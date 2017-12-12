@@ -1619,7 +1619,7 @@ Graph.prototype.connectVertex = function(source, direction, length, evt, forceCl
 		pt.x -= length;
 		pt.y += source.geometry.height / 2;
 	}
-	else
+	else if (direction == mxConstants.DIRECTION_EAST)
 	{
 		pt.x += source.geometry.width + length;
 		pt.y += source.geometry.height / 2;
@@ -1695,7 +1695,7 @@ Graph.prototype.connectVertex = function(source, direction, length, evt, forceCl
 		{
 			pt.x -= source.geometry.width / 2;
 		}
-		else
+		else if(direction==mxConstants.DIRECTION_EAST)
 		{
 			pt.x += source.geometry.width / 2;
 		}
@@ -2555,6 +2555,10 @@ HoverIcons.prototype.triangleDown = new mxImage((mxClient.IS_SVG) ? 'data:image/
 HoverIcons.prototype.triangleLeft = new mxImage((mxClient.IS_SVG) ? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAaCAYAAACHD21cAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0ZBN0E3M0E5NjZGMTFFNTg5NTRDNzQwMTgwNDlEQzQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0ZBN0E3M0I5NjZGMTFFNTg5NTRDNzQwMTgwNDlEQzQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1OENDNzlFQjk2NkYxMUU1ODk1NEM3NDAxODA0OURDNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1OENDNzlFQzk2NkYxMUU1ODk1NEM3NDAxODA0OURDNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi1fu2cAAADXSURBVHjalNTRB8JQFMfxVROxPyl6iuipRJFS2kv/TU89lY0piyw9pP6r3iP6He7Ndd3de87haxMfd+1ua0TVOxLOCuVNIdqiHZ1I4AbtUUsC6fIO6jzhwoWB/hOCU5Tpy+PCCTq5kA+OfKgODlGJ2r7/YMMBqkLIhn0uMmEP3VGH+zQQ7KKnBGmY+O6eD77QGH2kkOYhxeZdJTzjYnsfb2jOwbHjt6s6ltJHTmNa+SuFNBe0rMOh9/GM1i7M+QIUKLVxzNy2XB0zyYomTqUr6jnqLfoJMADoxSMHt6pxsAAAAABJRU5ErkJggg==' :
 	IMAGE_PATH + '/triangle-left.png', 14, 26);
 
+//生成表
+HoverIcons.prototype.Information=new mxImage(IMAGE_PATH + '/chevron-up.png',16,16);
+
+
 /**
  * Round target.
  */
@@ -2581,6 +2585,21 @@ HoverIcons.prototype.init = function()
 	this.arrowRight = this.createArrow(this.triangleRight, mxResources.get('plusTooltip'));
 	this.arrowDown = this.createArrow(this.triangleDown, mxResources.get('plusTooltip'));
 	this.arrowLeft = this.createArrow(this.triangleLeft, mxResources.get('plusTooltip'));
+
+	//生成表格
+	this.myTable=this.createArrow(this.Information,'Information');
+	this.myTable.style.cursor='pointer';
+    this.myDiv=this.createArrow(null,'Table');
+	//show
+	var mdiv=this.myDiv;
+	this.myTable.onclick=function () {
+		if(mdiv.style.visibility=='visible'){
+			mdiv.style.visibility='hidden';
+		}
+		else{
+			mdiv.style.visibility='visible';
+		}
+	}
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
 
@@ -2736,83 +2755,100 @@ HoverIcons.prototype.createArrow = function(img, tooltip)
 {
 	var arrow = null;
 	
-	if (mxClient.IS_IE && !mxClient.IS_SVG)
-	{
-		// Workaround for PNG images in IE6
-		if (mxClient.IS_IE6 && document.compatMode != 'CSS1Compat')
-		{
-			arrow = document.createElement(mxClient.VML_PREFIX + ':image');
-			arrow.setAttribute('src', img.src);
-			arrow.style.borderStyle = 'none';
-		}
-		else
-		{
-			arrow = document.createElement('div');
-			arrow.style.backgroundImage = 'url(' + img.src + ')';
-			arrow.style.backgroundPosition = 'center';
-			arrow.style.backgroundRepeat = 'no-repeat';
-		}
-		
-		arrow.style.width = (img.width + 4) + 'px';
-		arrow.style.height = (img.height + 4) + 'px';
-		arrow.style.display = (mxClient.IS_QUIRKS) ? 'inline' : 'inline-block';
-	}
-	else
-	{
-		arrow = mxUtils.createImage(img.src);
-		arrow.style.width = img.width + 'px';
-		arrow.style.height = img.height + 'px';
-		arrow.style.padding = this.tolerance + 'px';
-	}
-	
-	if (tooltip != null)
-	{
-		arrow.setAttribute('title', tooltip);
-	}
-	
-	arrow.style.position = 'absolute';
-	arrow.style.cursor = 'crosshair';
+	if(img==null){
+        arrow = document.createElement('div');
+        arrow.style.backgroundColor = '#fff000';
+        arrow.style.width='100px';
+        arrow.style.height='100px';
+        arrow.style.position = 'absolute';
+        //arrow.style.cursor = 'crosshair';
+        if(tooltip!=null){
+            arrow.setAttribute('title',tooltip);
+        }
+    }
 
-	mxEvent.addGestureListeners(arrow, mxUtils.bind(this, function(evt)
-	{
-		if (this.currentState != null && !this.isResetEvent(evt))
-		{
-			this.mouseDownPoint = mxUtils.convertPoint(this.graph.container,
-					mxEvent.getClientX(evt), mxEvent.getClientY(evt));
-			this.drag(evt, this.mouseDownPoint.x, this.mouseDownPoint.y);
-			this.activeArrow = arrow;
-			this.setDisplay('none');
-			mxEvent.consume(evt);
-		}
-	}));
-	
-	// Captures mouse events as events on graph
-	mxEvent.redirectMouseEvents(arrow, this.graph, this.currentState);
-	
-	mxEvent.addListener(arrow, 'mouseenter', mxUtils.bind(this, function(evt)
-	{
-		// Workaround for Firefox firing mouseenter on touchend
-		if (mxEvent.isMouseEvent(evt))
-		{
-	    	if (this.activeArrow != null && this.activeArrow != arrow)
-	    	{
-	    		mxUtils.setOpacity(this.activeArrow, this.inactiveOpacity);
-	    	}
+    else{
+        if (mxClient.IS_IE && !mxClient.IS_SVG)
+        {
+            // Workaround for PNG images in IE6
+            if (mxClient.IS_IE6 && document.compatMode != 'CSS1Compat')
+            {
+                arrow = document.createElement(mxClient.VML_PREFIX + ':image');
+                arrow.setAttribute('src', img.src);
+                arrow.style.borderStyle = 'none';
+            }
+            else
+            {
+                arrow = document.createElement('div');
+                arrow.style.backgroundImage = 'url(' + img.src + ')';
+                arrow.style.backgroundPosition = 'center';
+                arrow.style.backgroundRepeat = 'no-repeat';
+            }
 
-			this.graph.connectionHandler.constraintHandler.reset();
-			mxUtils.setOpacity(arrow, 100);
-			this.activeArrow = arrow;
+            arrow.style.width = (img.width + 4) + 'px';
+            arrow.style.height = (img.height + 4) + 'px';
+            arrow.style.display = (mxClient.IS_QUIRKS) ? 'inline' : 'inline-block';
+        }
+        else
+        {
+            arrow = mxUtils.createImage(img.src);
+            arrow.style.width = img.width + 'px';
+            arrow.style.height = img.height + 'px';
+            arrow.style.padding = this.tolerance + 'px';
+        }
+
+        if (tooltip != null)
+        {
+            arrow.setAttribute('title', tooltip);
+        }
+
+        arrow.style.position = 'absolute';
+		if(img!=this.Information){
+			arrow.style.cursor = 'crosshair';
+
+			mxEvent.addGestureListeners(arrow, mxUtils.bind(this, function(evt)
+			{
+				if (this.currentState != null && !this.isResetEvent(evt))
+				{
+					this.mouseDownPoint = mxUtils.convertPoint(this.graph.container,
+						mxEvent.getClientX(evt), mxEvent.getClientY(evt));
+					this.drag(evt, this.mouseDownPoint.x, this.mouseDownPoint.y);
+					this.activeArrow = arrow;
+					this.setDisplay('none');
+					mxEvent.consume(evt);
+				}
+			}));
+
+			// Captures mouse events as events on graph
+			mxEvent.redirectMouseEvents(arrow, this.graph, this.currentState);
 		}
-	}));
-	
-	mxEvent.addListener(arrow, 'mouseleave', mxUtils.bind(this, function(evt)
-	{
-		// Workaround for IE11 firing this event on touch
-		if (!this.graph.isMouseDown)
-		{
-			this.resetActiveArrow();
-		}
-	}));
+
+
+        mxEvent.addListener(arrow, 'mouseenter', mxUtils.bind(this, function(evt)
+        {
+            // Workaround for Firefox firing mouseenter on touchend
+            if (mxEvent.isMouseEvent(evt))
+            {
+                if (this.activeArrow != null && this.activeArrow != arrow)
+                {
+                    mxUtils.setOpacity(this.activeArrow, this.inactiveOpacity);
+                }
+
+                this.graph.connectionHandler.constraintHandler.reset();
+                mxUtils.setOpacity(arrow, 100);
+                this.activeArrow = arrow;
+            }
+        }));
+
+        mxEvent.addListener(arrow, 'mouseleave', mxUtils.bind(this, function(evt)
+        {
+            // Workaround for IE11 firing this event on touch
+            if (!this.graph.isMouseDown)
+            {
+                this.resetActiveArrow();
+            }
+        }));
+    }
 	
 	return arrow;
 };
@@ -2834,7 +2870,7 @@ HoverIcons.prototype.resetActiveArrow = function()
  */
 HoverIcons.prototype.getDirection = function()
 {
-	var dir = mxConstants.DIRECTION_EAST;
+	var dir ;
 
 	if (this.activeArrow == this.arrowUp)
 	{
@@ -2848,7 +2884,10 @@ HoverIcons.prototype.getDirection = function()
 	{
 		dir = mxConstants.DIRECTION_WEST;
 	}
-		
+	else if(this.activeArrow == this.arrowRight)
+	{
+		dir = mxConstants.DIRECTION_EAST;
+	}
 	return dir;
 };
 
@@ -3072,7 +3111,16 @@ HoverIcons.prototype.repaint = function()
 			this.arrowLeft.style.left = Math.round(bds.x - this.triangleLeft.width - this.tolerance) + 'px';
 			this.arrowLeft.style.top = this.arrowRight.style.top;
 			mxUtils.setOpacity(this.arrowLeft, this.inactiveOpacity);
-			
+
+			//table
+			this.myTable.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTable.style.top=Math.round(bds.y + this.triangleUp.height + this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTable,this.inactiveOpacity);
+
+            this.myDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+            this.myDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+            mxUtils.setOpacity(this.myDiv, this.inactiveOpacity);
+
 			if (this.checkCollisions)
 			{
 				var right = this.graph.getCellAt(bds.x + bds.width +
@@ -3080,6 +3128,9 @@ HoverIcons.prototype.repaint = function()
 				var left = this.graph.getCellAt(bds.x - this.triangleLeft.width / 2, this.currentState.getCenterY()); 
 				var top = this.graph.getCellAt(this.currentState.getCenterX(), bds.y - this.triangleUp.height / 2); 
 				var bottom = this.graph.getCellAt(this.currentState.getCenterX(), bds.y + bds.height + this.triangleDown.height / 2); 
+				//table
+				var mtable=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
+                var mdiv=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
 
 				// Shows hover icons large cell is behind all directions of current cell
 				if (right != null && right == left && left == top && top == bottom)
@@ -3113,6 +3164,8 @@ HoverIcons.prototype.repaint = function()
 				checkCollision(left, this.arrowLeft);
 				checkCollision(top, this.arrowUp);
 				checkCollision(bottom, this.arrowDown);
+				//checkCollision(mtable,this.myTable);
+                //checkCollision(mdiv,this.myDiv);
 			}
 			else
 			{
@@ -3120,6 +3173,8 @@ HoverIcons.prototype.repaint = function()
 				this.arrowRight.style.visibility = 'visible';
 				this.arrowUp.style.visibility = 'visible';
 				this.arrowDown.style.visibility = 'visible';
+				this.myTable.style.visibility='visible';
+                this.myDiv.style.visibility='visible';
 			}
 			
 			if (this.graph.tooltipHandler.isEnabled())
@@ -3128,6 +3183,7 @@ HoverIcons.prototype.repaint = function()
 				this.arrowRight.setAttribute('title', mxResources.get('plusTooltip'));
 				this.arrowUp.setAttribute('title', mxResources.get('plusTooltip'));
 				this.arrowDown.setAttribute('title', mxResources.get('plusTooltip'));
+				this.myTable.setAttribute('title','Information');
 			}
 			else
 			{
@@ -3135,6 +3191,7 @@ HoverIcons.prototype.repaint = function()
 				this.arrowRight.removeAttribute('title');
 				this.arrowUp.removeAttribute('title');
 				this.arrowDown.removeAttribute('title');
+				this.myTable.removeAttribute('title');
 			}
 		}
 		else
@@ -3305,6 +3362,11 @@ HoverIcons.prototype.setCurrentState = function(state)
 
 	this.graph.container.appendChild(this.arrowRight);
 	this.graph.container.appendChild(this.arrowLeft);
+	this.graph.container.appendChild(this.myTable);
+	this.graph.container.appendChild(this.myDiv);
+
+
+
 	this.currentState = state;
 };
 
