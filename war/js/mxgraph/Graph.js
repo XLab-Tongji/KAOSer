@@ -2589,7 +2589,7 @@ HoverIcons.prototype.init = function()
 	//生成表格
 	this.myTable=this.createArrow(this.Information,'Information');
 	this.myTable.style.cursor='pointer';
-    this.myDiv=this.createArrow(null,'Table');
+    this.myDiv=createDiv();
 	//show
 	var mdiv=this.myDiv;
 	this.myTable.onclick=function () {
@@ -2599,7 +2599,7 @@ HoverIcons.prototype.init = function()
 		else{
 			mdiv.style.visibility='visible';
 		}
-	}
+	};
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
 
@@ -3155,7 +3155,7 @@ HoverIcons.prototype.repaint = function()
 						arrow.style.visibility = 'hidden';
 					}
 
-					// else if((geo.STYLE_SHAPE=='goal') && (arrow==this.myTable))
+					// 判断shape的类型
 					else if((this.currentState.style['shape']!='goal')&&(arrow==this.myTable))
 					{
 						arrow.style.visibility = 'hidden';

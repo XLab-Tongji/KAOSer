@@ -16,6 +16,7 @@ mxscript('js/sanitizer/sanitizer.min.js');
 mxscript('js/mxgraph/Editor.js');
 mxscript('js/mxgraph/EditorUi.js');
 mxscript('js/mxgraph/Sidebar.js');
+mxscript('js/mxgraph/mydiv.js');
 mxscript('js/mxgraph/Graph.js');
 mxscript('js/mxgraph/Shapes.js');
 mxscript('js/mxgraph/Actions.js');
@@ -25,6 +26,7 @@ mxscript('js/mxgraph/Toolbar.js');
 mxscript('js/mxgraph/Dialogs.js');
 mxscript('js/mxgraph/myShaps.js');
 mxscript('js/mxgraph/myLineShapes.js');
+
 // Loads main classes
 mxscript('js/diagramly/sidebar/Sidebar.js');
 // mxscript('js/diagramly/sidebar/Sidebar-Advanced.js');
