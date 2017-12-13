@@ -2805,7 +2805,7 @@ HoverIcons.prototype.createArrow = function(img, tooltip)
         arrow.style.position = 'absolute';
 		if(img!=this.Information){
 			arrow.style.cursor = 'crosshair';
-
+			//点击鼠标事件
 			mxEvent.addGestureListeners(arrow, mxUtils.bind(this, function(evt)
 			{
 				if (this.currentState != null && !this.isResetEvent(evt))
@@ -3154,8 +3154,13 @@ HoverIcons.prototype.repaint = function()
 					{
 						arrow.style.visibility = 'hidden';
 					}
-					else
+
+					// else if((geo.STYLE_SHAPE=='goal') && (arrow==this.myTable))
+					else if((this.currentState.style['shape']!='goal')&&(arrow==this.myTable))
 					{
+						arrow.style.visibility = 'hidden';
+					}
+					else{
 						arrow.style.visibility = 'visible';
 					}
 				});
@@ -3164,7 +3169,7 @@ HoverIcons.prototype.repaint = function()
 				checkCollision(left, this.arrowLeft);
 				checkCollision(top, this.arrowUp);
 				checkCollision(bottom, this.arrowDown);
-				//checkCollision(mtable,this.myTable);
+				checkCollision(mtable,this.myTable);
                 //checkCollision(mdiv,this.myDiv);
 			}
 			else

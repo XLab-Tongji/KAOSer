@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d1ece4fb-37f1-4c79-b659-f75aa461fe9c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Basic.js" afterPath="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Basic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" afterPath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
     </list>
     <ignored path="wa.iws" />
@@ -27,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
@@ -86,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4462">
-              <caret line="2587" column="0" selection-start-line="2587" selection-start-column="0" selection-end-line="2587" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="3158" column="79" selection-start-line="3158" selection-start-column="79" selection-end-line="3158" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -121,7 +120,7 @@
       <file leaf-file-name="Format.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5450">
+            <state relative-caret-position="95450">
               <caret line="3818" column="239" selection-start-line="3818" selection-start-column="227" selection-end-line="3818" selection-end-column="239" />
               <folding>
                 <marker date="1512619145078" expanded="true" signature="23897:24099" ph="..." />
@@ -527,33 +526,35 @@
       <workItem from="1512721995820" duration="3315000" />
       <workItem from="1513037336509" duration="7035000" />
       <workItem from="1513050647957" duration="7775000" />
-      <workItem from="1513065852136" duration="2010000" />
+      <workItem from="1513065852136" duration="5249000" />
+      <workItem from="1513102526876" duration="1077000" />
+      <workItem from="1513137415354" duration="732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118590000" />
+    <option name="totallyTimeSpent" value="123638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21522693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -943,13 +944,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/myShaps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1975">
-          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18100">
@@ -960,10 +954,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95450">
+          <caret line="3818" column="239" selection-start-line="3818" selection-start-column="227" selection-end-line="3818" selection-end-column="239" />
+          <folding>
+            <marker date="1512619145078" expanded="true" signature="23897:24099" ph="..." />
+            <marker date="1512619145078" expanded="true" signature="28459:28477" ph="..." />
+            <marker date="1512619145078" expanded="true" signature="107915:107930" ph="..." />
+            <marker date="1512619145078" expanded="true" signature="114574:114589" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/myShaps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Basic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="3158" column="79" selection-start-line="3158" selection-start-column="79" selection-end-line="3158" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -977,27 +999,6 @@
             <element signature="e#1671#2473#0" expanded="false" />
             <element signature="e#2506#2821#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5450">
-          <caret line="3818" column="239" selection-start-line="3818" selection-start-column="227" selection-end-line="3818" selection-end-column="239" />
-          <folding>
-            <marker date="1512619145078" expanded="true" signature="23897:24099" ph="..." />
-            <marker date="1512619145078" expanded="true" signature="28459:28477" ph="..." />
-            <marker date="1512619145078" expanded="true" signature="107915:107930" ph="..." />
-            <marker date="1512619145078" expanded="true" signature="114574:114589" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4462">
-          <caret line="2587" column="0" selection-start-line="2587" selection-start-column="0" selection-end-line="2587" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
