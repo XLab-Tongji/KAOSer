@@ -2579,6 +2579,7 @@ HoverIcons.prototype.tolerance = (mxClient.IS_TOUCH) ? 6 : 0;
 /**
  * 
  */
+var div=createDiv();
 HoverIcons.prototype.init = function()
 {
 	this.arrowUp = this.createArrow(this.triangleUp, mxResources.get('plusTooltip'));
@@ -2592,7 +2593,10 @@ HoverIcons.prototype.init = function()
     this.myDiv=createDiv();
 	//show
 	var mdiv=this.myDiv;
+	mdiv.style.visibility='hidden';
 	this.myTable.onclick=function () {
+
+
 		if(mdiv.style.visibility=='visible'){
 			mdiv.style.visibility='hidden';
 		}
@@ -2609,14 +2613,22 @@ HoverIcons.prototype.init = function()
 	});
 
 	this.graph.selectionModel.addListener(mxEvent.CHANGE, this.repaintHandler);
+
+
+
 	this.graph.model.addListener(mxEvent.CHANGE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.SCALE_AND_TRANSLATE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.TRANSLATE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.SCALE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.DOWN, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.UP, this.repaintHandler);
+	this.graph.view.addListener(mxEvent.ADD_VERTEX, mxUtils.bind(this,function () {
+		alert("hello");
+	}));
 	this.graph.addListener(mxEvent.ROOT, this.repaintHandler);
-	
+	this.graph.model.addListener(mxEvent.AFTER_ADD_VERTEX, mxUtils.bind(this,function () {
+		alert("hello");
+	}));
 	// Resets the mouse point on escape
 	this.graph.addListener(mxEvent.ESCAPE, mxUtils.bind(this, function()
 	{
@@ -3055,7 +3067,8 @@ HoverIcons.prototype.reset = function(clearTimeout)
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
-	
+	//this.myDiv=createDiv();
+
 	if (this.currentState != null)
 	{
 		// Checks if cell was deleted
@@ -3119,7 +3132,7 @@ HoverIcons.prototype.repaint = function()
 
             this.myDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
-            mxUtils.setOpacity(this.myDiv, this.inactiveOpacity);
+            //mxUtils.setOpacity(this.myDiv, this.inactiveOpacity);
 
 			if (this.checkCollisions)
 			{
@@ -3130,7 +3143,6 @@ HoverIcons.prototype.repaint = function()
 				var bottom = this.graph.getCellAt(this.currentState.getCenterX(), bds.y + bds.height + this.triangleDown.height / 2); 
 				//table
 				var mtable=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
-                var mdiv=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
 
 				// Shows hover icons large cell is behind all directions of current cell
 				if (right != null && right == left && left == top && top == bottom)
@@ -3159,9 +3171,11 @@ HoverIcons.prototype.repaint = function()
 					else if((this.currentState.style['shape']!='goal')&&(arrow==this.myTable))
 					{
 						arrow.style.visibility = 'hidden';
+						this.myDiv.style.visibility='hidden';
 					}
 					else{
 						arrow.style.visibility = 'visible';
+						//this.myDiv.style.visibility="visible";
 					}
 				});
 				
@@ -3368,6 +3382,7 @@ HoverIcons.prototype.setCurrentState = function(state)
 	this.graph.container.appendChild(this.arrowRight);
 	this.graph.container.appendChild(this.arrowLeft);
 	this.graph.container.appendChild(this.myTable);
+
 	this.graph.container.appendChild(this.myDiv);
 
 

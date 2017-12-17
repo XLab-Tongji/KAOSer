@@ -1,3 +1,109 @@
+#detailcontainer{
+      height: 600px;
+      width: 430px;
+      border-color: #dcdcdc;
+      border-radius: 15px;
+      box-shadow: 0 0 13px #d2d0d0;
+      padding: 20px;
+      position: absolute;
+      z-index: 10;
+    }
+
+    #detailtable{
+      width: 100%;
+      border: 0px solid #dcdcdc;
+      border-collapse: collapse;
+      font-family: "微软雅黑";
+    }
+
+    #detailtable td{
+      padding-left: 10px;
+      border-top: 0;
+      border-right: 1px solid #dcdcdc;
+      border-bottom: 1px solid #dcdcdc;
+      border-left: 0;
+    }
+
+    #detailtable tr:last-child td{
+      border-bottom: 0;
+    }
+
+    #detailtable tr td:last-child {
+      border-right: 0;
+    }
+
+    #detailtable tr:nth-child(1) td{
+      height: 30px;
+    }
+
+    #detailtable tr:nth-child(2) td{
+      height: 30px;
+    }
+
+    #detailtable tr:nth-child(3) td{
+      height: 30px;
+    }
+
+    #detailtable tr:nth-child(4) td{
+      height: 30px;
+    }
+
+    #detailtable tr:nth-child(5) td{
+      height: 30px;
+    }
+
+    #detailtable tr:nth-child(6) td{
+      padding-top: 5px;
+      height: 120px;
+    }
+    #detailtable tr:nth-child(7) td{
+      padding-top: 5px;
+      height: 120px;
+    }
+    #detailtable tr:nth-child(8) td{
+      padding-top: 5px;
+      height: 100px;
+    }
+    #detailtable tr:nth-child(9) td{
+      padding-top: 5px;
+      height: 90px;
+    }
+
+    .detailform-single-text{
+      text-align: left;
+      vertical-align: middle;
+      height: 100%;
+      width: 100%;
+      border: 0;
+      outline: none;
+      font-family: "微软雅黑";
+    }
+
+    .detailform-textarea{
+      text-align: left;
+      vertical-align: middle;
+      height: 70%;
+      width: 100%;
+      border: 0;
+      resize: none;
+      outline: none;
+      font-family: "微软雅黑";
+      padding-left: 10px;
+    }
+
+    #detailbutton{
+      height: 25px;
+      width: 25px;
+      border:0;
+      padding: 0;
+      background:transparent;
+      outline: none;
+    }
+
+    #detailimage-minus{
+      display: none;
+    }
+
 .geEditor {
 	font-family:Helvetica Neue,Helvetica,Arial Unicode MS,Arial;
 	font-size:10pt;
@@ -727,3 +833,5 @@ html td.mxWindowTitle {
  	color:rgb(112, 112, 112);
  	padding:4px;
 }
+
+
