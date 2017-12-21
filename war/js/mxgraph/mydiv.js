@@ -32,7 +32,10 @@ function createDiv() {
          input1.setAttributeNode(input1_type);
          var input1_name = document.createAttribute("name");
          input1_name.value = "usecaseName";
+         var input1_id=document.createAttribute("id");
+         input1_id.value="usecaseId";
          input1.setAttributeNode(input1_name);
+         input1.setAttributeNode(input1_id);
          var input1_class = document.createAttribute("class");
          input1_class.value = "detailform-single-text";
          input1.setAttributeNode(input1_class);
@@ -49,10 +52,13 @@ function createDiv() {
          var input2 = document.createElement("input");
          var input2_type = document.createAttribute("type");
          input2_type.value = "text";
-         input2.setAttributeNode(input2_type)
+         input2.setAttributeNode(input2_type);
          var input2_name = document.createAttribute("name");
          input2_name.value = "usecaseDiscription";
          input2.setAttributeNode(input2_name);
+         var input2_id=document.createAttribute("id");
+         input2_id.value="usecaseDiscription";
+         input2.setAttributeNode(input2_id);
          var input2_class = document.createAttribute("class");
          input2_class.value = "detailform-single-text"
          input2.setAttributeNode(input2_class);
@@ -76,6 +82,9 @@ function createDiv() {
          var input3_class = document.createAttribute("class");
          input3_class.value = "detailform-single-text"
          input3.setAttributeNode(input3_class);
+         var input3_id=document.createAttribute("id");
+         input3_id.value="participant";
+         input3.setAttributeNode(input3_id);
          td3_2.appendChild(input3);
          tr3.appendChild(td3_1);
          tr3.appendChild(td3_2);
@@ -96,6 +105,9 @@ function createDiv() {
          var input4_class = document.createAttribute("class");
          input4_class.value = "detailform-single-text"
          input4.setAttributeNode(input4_class);
+         var input4_id=document.createAttribute("id");
+         input4_id.value="preCondition";
+         input4.setAttributeNode(input4_id);
          td4_2.appendChild(input4);
          tr4.appendChild(td4_1);
          tr4.appendChild(td4_2);
@@ -116,6 +128,9 @@ function createDiv() {
          var input5_class = document.createAttribute("class");
          input5_class.value = "detailform-single-text"
          input5.setAttributeNode(input5_class);
+         var input5_id=document.createAttribute("id");
+         input5_id.value="aftCondition";
+         input5.setAttributeNode(input5_id);
          td5_2.appendChild(input5);
          tr5.appendChild(td5_1);
          tr5.appendChild(td5_2);
@@ -137,6 +152,9 @@ function createDiv() {
          var textarea6_class = document.createAttribute("class");
          textarea6_class.value = "detailform-textarea"
          textarea6.setAttributeNode(textarea6_class);
+         var input6_id=document.createAttribute("id");
+         input6_id.value="basicEventFlow";
+         textarea6.setAttributeNode(input6_id);
          td6.appendChild(textarea6);
          tr6.appendChild(td6);
          table.appendChild(tr6);
@@ -157,6 +175,9 @@ function createDiv() {
          var textarea7_class = document.createAttribute("class");
          textarea7_class.value = "detailform-textarea"
          textarea7.setAttributeNode(textarea7_class);
+         var input7_id=document.createAttribute("id");
+         input7_id.value="addtionEventFlow";
+         textarea7.setAttributeNode(input7_id);
          td7.appendChild(textarea7);
          tr7.appendChild(td7);
          table.appendChild(tr7);
@@ -177,6 +198,9 @@ function createDiv() {
          var textarea8_class = document.createAttribute("class");
          textarea8_class.value = "detailform-textarea"
          textarea8.setAttributeNode(textarea8_class);
+         var input8_id=document.createAttribute("id");
+         input8_id.value="businessRule";
+         textarea8.setAttributeNode(input8_id);
          td8.appendChild(textarea8);
          tr8.appendChild(td8);
          table.appendChild(tr8);
@@ -197,6 +221,9 @@ function createDiv() {
          var textarea9_class = document.createAttribute("class");
          textarea9_class.value = "detailform-textarea"
          textarea9.setAttributeNode(textarea9_class);
+         var input9_id=document.createAttribute("id");
+         input9_id.value="nonFunctionalRule";
+         textarea9.setAttributeNode(input9_id);
          td9.appendChild(textarea9);
          tr9.appendChild(td9);
          table.appendChild(tr9);

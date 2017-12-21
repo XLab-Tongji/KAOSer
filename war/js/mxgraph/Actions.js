@@ -1110,6 +1110,15 @@ Actions.prototype.init = function()
 
 	//add new action
 	this.addAction('mongo',function(){
+		var usecaseName=document.getElementsByName("usecaseName").value;
+		var usecaseDiscription=document.getElementsByName("usecaseDiscription").value;
+		var participant=document.getElementsByName("participant").value;
+		var preCondition=document.getElementsByName("preCondition").value;
+		var aftCondition=document.getElementsByName("aftCondition").value;
+		var basicEventFlow=document.getElementsByName("basicEventFlow").value;
+		var addtionEventFlow=document.getElementsByName("addtionEventFlow").value;
+		var businessRule=document.getElementsByName("businessRule").value;
+		var nonFunctionalRule=document.getElementsByName("nonFunctionalRule").value;
 		var encoder = new mxCodec();
 		var node = encoder.encode(graph.getModel());
 		var result=mxUtils.getXml(node,'\n');
@@ -1124,7 +1133,17 @@ Actions.prototype.init = function()
 		$.ajax({
 			type:"POST",
 			url:"http://localhost:8880/test",
-			data:{jsname:'hei',jsonStr:jsonStr},
+			data:{jsname:'hei',
+				jsonStr:jsonStr,
+				usecaseName:usecaseName,
+				usecaseDiscription:usecaseDiscription,
+				participant:participant,
+				preCondition:preCondition,
+				aftCondition:aftCondition,
+				basicEventFlow:basicEventFlow,
+				addtionEventFlow:addtionEventFlow,
+				businessRule:businessRule,
+				nonFunctionalRule:nonFunctionalRule,},
 			dataType:"json",
 			success:function (message) {
 

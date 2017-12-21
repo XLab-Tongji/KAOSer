@@ -2587,34 +2587,30 @@ HoverIcons.prototype.init = function()
 	this.arrowDown = this.createArrow(this.triangleDown, mxResources.get('plusTooltip'));
 	this.arrowLeft = this.createArrow(this.triangleLeft, mxResources.get('plusTooltip'));
 
-	//生成表格
 	this.myTable=this.createArrow(this.Information,'Information');
 	this.myTable.style.cursor='pointer';
-    this.myDiv=createDiv();
+
+	//生成表格
+	this.myDiv=createDiv();
 	//show
-	var mdiv=this.myDiv;
-	mdiv.style.visibility='hidden';
-	this.myTable.onclick=function () {
+
+	this.myDiv.style.visibility='hidden';
 
 
-		if(mdiv.style.visibility=='visible'){
-			mdiv.style.visibility='hidden';
-		}
-		else{
-			mdiv.style.visibility='visible';
-		}
-	};
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
 
 	this.repaintHandler = mxUtils.bind(this, function()
 	{
 		this.repaint();
+
 	});
 
 	this.graph.selectionModel.addListener(mxEvent.CHANGE, this.repaintHandler);
 
-
+	// mxEvent.addListener(mxEvent.AFTER_ADD_VERTEX,mxUtils.bind(this,function () {
+	// 	alert("hello");
+	// }));
 
 	this.graph.model.addListener(mxEvent.CHANGE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.SCALE_AND_TRANSLATE, this.repaintHandler);
@@ -2622,13 +2618,9 @@ HoverIcons.prototype.init = function()
 	this.graph.view.addListener(mxEvent.SCALE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.DOWN, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.UP, this.repaintHandler);
-	this.graph.view.addListener(mxEvent.ADD_VERTEX, mxUtils.bind(this,function () {
-		alert("hello");
-	}));
 	this.graph.addListener(mxEvent.ROOT, this.repaintHandler);
-	this.graph.model.addListener(mxEvent.AFTER_ADD_VERTEX, mxUtils.bind(this,function () {
-		alert("hello");
-	}));
+
+
 	// Resets the mouse point on escape
 	this.graph.addListener(mxEvent.ESCAPE, mxUtils.bind(this, function()
 	{
@@ -3073,14 +3065,14 @@ HoverIcons.prototype.repaint = function()
 	{
 		// Checks if cell was deleted
 		this.currentState = this.getState(this.currentState);
-		
+
 		// Cell was deleted	
 		if (this.currentState != null &&
 			this.graph.model.isVertex(this.currentState.cell) &&
 			this.graph.isCellConnectable(this.currentState.cell))
 		{
 			var bds = mxRectangle.fromRectangle(this.currentState);
-			
+
 			// Uses outer bounding box to take rotation into account
 			if (this.currentState.shape != null && this.currentState.shape.boundingBox != null)
 			{
@@ -3127,13 +3119,60 @@ HoverIcons.prototype.repaint = function()
 
 			//table
 			this.myTable.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
-			this.myTable.style.top=Math.round(bds.y + this.triangleUp.height + this.tolerance) + 'px';
+			this.myTable.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTable,this.inactiveOpacity);
 
             this.myDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
             //mxUtils.setOpacity(this.myDiv, this.inactiveOpacity);
+			var mdiv=this.myDiv;
+			// var value=this.currentState.cell.value;
+			// var usecaseDiscription=this.currentState.cell.usecaseDiscription;
+			// var participant=this.currentState.cell.participant;
+			// var preCondition=this.currentState.cell.preCondition;
+			// var aftCondition=this.currentState.cell.aftCondition;
+			// var basicEventFlow=this.currentState.cell.basicEventFlow;
+			// var addtionEventFlow=this.currentState.cell.addtionEventFlow;
+			// var businessRule=this.currentState.cell.businessRule;
+			// var nonFunctionalRule=this.currentState.cell.nonFunctionalRule;
+			var that=this.currentState.cell;
+			this.myTable.onclick=function () {
 
+				if (mdiv.style.visibility == 'visible') {
+					that.value=document.getElementById("usecaseId").value;
+					that.usecaseDiscription=document.getElementById("usecaseDiscription").value;
+					that.participant=document.getElementById("participant").value;
+					that.preCondition=document.getElementById("preCondition").value;
+					that.aftCondition=document.getElementById("aftCondition").value;
+					that.basicEventFlow=document.getElementById("basicEventFlow").value;
+					that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
+					that.businessRule=document.getElementById("businessRule").value;
+					that.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+					mdiv.style.visibility = 'hidden';
+					graph.refresh(that);
+					document.getElementById("usecaseId").value='';
+					document.getElementById("usecaseDiscription").value='';
+					document.getElementById("participant").value='';
+					document.getElementById("preCondition").value='';
+					document.getElementById("aftCondition").value='';
+					document.getElementById("basicEventFlow").value='';
+					document.getElementById("addtionEventFlow").value='';
+					document.getElementById("businessRule").value='';
+					document.getElementById("nonFunctionalRule").value='';
+				}
+				else {
+					document.getElementById("usecaseId").value=that.value;
+					document.getElementById("usecaseDiscription").value=that.usecaseDiscription;
+					document.getElementById("participant").value=that.participant;
+					document.getElementById("preCondition").value=that.preCondition;
+					document.getElementById("aftCondition").value=that.aftCondition;
+					document.getElementById("basicEventFlow").value=that.basicEventFlow;
+					document.getElementById("addtionEventFlow").value=that.addtionEventFlow;
+					document.getElementById("businessRule").value=that.businessRule;
+					document.getElementById("nonFunctionalRule").value=that.nonFunctionalRule;
+					mdiv.style.visibility = 'visible';
+				}
+			};
 			if (this.checkCollisions)
 			{
 				var right = this.graph.getCellAt(bds.x + bds.width +
@@ -3178,7 +3217,7 @@ HoverIcons.prototype.repaint = function()
 						//this.myDiv.style.visibility="visible";
 					}
 				});
-				
+
 				checkCollision(right, this.arrowRight);
 				checkCollision(left, this.arrowLeft);
 				checkCollision(top, this.arrowUp);
@@ -3193,6 +3232,7 @@ HoverIcons.prototype.repaint = function()
 				this.arrowUp.style.visibility = 'visible';
 				this.arrowDown.style.visibility = 'visible';
 				this.myTable.style.visibility='visible';
+
                 this.myDiv.style.visibility='visible';
 			}
 			
