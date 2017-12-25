@@ -15,7 +15,7 @@ function createDiv() {
          //创建table
          var table = document.createElement("table");
          var tableattr = document.createAttribute("id");
-         tableattr.value = "detailtable"
+         tableattr.value = "detailtable";
          table.setAttributeNode(tableattr);
 
          //行 - 用例名
@@ -26,19 +26,10 @@ function createDiv() {
          td1_1_width.value = "100px";
          td1_1.setAttributeNode(td1_1_width);
          var td1_2 = document.createElement("td");
-         var input1 = document.createElement("input");
-         var input1_type = document.createAttribute("type");
-         input1_type.value = "text";
-         input1.setAttributeNode(input1_type);
-         var input1_name = document.createAttribute("name");
-         input1_name.value = "usecaseName";
+         var input1 = document.createElement("h4");
          var input1_id=document.createAttribute("id");
          input1_id.value="usecaseId";
-         input1.setAttributeNode(input1_name);
          input1.setAttributeNode(input1_id);
-         var input1_class = document.createAttribute("class");
-         input1_class.value = "detailform-single-text";
-         input1.setAttributeNode(input1_class);
          td1_2.appendChild(input1);
          tr1.appendChild(td1_1);
          tr1.appendChild(td1_2);

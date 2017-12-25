@@ -3126,20 +3126,22 @@ HoverIcons.prototype.repaint = function()
             this.myDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
             //mxUtils.setOpacity(this.myDiv, this.inactiveOpacity);
 			var mdiv=this.myDiv;
-			// var value=this.currentState.cell.value;
-			// var usecaseDiscription=this.currentState.cell.usecaseDiscription;
-			// var participant=this.currentState.cell.participant;
-			// var preCondition=this.currentState.cell.preCondition;
-			// var aftCondition=this.currentState.cell.aftCondition;
-			// var basicEventFlow=this.currentState.cell.basicEventFlow;
-			// var addtionEventFlow=this.currentState.cell.addtionEventFlow;
-			// var businessRule=this.currentState.cell.businessRule;
-			// var nonFunctionalRule=this.currentState.cell.nonFunctionalRule;
+
+
+			var value;
+			var usecaseDiscription;
+			var participant;
+			var preCondition;
+			var aftCondition;
+			var basicEventFlow;
+			var addtionEventFlow;
+			var businessRule;
+			var nonFunctionalRule;
 			var that=this.currentState.cell;
 			this.myTable.onclick=function () {
 
 				if (mdiv.style.visibility == 'visible') {
-					that.value=document.getElementById("usecaseId").value;
+					//that.value=document.getElementById("usecaseId").value;
 					that.usecaseDiscription=document.getElementById("usecaseDiscription").value;
 					that.participant=document.getElementById("participant").value;
 					that.preCondition=document.getElementById("preCondition").value;
@@ -3148,8 +3150,9 @@ HoverIcons.prototype.repaint = function()
 					that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 					that.businessRule=document.getElementById("businessRule").value;
 					that.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+
 					mdiv.style.visibility = 'hidden';
-					graph.refresh(that);
+
 					document.getElementById("usecaseId").value='';
 					document.getElementById("usecaseDiscription").value='';
 					document.getElementById("participant").value='';
@@ -3161,7 +3164,16 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("nonFunctionalRule").value='';
 				}
 				else {
-					document.getElementById("usecaseId").value=that.value;
+					value=that.value;
+					usecaseDiscription=that.usecaseDiscription;
+					participant=that.participant;
+					preCondition=that.participant;
+					aftCondition=that.aftCondition;
+					basicEventFlow=that.basicEventFlow;
+					addtionEventFlow=that.addtionEventFlow;
+					businessRule=that.businessRule;
+					nonFunctionalRule=that.nonFunctionalRule;
+					document.getElementById("usecaseId").innerHTML=that.value;
 					document.getElementById("usecaseDiscription").value=that.usecaseDiscription;
 					document.getElementById("participant").value=that.participant;
 					document.getElementById("preCondition").value=that.preCondition;
@@ -3173,6 +3185,39 @@ HoverIcons.prototype.repaint = function()
 					mdiv.style.visibility = 'visible';
 				}
 			};
+			if(mdiv.style.visibility=="visible"){
+				if((document.getElementById("usecaseId").innerHTML==that.value)&&(document.getElementById("usecaseDiscription").value!=that.usecaseDiscription
+				||document.getElementById("participant").value!=that.participant
+				||document.getElementById("preCondition").value!=that.preCondition
+				||document.getElementById("aftCondition").value!=that.aftCondition
+				||document.getElementById("basicEventFlow").value!=that.basicEventFlow
+				||document.getElementById("addtionEventFlow").value!=that.addtionEventFlow
+				||document.getElementById("businessRule").value!=that.businessRule
+				||document.getElementById("nonFunctionalRule").value!=that.nonFunctionalRule)){
+					this.currentState.cell.value=document.getElementById("usecaseId").innerHTML;
+					this.currentState.cell.usecaseDiscription=document.getElementById("usecaseDiscription").value;
+					this.currentState.cell.participant=document.getElementById("participant").value;
+					this.currentState.cell.preCondition=document.getElementById("preCondition").value;
+					this.currentState.cell.aftCondition=document.getElementById("aftCondition").value;
+					this.currentState.cell.basicEventFlow=document.getElementById("basicEventFlow").value;
+					this.currentState.cell.addtionEventFlow=document.getElementById("addtionEventFlow").value;
+					this.currentState.cell.businessRule=document.getElementById("businessRule").value;
+					this.currentState.cell.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+				}
+				else{
+					document.getElementById("usecaseId").innerHTML=this.currentState.cell.value;
+					document.getElementById("usecaseDiscription").value=this.currentState.cell.usecaseDiscription;
+					document.getElementById("participant").value=this.currentState.cell.participant;
+					document.getElementById("preCondition").value=this.currentState.cell.preCondition;
+					document.getElementById("aftCondition").value=this.currentState.cell.aftCondition;
+					document.getElementById("basicEventFlow").value=this.currentState.cell.basicEventFlow;
+					document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
+					document.getElementById("businessRule").value=this.currentState.cell.businessRule;
+					document.getElementById("nonFunctionalRule").value=this.currentState.cell.nonFunctionalRule;
+				}
+
+
+			}
 			if (this.checkCollisions)
 			{
 				var right = this.graph.getCellAt(bds.x + bds.width +
@@ -4260,8 +4305,8 @@ if (typeof mxVertexHandler != 'undefined')
 		/**
 		 * Contains the default style for edges.
 		 */
-		Graph.prototype.defaultEdgeStyle = {'edgeStyle': 'orthogonalEdgeStyle', 'rounded': '0',
-			'jettySize': 'auto', 'orthogonalLoop': '1'};
+		Graph.prototype.defaultEdgeStyle = {'edgeStyle': 'straightEdgeStyle', 'rounded': '0',
+			'jettySize': 'auto', 'orthogonalLoop': '1','strokeColor':'#FFFF00'};
 
 		/**
 		 * Returns the current edge style as a string.

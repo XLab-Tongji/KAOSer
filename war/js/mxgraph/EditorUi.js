@@ -695,57 +695,9 @@ EditorUi = function(editor, container, lightbox)
 				// Updates toolbar icon for edge style
 				var edgeStyleDiv = this.toolbar.edgeStyleMenu.getElementsByTagName('div')[0];
 
-				if (graph.currentEdgeStyle['edgeStyle'] == 'orthogonalEdgeStyle' && graph.currentEdgeStyle['curved'] == '1')
-				{
-					edgeStyleDiv.className = 'geSprite geSprite-curved';
-				}
-				else if (graph.currentEdgeStyle['edgeStyle'] == 'straight' || graph.currentEdgeStyle['edgeStyle'] == 'none' ||
-						graph.currentEdgeStyle['edgeStyle'] == null)
-				{
-					edgeStyleDiv.className = 'geSprite geSprite-straight';
-				}
-				else if (graph.currentEdgeStyle['edgeStyle'] == 'entityRelationEdgeStyle')
-				{
-					edgeStyleDiv.className = 'geSprite geSprite-entity';
-				}
-				else if (graph.currentEdgeStyle['edgeStyle'] == 'elbowEdgeStyle')
-				{
-					edgeStyleDiv.className = 'geSprite geSprite-' + ((graph.currentEdgeStyle['elbow'] == 'vertical') ?
-						'verticalelbow' : 'horizontalelbow');
-				}
-				else if (graph.currentEdgeStyle['edgeStyle'] == 'isometricEdgeStyle')
-				{
-					edgeStyleDiv.className = 'geSprite geSprite-' + ((graph.currentEdgeStyle['elbow'] == 'vertical') ?
-						'verticalisometric' : 'horizontalisometric');
-				}
-				else
-				{
-					edgeStyleDiv.className = 'geSprite geSprite-orthogonal';
-				}
+				edgeStyleDiv.className = 'geSprite geSprite-straight';
 			}
-			
-			// if (this.toolbar.edgeShapeMenu != null)
-			// {
-			// 	// Updates icon for edge shape
-			// 	var edgeMiddleShapeDiv = this.toolbar.edgeShapeMenu.getElementsByTagName('div')[0];
-            //
-			// 	if (graph.currentEdgeStyle['shape'] == 'link')
-			// 	{
-			// 		edgeMiddleShapeDiv.className = 'geSprite geSprite-linkedge';
-			// 	}
-			// 	else if (graph.currentEdgeStyle['shape'] == 'flexArrow')
-			// 	{
-			// 		edgeMiddleShapeDiv.className = 'geSprite geSprite-arrow';
-			// 	}
-			// 	else if (graph.currentEdgeStyle['shape'] == 'arrow')
-			// 	{
-			// 		edgeMiddleShapeDiv.className = 'geSprite geSprite-simplearrow';
-			// 	}
-			// 	else
-			// 	{
-			// 		edgeMiddleShapeDiv.className = 'geSprite geSprite-connection';
-			// 	}
-			// }
+
 			
 			// Updates icon for optinal line start shape
 			if (this.toolbar.lineStartMenu != null)
