@@ -2579,7 +2579,7 @@ HoverIcons.prototype.tolerance = (mxClient.IS_TOUCH) ? 6 : 0;
 /**
  * 
  */
-var div=createDiv();
+var div=createGoalDiv();
 HoverIcons.prototype.init = function()
 {
 	this.arrowUp = this.createArrow(this.triangleUp, mxResources.get('plusTooltip'));
@@ -2587,15 +2587,17 @@ HoverIcons.prototype.init = function()
 	this.arrowDown = this.createArrow(this.triangleDown, mxResources.get('plusTooltip'));
 	this.arrowLeft = this.createArrow(this.triangleLeft, mxResources.get('plusTooltip'));
 
-	this.myTable=this.createArrow(this.Information,'Information');
-	this.myTable.style.cursor='pointer';
-
+	this.myTableGoal=this.createArrow(this.Information,'Information');
+	this.myTableGoal.style.cursor='pointer';
+	this.myTableRequirement=this.createArrow(this.Information,'Information');
+	this.myTableRequirement.style.cursor='pointer';
 	//生成表格
-	this.myDiv=createDiv();
+	this.myGoalDiv=createGoalDiv();
+	this.myRequirementDiv=createRequirementDiv();
 	//show
 
-	this.myDiv.style.visibility='hidden';
-
+	this.myGoalDiv.style.visibility='hidden';
+	this.myRequirementDiv.style.visibility='hidden';
 
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
@@ -3056,10 +3058,11 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
+var flagGoal,flagRequirement;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
-	//this.myDiv=createDiv();
+	//this.myGoalDiv=createDiv();
 
 	if (this.currentState != null)
 	{
@@ -3118,91 +3121,117 @@ HoverIcons.prototype.repaint = function()
 			mxUtils.setOpacity(this.arrowLeft, this.inactiveOpacity);
 
 			//table
-			this.myTable.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
-			this.myTable.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
-			mxUtils.setOpacity(this.myTable,this.inactiveOpacity);
+			this.myTableGoal.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTableGoal.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTableGoal,this.inactiveOpacity);
 
-            this.myDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
-            this.myDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
-            //mxUtils.setOpacity(this.myDiv, this.inactiveOpacity);
-			var mdiv=this.myDiv;
+			this.myTableRequirement.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTableRequirement.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTableRequirement,this.inactiveOpacity);
 
+            this.myGoalDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+            this.myGoalDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
-			var value;
-			var usecaseDiscription;
-			var participant;
-			var preCondition;
-			var aftCondition;
-			var basicEventFlow;
-			var addtionEventFlow;
-			var businessRule;
-			var nonFunctionalRule;
+			this.myRequirementDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+			this.myRequirementDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+            //mxUtils.setOpacity(this.myGoalDiv, this.inactiveOpacity);
+
+			var mgoaldiv=this.myGoalDiv;
+			var mrequirementdiv=this.myRequirementDiv;
 			var that=this.currentState.cell;
-			this.myTable.onclick=function () {
+			var curr=this.currentState;
 
-				if (mdiv.style.visibility == 'visible') {
-					//that.value=document.getElementById("usecaseId").value;
-					that.usecaseDiscription=document.getElementById("usecaseDiscription").value;
-					that.participant=document.getElementById("participant").value;
-					that.preCondition=document.getElementById("preCondition").value;
-					that.aftCondition=document.getElementById("aftCondition").value;
-					that.basicEventFlow=document.getElementById("basicEventFlow").value;
-					that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
-					that.businessRule=document.getElementById("businessRule").value;
-					that.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
-
-					mdiv.style.visibility = 'hidden';
-
-					document.getElementById("usecaseId").value='';
-					document.getElementById("usecaseDiscription").value='';
-					document.getElementById("participant").value='';
-					document.getElementById("preCondition").value='';
-					document.getElementById("aftCondition").value='';
-					document.getElementById("basicEventFlow").value='';
-					document.getElementById("addtionEventFlow").value='';
-					document.getElementById("businessRule").value='';
-					document.getElementById("nonFunctionalRule").value='';
+			if(curr.style['shape']=='goal'){
+				mrequirementdiv.style.visibility='hidden';
+				if(flagGoal==1){
+					mgoaldiv.style.visibility='visible';
 				}
-				else {
-					value=that.value;
-					usecaseDiscription=that.usecaseDiscription;
-					participant=that.participant;
-					preCondition=that.participant;
-					aftCondition=that.aftCondition;
-					basicEventFlow=that.basicEventFlow;
-					addtionEventFlow=that.addtionEventFlow;
-					businessRule=that.businessRule;
-					nonFunctionalRule=that.nonFunctionalRule;
-					document.getElementById("usecaseId").innerHTML=that.value;
-					document.getElementById("usecaseDiscription").value=that.usecaseDiscription;
-					document.getElementById("participant").value=that.participant;
-					document.getElementById("preCondition").value=that.preCondition;
-					document.getElementById("aftCondition").value=that.aftCondition;
-					document.getElementById("basicEventFlow").value=that.basicEventFlow;
-					document.getElementById("addtionEventFlow").value=that.addtionEventFlow;
-					document.getElementById("businessRule").value=that.businessRule;
-					document.getElementById("nonFunctionalRule").value=that.nonFunctionalRule;
-					mdiv.style.visibility = 'visible';
+				else if(flagGoal==0){
+					mgoaldiv.style.visibility='hidden';
+				}
+			}
+			else if(curr.style['shape']=='requirement'){
+				mgoaldiv.style.visibility='hidden';
+			}
+			else if(curr.style['shape']=='requirement'){
+				mgoaldiv.style.visibility='hidden';
+				if(flagRequirement==1){
+					mrequirementdiv.style.visibility='visible';
+				}
+				else if(flagRequirement==0){
+					mrequirementdiv.style.visibility='hidden';
+				}
+			}
+			else if(curr.style['shape']=='goal'){
+				mrequirementdiv.style.visibility='hidden';
+			}
+			this.myTableGoal.onclick=function () {
+				if(curr.style['shape']=='goal'){
+					if (mgoaldiv.style.visibility == 'visible') {
+						//that.value=document.getElementById("usecaseId").value;
+						that.usecaseDiscription=document.getElementById("usecaseDiscription").value;
+						that.participant=document.getElementById("participant").value;
+						that.preCondition=document.getElementById("preCondition").value;
+						that.aftCondition=document.getElementById("aftCondition").value;
+						flagGoal=0;
+						mgoaldiv.style.visibility = 'hidden';
+
+						document.getElementById("usecaseId").value='';
+						document.getElementById("usecaseDiscription").value='';
+						document.getElementById("participant").value='';
+						document.getElementById("preCondition").value='';
+						document.getElementById("aftCondition").value='';
+					}
+					else {
+						flagGoal=1;
+						document.getElementById("usecaseId").innerHTML=that.value;
+						document.getElementById("usecaseDiscription").value=that.usecaseDiscription;
+						document.getElementById("participant").value=that.participant;
+						document.getElementById("preCondition").value=that.preCondition;
+						document.getElementById("aftCondition").value=that.aftCondition;
+						mgoaldiv.style.visibility = 'visible';
+					}
 				}
 			};
-			if(mdiv.style.visibility=="visible"){
+
+			this.myTableRequirement.onclick=function () {
+				if(curr.style['shape']=='requirement'){
+					if(mrequirementdiv.style.visibility=='visible'){
+						that.basicEventFlow=document.getElementById("basicEventFlow").value;
+						that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
+						that.businessRule=document.getElementById("businessRule").value;
+						that.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+						flagRequirement=0;
+						mrequirementdiv.style.visibility = 'hidden';
+
+						document.getElementById("reqId").value='';
+						document.getElementById("basicEventFlow").value='';
+						document.getElementById("addtionEventFlow").value='';
+						document.getElementById("businessRule").value='';
+						document.getElementById("nonFunctionalRule").value='';
+					}
+					else {
+						flagRequirement=1;
+						document.getElementById("reqId").innerHTML=that.value;
+						document.getElementById("basicEventFlow").value=that.basicEventFlow;
+						document.getElementById("addtionEventFlow").value=that.addtionEventFlow;
+						document.getElementById("businessRule").value=that.businessRule;
+						document.getElementById("nonFunctionalRule").value=that.nonFunctionalRule;
+						mrequirementdiv.style.visibility = 'visible';
+					}
+				}
+			};
+
+			if(mgoaldiv.style.visibility=="visible"){
 				if((document.getElementById("usecaseId").innerHTML==that.value)&&(document.getElementById("usecaseDiscription").value!=that.usecaseDiscription
 				||document.getElementById("participant").value!=that.participant
 				||document.getElementById("preCondition").value!=that.preCondition
-				||document.getElementById("aftCondition").value!=that.aftCondition
-				||document.getElementById("basicEventFlow").value!=that.basicEventFlow
-				||document.getElementById("addtionEventFlow").value!=that.addtionEventFlow
-				||document.getElementById("businessRule").value!=that.businessRule
-				||document.getElementById("nonFunctionalRule").value!=that.nonFunctionalRule)){
+				||document.getElementById("aftCondition").value!=that.aftCondition)){
 					this.currentState.cell.value=document.getElementById("usecaseId").innerHTML;
 					this.currentState.cell.usecaseDiscription=document.getElementById("usecaseDiscription").value;
 					this.currentState.cell.participant=document.getElementById("participant").value;
 					this.currentState.cell.preCondition=document.getElementById("preCondition").value;
 					this.currentState.cell.aftCondition=document.getElementById("aftCondition").value;
-					this.currentState.cell.basicEventFlow=document.getElementById("basicEventFlow").value;
-					this.currentState.cell.addtionEventFlow=document.getElementById("addtionEventFlow").value;
-					this.currentState.cell.businessRule=document.getElementById("businessRule").value;
-					this.currentState.cell.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
 				}
 				else{
 					document.getElementById("usecaseId").innerHTML=this.currentState.cell.value;
@@ -3210,14 +3239,33 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("participant").value=this.currentState.cell.participant;
 					document.getElementById("preCondition").value=this.currentState.cell.preCondition;
 					document.getElementById("aftCondition").value=this.currentState.cell.aftCondition;
+					// document.getElementById("basicEventFlow").value=this.currentState.cell.basicEventFlow;
+					// document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
+					// document.getElementById("businessRule").value=this.currentState.cell.businessRule;
+					// document.getElementById("nonFunctionalRule").value=this.currentState.cell.nonFunctionalRule;
+				}
+			}
+
+			if(mrequirementdiv.style.visibility=="visible"){
+				if((document.getElementById("reqeId").innerHTML==that.value)&&(document.getElementById("basicEventFlow").value!=that.basicEventFlow
+					||document.getElementById("addtionEventFlow").value!=that.addtionEventFlow
+					||document.getElementById("businessRule").value!=that.businessRule
+					||document.getElementById("nonFunctionalRule").value!=that.nonFunctionalRule)){
+					this.currentState.cell.value=document.getElementById("reqId").innerHTML;
+					this.currentState.cell.basicEventFlow=document.getElementById("basicEventFlow").value;
+					this.currentState.cell.addtionEventFlow=document.getElementById("addtionEventFlow").value;
+					this.currentState.cell.businessRule=document.getElementById("businessRule").value;
+					this.currentState.cell.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+				}
+				else{
+					document.getElementById("reqId").innerHTML=this.currentState.cell.value;
 					document.getElementById("basicEventFlow").value=this.currentState.cell.basicEventFlow;
 					document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
 					document.getElementById("businessRule").value=this.currentState.cell.businessRule;
 					document.getElementById("nonFunctionalRule").value=this.currentState.cell.nonFunctionalRule;
 				}
-
-
 			}
+
 			if (this.checkCollisions)
 			{
 				var right = this.graph.getCellAt(bds.x + bds.width +
@@ -3226,7 +3274,8 @@ HoverIcons.prototype.repaint = function()
 				var top = this.graph.getCellAt(this.currentState.getCenterX(), bds.y - this.triangleUp.height / 2); 
 				var bottom = this.graph.getCellAt(this.currentState.getCenterX(), bds.y + bds.height + this.triangleDown.height / 2); 
 				//table
-				var mtable=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
+				var mtablegoal=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
+				var mtablerequirement=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
 
 				// Shows hover icons large cell is behind all directions of current cell
 				if (right != null && right == left && left == top && top == bottom)
@@ -3252,23 +3301,31 @@ HoverIcons.prototype.repaint = function()
 					}
 
 					// 判断shape的类型
-					else if((this.currentState.style['shape']!='goal')&&(arrow==this.myTable))
+					else if((this.currentState.style['shape']!='goal')&&(arrow==this.myTableGoal))
 					{
 						arrow.style.visibility = 'hidden';
-						this.myDiv.style.visibility='hidden';
+
 					}
-					else{
+					else if((this.currentState.style['shape']=='goal')&&(arrow==this.myTableGoal)){
 						arrow.style.visibility = 'visible';
-						//this.myDiv.style.visibility="visible";
+						//this.myGoalDiv.style.visibility="visible";
 					}
+					else if((this.currentState.style['shape']!='requirement')&&(arrow==this.myTableRequirement)){
+						arrow.style.visibility = 'hidden';
+					}
+					else if((this.currentState.style['shape']=='requirement')&&(arrow==this.myTableRequirement)){
+						arrow.style.visibility = 'visible';
+					}
+
 				});
 
 				checkCollision(right, this.arrowRight);
 				checkCollision(left, this.arrowLeft);
 				checkCollision(top, this.arrowUp);
 				checkCollision(bottom, this.arrowDown);
-				checkCollision(mtable,this.myTable);
-                //checkCollision(mdiv,this.myDiv);
+				checkCollision(mtablegoal,this.myTableGoal);
+				checkCollision(mtablerequirement,this.myTableRequirement);
+                //checkCollision(mgoaldiv,this.myGoalDiv);
 			}
 			else
 			{
@@ -3276,9 +3333,9 @@ HoverIcons.prototype.repaint = function()
 				this.arrowRight.style.visibility = 'visible';
 				this.arrowUp.style.visibility = 'visible';
 				this.arrowDown.style.visibility = 'visible';
-				this.myTable.style.visibility='visible';
-
-                this.myDiv.style.visibility='visible';
+				this.myTableGoal.style.visibility='visible';
+				this.myTableRequirement.style.visibility='visible';
+                this.myGoalDiv.style.visibility='visible';
 			}
 			
 			if (this.graph.tooltipHandler.isEnabled())
@@ -3287,7 +3344,8 @@ HoverIcons.prototype.repaint = function()
 				this.arrowRight.setAttribute('title', mxResources.get('plusTooltip'));
 				this.arrowUp.setAttribute('title', mxResources.get('plusTooltip'));
 				this.arrowDown.setAttribute('title', mxResources.get('plusTooltip'));
-				this.myTable.setAttribute('title','Information');
+				this.myTableGoal.setAttribute('title','Information');
+				this.myTableRequirement.setAttribute('title','Information');
 			}
 			else
 			{
@@ -3295,7 +3353,8 @@ HoverIcons.prototype.repaint = function()
 				this.arrowRight.removeAttribute('title');
 				this.arrowUp.removeAttribute('title');
 				this.arrowDown.removeAttribute('title');
-				this.myTable.removeAttribute('title');
+				this.myTableGoal.removeAttribute('title');
+				this.myTableRequirement.removeAttribute('title');
 			}
 		}
 		else
@@ -3466,9 +3525,11 @@ HoverIcons.prototype.setCurrentState = function(state)
 
 	this.graph.container.appendChild(this.arrowRight);
 	this.graph.container.appendChild(this.arrowLeft);
-	this.graph.container.appendChild(this.myTable);
+	this.graph.container.appendChild(this.myTableGoal);
+	this.graph.container.appendChild(this.myTableRequirement);
 
-	this.graph.container.appendChild(this.myDiv);
+	this.graph.container.appendChild(this.myGoalDiv);
+	this.graph.container.appendChild(this.myRequirementDiv);
 
 
 

@@ -618,21 +618,6 @@
 	 */
 	Sidebar.prototype.initPalettes = function()
 	{
-		var imgDir = GRAPH_IMAGE_PATH;
-		var dir = STENCIL_PATH;
-		var signs = this.signs;
-		var gcp = this.gcp;
-		var rack = this.rack;
-		var pids = this.pids;
-		var cisco = this.cisco;
-		var sysml = this.sysml;
-		var eip = this.eip;
-		var gmdl = this.gmdl;
-		var office = this.office;
-		var veeam = this.veeam;
-		var archimate3 = this.archimate3;
-		var electrical = this.electrical;
-		
 		if (urlParams['createindex'] == '1')
 		{
 			mxLog.show();
@@ -646,12 +631,13 @@
 		// this.addUmlPalette(false);
 		//this.addErPalette();
 		 this.addBasicPalette();
+		 this.addArchiMatePalette();
 		// this.addFlowchartPalette();
 		// this.addNetworkPalette();
-		// this.addAzurePalette();
+		 this.addAzurePalette();
 		// this.addCitrixPalette();
 		// this.addMSCAEPalette();
-		// this.addBpmnPalette(dir, false);
+		 this.addBpmnPalette();
 		// this.addAWS3Palette();
 		// this.addAWS3DPalette();
 		// this.addLeanMappingPalette();
@@ -1011,7 +997,7 @@
     //
 	// 	this.addCabinetsPalette();
 	// 	this.addArchimate3Palette();
-	// 	this.addArchiMatePalette();
+
 	// 	this.addWebIconsPalette();
 	// 	this.addWebLogosPalette();
 	//

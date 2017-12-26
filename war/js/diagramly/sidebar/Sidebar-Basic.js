@@ -10,11 +10,11 @@
 		// var gn = 'mxgraph.basic';
 		// var dt = '';
 		var sb=this;
-		this.addPaletteFunctions('basic', "HELLO", false,
+		this.addPaletteFunctions('basic', "Basic", false,
 		[
 			this.createVertexTemplateEntry('whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFFFFF;strokeColor=#000000', 120, 40, '', 'Entity'),
 			this.createVertexTemplateEntry('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#000000', 120, 40, '', 'Goal'),
-			this.createVertexTemplateEntry('shape=parallelogram;strokeWidth=3;whiteSpace=wrap;html=1;right=0;top=0;bottom=0;fillColor=#F5F5F5;routingCenterX=-0.5;strokeColor=#000000', 120, 40, '', 'Requirement'),
+			this.createVertexTemplateEntry('shape=requirement;strokeWidth=3;whiteSpace=wrap;html=1;right=0;top=0;bottom=0;fillColor=#F5F5F5;routingCenterX=-0.5;strokeColor=#000000', 120, 40, '', 'Requirement'),
 			this.createVertexTemplateEntry('shape=parallelogram;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=#cccc00;strokeColor=#000000', 120, 40, '', 'Expectation'),
 			this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#FF9999;strokeColor=#000000', 120, 40, '', 'Obstacle'),
 			this.createVertexTemplateEntry('shape=ellipse;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffff33;strokeColor=#000000', 120, 40, '', 'Operation'),
@@ -23,8 +23,8 @@
 			this.createVertexTemplateEntry('shape=event;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFFFFF;strokeColor=#000000', 120, 40, '', 'Event'),
 			this.createVertexTemplateEntry('shape=hexagon;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFFFFF;strokeColor=#000000', 80, 40, '', 'Agent'),
 			this.createVertexTemplateEntry('shape=ellipse;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffff33;aspect=fixed;strokeColor=#000000', 20, 20, '', ' '),
-			//this.createVertexTemplateEntry('shape=ellipse;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#CC0000;aspect=fixed;strokeColor=#000000', 20, 20, '', ' '),
-			//this.createEdgeTemplateEntry('startArrow=none;startSize=7;endArrow=classic;endFill=1;endSize=10;dashed=1;html=1;', 100, 0, '', 'Message Flow 1', null, 'bpmn message flow'),
+			this.createVertexTemplateEntry('shape=ellipse;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#CC0000;aspect=fixed;strokeColor=#000000', 20, 20, '', ' '),
+			this.createEdgeTemplateEntry('startArrow=none;startSize=7;endArrow=classic;endFill=1;endSize=10;dashed=1;html=1;', 100, 0, '', 'Message Flow 1', null, 'bpmn message flow'),
 			this.addEntry('FF', function()
 			{
 				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000');

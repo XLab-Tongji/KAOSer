@@ -15,7 +15,22 @@ GoalShape.prototype.redrawPath = function(c, x, y, w, h)
 };
 
 mxCellRenderer.prototype.defaultShapes['goal'] = GoalShape;
+function RequirementShape()
+{
+    mxActor.call(this);
+};
+mxUtils.extend(RequirementShape, mxActor);
+RequirementShape.prototype.size = 0.2;
+RequirementShape.prototype.redrawPath = function(c, x, y, w, h)
+{
+    var dx = w * Math.max(0, Math.min(1, parseFloat(mxUtils.getValue(this.style, 'size', this.size))));
+    var arcSize = mxUtils.getValue(this.style, mxConstants.STYLE_ARCSIZE, mxConstants.LINE_ARCSIZE) / 2;
+    this.addPoints(c, [new mxPoint(0, h), new mxPoint(dx, 0), new mxPoint(w, 0), new mxPoint(w - dx, h)],
+        this.isRounded, arcSize, true);
+    c.end();
+};
 
+mxCellRenderer.prototype.defaultShapes['requirement'] = RequirementShape;
 
 function ObstacleShape()
 {
@@ -91,7 +106,7 @@ ObstacleShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 GoalShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 DomainPropertyShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 EventShape.prototype.constraints = mxRectangleShape.prototype.constraints;
-
+RequirementShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 // function mxLine(bounds, stroke, strokewidth)
 // {
 //     mxShape.call(this);
