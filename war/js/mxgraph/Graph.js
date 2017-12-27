@@ -3150,9 +3150,7 @@ HoverIcons.prototype.repaint = function()
 					mgoaldiv.style.visibility='hidden';
 				}
 			}
-			else if(curr.style['shape']=='requirement'){
-				mgoaldiv.style.visibility='hidden';
-			}
+
 			else if(curr.style['shape']=='requirement'){
 				mgoaldiv.style.visibility='hidden';
 				if(flagRequirement==1){
@@ -3239,10 +3237,6 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("participant").value=this.currentState.cell.participant;
 					document.getElementById("preCondition").value=this.currentState.cell.preCondition;
 					document.getElementById("aftCondition").value=this.currentState.cell.aftCondition;
-					// document.getElementById("basicEventFlow").value=this.currentState.cell.basicEventFlow;
-					// document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
-					// document.getElementById("businessRule").value=this.currentState.cell.businessRule;
-					// document.getElementById("nonFunctionalRule").value=this.currentState.cell.nonFunctionalRule;
 				}
 			}
 

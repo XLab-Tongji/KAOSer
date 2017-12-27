@@ -107,24 +107,6 @@ GoalShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 DomainPropertyShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 EventShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 RequirementShape.prototype.constraints = mxRectangleShape.prototype.constraints;
-// function mxLine(bounds, stroke, strokewidth)
-// {
-//     mxShape.call(this);
-//     this.bounds = bounds;
-//     this.stroke = stroke;
-//     this.strokewidth = (strokewidth != null) ? strokewidth : 1;
-// };
-// mxUtils.extend(mxLine, mxShape);
-//
-//
-// mxLine.prototype.paintVertexShape = function(path, x, y, w, h)
-// {
-//     var mid = y + h / 2;
-//
-//     path.begin();
-//     path.moveTo(x, mid);
-//     path.lineTo(x + w, mid);
-//     path.stroke();
-// };
-// mxLine.prototype.defaultEdge['myline']=mxLine;
+
+
 
