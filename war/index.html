@@ -8,7 +8,7 @@
     <meta name="Description" content="KAOS is free online diagram software for making flowcharts, process diagrams, org charts, UML, ER and network diagrams">
     <meta name="Keywords" content="diagram, online, flow chart, flowchart maker, uml, erd">
     <meta itemprop="name" content="KAOS - free flowchart maker and diagrams online">
-	<meta itemprop="description" content="draw.io is a free online diagramming application  and flowchart maker . You can use it to create UML, entity relationship,
+	<meta itemprop="description" content="KAOS is a free online diagramming application  and flowchart maker . You can use it to create UML, entity relationship,
 		org charts, BPMN and BPM, database schema and networks. Also possible are telecommunication network, workflow, flowcharts, maps overlays and GIS, electronic 
 		circuit and social network diagrams.">
 	<meta itemprop="image" content="https://lh4.googleusercontent.com/-cLKEldMbT_E/Tx8qXDuw6eI/AAAAAAAAAAs/Ke0pnlk8Gpg/w500-h344-k/BPMN%2Bdiagram%2Brc2f.png">
@@ -343,6 +343,30 @@
 		</p>
 	</div>
 </div>
+<div id="light" class="white_content">
+	<p align="center">保存信息</p>
+	<form id="saveFiles" method="get" action="index.html">
+		<table>
+			<tr>
+				<td align="right" style="width: 150px">
+					<label for="txtname">名称</label>
+				</td>
+				<td>
+					<input type="text" id="txtname" name="myname"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" style="width: 150px"><button id="affirm" type="button">确认
+				</button>
+				</td>
+				<td align="left">
+					<button id="back" type="button" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">取消</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<div id="fade" class="black_overlay"></div>
 <script type="text/javascript">
 /**
  * Main

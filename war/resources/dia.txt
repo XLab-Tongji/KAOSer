@@ -707,3 +707,5 @@ webLink=Web Link
 wireframes=Wireframes
 saveToDatabase=Save to Database
 mongo=MongoDB
+exportTemplate=Export Template
+Template=Template

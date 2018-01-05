@@ -1107,18 +1107,15 @@ Actions.prototype.init = function()
 		}
 	}).isEnabled = isGraphEnabled;
 
-
 	//add new action
+	var div = document.getElementById("light");
+	var div2=document.getElementById("fade");
+	var jsonText;
+	//序列化后的json
+	var jsonStr;
 	this.addAction('mongo',function(){
-		var usecaseName=document.getElementsByName("usecaseName").value;
-		var usecaseDiscription=document.getElementsByName("usecaseDiscription").value;
-		var participant=document.getElementsByName("participant").value;
-		var preCondition=document.getElementsByName("preCondition").value;
-		var aftCondition=document.getElementsByName("aftCondition").value;
-		var basicEventFlow=document.getElementsByName("basicEventFlow").value;
-		var addtionEventFlow=document.getElementsByName("addtionEventFlow").value;
-		var businessRule=document.getElementsByName("businessRule").value;
-		var nonFunctionalRule=document.getElementsByName("nonFunctionalRule").value;
+		div.style.display="block";
+		div2.style.display="block";
 		var encoder = new mxCodec();
 		var node = encoder.encode(graph.getModel());
 		var result=mxUtils.getXml(node,'\n');
@@ -1126,32 +1123,54 @@ Actions.prototype.init = function()
 		var json = xotree.parseXML(result);
 		//将json对象转为格式化的字符串
 		var dumper = new JKL.Dumper();
-		var jsonText = dumper.dump(json);
+		jsonText = dumper.dump(json);
 		mxUtils.popup(jsonText, true);
 		//对数组进行json序列化，不然无法传递到服务端
-		var jsonStr = JSON.stringify(jsonText);
-		$.ajax({
-			type:"POST",
-			url:"http://localhost:8880/test",
-			data:{jsname:'hei',
-				jsonStr:jsonStr,
-				usecaseName:usecaseName,
-				usecaseDiscription:usecaseDiscription,
-				participant:participant,
-				preCondition:preCondition,
-				aftCondition:aftCondition,
-				basicEventFlow:basicEventFlow,
-				addtionEventFlow:addtionEventFlow,
-				businessRule:businessRule,
-				nonFunctionalRule:nonFunctionalRule,},
-			dataType:"json",
-			success:function (message) {
-
-			}
-		});
+		jsonStr = JSON.stringify(jsonText);
+		alert(jsonStr);
 	});
+	$("#affirm").click(function () {
+		var jsname=document.getElementById("txtname").value;
+		if(jsname==""){
+			alert("名称不能为空");
+		}
+		else{
+			document.getElementById('light').style.display='none';
+			document.getElementById('fade').style.display='none';
+			$.ajax({
+				type:"POST",
+				url:"http://localhost:8880/save",
+				data:{jsname:jsname,jsonStr:jsonStr},
+				dataType:"json",
+				success:function (data) {
+					if(data=="success"){
+						alert("成功");
+					}
+					else{
+						alert("名称已存在");
+					}
+				}
+			});
+		}
 
-
+	});
+    this.addAction('Template',mxUtils.bind(this,function () {
+        $.ajax({
+            type:"POST",
+            url:"http://localhost:8880/template",
+            data:{jsonStr:jsonStr},
+            dataType:"json",
+            success:function(data){
+                if(data==1)
+                {
+                    alert("导出成功");
+                }
+                else{
+                    alert("导出失败");
+                }
+            }
+        });
+    }));
 	action = this.addAction('layers', mxUtils.bind(this, function()
 	{
 		if (this.layersWindow == null)
