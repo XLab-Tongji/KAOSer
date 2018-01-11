@@ -1,4 +1,4 @@
-#fade{
+#fade,#fade1{
 	display: none;
 	position: absolute;
 	top: 0%;
@@ -11,7 +11,7 @@
 	opacity:.80;
 	filter: alpha(opacity=88);
 }
-#light {
+#light ,#lightExport{
 	text-align: center;
 	display: none;
 	position: absolute;

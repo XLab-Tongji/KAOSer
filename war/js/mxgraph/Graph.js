@@ -3281,7 +3281,8 @@ HoverIcons.prototype.repaint = function()
 				}
 				
 				var currentGeo = this.graph.getCellGeometry(this.currentState.cell);
-				
+				var current=this.currentState.cell;
+				var cur=this.currentState;
 				var checkCollision = mxUtils.bind(this, function(cell, arrow)
 				{
 					var geo = this.graph.model.isVertex(cell) && this.graph.getCellGeometry(cell);
@@ -3297,10 +3298,12 @@ HoverIcons.prototype.repaint = function()
 					// 判断shape的类型
 					else if((this.currentState.style['shape']!='goal')&&(arrow==this.myTableGoal))
 					{
+
 						arrow.style.visibility = 'hidden';
 
 					}
 					else if((this.currentState.style['shape']=='goal')&&(arrow==this.myTableGoal)){
+						current.flag="goal";
 						arrow.style.visibility = 'visible';
 						//this.myGoalDiv.style.visibility="visible";
 					}
@@ -3308,7 +3311,11 @@ HoverIcons.prototype.repaint = function()
 						arrow.style.visibility = 'hidden';
 					}
 					else if((this.currentState.style['shape']=='requirement')&&(arrow==this.myTableRequirement)){
+						current.flag="requirement";
 						arrow.style.visibility = 'visible';
+					}
+					else{
+						current.flag=cur.style['shape'];
 					}
 
 				});

@@ -1110,6 +1110,8 @@ Actions.prototype.init = function()
 	//add new action
 	var div = document.getElementById("light");
 	var div2=document.getElementById("fade");
+	var div3 = document.getElementById("lightExport");
+	var div4=document.getElementById("fade1");
 	var jsonText;
 	//序列化后的json
 	var jsonStr;
@@ -1154,22 +1156,44 @@ Actions.prototype.init = function()
 		}
 
 	});
+	$("#affirm1").click(function () {
+		var jsname=document.getElementById("txtname1").value;
+		if(jsname==""){
+			alert("名称不能为空");
+		}
+		else{
+			document.getElementById('lightExport').style.display='none';
+			document.getElementById('fade1').style.display='none';
+			$.ajax({
+				type:"POST",
+				url:"http://localhost:8880/template",
+				data:{jsname:jsname,jsonStr:jsonStr},
+				dataType:"json",
+				success:function (data) {
+					if(data=="success"){
+						alert("成功");
+					}
+					else{
+						alert("名称已存在");
+					}
+				}
+			});
+		}
+
+	});
     this.addAction('Template',mxUtils.bind(this,function () {
-        $.ajax({
-            type:"POST",
-            url:"http://localhost:8880/template",
-            data:{jsonStr:jsonStr},
-            dataType:"json",
-            success:function(data){
-                if(data==1)
-                {
-                    alert("导出成功");
-                }
-                else{
-                    alert("导出失败");
-                }
-            }
-        });
+		div3.style.display="block";
+		div4.style.display="block";
+		var encoder = new mxCodec();
+		var node = encoder.encode(graph.getModel());
+		var result=mxUtils.getXml(node,'\n');
+		var xotree = new XML.ObjTree();
+		var json = xotree.parseXML(result);
+		//将json对象转为格式化的字符串
+		var dumper = new JKL.Dumper();
+		jsonText = dumper.dump(json);
+		//对数组进行json序列化，不然无法传递到服务端
+		jsonStr = JSON.stringify(jsonText);
     }));
 	action = this.addAction('layers', mxUtils.bind(this, function()
 	{

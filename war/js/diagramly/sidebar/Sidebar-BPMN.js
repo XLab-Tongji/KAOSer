@@ -7,7 +7,7 @@
 		[
 			 this.createVertexTemplateEntry('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#000000', 120, 40, '', 'Goal'),
 			 this.createVertexTemplateEntry('shape=requirement;strokeWidth=3;whiteSpace=wrap;html=1;right=0;top=0;bottom=0;fillColor=#F5F5F5;routingCenterX=-0.5;strokeColor=#000000', 120, 40, '', 'Requirement'),
-			 this.createVertexTemplateEntry('shape=parallelogram;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=#cccc00;strokeColor=#000000', 120, 40, '', 'Expectation'),
+			 this.createVertexTemplateEntry('shape=expectation;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=#cccc00;strokeColor=#000000', 120, 40, '', 'Expectation'),
 			 this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#FF9999;strokeColor=#000000', 120, 40, '', 'Obstacle'),
 			 this.createVertexTemplateEntry('shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#E1D5E7;strokeColor=#000000', 120, 40, '', 'Domain Property'),
 			this.addEntry('FF', function()

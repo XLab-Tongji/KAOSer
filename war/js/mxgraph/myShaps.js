@@ -15,6 +15,23 @@ GoalShape.prototype.redrawPath = function(c, x, y, w, h)
 };
 
 mxCellRenderer.prototype.defaultShapes['goal'] = GoalShape;
+
+function ExpectationShape()
+{
+    mxActor.call(this);
+};
+mxUtils.extend(ExpectationShape, mxActor);
+ExpectationShape.prototype.size = 0.2;
+ExpectationShape.prototype.redrawPath = function(c, x, y, w, h)
+{
+    var dx = w * Math.max(0, Math.min(1, parseFloat(mxUtils.getValue(this.style, 'size', this.size))));
+    var arcSize = mxUtils.getValue(this.style, mxConstants.STYLE_ARCSIZE, mxConstants.LINE_ARCSIZE) / 2;
+    this.addPoints(c, [new mxPoint(0, h), new mxPoint(dx, 0), new mxPoint(w, 0), new mxPoint(w - dx, h)],
+        this.isRounded, arcSize, true);
+    c.end();
+};
+
+mxCellRenderer.prototype.defaultShapes['expectation'] = ExpectationShape;
 function RequirementShape()
 {
     mxActor.call(this);
@@ -107,6 +124,7 @@ GoalShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 DomainPropertyShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 EventShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 RequirementShape.prototype.constraints = mxRectangleShape.prototype.constraints;
+ExpectationShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 
 
 
