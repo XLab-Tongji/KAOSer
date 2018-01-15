@@ -344,53 +344,36 @@
 	</div>
 </div>
 <div id="light" class="white_content">
-	<p align="center">保存信息</p>
-	<form id="saveFiles" method="post" action="index.html">
-		<table>
-			<tr>
-				<td align="right" style="width: 150px">
-					<label for="txtname">名称</label>
-				</td>
-				<td>
-					<input type="text" id="txtname" name="myname"/>
-				</td>
-			</tr>
-			<tr>
-				<td align="right" style="width: 150px"><button id="affirm" type="button">确认
-				</button>
-				</td>
-				<td align="left">
-					<button id="back" type="button" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">取消</button>
-				</td>
-			</tr>
-		</table>
+	<form id="SaveFiles" method="post" action="index.html">
+		<h3>Quick Save</h3>
+		<fieldset>
+			<input placeholder="Your save name" id="txtname" type="text" tabindex="1" required autofocus>
+		</fieldset>
+		<fieldset>
+			<button id="affirm" type="button">确认</button>
+		</fieldset>
+		<fieldset>
+			<button id="back" type="button" onclick="document.getElementById('light').style.display='none';
+			document.getElementById('fade').style.display='none'">取消</button>
+		</fieldset>
 	</form>
 </div>
 <div id="fade" class="black_overlay"></div>
 <div id="lightExport" class="white_content">
-    <p align="center">导出信息</p>
     <form id="ExportFiles" method="post" action="index.html">
-        <table>
-            <tr>
-                <td align="right" style="width: 150px">
-                    <label for="txtname">名称</label>
-                </td>
-                <td>
-                    <input type="text" id="txtname1" name="myname"/>
-                </td>
-            </tr>
-            <tr>
-                <td align="right" style="width: 150px"><button id="affirm1" type="button">确认
-                </button>
-                </td>
-                <td align="left">
-                    <button id="back1" type="button" onclick="document.getElementById('lightExport').style.display='none';document.getElementById('fade1').style.display='none'">取消</button>
-                </td>
-            </tr>
-        </table>
-    </form>
+		<h3>Quick Export</h3>
+		<fieldset>
+			<input placeholder="Your export name" id="txtname1" type="text" tabindex="1" required autofocus>
+		</fieldset>
+		<fieldset>
+			<button id="affirm1" type="button">确认</button>
+		</fieldset>
+		<fieldset>
+			<button id="back1" type="button" onclick="document.getElementById('lightExport').style.display='none';
+			document.getElementById('fade').style.display='none'">取消</button>
+		</fieldset>
+	</form>
 </div>
-<div id="fade1" class="black_overlay"></div>
 <script type="text/javascript">
 /**
  * Main
