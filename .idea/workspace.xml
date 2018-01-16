@@ -2,753 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/build.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/compiler.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/jars/commons-codec-1.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/jars/commons-fileupload-1.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/jars/commons-lang3-3.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/jars/gae-stub-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/jars/gson-2.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/build/jars/servlet-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/mxgraph/mxClient.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/propgen/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/propgen/com/mxgraph/properties/PropGen.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/ChangeLog" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/build.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/description.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/images/drawio448.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/pgp-keyring" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/pgp-signature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/rootFiles" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/sandstorm-pkgdef.capnp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/server.c++" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/shortDesc.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/ssindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/sandstorm/stage.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/emptyfile.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/special'filename.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf16.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8-uncompressed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8.gliffy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8.vdx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8.vsdx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/etc/unicode-tests/utf8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/anchors.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/animation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/autolayout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/boundary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/clipboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/codec.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/collapse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/constituent.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/contexticons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/control.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/dragsource.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/drop.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/dynamicloading.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/dynamicstyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/dynamictoolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/edgetolerance.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/diagrameditor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/editor-commons.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/keyhandler-commons.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/keyhandler-minimal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/layouteditor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/processeditor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/wfeditor-commons.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/wfgraph-commons.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/wftoolbar-commons.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/config/workfloweditor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/css/process.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/css/wordpress.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/diagrameditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/diagrams/empty.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/diagrams/swimlanes.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/diagrams/travel-booking.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/diagrams/withdrawal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/grapheditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/help/index-all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/help/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/actor.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/alignbottom.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/aligncenter.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/alignleft.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/alignmiddle.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/alignright.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/aligntop.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/arrow.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/bell.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/block_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/block_start.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/bold.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/bottom.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/box.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/camera.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/center.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/classic_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/classic_start.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/cloud.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/cmp-bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/collapse.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/connect.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/connector.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/console.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/copy.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/cube_green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/cut.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/cylinder.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/diagram.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/diamond_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/diamond_start.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/doubleellipse.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/draw/drawbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/draw/drawbgcolor.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/draw/drawfooter.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/draw/drawheader.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/draw/mxlogo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/dude3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/earth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/ellipse.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/entity.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/expand.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/fillcolor.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/fit.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/font.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/fontcolor.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/gear.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/gear.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/grid.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/group.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/help.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/hexagon.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/hline.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/house.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/house.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/image.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/italic.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/left.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/linecolor.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/link.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/middle.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/new.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/open.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/open_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/open_start.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/outline.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/oval_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/oval_start.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/flash.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/forbidden.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/help.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/house.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/information.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/lightbulb_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/pencil.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/printer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/user3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/users3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/overlays/workplace.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/package.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/pan.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/paste.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/plain.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/preferences.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/press.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/preview.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/print.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/printer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/properties.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/rectangle.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/redo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/refresh.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/rhombus.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/right.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/rounded.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/save.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/saveas.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/script.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/select.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/server.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/straight.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/swimlane.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/cancel_end.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/cancel_intermediate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/event.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/event_end.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/event_intermediate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/fork.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/inclusive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/merge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/message.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/message_end.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/message_intermediate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/multiple.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/rule.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_cancel_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_cancel_intermediate.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_error.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_event.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_event_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_event_intermediate.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_fork.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_inclusive.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_link.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_merge.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_message.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_message_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_message_intermediate.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_multiple.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_rule.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_terminate.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/small_timer.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/terminate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/symbols/timer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/tasks.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/text.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/toback.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/tofront.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/toolbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/top.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/tree.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/triangle.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/underline.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/undo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/ungroup.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/vertical.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/workplace.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/wrench.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/zoom.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/zoomactual.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/zoomin.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/images/zoomout.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/layouteditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/processeditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/resources/app.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/resources/app_de.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/resources/app_zh.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/editors/workfloweditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/events.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/extendcanvas.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/fileio.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/fileio.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/fileio.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/fixedicon.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/fixedpoints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/folding.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/java/src/com/mxgraph/examples/web/GraphEditor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/java/src/com/mxgraph/examples/web/OpenServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/checkmark.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/clear.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/collapsed.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/dropdown.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/dropdown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/edit.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/expanded.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/grid.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/handle-fixed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/handle-main.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/handle-rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/handle-secondary.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/handle-terminal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/help.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/locked.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/nocolor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/round-drop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/tooltip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/transparent.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/triangle-down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/triangle-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/triangle-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/triangle-up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/images/unlocked.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Actions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Dialogs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Editor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/EditorUi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Format.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Graph.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Menus.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Shapes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Sidebar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/js/Toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/jscolor/arrow.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/jscolor/cross.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/jscolor/hs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/jscolor/hv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/jscolor/jscolor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/open.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/resources/grapheditor.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/resources/grapheditor_de.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/resources/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/resources/help_de.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/sanitizer/sanitizer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/arrows.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/basic.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/bpmn.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Credit_Card_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Doctor1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Earth_globe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Email_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Empty_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Firewall_02_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Full_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Gear_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Graph_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Laptop_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Lock_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/MacBook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Monitor_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Piggy_Bank_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Pilot1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Printer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Router_Icon_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Safe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Security1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Server_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Shopping_Cart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Software_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Soldier1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Suit1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Suit2_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Suit3_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Tech1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Telesales1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Virtual_Machine_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Virus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Wireless_Router_N_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Worker1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/Workstation_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/iMac_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/clipart/iPad_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/stencils/flowchart.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/grapheditor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/help.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/sprites.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/thumb_horz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/thumb_vertical.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/styles/up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grapheditor/www/viewer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/graphlayout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/grid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/groups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/guides.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/handles.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/helloport.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/helloworld.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/hierarchicallayout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/hovericons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/hoverstyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/htmllabel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/ie9svg.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/add.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/camera.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/check.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/connector.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/copy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/cut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/delete2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/dot.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/export1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/fit_to_size.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/gradient_background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/green-dot.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/group.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/handle-connect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/handle-main.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/column.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/earth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/gear.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/keys.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/mail_new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/server.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/icons48/table.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/key.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/navigate_minus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/navigate_plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/paste.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/press32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/print32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/printer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/redo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/sidebar_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/spacer.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/toolbar_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/undo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/view_1_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/view_1_132.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/view_next.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/view_previous.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/wires-grid.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/zoom_in.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/zoom_in32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/zoom_out.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/images/zoom_out32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/indicators.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/jquery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/jsondata.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/labelposition.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/labels.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/layers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/lod.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/map.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/markers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/menustyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/merge.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/monitor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/morph.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/offpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/orgchart.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/orthogonal.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/overlays.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/pagebreaks.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/perimeter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/permissions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/portrefs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/ports.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/radialtreelayout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/schema.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/scrollbars.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/secondlabel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/serverview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/shape.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/showregion.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/standardsmode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/stencils.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/stencils.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/stylesheet.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/swimlanes.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/thread.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/touch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/uiconfig.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/uiconfig.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/userobject.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/validation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/visibility.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/webpack/anchors.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/webpack/src/anchors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/windows.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/wires.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/examples/wrapping.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/mxClient.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/mxClient.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/css/explorer.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/button.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/close.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/collapsed.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/error.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/expanded.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/maximize.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/minimize.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/normalize.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/point.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/resize.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/separator.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/submenu.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/transparent.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/warning.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/window-title.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/images/window.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/editor/mxDefaultKeyHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/editor/mxDefaultPopupMenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/editor/mxDefaultToolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/editor/mxEditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxCellHighlight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxCellMarker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxCellTracker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxConnectionHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxConstraintHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxEdgeHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxEdgeSegmentHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxElbowEdgeHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxGraphHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxHandle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxKeyHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxPanningHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxPopupMenuHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxRubberband.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxSelectionCellsHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxTooltipHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/handler/mxVertexHandler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/index.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxCellCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxChildChangeCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxCodecRegistry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxDefaultKeyHandlerCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxDefaultPopupMenuCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxDefaultToolbarCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxEditorCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxGenericChangeCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxGraphCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxGraphViewCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxModelCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxObjectCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxRootChangeCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxStylesheetCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/io/mxTerminalChangeCodec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/model/mxGraphAbstractHierarchyCell.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/model/mxGraphHierarchyEdge.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/model/mxGraphHierarchyModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/model/mxGraphHierarchyNode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/model/mxSwimlaneModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/mxHierarchicalLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/mxSwimlaneLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/stage/mxCoordinateAssignment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/stage/mxHierarchicalLayoutStage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/stage/mxMedianHybridCrossingReduction.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/stage/mxMinimumCycleRemover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/hierarchical/stage/mxSwimlaneOrdering.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxCircleLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxCompactTreeLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxCompositeLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxEdgeLabelLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxFastOrganicLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxGraphLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxParallelEdgeLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxPartitionLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxRadialTreeLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/layout/mxStackLayout.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/model/mxCell.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/model/mxCellPath.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/model/mxGeometry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/model/mxGraphModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/mxClient.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxActor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxArrow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxArrowConnector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxCloud.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxConnector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxCylinder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxDoubleEllipse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxEllipse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxHexagon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxImageShape.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxLabel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxLine.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxMarker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxPolyline.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxRectangleShape.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxRhombus.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxShape.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxStencil.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxStencilRegistry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxSwimlane.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxText.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/shape/mxTriangle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxAbstractCanvas2D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxAnimation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxAutoSaveManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxClipboard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxConstants.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxDictionary.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxDivResizer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxDragSource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxEffects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxEvent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxEventObject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxEventSource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxGuide.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxImage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxImageBundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxImageExport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxLog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxMorphing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxMouseEvent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxObjectIdentity.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxPanningManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxPoint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxPopupMenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxRectangle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxResources.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxSvgCanvas2D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxToolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxUndoManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxUndoableEdit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxUrlConverter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxUtils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxVmlCanvas2D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxWindow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxXmlCanvas2D.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/util/mxXmlRequest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxCellEditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxCellOverlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxCellRenderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxCellState.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxCellStatePreview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxConnectionConstraint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxEdgeStyle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxGraph.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxGraphSelectionModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxGraphView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxLayoutManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxMultiplicity.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxOutline.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxPerimeter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxPrintPreview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxStyleRegistry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxStylesheet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxSwimlaneManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/js/view/mxTemporaryCellStates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/resources/editor.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/resources/editor_de.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/resources/editor_zh.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/resources/graph.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/resources/graph_de.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/src/resources/graph_zh.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/ArrowMapping.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/DashStyleMapping.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/GliffyDiagramConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/LineMapping.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/PostDeserializer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/StencilTranslator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/gliffyTranslation.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Constraint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Constraints.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Diagram.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/EmbeddedResources.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/GliffyObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/GliffyText.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Graphic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/LinkMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Metadata.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Stage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlConstants.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlKey.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlKeyManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlPort.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlShapeEdge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlShapeNode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/mxGraphMlCodec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/mxVsdxCodec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/mxVssxCodec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Paragraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Section.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Shape.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/ShapePageId.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Style.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/VsdxShape.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/export/ModelExtAttrib.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/export/mxVsdxExporter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/ArcTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/DelRow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/Ellipse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/EllipticalArcTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/InfiniteLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/LineTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/MoveTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/NURBSTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/PolylineTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelCubBezTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelEllipticalArcTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelLineTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelMoveTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelQuadBezTo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/Row.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RowFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/SplineKnot.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/SplineStart.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxPathDebug.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxPropertiesManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxConnect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxConstants.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxGeometry.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxGeometryList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxMaster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxTheme.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/edgeNameU.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/[Content_Types].xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/_rels/.rels" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/docProps/app.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/docProps/core.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/docProps/custom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/_rels/document.xml.rels" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/document.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/masters/_rels/masters.xml.rels" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/masters/masters.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/pages/_rels/page1.xml.rels" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/windows.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/nameU.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/nameU.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/Color.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/FillStyle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/FillStyleFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/GradFill.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/HSLColor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/HSVColor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/HslClr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/LineStyle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/LineStyleExt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/NoFillStyle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/OoxmlColor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/OoxmlColorFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/PrstClr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/QuickStyleVals.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SchemeClr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/ScrgbClr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SolidFillStyle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SrgbClr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SysClr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/AppShortcutServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/Constants.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/EmbedServlet2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/GitHubServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/GoogleGadgetServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/ImgurRedirectServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/ImportServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/LogServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/OpenServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/ProxyServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/SaveServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/Utils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/online/mxBase64.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/view/mxGraphHeadless.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/mxgraph/vsdxutils/vsdxBatchConvert.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/log4j.properties" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/index.html" afterPath="$PROJECT_DIR$/war/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/js/mxgraph/Actions.js" afterPath="$PROJECT_DIR$/war/js/mxgraph/Actions.js" />
@@ -770,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="375" selection-end-column="6" />
+            <state relative-caret-position="1833">
+              <caret line="340" column="9" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="9" />
               <folding>
                 <element signature="e#7357#7555#0" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -786,18 +39,18 @@
       <file leaf-file-name="Actions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="1211" column="9" selection-start-line="1211" selection-start-column="9" selection-end-line="1211" selection-end-column="9" />
+            <state relative-caret-position="847">
+              <caret line="1199" column="7" selection-start-line="1199" selection-start-column="7" selection-end-line="1199" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grapheditor.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="grapheditor.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="513">
+              <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -826,7 +79,7 @@
       <file leaf-file-name="Sidebar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3578">
+            <state relative-caret-position="16250">
               <caret line="650" column="34" selection-start-line="650" selection-start-column="34" selection-end-line="650" selection-end-column="34" />
               <folding>
                 <marker date="1514367419683" expanded="true" signature="37443:37449" ph="..." />
@@ -907,8 +160,8 @@
         <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-BPMN.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/myShaps.js" />
         <option value="$PROJECT_DIR$/war/index.html" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Actions.js" />
         <option value="$PROJECT_DIR$/war/styles/grapheditor.css" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/Actions.js" />
       </list>
     </option>
   </component>
@@ -949,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -969,8 +224,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -1127,19 +380,20 @@
       <workItem from="1515746704556" duration="843000" />
       <workItem from="1516018477984" duration="14065000" />
       <workItem from="1516041845397" duration="1570000" />
+      <workItem from="1516081026118" duration="146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134032000" />
+    <option name="totallyTimeSpent" value="134178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1496,7 +750,7 @@
     <entry file="file://$PROJECT_DIR$/javascript/index.html" />
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3578">
+        <state relative-caret-position="16250">
           <caret line="650" column="34" selection-start-line="650" selection-start-column="34" selection-end-line="650" selection-end-column="34" />
           <folding>
             <marker date="1514367419683" expanded="true" signature="37443:37449" ph="..." />
@@ -1512,38 +766,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="1211" column="9" selection-start-line="1211" selection-start-column="9" selection-end-line="1211" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="847">
+          <caret line="1199" column="7" selection-start-line="1199" selection-start-column="7" selection-end-line="1199" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="375" selection-end-column="6" />
+        <state relative-caret-position="1833">
+          <caret line="340" column="9" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="9" />
           <folding>
             <element signature="e#7357#7555#0" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>

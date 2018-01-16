@@ -327,6 +327,18 @@
 				status.innerHTML = 'Page could not be loaded. Please try refreshing.';
 			}
 		};
+
+	</script>
+	<script>
+		function downloadFile() {
+			document.getElementById("DownloadDiv").style.display="none";
+			console.log("ajaxDownloadSynchronized");
+			var url = "http://localhost:8880/ServletDownload";
+			var fileName = document.getElementById("txtname1").value+".md";
+			var form = $("<form></form>").attr("action", url).attr("method", "post");
+			form.append($("<input />").attr("type", "hidden").attr("name", "fileName").attr("value", fileName));
+			form.appendTo('body').submit().remove();
+		}
 	</script>
 </head>
 <body class="geEditor">
@@ -373,6 +385,15 @@
 			document.getElementById('fade').style.display='none'">取消</button>
 		</fieldset>
 	</form>
+</div>
+<div id="DownloadDiv" class="white_content">
+	<h3>Quick Export</h3>
+	<fieldset>
+		<button id="downloadBtn" type="button" onclick="downloadFile()">下载</button>
+	</fieldset>
+	<fieldset>
+		<button id="giveup" type="button" onclick="document.getElementById('DownloadDiv').style.display='none'">取消</button>
+	</fieldset>
 </div>
 <script type="text/javascript">
 /**

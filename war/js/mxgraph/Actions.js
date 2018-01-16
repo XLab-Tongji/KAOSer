@@ -1167,22 +1167,29 @@ Actions.prototype.init = function()
 			alert("名称不能为空");
 		}
 		else{
+			document.getElementById('lightExport').style.display='none';
+			document.getElementById('fade').style.display='none';
+
 			$.ajax({
 				type:"POST",
 				url:"http://localhost:8880/template",
 				data:{jsname:jsname,jsonStr:jsonStr},
-                dataType:"html",
+				dataType:"html",
 				async: false,
 				success:function (data) {
-					var obj = JSON.parse(data);
-					if(obj.name=="success"){
-						document.getElementById('lightExport').style.display='none';
-						document.getElementById('fade').style.display='none';
-						alert("保存成功");
-					}
-					else{
-						alert("保存失败，请重命名");
-					}
+					// var obj = JSON.parse(data);
+					// if(obj.name=="success"){
+
+					// 	alert("保存成功");
+					// 	var str=obj.content;
+					// 	alert(str);
+					//}
+					// else{
+					// 	alert("保存失败，请重命名");
+					// }
+					//alert(data);
+					document.getElementById("DownloadDiv").style.display="block";
+					mxUtils.popup(data,true);
 				},
 				error:function (data) {
 					alert("失败");
