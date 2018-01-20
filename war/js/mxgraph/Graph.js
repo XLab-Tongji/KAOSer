@@ -2591,14 +2591,19 @@ HoverIcons.prototype.init = function()
 	this.myTableGoal.style.cursor='pointer';
 	this.myTableRequirement=this.createArrow(this.Information,'Information');
 	this.myTableRequirement.style.cursor='pointer';
+	this.myTableOthers=this.createArrow(this.Information,'Information');
+	this.myTableOthers.style.cursor='pointer';
+	// this.myTableGoal.style.visibility="hidden";
+	// this.myTableRequirement.style.visibility="hidden";
+	// this.myTableOthers.style.visibility="hidden";
 	//生成表格
 	this.myGoalDiv=createGoalDiv();
 	this.myRequirementDiv=createRequirementDiv();
-	//show
+	this.myOtherDiv=createOtherDiv();
 
 	this.myGoalDiv.style.visibility='hidden';
 	this.myRequirementDiv.style.visibility='hidden';
-
+	this.myOtherDiv.style.visibility='hidden';
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
 
@@ -2767,7 +2772,6 @@ HoverIcons.prototype.createArrow = function(img, tooltip)
         arrow.style.width='100px';
         arrow.style.height='100px';
         arrow.style.position = 'absolute';
-        //arrow.style.cursor = 'crosshair';
         if(tooltip!=null){
             arrow.setAttribute('title',tooltip);
         }
@@ -3058,7 +3062,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal,flagRequirement;
+var flagGoal,flagRequirement,flagOthers;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3129,20 +3133,28 @@ HoverIcons.prototype.repaint = function()
 			this.myTableRequirement.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableRequirement,this.inactiveOpacity);
 
+			this.myTableOthers.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTableOthers.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTableOthers,this.inactiveOpacity);
+
             this.myGoalDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myGoalDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
 			this.myRequirementDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myRequirementDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
-            //mxUtils.setOpacity(this.myGoalDiv, this.inactiveOpacity);
+
+			this.myOtherDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+			this.myOtherDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
 			var mgoaldiv=this.myGoalDiv;
 			var mrequirementdiv=this.myRequirementDiv;
+			var motherdiv=this.myOtherDiv;
 			var that=this.currentState.cell;
 			var curr=this.currentState;
 
 			if(curr.style['shape']=='goal'){
 				mrequirementdiv.style.visibility='hidden';
+				motherdiv.style.visibility="hidden";
 				if(flagGoal==1){
 					mgoaldiv.style.visibility='visible';
 				}
@@ -3153,6 +3165,7 @@ HoverIcons.prototype.repaint = function()
 
 			else if(curr.style['shape']=='requirement'){
 				mgoaldiv.style.visibility='hidden';
+				motherdiv.style.visibility="hidden";
 				if(flagRequirement==1){
 					mrequirementdiv.style.visibility='visible';
 				}
@@ -3162,6 +3175,17 @@ HoverIcons.prototype.repaint = function()
 			}
 			else if(curr.style['shape']=='goal'){
 				mrequirementdiv.style.visibility='hidden';
+				motherdiv.style.visibility="hidden";
+			}
+			else{
+				mrequirementdiv.style.visibility='hidden';
+				mgoaldiv.style.visibility='hidden';
+				if(flagOthers==1){
+					motherdiv.style.visibility='visible';
+				}
+				else if(flagOthers==0){
+					motherdiv.style.visibility='hidden';
+				}
 			}
 			this.myTableGoal.onclick=function () {
 				if(curr.style['shape']=='goal'){
@@ -3219,7 +3243,24 @@ HoverIcons.prototype.repaint = function()
 					}
 				}
 			};
+			this.myTableOthers.onclick=function () {
+				if((curr.style['shape']!='requirement')&&(curr.style['shape']!='goal')){
+					if(motherdiv.style.visibility=='visible'){
+						that.gedetail=document.getElementById("detail").value;
+						flagOthers=0;
+						motherdiv.style.visibility = 'hidden';
 
+						document.getElementById("othId").value='';
+						document.getElementById("detail").value='';
+					}
+					else {
+						flagOthers=1;
+						document.getElementById("othId").innerHTML=that.value;
+						document.getElementById("detail").value=that.gedetail;
+						motherdiv.style.visibility = 'visible';
+					}
+				}
+			}
 			if(mgoaldiv.style.visibility=="visible"){
 				if((document.getElementById("usecaseId").innerHTML==that.value)&&(document.getElementById("usecaseDiscription").value!=that.usecaseDiscription
 				||document.getElementById("participant").value!=that.participant
@@ -3241,7 +3282,7 @@ HoverIcons.prototype.repaint = function()
 			}
 
 			if(mrequirementdiv.style.visibility=="visible"){
-				if((document.getElementById("reqeId").innerHTML==that.value)&&(document.getElementById("basicEventFlow").value!=that.basicEventFlow
+				if((document.getElementById("reqId").innerHTML==that.value)&&(document.getElementById("basicEventFlow").value!=that.basicEventFlow
 					||document.getElementById("addtionEventFlow").value!=that.addtionEventFlow
 					||document.getElementById("businessRule").value!=that.businessRule
 					||document.getElementById("nonFunctionalRule").value!=that.nonFunctionalRule)){
@@ -3260,6 +3301,17 @@ HoverIcons.prototype.repaint = function()
 				}
 			}
 
+			if(motherdiv.style.visibility=="visible"){
+				if((document.getElementById("othId").innerHTML==that.value)&&(document.getElementById("detail").value!=that.gedetail)){
+					this.currentState.cell.value=document.getElementById("othId").innerHTML;
+					this.currentState.cell.gedetail=document.getElementById("detail").value;
+				}
+				else{
+					document.getElementById("othId").innerHTML=this.currentState.cell.value;
+					document.getElementById("detail").value=this.currentState.cell.gedetail;
+				}
+			}
+
 			if (this.checkCollisions)
 			{
 				var right = this.graph.getCellAt(bds.x + bds.width +
@@ -3270,6 +3322,7 @@ HoverIcons.prototype.repaint = function()
 				//table
 				var mtablegoal=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
 				var mtablerequirement=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
+				var mtableothers=this.graph.getCellAt(this.currentState.getCenterX(), bds.y + this.triangleUp.height / 2);
 
 				// Shows hover icons large cell is behind all directions of current cell
 				if (right != null && right == left && left == top && top == bottom)
@@ -3314,10 +3367,16 @@ HoverIcons.prototype.repaint = function()
 						current.flag="requirement";
 						arrow.style.visibility = 'visible';
 					}
-					else{
+					else if((this.currentState.style['shape']!='ellipse')&&(this.currentState.style['shape']!='requirement')&&(this.currentState.style['shape']!='goal')&&(arrow==this.myTableOthers)){
 						current.flag=cur.style['shape'];
+						arrow.style.visibility = 'visible';
 					}
-
+					else if(((this.currentState.style['shape']=='requirement')||(this.currentState.style['shape']=='goal'))&&(arrow==this.myTableOthers)){
+						arrow.style.visibility = 'hidden';
+					}
+					else if((this.currentState.style['shape']=='ellipse')&&(arrow==this.myTableOthers)){
+						arrow.style.visibility = 'hidden';
+					}
 				});
 
 				checkCollision(right, this.arrowRight);
@@ -3326,7 +3385,7 @@ HoverIcons.prototype.repaint = function()
 				checkCollision(bottom, this.arrowDown);
 				checkCollision(mtablegoal,this.myTableGoal);
 				checkCollision(mtablerequirement,this.myTableRequirement);
-                //checkCollision(mgoaldiv,this.myGoalDiv);
+                checkCollision(mtableothers,this.myTableOthers);
 			}
 			else
 			{
@@ -3336,7 +3395,10 @@ HoverIcons.prototype.repaint = function()
 				this.arrowDown.style.visibility = 'visible';
 				this.myTableGoal.style.visibility='visible';
 				this.myTableRequirement.style.visibility='visible';
+				this.myTableOthers.style.visibility='visible';
                 this.myGoalDiv.style.visibility='visible';
+				this.myRequirementDiv.style.visibility='visible';
+				this.myOtherDiv.style.visibility='visible';
 			}
 			
 			if (this.graph.tooltipHandler.isEnabled())
@@ -3347,6 +3409,7 @@ HoverIcons.prototype.repaint = function()
 				this.arrowDown.setAttribute('title', mxResources.get('plusTooltip'));
 				this.myTableGoal.setAttribute('title','Information');
 				this.myTableRequirement.setAttribute('title','Information');
+				this.myTableOthers.setAttribute('title','Information');
 			}
 			else
 			{
@@ -3356,6 +3419,7 @@ HoverIcons.prototype.repaint = function()
 				this.arrowDown.removeAttribute('title');
 				this.myTableGoal.removeAttribute('title');
 				this.myTableRequirement.removeAttribute('title');
+				this.myTableOthers.removeAttribute('title');
 			}
 		}
 		else
@@ -3528,10 +3592,10 @@ HoverIcons.prototype.setCurrentState = function(state)
 	this.graph.container.appendChild(this.arrowLeft);
 	this.graph.container.appendChild(this.myTableGoal);
 	this.graph.container.appendChild(this.myTableRequirement);
-
+	this.graph.container.appendChild(this.myTableOthers);
 	this.graph.container.appendChild(this.myGoalDiv);
 	this.graph.container.appendChild(this.myRequirementDiv);
-
+	this.graph.container.appendChild(this.myOtherDiv);
 
 
 	this.currentState = state;

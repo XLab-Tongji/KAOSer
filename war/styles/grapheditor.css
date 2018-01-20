@@ -1,3 +1,65 @@
+body { overflow:hidden; }
+.geSidebarContainer .geTitle { color:#505050; }
+.geSidebarContainer .geTitle input {
+	font-size:8pt;
+	color:#606060;
+}
+.geBlock {
+	z-index:-3;
+	margin:100px;
+	margin-top:40px;
+	margin-bottom:30px;
+	padding:20px;
+}
+.geBlock h1, .geBlock h2 {
+	margin-top:0px;
+	padding-top:0px;
+}
+.geEditor ::-webkit-scrollbar {
+	width:12px;
+	height:12px;
+}
+.geEditor ::-webkit-scrollbar-track {
+	background:whiteSmoke;
+	-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.1);
+}
+.geEditor ::-webkit-scrollbar-thumb {
+	background:#c5c5c5;
+	border-radius:10px;
+	border:whiteSmoke solid 3px;
+}
+.geEditor ::-webkit-scrollbar-thumb:hover {
+	background:#b5b5b5;
+}
+.geFooterContainer div.geSocialFooter a {
+	display:inline;
+	padding:0px;
+}
+.geFooterContainer div.geSocialFooter a img {
+	margin-top:10px;
+	opacity:0.8;
+}
+.geFooterContainer div.geSocialFooter a img:hover {
+	opacity:1;
+}
+.geFooterContainer>div>img {
+	opacity:0.5;
+	background:#e5e5e5;
+	border:1px solid transparent;
+	cusor:pointer;
+	margin-top:3px;
+	margin-right:6px;
+	position:absolute;
+	right:4px;
+	top:12px;
+	padding:1px;
+	cursor:pointer;
+}
+.geFooterContainer>div>img:hover {
+	opacity: 1;
+}
+
+
 #fade{
 	display: none;
 	position: absolute;
@@ -108,7 +170,8 @@ fieldset {
 	outline:0;
 	border:1px solid #999;
 }
-#detailcontainer,#detailcontainer2{
+
+#detailcontainer,#detailcontainer2,#detailcontainer3{
       width: 430px;
       border-color: #dcdcdc;
       border-radius: 15px;
@@ -118,19 +181,22 @@ fieldset {
       z-index: 10;
     }
 #detailcontainer{
-	height: 160px;
+	height: 180px;
 }
 #detailcontainer2{
 	height: 480px;
 }
-    #detailtable,#detailtable2{
+#detailcontainer3{
+	height: 240px;
+}
+    #detailtable,#detailtable2,#detailtable3{
       width: 100%;
       border: 0px solid #dcdcdc;
       border-collapse: collapse;
       font-family: "微软雅黑";
     }
 
-    #detailtable td,#detailtable2 td{
+    #detailtable td,#detailtable2 td,#detailtable3 td{
       padding-left: 10px;
       border-top: 0;
       border-right: 1px solid #dcdcdc;
@@ -138,11 +204,11 @@ fieldset {
       border-left: 0;
     }
 
-    #detailtable tr:last-child td,#detailtable2 tr:last-child td{
+    #detailtable tr:last-child td,#detailtable2 tr:last-child td,#detailtable3 tr:last-child td{
       border-bottom: 0;
     }
 
-    #detailtable tr td:last-child,#detailtable tr td:last-child {
+    #detailtable tr td:last-child,#detailtable2 tr td:last-child,#detailtable3 tr td:last-child {
       border-right: 0;
     }
 
@@ -184,7 +250,13 @@ fieldset {
       padding-top: 5px;
       height: 90px;
     }
-
+	#detailtable3 tr:nth-child(1) td{
+		height: 30px;
+	}
+	#detailtable3 tr:nth-child(2) td{
+		padding-top: 5px;
+		height: 200px;
+	}
     .detailform-single-text{
       text-align: left;
       vertical-align: middle;

@@ -624,31 +624,11 @@
 			mxLog.textarea.value = '';
 		}
 
-		// this.addSearchPalette(true);
-		// this.addGeneralPalette(true);
-		// this.addMiscPalette(false);
-		// this.addAdvancedPalette(false);
-		// this.addUmlPalette(false);
-		//this.addErPalette();
-		this.addBpmnPalette();
-		 this.addBasicPalette();
-		 this.addArchiMatePalette();
-		// this.addFlowchartPalette();
-		// this.addNetworkPalette();
-		 this.addAzurePalette();
-		// this.addCitrixPalette();
-		// this.addMSCAEPalette();
 
-		// this.addAWS3Palette();
-		// this.addAWS3DPalette();
-		// this.addLeanMappingPalette();
-		// this.addIos7Palette();
-		// this.addIosPalette();
-		// this.addAndroidPalette();
-		// this.addMockupPalette();
-		// this.addElectricalPalette();
-		// this.addOfficePalette();
-		// this.addVeeamPalette();
+		this.addBpmnPalette();
+        this.addBasicPalette();
+        this.addArchiMatePalette();
+        this.addAzurePalette();
 	};
 	
 	/**
