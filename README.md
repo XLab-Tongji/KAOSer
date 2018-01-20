@@ -25,11 +25,8 @@
  3. 选择项目文件夹
 
 ### 构建项目
-How to build executable artifacts.
 
-## 项目运行方法
-
-通过docker运行项目
+通过docker构建项目
 
  - 拉取项目
 
@@ -43,6 +40,10 @@ How to build executable artifacts.
  - 从镜像创建容器
 
 > docker run --name=kaoser -p 8080:8080 kaoser
+## 项目运行方法
+
+通过docker运行项目
+
 
  - 从浏览器中访问项目
 
