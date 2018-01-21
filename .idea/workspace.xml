@@ -2,159 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/compiler.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/jars/commons-codec-1.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/jars/commons-fileupload-1.3.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/jars/commons-lang3-3.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/jars/gae-stub-1.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/jars/gson-2.7.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/jars/servlet-api.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/images/drawio448.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/pgp-keyring" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/pgp-signature" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8.vsdx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/build.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/build/build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/mxgraph/mxClient.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/propgen/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/propgen/com/mxgraph/properties/PropGen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/ChangeLog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/build.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/description.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/rootFiles" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/sandstorm-pkgdef.capnp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/server.c++" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/shortDesc.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/ssindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/sandstorm/stage.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/emptyfile.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/special'filename.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8-uncompressed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8.gliffy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8.vdx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/etc/unicode-tests/utf8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/ArrowMapping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/DashStyleMapping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/GliffyDiagramConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/LineMapping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/PostDeserializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/StencilTranslator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/importer/gliffyTranslation.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Constraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Constraints.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Diagram.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/EmbeddedResources.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/GliffyObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/GliffyText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Graphic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/LinkMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Metadata.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/gliffy/model/Stage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlConstants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlEdge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlKey.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlKeyManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlPort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlShapeEdge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlShapeNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/graphml/mxGraphMlUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/mxGraphMlCodec.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/mxVsdxCodec.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/mxVssxCodec.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Paragraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Section.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Shape.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/ShapePageId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/Style.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/VsdxShape.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/export/ModelExtAttrib.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/export/mxVsdxExporter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/ArcTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/DelRow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/Ellipse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/EllipticalArcTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/InfiniteLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/LineTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/MoveTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/NURBSTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/PolylineTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelCubBezTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelEllipticalArcTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelLineTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelMoveTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RelQuadBezTo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/Row.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/RowFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/SplineKnot.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/geometry/SplineStart.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxPathDebug.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxPropertiesManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxConnect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxConstants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxGeometry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxGeometryList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxMaster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxTheme.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/mxVsdxUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/edgeNameU.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/[Content_Types].xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/_rels/.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/docProps/app.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/docProps/core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/docProps/custom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/_rels/document.xml.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/document.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/masters/_rels/masters.xml.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/masters/masters.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/pages/_rels/page1.xml.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/export/visio/windows.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/nameU.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/resources/nameU.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/Color.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/FillStyle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/FillStyleFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/GradFill.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/HSLColor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/HSVColor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/HslClr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/LineStyle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/LineStyleExt.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/NoFillStyle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/OoxmlColor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/OoxmlColorFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/PrstClr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/QuickStyleVals.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SchemeClr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/ScrgbClr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SolidFillStyle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SrgbClr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/io/vsdx/theme/SysClr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/AppShortcutServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/EmbedServlet2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/GitHubServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/GoogleGadgetServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/ImgurRedirectServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/ImportServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/LogServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/OpenServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/ProxyServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/SaveServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/online/mxBase64.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/view/mxGraphHeadless.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mxgraph/vsdxutils/vsdxBatchConvert.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -172,7 +19,28 @@
     <favorites_list name="KAOSer" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Actions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="56" column="81" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="3068" column="33" selection-start-line="3068" selection-start-column="33" selection-end-line="3068" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -263,6 +131,60 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="KAOSer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KAOSer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KAOSer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KAOSer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KAOSer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KAOSer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KAOSer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mxgraph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -436,18 +358,18 @@
       <workItem from="1516041845397" duration="1570000" />
       <workItem from="1516081026118" duration="550000" />
       <workItem from="1516087394314" duration="280000" />
-      <workItem from="1516428794129" duration="538000" />
+      <workItem from="1516428794129" duration="3917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135400000" />
+    <option name="totallyTimeSpent" value="138779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -780,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80900">
-          <caret line="3238" column="57" selection-start-line="3238" selection-start-column="45" selection-end-line="3238" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Advanced.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -828,14 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29925">
-          <caret line="1199" column="7" selection-start-line="1199" selection-start-column="7" selection-end-line="1199" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -848,6 +754,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="3068" column="33" selection-start-line="3068" selection-start-column="33" selection-end-line="3068" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="81" />
           <folding />
         </state>
       </provider>
