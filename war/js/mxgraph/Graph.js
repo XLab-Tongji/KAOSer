@@ -2832,10 +2832,13 @@ HoverIcons.prototype.createArrow = function(img, tooltip)
 			// Captures mouse events as events on graph
 			mxEvent.redirectMouseEvents(arrow, this.graph, this.currentState);
 		}
-
+		// else if(img==this.Information){
+		// 	arrow.style.display = 'none';
+		// }
 
         mxEvent.addListener(arrow, 'mouseenter', mxUtils.bind(this, function(evt)
         {
+			//arrow.style.display='visbility';
             // Workaround for Firefox firing mouseenter on touchend
             if (mxEvent.isMouseEvent(evt))
             {
@@ -2857,6 +2860,7 @@ HoverIcons.prototype.createArrow = function(img, tooltip)
             {
                 this.resetActiveArrow();
             }
+			//arrow.style.display='none';
         }));
     }
 	
@@ -3070,6 +3074,9 @@ HoverIcons.prototype.repaint = function()
 
 	if (this.currentState != null)
 	{
+		this.myTableGoal.style.visibility='visible';
+		this.myTableRequirement.style.visibility='visible';
+		this.myTableOthers.style.visibility='visible';
 		// Checks if cell was deleted
 		this.currentState = this.getState(this.currentState);
 
@@ -3438,6 +3445,11 @@ HoverIcons.prototype.repaint = function()
 				this.bbox.grow(10);
 			}
 		}
+	}
+	else if(this.currentState==null){
+		this.myTableGoal.style.visibility='hidden';
+		this.myTableRequirement.style.visibility='hidden';
+		this.myTableOthers.style.visibility='hidden';
 	}
 };
 
