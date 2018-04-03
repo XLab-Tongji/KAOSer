@@ -1,353 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_0_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_100_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_50_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_75_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_allstates_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Bluetooth_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Earth_globe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Empty_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Full_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Gear_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Keys_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Lock_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Mouse_Pointer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Plug_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Ships_Wheel_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Star_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Tire_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Antivirus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Data_Filtering_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Add_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Minus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Move_Stack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Remove_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Fujitsu_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Harddrive_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/IBM_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Laptop_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/MacBook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Mainframe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Monitor_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Monitor_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Monitor_Tower_Behind_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Netbook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Network_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Network_2_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Printer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Printer_Commercial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Secure_System_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Rack_Empty_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Rack_Partial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Software_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Stylus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Touch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/USB_Hub_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Virtual_Application_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Virtual_Machine_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Virus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Workstation_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/iMac_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/iPad_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Arrow_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Arrow_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Coins_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Credit_Card_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Dollar_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Graph_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Pie_Chart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Piggy_Bank_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Safe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Shopping_Cart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Stock_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Stock_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Antivirus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Data_Filtering_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Add_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Minus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Move_Stack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Remove_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Fujitsu_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Harddrive_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/IBM_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Laptop_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/MacBook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Mainframe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Monitor_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Monitor_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Monitor_Tower_Behind_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Netbook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Network_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Network_2_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Printer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Printer_Commercial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Secure_System_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Rack_Empty_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Rack_Partial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Software_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Stylus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Touch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/USB_Hub_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Virtual_Application_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Virtual_Machine_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Virus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Workstation_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/iMac_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/iPad_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Arrow_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Arrow_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Coins_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Credit_Card_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Dollar_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Graph_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Pie_Chart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Piggy_Bank_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Safe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Shopping_Cart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Stock_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Stock_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_0_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_100_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_50_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_75_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_allstates_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Bluetooth_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Earth_globe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Empty_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Full_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Gear_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Keys_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Lock_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Mouse_Pointer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Plug_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Ships_Wheel_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Star_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Tire_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Bridge_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Certificate_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Certificate_Off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Computer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Computer_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Rack_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Server_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Storage_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Concentrator_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Email_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Firewall-page1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Firewall_02_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Firewall_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Ip_Camera_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Modem_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Print_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Print_Server_Wireless_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Repeater_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Router_Icon_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Switch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/UPS_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Wireless_Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Wireless_Router_N_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/power_distribution_unit_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Soldier_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Soldier_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Tech_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Tech_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/BlackBerry_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Cellphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/HTC_smartphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Palm_Treo_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Signal_tower_off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Signal_tower_on_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Telephone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/iPhone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Bridge_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Certificate_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Certificate_Off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Computer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Computer_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Rack_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Server_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Storage_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Concentrator_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Data_Filtering_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Add_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Minus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Move_Stack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Remove_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Email_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Firewall-page1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Firewall_02_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Firewall_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Ip_Camera_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Mainframe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Modem_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Print_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Print_Server_Wireless_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Repeater_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Router_Icon_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_Rack_Empty_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_Rack_Partial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Switch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/UPS_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Wireless_Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Wireless_Router_N_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/power_distribution_unit_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Soldier_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Soldier_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Tech_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Tech_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_0_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_100_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_50_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_75_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_allstates_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/BlackBerry_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Cellphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/HTC_smartphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Palm_Treo_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Signal_tower_off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Signal_tower_on_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/iPhone_128x128.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" afterPath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
-    </list>
+    <list default="true" id="21a6cd31-dce4-4c70-a829-93385078a7da" name="Default" comment="" />
+    <ignored path="vue_test.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -360,51 +19,100 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="KAOSer" />
+    <favorites_list name="vue_test" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Sidebar-ObjectModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
+      <file leaf-file-name="secondcomponent.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/secondcomponent.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="142" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
-              <folding />
+            <state relative-caret-position="225">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#963#970#0" expanded="true" />
+                <element signature="e#985#992#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menus.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
+      <file leaf-file-name="Sidebar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/mxgraph/Sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="486" column="42" selection-start-line="486" selection-start-column="34" selection-end-line="486" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="3448" column="24" selection-start-line="3448" selection-start-column="24" selection-end-line="3448" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/index.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+            <state relative-caret-position="1400">
+              <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/mxgraph/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homePage.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/homePage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#el-input#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#393#426#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Devel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/diagramly/Devel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="divforOthers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/mxgraph/divforOthers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -414,53 +122,47 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="vue File" />
         <option value="JavaScript File" />
       </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/war/css/arrowDiv_style" />
-        <option value="$PROJECT_DIR$/war/styles/arrowDiv_style" />
-        <option value="$PROJECT_DIR$/war/styles/atlas.css" />
-        <option value="$PROJECT_DIR$/javascript/mxClient.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/EditorUi.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Format.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Toolbar.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Cabinet.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/mydiv.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Citrix.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Menus.js" />
-        <option value="$PROJECT_DIR$/war/resources/dia.txt" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/myShaps.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/main.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/operations.js" />
-        <option value="$PROJECT_DIR$/war/styles/grapheditor.css" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/divforOthers.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-BPMN.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Actions.js" />
-        <option value="$PROJECT_DIR$/war/index.html" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Basic.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ArchiMate.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Azure.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/Devel.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
+        <option value="$PROJECT_DIR$/src/components/helloworld.html" />
+        <option value="$PROJECT_DIR$/build/webpack.dev.conf.js" />
+        <option value="$PROJECT_DIR$/src/components/hello.vue" />
+        <option value="$PROJECT_DIR$/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/sideBar.html" />
+        <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/src/js/mymain.js" />
+        <option value="$PROJECT_DIR$/src/js/helloworld.js" />
+        <option value="$PROJECT_DIR$/static/JS/mymain.js" />
+        <option value="$PROJECT_DIR$/src/components/secondcomponent2.vue" />
+        <option value="$PROJECT_DIR$/static/js/mxgraph/Init.js" />
+        <option value="$PROJECT_DIR$/static/js/diagramly/App.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/static/js/mxgraph/operations.js" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/static/js/diagramly/Init.js" />
+        <option value="$PROJECT_DIR$/static/js/mxgraph/Actions.js" />
+        <option value="$PROJECT_DIR$/src/components/secondcomponent.vue" />
+        <option value="$PROJECT_DIR$/static/styles/grapheditor.css" />
+        <option value="$PROJECT_DIR$/static/js/diagramly/Devel.js" />
+        <option value="$PROJECT_DIR$/static/js/mxgraph/main.js" />
+        <option value="$PROJECT_DIR$/src/components/homePage.vue" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/static/js/mxgraph/Graph.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -496,110 +198,58 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
+              <option name="myItemId" value="vue_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
+              <option name="myItemId" value="vue_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mxgraph" />
+              <option name="myItemId" value="vue_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
-    <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="D:/vue2-elm" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\2345Downloads\KAOSer-master\war" />
-      <recent name="E:\ProgramData\KAOSER\KAOSer\war\styles" />
+      <recent name="D:\vue\vue_test\static" />
+      <recent name="D:\vue\vue_test" />
+      <recent name="D:\vue\vue_test\src\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\vue\vue_test\static\js\mxgraph" />
+      <recent name="D:\vue\vue_test\static\js\diagramly" />
+      <recent name="D:\vue\vue_test\static" />
+      <recent name="D:\vue\vue_test" />
+      <recent name="D:\vue\vue_test\static\JS" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KAOSer/war/index.html">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.vue">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -653,14 +303,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <configuration default="false" name="vue" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="build/dev-server.js" working-dir="$PROJECT_DIR$">
+      <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" with-js-debugger="true" />
+      <profiling v8-profiler-path="" />
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+        <profiling v8-profiler-path="" />
+      </EXTENSION>
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" with-js-debugger="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.vue" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -670,119 +326,93 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="" />
-      <created>1513171844476</created>
+      <changelist id="21a6cd31-dce4-4c70-a829-93385078a7da" name="Default" comment="" />
+      <created>1510019690347</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1513171844476</updated>
-      <workItem from="1513215641162" duration="3578000" />
-      <workItem from="1513223983173" duration="7977000" />
-      <workItem from="1513271614940" duration="6276000" />
-      <workItem from="1513332956668" duration="615000" />
-      <workItem from="1513404146668" duration="497000" />
-      <workItem from="1513409356619" duration="3756000" />
-      <workItem from="1513414696130" duration="1361000" />
-      <workItem from="1513441435185" duration="3216000" />
-      <workItem from="1513494199146" duration="1238000" />
-      <workItem from="1513507367406" duration="613000" />
-      <workItem from="1513562716557" duration="4837000" />
-      <workItem from="1513577995070" duration="3298000" />
-      <workItem from="1513610890088" duration="6060000" />
-      <workItem from="1513649458581" duration="7560000" />
-      <workItem from="1513754065866" duration="610000" />
-      <workItem from="1513829041310" duration="10512000" />
-      <workItem from="1513930755938" duration="2164000" />
-      <workItem from="1514112850584" duration="5665000" />
-      <workItem from="1514128827588" duration="1571000" />
-      <workItem from="1514167622247" duration="6680000" />
-      <workItem from="1514183947941" duration="1714000" />
-      <workItem from="1514221469500" duration="9128000" />
-      <workItem from="1514363092594" duration="2494000" />
-      <workItem from="1514378122387" duration="1131000" />
-      <workItem from="1514478076299" duration="3848000" />
-      <workItem from="1514526109879" duration="3252000" />
-      <workItem from="1514818416795" duration="1743000" />
-      <workItem from="1515061225678" duration="688000" />
-      <workItem from="1515118302017" duration="7008000" />
-      <workItem from="1515504009599" duration="1884000" />
-      <workItem from="1515514390809" duration="1689000" />
-      <workItem from="1515516119549" duration="1017000" />
-      <workItem from="1515567316126" duration="964000" />
-      <workItem from="1515664187827" duration="2832000" />
-      <workItem from="1516043078967" duration="152000" />
-      <workItem from="1516043317199" duration="9685000" />
-      <workItem from="1516087675526" duration="9635000" />
-      <workItem from="1516112661280" duration="3116000" />
-      <workItem from="1516338518290" duration="6528000" />
-      <workItem from="1516359194597" duration="425000" />
-      <workItem from="1516363447126" duration="5437000" />
-      <workItem from="1516402820924" duration="4107000" />
-      <workItem from="1516515058277" duration="1636000" />
-      <workItem from="1516525351980" duration="72000" />
-      <workItem from="1519831843332" duration="42000" />
-      <workItem from="1520595282085" duration="2328000" />
+      <updated>1510019690347</updated>
+      <workItem from="1510053104962" duration="440000" />
+      <workItem from="1510074594577" duration="2921000" />
+      <workItem from="1510078750972" duration="2476000" />
+      <workItem from="1510083319132" duration="705000" />
+      <workItem from="1510223301835" duration="1007000" />
+      <workItem from="1510224900573" duration="213000" />
+      <workItem from="1510225290607" duration="7525000" />
+      <workItem from="1510306918724" duration="6010000" />
+      <workItem from="1510381472456" duration="262000" />
+      <workItem from="1510478931307" duration="1382000" />
+      <workItem from="1510665417993" duration="1372000" />
+      <workItem from="1510907910993" duration="2534000" />
+      <workItem from="1510991446171" duration="1198000" />
+      <workItem from="1511032919497" duration="164000" />
+      <workItem from="1512111640974" duration="370000" />
+      <workItem from="1512728792774" duration="1199000" />
+      <workItem from="1514479225169" duration="1176000" />
+      <workItem from="1516094655120" duration="11417000" />
+      <workItem from="1516437807746" duration="681000" />
+      <workItem from="1519831871928" duration="607000" />
+      <workItem from="1520594926323" duration="834000" />
+      <workItem from="1520599674626" duration="519000" />
+      <workItem from="1520988979770" duration="834000" />
+      <workItem from="1521025362891" duration="1665000" />
+      <workItem from="1521030968303" duration="569000" />
+      <workItem from="1521041702471" duration="552000" />
+      <workItem from="1521098720915" duration="1301000" />
+      <workItem from="1521185852890" duration="1914000" />
+      <workItem from="1521592795150" duration="6317000" />
+      <workItem from="1521630390576" duration="5229000" />
+      <workItem from="1521641468778" duration="12396000" />
+      <workItem from="1521707222974" duration="77000" />
+      <workItem from="1522070576497" duration="631000" />
+      <workItem from="1522242414081" duration="784000" />
+      <workItem from="1522326092127" duration="30000" />
+      <workItem from="1522767009368" duration="91000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160639000" />
+    <option name="totallyTimeSpent" value="77402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22108346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22254759" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2540193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.255627" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2239354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22108346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -801,256 +431,243 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/war/styles/sprites.png">
+    <entry file="file://$PROJECT_DIR$/src/components/hello.vue" />
+    <entry file="file://$PROJECT_DIR$/src/components/helloworld.html" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/mystyle.css" />
+    <entry file="file://$PROJECT_DIR$/src/components/sideBar.html" />
+    <entry file="file://$PROJECT_DIR$/src/js/mxClient.js" />
+    <entry file="file://$PROJECT_DIR$/src/js/myShaps.js" />
+    <entry file="file://$PROJECT_DIR$/src/js/hello.js" />
+    <entry file="file://$PROJECT_DIR$/src/js/mymain.js" />
+    <entry file="file://$PROJECT_DIR$/src/js/helloworld.js" />
+    <entry file="file://$PROJECT_DIR$/static/JS/javascript/src/js/io/mxCodec.js" />
+    <entry file="file://$PROJECT_DIR$/static/JS/mxClient.js" />
+    <entry file="file://$PROJECT_DIR$/static/JS/mymain.js" />
+    <entry file="file://$PROJECT_DIR$/static/JS/javascript/index.html" />
+    <entry file="file://$PROJECT_DIR$/static/javascript/src/js/io/mxCodec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/Menus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/resources/dia.txt" />
+    <entry file="file://$PROJECT_DIR$/src/assets/KAOS.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Dialogs.js">
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/Embed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50050">
-          <caret line="2004" column="57" selection-start-line="2004" selection-start-column="49" selection-end-line="2004" selection-end-column="57" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Init.js">
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="28300">
+          <caret line="1132" column="4" selection-start-line="1132" selection-start-column="4" selection-end-line="1132" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/resources/dia.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17750">
-          <caret line="710" column="17" selection-start-line="710" selection-start-column="17" selection-end-line="710" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93650">
-          <caret line="3746" column="51" selection-start-line="3746" selection-start-column="36" selection-end-line="3746" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26875">
-          <caret line="1077" column="60" selection-start-line="1077" selection-start-column="60" selection-end-line="1077" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Editor.js">
+    <entry file="file://$PROJECT_DIR$/static/js/json/json2.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-AWS3D.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-AWS3.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-AWS.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Atlassian.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Gmdl.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Ios.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Ios7.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-LeanMapping.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Mockup.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-MSCAE.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Network.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-PID.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Rack.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Sysml.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/myShaps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/styles/atlas.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6225">
-          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/open.html">
+    <entry file="file://$PROJECT_DIR$/config/prod.env.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/github.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/offline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/jscolor/jscolor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/app.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="99" column="256" selection-start-line="99" selection-start-column="247" selection-end-line="99" selection-end-column="256" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/mydiv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6425">
-          <caret line="257" column="19" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Arrows2.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Advanced.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/operations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc;n#downloadFile#0" expanded="false" />
-            <element signature="n#!!block;n#mxinclude#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/divforOthers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43050">
-          <caret line="1724" column="38" selection-start-line="1724" selection-start-column="13" selection-end-line="1724" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-Android.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-WebIcons.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ArchiMate3.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="630" column="8" selection-start-line="630" selection-start-column="8" selection-end-line="630" selection-end-column="8" />
-          <folding>
-            <marker date="1516406378662" expanded="true" signature="36838:36844" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js">
+    <entry file="file://$PROJECT_DIR$/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="12" column="142" selection-start-line="12" selection-start-column="142" selection-end-line="12" selection-end-column="142" />
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/resources/dia.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/secondcomponent2.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-650">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="524" column="14" selection-start-line="524" selection-start-column="6" selection-end-line="524" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/headerMenu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="225" column="62" selection-start-line="225" selection-start-column="62" selection-end-line="225" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-725">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6825">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/Init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/Init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/Actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="1216" column="31" selection-start-line="1216" selection-start-column="31" selection-end-line="1216" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styles/grapheditor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="285" column="9" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-OperationModel.js">
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/sidebar/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/sidebar/Sidebar-GoalModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vuex/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Devel.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="1131" column="23" selection-start-line="1131" selection-start-column="23" selection-end-line="1131" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="142" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="486" column="42" selection-start-line="486" selection-start-column="34" selection-end-line="486" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+        <state relative-caret-position="1400">
+          <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1058,72 +675,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
+    <entry file="file://$PROJECT_DIR$/src/components/secondcomponent.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="3448" column="24" selection-start-line="3448" selection-start-column="24" selection-end-line="3448" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#963#970#0" expanded="true" />
+            <element signature="e#985#992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/diagramly/Devel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/divforOthers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mxgraph/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="3268" column="52" selection-start-line="3268" selection-start-column="52" selection-end-line="3268" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homePage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#el-input#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#393#426#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
