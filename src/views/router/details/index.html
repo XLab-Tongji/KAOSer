@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="Description" content="KAOS is free online diagram software for making flowcharts, process diagrams, org charts, UML, ER and network diagrams">
-    <meta name="Keywords" content="diagram, online, flow chart, flowchart maker, uml, erd">f
+    <meta name="Keywords" content="diagram, online, flow chart, flowchart maker, uml, erd">
     <meta itemprop="name" content="KAOS - free flowchart maker and diagrams online">
     <meta itemprop="description" content="KAOS is a free online diagramming application  and flowchart maker .">
     <meta itemprop="image" content="https://lh4.googleusercontent.com/-cLKEldMbT_E/Tx8qXDuw6eI/AAAAAAAAAAs/Ke0pnlk8Gpg/w500-h344-k/BPMN%2Bdiagram%2Brc2f.png">
@@ -43,19 +43,83 @@
     <link rel="shortcut icon" href="/static/favicon.ico">
     <script src="/static/js/mxgraph/operations.js"></script>
     <script src="/static/js/diagramly/Devel.js"></script>
-    <script src="/static/js/mxgraph/main.js"></script>
 
-    <script type="text/javascript" src="/static/js/mxgraph/EditorUi.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Editor.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Sidebar.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Graph.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Shapes.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Actions.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Menus.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Format.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Toolbar.js"></script>
-    <script type="text/javascript" src="/static/js/mxgraph/Dialogs.js"></script>
-    <script type="text/javascript" src="/static/js/diagramly/App.js"></script>
+    <script src="/static/js/spin/spin.min.js"></script>
+    <script src="/static/js/deflate/pako.min.js"></script>
+    <script src="/static/js/deflate/base64.js"></script>
+    <script src="/static/js/sanitizer/sanitizer.min.js"></script>
+
+    <script src="/static/js/mxgraph/Editor.js"></script>
+    <script src="/static/js/mxgraph/EditorUi.js"></script>
+    <script src="/static/js/mxgraph/Sidebar.js"></script>
+    <script src="/static/js/mxgraph/mydiv.js"></script>
+    <script src="/static/js/mxgraph/RequirementDiv.js"></script>
+    <script src="/static/js/mxgraph/divforOthers.js"></script>
+    <script src="/static/js/mxgraph/Graph.js"></script>
+    <script src="/static/js/mxgraph/Shapes.js"></script>
+    <script src="/static/js/mxgraph/Actions.js"></script>
+    <script src="/static/js/mxgraph/Menus.js"></script>
+    <script src="/static/js/mxgraph/Format.js"></script>
+    <script src="/static/js/mxgraph/Toolbar.js"></script>
+    <script src="/static/js/mxgraph/Dialogs.js"></script>
+    <script src="/static/js/mxgraph/myShaps.js"></script>
+    <script src="/static/js/mxgraph/myLineShapes.js"></script>
+
+
+    <script src="/static/js/diagramly/sidebar/Sidebar.js"></script>
+    <script src="/static/js/diagramly/sidebar/Sidebar-ObjectModel.js"></script>
+    <script src="/static/js/diagramly/sidebar/Sidebar-OperationModel.js"></script>
+    <script src="/static/js/diagramly/sidebar/Sidebar-RespModel.js"></script>
+    <script src="/static/js/diagramly/sidebar/Sidebar-GoalModel.js"></script>
+
+    <script src="/static/js/diagramly/util/mxJsCanvas.js"></script>
+    <script src="/static/js/diagramly/util/mxAsyncCanvas.js"></script>
+
+    <script src="/static/js/diagramly/DrawioFile.js"></script>
+    <script src="/static/js/diagramly/LocalFile.js"></script>
+    <script src="/static/js/diagramly/LocalLibrary.js"></script>
+    <script src="/static/js/diagramly/StorageFile.js"></script>
+    <script src="/static/js/diagramly/StorageLibrary.js"></script>
+    <script src="/static/js/diagramly/Dialogs.js"></script>
+    <script src="/static/js/diagramly/Editor.js"></script>
+    <script src="/static/js/diagramly/EditorUi.js"></script>
+    <script src="/static/js/diagramly/Settings.js"></script>
+
+    <script src="/static/js/diagramly/DrawioClient.js"></script>
+    <script src="/static/js/diagramly/DrawioUser.js"></script>
+    <script src="/static/js/diagramly/UrlLibrary.js"></script>
+    <script src="/static/js/diagramly/DriveRealtime.js"></script>
+    <script src="/static/js/diagramly/RealtimeMapping.js"></script>
+    <script src="/static/js/diagramly/DriveFile.js"></script>
+    <script src="/static/js/diagramly/DriveLibrary.js"></script>
+    <script src="/static/js/diagramly/DriveClient.js"></script>
+    <script src="/static/js/diagramly/DropboxFile.js"></script>
+    <script src="/static/js/diagramly/DropboxLibrary.js"></script>
+    <script src="/static/js/diagramly/DropboxClient.js"></script>
+    <script src="/static/js/diagramly/GitHubFile.js"></script>
+    <script src="/static/js/diagramly/GitHubLibrary.js"></script>
+    <script src="/static/js/diagramly/GitHubClient.js"></script>
+    <script src="/static/js/diagramly/OneDriveFile.js"></script>
+    <script src="/static/js/diagramly/OneDriveLibrary.js"></script>
+    <script src="/static/js/diagramly/OneDriveClient.js"></script>
+    <script src="/static/js/diagramly/TrelloFile.js"></script>
+    <script src="/static/js/diagramly/TrelloLibrary.js"></script>
+    <script src="/static/js/diagramly/TrelloClient.js"></script>
+    <script src="/static/js/diagramly/ChatWindow.js"></script>
+
+    <script src="/static/js/diagramly/App.js"></script>
+    <script src="/static/js/diagramly/Menus.js"></script>
+    <script src="/static/js/diagramly/Pages.js"></script>
+    <script src="/static/js/diagramly/Trees.js"></script>
+    <script src="/static/js/diagramly/DevTools.js"></script>
+
+    <script src="/static/js/diagramly/vsdx/VsdxExport.js"></script>
+    <script src="/static/js/diagramly/vsdx/mxVsdxCanvas2D.js"></script>
+    <script src="/static/js/jszip/jszip.min.js"></script>
+
+    <script src="/static/js/diagramly/ruler/mxRuler.js"></script>
+
+    <script src="/static/js/mxgraph/main.js"></script>
 </head>
 <body class="geEditorBody">
 <div id="app"></div>

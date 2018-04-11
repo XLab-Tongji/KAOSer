@@ -391,7 +391,7 @@ App.getStoredMode = function()
 			// Loads JSON for older browsers
 			if (typeof(JSON) == 'undefined')
 			{
-				mxscript('../js/json/json2.min.js');
+				mxscript('/static/js/json/json2.min.js');
 			}
 		}
 	}

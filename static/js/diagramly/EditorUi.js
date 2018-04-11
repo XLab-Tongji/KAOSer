@@ -5257,11 +5257,11 @@
 			
 			if (urlParams['dev'] == '1')
 			{
-				mxscript('js/diagramly/Extensions.js', delayed);
+				mxscript('/static/js/diagramly/Extensions.js', delayed);
 			}
 			else
 			{
-				mxscript('js/extensions.min.js', delayed);
+				mxscript('/static/js/extensions.min.js', delayed);
 			}
 		}
 		else

@@ -4,7 +4,7 @@
 function start() {
   App.main();
 
-  /**
+  /**F
    * Analytics
    */
   if (urlParams['analytics'] != '0' && urlParams['dev'] != '1' && urlParams['chrome'] != '0')

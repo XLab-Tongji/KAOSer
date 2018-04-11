@@ -521,7 +521,7 @@
 			if (typeof(VsdxExport) === 'undefined' && !this.loadingVsdx && !editorUi.isOffline())
 			{
 				this.loadingVsdx = true;
-				mxscript('js/vsdx.min.js', delayed);
+				mxscript('/static/js/vsdx.min.js', delayed);
 			}
 			else
 			{

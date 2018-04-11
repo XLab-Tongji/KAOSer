@@ -194,14 +194,14 @@ if (urlParams['dev'] != '1')
 }
 else
 {
-    mxscript('../app.min.js');
+    mxscript('/static/js/app.min.js');
 }
 
 if (window && window.process && window.process.type)
 {
     // Electron
-    mxscript('../diagramly/ElectronApp.js');
-    mxscript('../diagramly/Extensions.js');
+    mxscript('/static/js/diagramly/ElectronApp.js');
+    mxscript('/static/js/diagramly/Extensions.js');
 }
 
 // Adds basic error handling
