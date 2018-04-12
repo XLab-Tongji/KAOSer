@@ -10,18 +10,19 @@ RUN apt-get update -y && \
 
 # Download
 RUN cd /tmp && \
-    git clone https://github.com/XLab-Tongji/KAOSer.git
+    wget https://github.com/XLab-Tongji/KAOSer/archive/master.zip && \
+    unzip KAOSer-master.zip
 
 # Patch EmbedServlet2
-ADD assets/embed2js.patch /tmp/KAOSer/war/plugins/
+ADD assets/embed2js.patch /tmp/KAOSer-master/war/plugins/
 
-RUN cd /tmp/KAOSer && \
+RUN cd /tmp/KAOSer-master && \
     patch -p1 war/plugins/embed2js.patch && \
-    cd /tmp/KAOSer/etc/build && \
+    cd /tmp/KAOSer-master/etc/build && \
     ant war && \
-    cd /tmp/KAOSer/build && \
-    unzip /tmp/KAOSer/build/draw.war -d $CATALINA_HOME/webapps/draw
-    #cp -rp /tmp/KAOSer/build/draw.war $CATALINA_HOME/webapps/
+    cd /tmp/KAOSer-master/build && \
+    unzip /tmp/KAOSer-master/build/draw.war -d $CATALINA_HOME/webapps/draw
+    #cp -rp /tmp/KAOSer-master/build/draw.war $CATALINA_HOME/webapps/
 
 # Update server.xml to set Draw.io webapp to root
 RUN cd $CATALINA_HOME && \
@@ -40,7 +41,7 @@ RUN cd $CATALINA_HOME && \
 # Cleanup
 RUN rm -r /var/lib/apt/lists/* && \
     rm -rf \
-    /tmp/KAOSer
+    /tmp/KAOSer-master
 
 # Copy docker-entrypoint
 COPY docker-entrypoint.sh /
