@@ -16,13 +16,13 @@ RUN cd /tmp && \
 # Patch EmbedServlet2
 ADD assets/embed2js.patch /tmp/master/war/plugins/
 
-RUN cd /tmp/master && \
+RUN cd /tmp/KAOSer-master && \
     patch -p1 war/plugins/embed2js.patch && \
-    cd /tmp/master/etc/build && \
+    cd /tmp/KAOSer-master/etc/build && \
     ant war && \
-    cd /tmp/master/build && \
-    unzip /tmp/master/build/draw.war -d $CATALINA_HOME/webapps/draw
-    #cp -rp /tmp/master/build/draw.war $CATALINA_HOME/webapps/
+    cd /tmp/KAOSer-master/build && \
+    unzip /tmp/KAOSer-master/build/draw.war -d $CATALINA_HOME/webapps/draw
+    #cp -rp /tmp/KAOSer-master/build/draw.war $CATALINA_HOME/webapps/
 
 # Update server.xml to set Draw.io webapp to root
 RUN cd $CATALINA_HOME && \
@@ -41,7 +41,8 @@ RUN cd $CATALINA_HOME && \
 # Cleanup
 RUN rm -r /var/lib/apt/lists/* && \
     rm -rf \
-    /tmp/master
+    /tmp/master.zip \
+    /tmp/KAOSer-master
 
 # Copy docker-entrypoint
 COPY docker-entrypoint.sh /
