@@ -91,40 +91,10 @@
 		<jscomp compilationLevel="simple" debug="false" forceRecompile="true" output="${basedir}/sidebar.min.js">
 			<sources dir="${war.dir}/js/diagramly/sidebar">
 				<file name="Sidebar.js" />
-				<file name="Sidebar-Advanced.js" />
-				<file name="Sidebar-Android.js" />
-				<file name="Sidebar-ArchiMate.js" />
-				<file name="Sidebar-ArchiMate3.js" />
-				<file name="Sidebar-Arrows2.js" />
-				<file name="Sidebar-Atlassian.js" />
-				<file name="Sidebar-AWS.js" />
-				<file name="Sidebar-AWS3.js" />
-				<file name="Sidebar-AWS3D.js" />
-				<file name="Sidebar-Azure.js" />
-				<file name="Sidebar-Basic.js" />
-				<file name="Sidebar-Bootstrap.js" />
-				<file name="Sidebar-BPMN.js" />
-				<file name="Sidebar-Cabinet.js" />
-				<file name="Sidebar-Citrix.js" />
-				<file name="Sidebar-EIP.js" />
-				<file name="Sidebar-Electrical.js" />
-				<file name="Sidebar-ER.js" />
-				<file name="Sidebar-Floorplan.js" />
-				<file name="Sidebar-Flowchart.js" />
-				<file name="Sidebar-GCP.js" />
-				<file name="Sidebar-Gmdl.js" />
-				<file name="Sidebar-Ios.js" />
-				<file name="Sidebar-Ios7.js" />
-				<file name="Sidebar-LeanMapping.js" />
-				<file name="Sidebar-Mockup.js" />
-				<file name="Sidebar-MSCAE.js" />
-				<file name="Sidebar-Network.js" />
-				<file name="Sidebar-Office.js" />
-				<file name="Sidebar-PID.js" />
-				<file name="Sidebar-Rack.js" />
-				<file name="Sidebar-Sysml.js" />
-				<file name="Sidebar-Veeam.js" />
-				<file name="Sidebar-WebIcons.js" />
+				<file name="Sidebar-GoalModel.js" />
+				<file name="Sidebar-ObjectModel.js" />
+				<file name="Sidebar-OperationModel.js" />
+				<file name="Sidebar-RespModel.js" />
 			</sources>
 		</jscomp>
 		

@@ -2,351 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Storage_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Cellphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Data_Filtering_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Move_Stack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Shopping_Cart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/BlackBerry_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Plug_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Arrow_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Lock_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Virtual_Application_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/power_distribution_unit_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_0_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Print_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Certificate_Off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Storage_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Printer_Commercial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Tech_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Workstation_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Monitor_Tower_Behind_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Monitor_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Bridge_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Ships_Wheel_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Rack_Partial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Empty_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Switch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/iPad_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Add_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Concentrator_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Workstation_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/iPad_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Antivirus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Printer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Certificate_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Software_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_100_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Rack_Empty_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Tech_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Empty_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Rack_Partial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Tech_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Telephone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Piggy_Bank_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Virus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Firewall_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Firewall_02_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Virtual_Application_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Network_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Antivirus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Repeater_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Server_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Graph_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Minus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Laptop_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Wireless_Router_N_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Tire_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Ip_Camera_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Repeater_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Ships_Wheel_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Credit_Card_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_75_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/IBM_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Coins_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Pie_Chart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Full_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Arrow_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/iPhone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Pilot_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Stock_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Network_2_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Certificate_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Monitor_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/USB_Hub_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Harddrive_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Wireless_Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Printer_Commercial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Farmer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Keys_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Mainframe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/UPS_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Netbook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Ip_Camera_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_75_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Rack_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Computer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Concentrator_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Signal_tower_off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Earth_globe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Email_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Network_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Mouse_Pointer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Safe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Security_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Laptop_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Arrow_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Stylus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Lock_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Dollar_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Modem_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Monitor_Tower_Behind_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/iPhone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Scientist_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Signal_tower_on_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Fujitsu_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_75_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Move_Stack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Soldier_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Data_Filtering_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Wireless_Router_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Soldier_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Move_Stack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Virtual_Machine_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Monitor_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Fujitsu_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Firewall-page1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/MacBook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Safe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Printer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/power_distribution_unit_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Shopping_Cart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/iMac_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Star_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Palm_Treo_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Blue_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Tower_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_0_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Data_Filtering_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Switch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_allstates_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Computer_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Harddrive_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Bluetooth_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/HTC_smartphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Virtual_Machine_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Wireless_Router_N_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Netbook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Bluetooth_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Full_Folder_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/MacBook_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Firewall-page1_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Signal_tower_on_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Secure_System_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_Rack_Partial_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/UPS_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Email_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/iMac_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Network_2_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_Green_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Construction_Worker_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Remove_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Mainframe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Stock_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Soldier_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Minus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/HTC_smartphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_Minus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Graph_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Stock_Down_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Earth_globe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Computer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_100_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Gear_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Telesales_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Woman_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Add_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Print_Server_Wireless_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_50_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_allstates_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Farmer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/USB_Hub_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Monitor_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Server_Rack_Empty_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Certificate_Off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Battery_50_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Router_Icon_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Mouse_Pointer_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Secure_System_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Plug_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Database_Remove_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Rack_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_50_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Arrow_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_0_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Coins_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Add_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_Remove_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/telecommunication/Cellphone_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Pilot_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Computer_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Tire_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/BlackBerry_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Firewall_02_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Touch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Keys_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Signal_tower_off_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Scientist_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Modem_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Firewall_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Piggy_Bank_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Credit_Card_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/IBM_Tablet_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Router_Icon_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Military_Officer_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Nurse_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Rack_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Suit_Man_Green_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/finance/Pie_Chart_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Print_Server_Wireless_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Stylus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Bridge_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Doctor_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Waiter_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Waiter_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Military_Officer_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Tech_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Server_Rack_Empty_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Star_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Stock_Up_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/telecommunication/Palm_Treo_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/general/Battery_100_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Cloud_Server_Private_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/computers/Software_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Telesales_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Touch_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Doctor_Man_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Cloud_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Nurse_Woman_Red_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Soldier_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Battery_allstates_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Suit_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Database_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/finance/Dollar_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/computers/Virus_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Construction_Worker_Man_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/people/Security_Woman_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/clipart/Gear_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Mainframe_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/networking/Print_Server_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/lib/clip_art/people/Worker_Woman_Black_128x128.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/img/networking/Router_128x128.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" afterPath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/etc/build/build.xml" afterPath="$PROJECT_DIR$/etc/build/build.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -358,7 +16,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="KAOSer" />
   </component>
@@ -367,8 +24,8 @@
       <file leaf-file-name="Sidebar-ObjectModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="142" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
+            <state relative-caret-position="230">
+              <caret line="10" column="142" lean-forward="false" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
               <folding />
             </state>
           </provider>
@@ -377,8 +34,8 @@
       <file leaf-file-name="Menus.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12100">
-              <caret line="486" column="42" selection-start-line="486" selection-start-column="34" selection-end-line="486" selection-end-column="42" />
+            <state relative-caret-position="11132">
+              <caret line="486" column="42" lean-forward="false" selection-start-line="486" selection-start-column="34" selection-end-line="486" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -387,18 +44,28 @@
       <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="3460" column="24" selection-start-line="3460" selection-start-column="24" selection-end-line="3460" selection-end-column="24" />
+            <state relative-caret-position="79534">
+              <caret line="3460" column="24" lean-forward="false" selection-start-line="3460" selection-start-column="24" selection-end-line="3460" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1922">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/etc/build/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1033">
+              <caret line="330" column="11" lean-forward="true" selection-start-line="330" selection-start-column="11" selection-end-line="330" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -407,8 +74,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+            <state relative-caret-position="1012">
+              <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -466,6 +133,7 @@
         <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js" />
         <option value="$PROJECT_DIR$/war/js/diagramly/Devel.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
+        <option value="$PROJECT_DIR$/etc/build/build.xml" />
       </list>
     </option>
   </component>
@@ -475,21 +143,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -506,27 +167,55 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KAOSer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="war" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="war" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="war" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="diagramly" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="war" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="diagramly" type="462c0819:PsiDirectoryNode" />
+              <item name="sidebar" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
@@ -540,7 +229,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
-    <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -562,10 +251,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KAOSer/war/index.html">
-      <method />
-    </configuration>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KAOSer/war/index.html" />
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -590,15 +277,6 @@
       <option name="filePath" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
@@ -619,9 +297,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-    </list>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
@@ -688,23 +371,27 @@
       <workItem from="1519831843332" duration="42000" />
       <workItem from="1520595282085" duration="2328000" />
       <workItem from="1523183481401" duration="24000" />
+      <workItem from="1523867847319" duration="726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160663000" />
+    <option name="totallyTimeSpent" value="161389000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22108346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15677084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -714,13 +401,11 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -752,6 +437,9 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -768,45 +456,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Dialogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50050">
-          <caret line="2004" column="57" selection-start-line="2004" selection-start-column="49" selection-end-line="2004" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="27" />
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/resources/dia.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17750">
-          <caret line="710" column="17" selection-start-line="710" selection-start-column="17" selection-end-line="710" selection-end-column="17" />
+          <caret line="710" column="17" lean-forward="false" selection-start-line="710" selection-start-column="17" selection-end-line="710" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93650">
-          <caret line="3746" column="51" selection-start-line="3746" selection-start-column="36" selection-end-line="3746" selection-end-column="51" />
+          <caret line="3746" column="51" lean-forward="false" selection-start-line="3746" selection-start-column="36" selection-end-line="3746" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26875">
-          <caret line="1077" column="60" selection-start-line="1077" selection-start-column="60" selection-end-line="1077" selection-end-column="60" />
+          <caret line="1077" column="60" lean-forward="false" selection-start-line="1077" selection-start-column="60" selection-end-line="1077" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -827,77 +508,77 @@
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/myShaps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3150">
-          <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+          <caret line="126" column="16" lean-forward="false" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/styles/atlas.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6225">
-          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+          <caret line="249" column="0" lean-forward="false" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/open.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/github.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/offline.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/jscolor/jscolor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/app.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
-          <caret line="99" column="256" selection-start-line="99" selection-start-column="247" selection-end-line="99" selection-end-column="256" />
+          <caret line="99" column="256" lean-forward="false" selection-start-line="99" selection-start-column="247" selection-end-line="99" selection-end-column="256" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/mydiv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6425">
-          <caret line="257" column="19" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
+          <caret line="257" column="19" lean-forward="false" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -905,7 +586,7 @@
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -913,21 +594,21 @@
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/operations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/divforOthers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43050">
-          <caret line="1724" column="38" selection-start-line="1724" selection-start-column="13" selection-end-line="1724" selection-end-column="38" />
+          <caret line="1724" column="38" lean-forward="false" selection-start-line="1724" selection-start-column="13" selection-end-line="1724" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -937,65 +618,65 @@
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="630" column="8" selection-start-line="630" selection-start-column="8" selection-end-line="630" selection-end-column="8" />
+          <caret line="630" column="8" lean-forward="false" selection-start-line="630" selection-start-column="8" selection-end-line="630" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="12" column="142" selection-start-line="12" selection-start-column="142" selection-end-line="12" selection-end-column="142" />
+          <caret line="12" column="142" lean-forward="false" selection-start-line="12" selection-start-column="142" selection-end-line="12" selection-end-column="142" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-OperationModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/Devel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+          <caret line="34" column="56" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
-          <caret line="1131" column="23" selection-start-line="1131" selection-start-column="23" selection-end-line="1131" selection-end-column="23" />
+          <caret line="1131" column="23" lean-forward="false" selection-start-line="1131" selection-start-column="23" selection-end-line="1131" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="142" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
+        <state relative-caret-position="230">
+          <caret line="10" column="142" lean-forward="false" selection-start-line="10" selection-start-column="142" selection-end-line="10" selection-end-column="142" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12100">
-          <caret line="486" column="42" selection-start-line="486" selection-start-column="34" selection-end-line="486" selection-end-column="42" />
+        <state relative-caret-position="11132">
+          <caret line="486" column="42" lean-forward="false" selection-start-line="486" selection-start-column="34" selection-end-line="486" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+        <state relative-caret-position="1012">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1007,16 +688,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="3460" column="24" selection-start-line="3460" selection-start-column="24" selection-end-line="3460" selection-end-column="24" />
+        <state relative-caret-position="79534">
+          <caret line="3460" column="24" lean-forward="false" selection-start-line="3460" selection-start-column="24" selection-end-line="3460" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1922">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/build/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1033">
+          <caret line="330" column="11" lean-forward="true" selection-start-line="330" selection-start-column="11" selection-end-line="330" selection-end-column="11" />
           <folding />
         </state>
       </provider>
