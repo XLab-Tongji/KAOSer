@@ -49,7 +49,7 @@ export default {
   methods: {
 	  submit: function () {
 		  console.log('username: '+this.username);
-          window.location.href="../router/index.html";
+          this.$router.push('/home');
       }
   }
 }

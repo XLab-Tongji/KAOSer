@@ -8,6 +8,7 @@ import $ from 'jquery'
 import BootstrapVue from "bootstrap-vue"
 
 const routes = [
+    {path: '/',redirect: 'login'},
     { path: '/login', component: Login },
     { path: '/sign', component: Sign },
     { path: '/success', component: Success },

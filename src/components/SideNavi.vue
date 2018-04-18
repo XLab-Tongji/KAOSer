@@ -3,7 +3,7 @@
         <b-card no-body id="tab-content">
             <b-tabs id="tabs-left" pills card vertical nav-wrapper-class="w-25">
                 <b-tab :title="`${proj.items}`" v-for="proj in projects" :key="proj.items">
-                    {{proj.items}}
+                    <a href="http://10.60.38.173:8112/">{{proj.items}}</a>
                 </b-tab>
             </b-tabs>
         </b-card>
