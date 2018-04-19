@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="jquery-1.9.0.min.js"></script>
+<script>
+
+    function verify() {
+             $.ajax({
+             	type:"post",
+             	url:"http://localhost:8880/save",
+             	data:{jsname:"11fs1",jsonStr:"hello"},
+                dataType:"html",
+                async: true,
+                //contentType: "application/json;charset=utf-8",
+             	success:function (msg) {
+                    var obj = JSON.parse(msg);
+                    alert(obj.name);
+             	},
+             	error:function (msg) {
+                    var obj = eval(msg);
+                    alert(JSON.stringify(obj));
+                    alert("error");
+                }
+             });
+
+
+    };
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX实例</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=GBK">
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+</head>
+<body>
+<input type="text" id="userName" /><span id="result" >*</span><br/><br/>
+<!-- <div id="result"></div> -->
+<button id="hello" onclick="verify()" type="button">hello</button>
+<a href="http://127.0.0.1:8880/ServletDownload?filename=dfaaam.md">下载图片</a>
+</body>
+</html>
