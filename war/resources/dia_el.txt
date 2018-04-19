@@ -706,3 +706,4 @@ webEmailOrOther=Web, email ή οποαδήποτε άλλη διαδικτυακ
 webLink=Διαδικτυακός Σύνδεσμος
 wireframes=Πλαίσια
 mongo=MongoDB
+pattern=Pattern

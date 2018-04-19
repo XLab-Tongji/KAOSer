@@ -13,10 +13,14 @@ mxscript('js/deflate/base64.js');
 mxscript('js/sanitizer/sanitizer.min.js');
 
 // Uses grapheditor from devhost
+mxscript('js/mxgraph/downLoadDiv.js');
+mxscript('js/mxgraph/user.js');
+mxscript('js/mxgraph/Mybg.js');
+mxscript('js/mxgraph/whatType.js');
 mxscript('js/mxgraph/Editor.js');
 mxscript('js/mxgraph/EditorUi.js');
 mxscript('js/mxgraph/Sidebar.js');
-mxscript('js/mxgraph/mydiv.js');
+mxscript('js/mxgraph/Goaldiv.js');
 mxscript('js/mxgraph/RequirementDiv.js');
 mxscript('js/mxgraph/divforOthers.js');
 mxscript('js/mxgraph/Graph.js');
@@ -26,7 +30,7 @@ mxscript('js/mxgraph/Menus.js');
 mxscript('js/mxgraph/Format.js');
 mxscript('js/mxgraph/Toolbar.js');
 mxscript('js/mxgraph/Dialogs.js');
-mxscript('js/mxgraph/myShaps.js');
+mxscript('js/mxgraph/myShapes.js');
 mxscript('js/mxgraph/myLineShapes.js');
 
 // Loads main classes

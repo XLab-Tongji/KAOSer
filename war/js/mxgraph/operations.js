@@ -1,15 +1,6 @@
 /**
  * Created by admin on 2018/1/16.
  */
-function downloadFile() {
-    document.getElementById("DownloadDiv").style.display="none";
-    console.log("ajaxDownloadSynchronized");
-    var url = "http://localhost:8880/ServletDownload";
-    var fileName = document.getElementById("txtname1").value+".md";
-    var form = $("<form></form>").attr("action", url).attr("method", "post");
-    form.append($("<input />").attr("type", "hidden").attr("name", "fileName").attr("value", fileName));
-    form.appendTo('body').submit().remove();
-};
 
 var urlParams = (function()
 {

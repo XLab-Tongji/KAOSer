@@ -706,3 +706,4 @@ webEmailOrOther=Уеб, имейл или друг интернет адрес
 webLink=Уеб линк
 wireframes=Схематични дизайни
 mongo=MongoDB
+pattern=Pattern

@@ -707,3 +707,4 @@ webLink=เว็บเชื่อมโยง
 wireframes=แบบร่างแผนงาน
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

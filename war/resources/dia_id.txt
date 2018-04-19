@@ -707,3 +707,4 @@ webLink=Tautan Web
 wireframes=Wireframe
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

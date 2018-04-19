@@ -706,3 +706,4 @@ webEmailOrOther=Адрес страницы, e-mail или иной интерн
 webLink=Сетевая ссылка
 wireframes=Макеты интерфейсов (UI)
 mongo=MongoDB
+pattern=Pattern

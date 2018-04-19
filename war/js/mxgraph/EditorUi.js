@@ -2768,6 +2768,7 @@ EditorUi.prototype.createTabContainer = function()
 EditorUi.prototype.createDivs = function()
 {
 	this.menubarContainer = this.createDiv('geMenubarContainer');
+	this.menubarContainer.setAttribute('id','geMenubarContainer');
 	this.toolbarContainer = this.createDiv('geToolbarContainer');
 	this.sidebarContainer = this.createDiv('geSidebarContainer');
 	this.formatContainer = this.createDiv('geSidebarContainer');
@@ -2826,7 +2827,6 @@ EditorUi.prototype.createUi = function()
 {
 	// Creates menubar
 	this.menubar = (this.editor.chromeless) ? null : this.menus.createMenubar(this.createDiv('geMenubar'));
-	
 	if (this.menubar != null)
 	{
 		this.menubarContainer.appendChild(this.menubar.container);

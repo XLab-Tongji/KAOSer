@@ -707,3 +707,4 @@ webLink=Webový odkaz
 wireframes=Skicy webu
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

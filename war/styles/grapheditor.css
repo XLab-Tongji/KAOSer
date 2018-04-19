@@ -1,3 +1,53 @@
+#table_content{
+	width: 200px;
+	height: 165px;
+	position: absolute;
+	overflow: auto;
+}
+
+.mytable{
+	font-size:20px;
+	width:188px;
+	height: 40px;
+}
+
+.mytable td{
+	background-color: #FFFFCC;
+	color: #b85b5a;
+	width: 188px;
+	height: 36px;
+}
+
+.act_table{
+	background:white;
+	width:200px;
+	height:200px;
+	z-index:999;
+	position:absolute;
+	margin: auto;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	text-align: center;
+	display: none;
+}
+.mytable td:hover {
+	background-color: #4d90fe;
+}
+
+#importQuit{
+	color: white;
+	position: absolute;
+	bottom:0px;
+	left: 0px;
+	background: #0cf;
+	width:99%;
+	font-size: 20px;
+}
+
+
 body { overflow:hidden; }
 .geSidebarContainer .geTitle { color:#505050; }
 .geSidebarContainer .geTitle input {
@@ -59,20 +109,6 @@ body { overflow:hidden; }
 	opacity: 1;
 }
 
-
-#fade{
-	display: none;
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	background-color: black;
-	z-index:1001;
-	-moz-opacity: 0.8;
-	opacity:.80;
-	filter: alpha(opacity=88);
-}
 #ExportFiles ,#SaveFiles{
 	background:#F9F9F9;
 	padding:25px;
@@ -103,6 +139,7 @@ fieldset {
 	background-color: white;
 	z-index: 1002;
 	overflow: auto;
+	-webkit-box-shadow: #666 0px 0px 10px;
 }
 #DownloadDiv{
 	text-align: center;
@@ -116,6 +153,7 @@ fieldset {
 	background-color: white;
 	z-index: 1002;
 	overflow: auto;
+	-webkit-box-shadow: #666 0px 0px 10px;
 }
 #ExportFiles h3 ,#SaveFiles h3,#DownloadDiv h3{
 	font-family:"Open Sans", Helvetica, Arial, sans-serif;
@@ -133,8 +171,9 @@ fieldset {
 	margin:0 0 5px;
 	padding:10px;
 	font-size:15px;
+
 }
-#DownloadDiv button[type="button"]{
+#downloadBtn,#giveup{
 	cursor:pointer;
 	width:45%;
 	border:none;

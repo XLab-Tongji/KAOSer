@@ -1109,27 +1109,27 @@ Actions.prototype.init = function()
 
 	//add new action
 	var div = document.getElementById("light");
-	var div2=document.getElementById("fade");
 	var div3 = document.getElementById("lightExport");
-	//var div4=document.getElementById("fade1");
 	var jsonText;
 	//序列化后的json
-	var jsonStr;
+	//var jsonStr;
+	var fid;//判断输出文件的类型
+	var result;
 	this.addAction('mongo',function(){
 		div.style.display="block";
-		div2.style.display="block";
+		displayDiv();
 		var encoder = new mxCodec();
 		var node = encoder.encode(graph.getModel());
-		var result=mxUtils.getXml(node,'\n');
+		result=mxUtils.getXml(node,'\n');
 		var xotree = new XML.ObjTree();
 		var json = xotree.parseXML(result);
 		//将json对象转为格式化的字符串
 		var dumper = new JKL.Dumper();
 		jsonText = dumper.dump(json);
-		mxUtils.popup(jsonText, true);
+		//mxUtils.popup(jsonText, true);
 		//对数组进行json序列化，不然无法传递到服务端
-		jsonStr = JSON.stringify(jsonText);
-		alert(jsonStr);
+		// jsonStr = JSON.stringify(jsonText);
+		// alert(jsonStr);
 	});
 	$("#affirm").click(function () {
 		var jsname=document.getElementById("txtname").value;
@@ -1141,18 +1141,18 @@ Actions.prototype.init = function()
 			$.ajax({
 				type:"POST",
 				url:"http://localhost:8880/save",
-				data:{jsname:jsname,jsonStr:jsonStr},
+				data:{jsname:jsname,jsonStr:jsonText,myname:username},
 				dataType:"html",
 				async: false,
 				success:function (data) {
 					var obj = JSON.parse(data);
 					if(obj.name=="success"){
 						document.getElementById('light').style.display='none';
-						document.getElementById('fade').style.display='none';
+						removeDiv(mybg);
 						alert("保存成功");
 					}
 					else{
-						alert("保存失败，请重命名");
+						alert("保存失败，该名称已存在");
 					}
 				},
 				error:function (data) {
@@ -1168,27 +1168,16 @@ Actions.prototype.init = function()
 		}
 		else{
 			document.getElementById('lightExport').style.display='none';
-			document.getElementById('fade').style.display='none';
+			removeDiv(mybg);
 
 			$.ajax({
 				type:"POST",
-				url:"http://localhost:8880/template",
-				data:{jsname:jsname,jsonStr:jsonStr},
+				url:"http://localhost:8880/template/" + fid,
+				data:{jsname:jsname,jsonStr:jsonText},
 				dataType:"html",
 				async: false,
 				success:function (data) {
-					// var obj = JSON.parse(data);
-					// if(obj.name=="success"){
-
-					// 	alert("保存成功");
-					// 	var str=obj.content;
-					// 	alert(str);
-					//}
-					// else{
-					// 	alert("保存失败，请重命名");
-					// }
-					//alert(data);
-					document.getElementById("DownloadDiv").style.display="block";
+					showDownloadDiv();
 					mxUtils.popup(data,true);
 				},
 				error:function (data) {
@@ -1198,20 +1187,159 @@ Actions.prototype.init = function()
 		}
 
 	});
-	this.addAction('Template',mxUtils.bind(this,function () {
-		div3.style.display="block";
-		div2.style.display="block";
-		var encoder = new mxCodec();
-		var node = encoder.encode(graph.getModel());
-		var result=mxUtils.getXml(node,'\n');
-		var xotree = new XML.ObjTree();
-		var json = xotree.parseXML(result);
-		//将json对象转为格式化的字符串
-		var dumper = new JKL.Dumper();
-		jsonText = dumper.dump(json);
-		//对数组进行json序列化，不然无法传递到服务端
-		jsonStr = JSON.stringify(jsonText);
+
+	function tem() {
+        div3.style.display="block";
+        displayDiv();
+        var encoder = new mxCodec();
+        var node = encoder.encode(graph.getModel());
+        var result=mxUtils.getXml(node,'\n');
+        var xotree = new XML.ObjTree();
+        var json = xotree.parseXML(result);
+        //将json对象转为格式化的字符串
+        var dumper = new JKL.Dumper();
+        jsonText = dumper.dump(json);
+        //对数组进行json序列化，不然无法传递到服务端
+        //jsonStr = JSON.stringify(jsonText);
+    }
+
+	this.addAction('TemplateMD',mxUtils.bind(this,function () {
+		tem();
+		fid='md';
+    }));
+	this.addAction('TemplateRST',mxUtils.bind(this,function () {
+		tem();
+		fid='rst';
+    }));
+
+	$("#back1").click(function () {
+		removeDiv(mybg);
+        div3.style.display="none";
+    });
+	$("#back").click(function () {
+		removeDiv(mybg);
+		div.style.display="none";
+    });
+	$("#giveup").click(function () {
+		removeDiv(downLoadDiv);
+    });
+	var geMenus=document.getElementsByClassName('geItem');
+	var tar;
+	function advice(advice) {
+		for(var i=0;i<geMenus.length;i++){
+			if(geMenus[i].innerHTML=='SpecialRequirement'||geMenus[i].innerHTML=='GeneralRequirement'){
+				//geMenus[i].innerHTML=advice;
+				tar=i;
+			}
+		}
+	}
+	this.addAction('GeneralRequirement',mxUtils.bind(this,function () {
+        advice('GeneralRequirement');
+		if(geMenus[tar].innerHTML=='SpecialRequirement'){
+            window.location.href='http://localhost:63342/KAOSer-master/war/index.html?tag=general';
+
+		}
+
+		//this.HoverIcons.prototype.init();
 	}));
+	this.addAction('SpecialRequirement',mxUtils.bind(this,function () {
+        advice('SpecialRequirement');
+        if(geMenus[tar].innerHTML=='GeneralRequirement'){
+            window.location.href='http://localhost:63342/KAOSer-master/war/index.html?tag=Requirement';
+
+		}
+	}));
+
+	//自定义字符串拼接方法
+    function StringBuffer() {
+        this.__strings__ = new Array();
+    }
+    StringBuffer.prototype.append = function (str) {
+        this.__strings__.push(str);
+        return this;    //方便链式操作
+    };
+    StringBuffer.prototype.toString = function () {
+        return this.__strings__.join("");
+    };
+
+
+
+    var boarddiv = "<div class='act_table' id='act_table'><div id='table_content'></div><button id='importQuit' type='button'>取消</button></div>";
+    $(document.body).append(boarddiv);
+
+    function getXML() {
+        $.ajax({
+            type:"Get",
+            url:"http://localhost:8880/importFromMongo",
+            data:{myname:username},
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            cache: false,
+            dataType: "json",
+            success:function (data) {
+                $.each(data,function (i,actObj) {
+                	var table = document.createElement("table");
+                	table.setAttribute("class","mytable");
+                	var tr = document.createElement("tr");
+                	var td = document.createElement("td");
+                	td.innerHTML = actObj.name;
+                	td.onclick = function (ev) {
+
+                	    var r =confirm("从数据库导入后将清空当前的内容");
+                	    if(r){
+                		    var curr = actObj.jsonStr;
+                		    //alert(curr);
+
+                            var xotree = new XML.ObjTree();
+                            var json = eval("(" + curr + ")");
+                            var xmlString =xotree.writeXML(json);
+                            //alert(xmlString);
+						    removeDiv(mybg);
+						    document.getElementById("act_table").style.display="none";
+						    //导入
+                            try
+                            {
+                                editor.graph.removeCells(graph.getChildVertices(graph.getDefaultParent()));
+                                var doc = mxUtils.parseXml(xmlString);
+                                var model = new mxGraphModel();
+                                var codec = new mxCodec(doc);
+                                codec.decode(doc.documentElement, model);
+
+                                var children = model.getChildren(model.getChildAt(model.getRoot(), 0));
+                                editor.graph.setSelectionCells(editor.graph.importCells(children));
+                            }
+                            catch (e)
+                            {
+                                mxUtils.alert(mxResources.get('invalidOrMissingFile') + ': ' + e.message);
+                             }
+                	    }
+                        document.getElementById("table_content").innerHTML = '';
+					};
+                	tr.appendChild(td);
+                	table.appendChild(tr);
+                	document.getElementById("table_content").appendChild(table);
+                });
+                //alert(list.toString());
+            },
+            error:function () {
+                alert("拉取信息失败");
+            }
+
+        });
+    }
+
+    this.addAction('fromMongo',mxUtils.bind(this,function () {
+        document.getElementById("act_table").style.display='block';
+		displayDiv();
+		getXML();
+    }));
+    $("#importQuit").click(function () {
+        document.getElementById("act_table").style.display='none';
+        //div2.style.display="none";
+		removeDiv(mybg);
+		document.getElementById("table_content").innerHTML = '';
+    });
+
+
 	action = this.addAction('layers', mxUtils.bind(this, function()
 	{
 		if (this.layersWindow == null)

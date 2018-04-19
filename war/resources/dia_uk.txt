@@ -707,3 +707,4 @@ webLink=Веб-посилання
 wireframes=Макети інтерфейсу
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

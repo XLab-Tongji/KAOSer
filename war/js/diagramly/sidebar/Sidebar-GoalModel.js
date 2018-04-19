@@ -1,18 +1,18 @@
 (function()
 {
-	Sidebar.prototype.addBpmnPalette = function()
+	Sidebar.prototype.addGoalModelPalette = function()
 	{
 		var sb=this;
 		this.addPaletteFunctions('bpmnGateways', 'Goal Modeling', false,
 		[
-			 this.createVertexTemplateEntry('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#000000', 120, 40, '', 'Goal'),
-			 this.createVertexTemplateEntry('shape=requirement;strokeWidth=3;whiteSpace=wrap;html=1;right=0;top=0;bottom=0;fillColor=#DAE8FC;routingCenterX=-0.5;strokeColor=#000000', 120, 40, '', 'Requirement'),
-			 this.createVertexTemplateEntry('shape=expectation;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=#cccc00;strokeColor=#000000', 120, 40, '', 'Expectation'),
-			 this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#FF9999;strokeColor=#000000', 120, 40, '', 'Obstacle'),
-			 this.createVertexTemplateEntry('shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#E1D5E7;strokeColor=#000000', 120, 40, '', 'Domain Property'),
+			 this.createVertexTemplateEntry('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#0066CC;fontSize=18', 180, 40, '', 'Goal'),
+			 this.createVertexTemplateEntry('shape=requirement;strokeWidth=3;whiteSpace=wrap;html=1;right=0;top=0;bottom=0;fillColor=#fff2cc;routingCenterX=-0.5;strokeColor=#D1BB7E;fontSize=18', 160, 40, '', 'Requirement'),
+			 this.createVertexTemplateEntry('shape=expectation;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=#f8cecc;strokeColor=#99004D;fontSize=18', 180, 40, '', 'Expectation'),
+			 this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#ffe6cc;strokeColor=#F19C99;fontSize=18', 180, 40, '', 'Obstacle'),
+			 this.createVertexTemplateEntry('shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFD966;strokeColor=#FFD306;fontSize=18', 120, 40, '', 'Domain Property'),
 			this.addEntry('FF', function()
 			{
-				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000');
+				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#000000');
 				edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
 				edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
 				edge.geometry.relative = true;

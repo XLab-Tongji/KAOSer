@@ -706,3 +706,4 @@ webEmailOrOther=Web, email or any other internet address
 webLink=Web Link
 wireframes=‫إطارات‬
 mongo=MongoDB
+pattern=Pattern

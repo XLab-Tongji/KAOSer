@@ -707,3 +707,4 @@ webLink=Weblenke
 wireframes=Trådmodeller
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

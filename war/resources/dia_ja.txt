@@ -706,3 +706,4 @@ webEmailOrOther=ウェブ電子メール、またはその他のインター ネ
 webLink=ウェブリンク
 wireframes=ワイヤーフレーム
 mongo=MongoDB
+pattern=Pattern

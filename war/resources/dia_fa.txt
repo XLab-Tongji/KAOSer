@@ -706,3 +706,4 @@ webEmailOrOther=‫وب، ایمیل و یا آدرس اینترنتی دیگر�
 webLink=‫لینک تحت وب‬
 wireframes=‫قاب خط‬
 mongo=MongoDB
+pattern=Pattern

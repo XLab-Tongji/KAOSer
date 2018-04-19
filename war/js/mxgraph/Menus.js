@@ -30,7 +30,28 @@ Menus.prototype.defaultFontSize = '12';
 /**
  * Sets the default font size.
  */
-Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase','exportTemplate'];
+
+var thisURL=document.URL;
+var getVal=thisURL.split('?')[1];
+var showVal=getVal.split("=")[1];
+var what;
+function g(){
+    if(showVal=="general"){
+        what="GeneralRequirement";
+        alert(what);
+    }
+    else{
+        what="SpecialRequirement";
+        alert(showVal);
+        if(showVal!="SpecialRequirement"){
+        	username = showVal;
+		}
+    }
+}
+window.onload=g();
+
+
+Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase','exportTemplate',what,'importFromDB'];
 
 /**
  * Adds the label menu items to the given menu and parent.
@@ -484,8 +505,18 @@ Menus.prototype.init = function()
 	})));
 	this.put('exportTemplate', new Menu(mxUtils.bind(this, function(menu, parent)
 	{
-		this.addMenuItems(menu, ['Template']);
+		this.addMenuItems(menu, ['TemplateMD']);
+		this.addMenuItems(menu,['TemplateRST'])
 	})));
+	this.put(what, new Menu(mxUtils.bind(this, function(menu, parent)
+	{
+		this.addMenuItems(menu, ['GeneralRequirement']);
+		this.addMenuItems(menu, ['SpecialRequirement']);
+	})));
+    this.put('importFromDB', new Menu(mxUtils.bind(this, function(menu, parent)
+    {
+        this.addMenuItems(menu, ['fromMongo']);
+    })));
 };
 
 /**

@@ -706,3 +706,4 @@ webEmailOrOther=Hálózati, email vagy másmilyen internet cím
 webLink=Hálózati link
 wireframes=Drótvázak
 mongo=MongoDB
+pattern=Pattern

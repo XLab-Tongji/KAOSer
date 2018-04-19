@@ -707,3 +707,4 @@ webLink=Web link
 wireframes=Žičani model
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

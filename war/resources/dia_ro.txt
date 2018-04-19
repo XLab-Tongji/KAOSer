@@ -707,3 +707,4 @@ webLink=Web Link
 wireframes=Wireframe-uri
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

@@ -118,6 +118,25 @@ ConflictShape.prototype.redrawPath = function(c, x, y, w, h)
 
 mxCellRenderer.prototype.defaultShapes['myconflict'] = ConflictShape;
 
+function CrossSign(){
+    mxActor.call(this);
+}
+mxUtils.extend(CrossSign, mxActor);
+CrossSign.prototype.size = 0.2;
+CrossSign.prototype.redrawPath = function(c, x, y, w, h){
+      //c.begin();
+      c.moveTo(0,0);
+      c.lineTo(w,h);
+      c.end();
+
+
+      c.moveTo(w,0);
+      c.lineTo(0,h);
+      c.close();
+};
+mxCellRenderer.prototype.defaultShapes['crossSign'] = CrossSign;
+
+
 
 ObstacleShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 GoalShape.prototype.constraints = mxRectangleShape.prototype.constraints;

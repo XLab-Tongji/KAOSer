@@ -707,3 +707,4 @@ webLink=Hyperlien
 wireframes=Maquettes conceptuelles
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

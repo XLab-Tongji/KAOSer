@@ -1678,9 +1678,9 @@ App.prototype.createBackground = function()
 	bg.style.top = '0px';
 	bg.style.bottom = '0px';
 	bg.style.right = '0px';
-	
+
 	mxUtils.setOpacity(bg, 100);
-	
+
 	if (mxClient.IS_QUIRKS)
 	{
 		new mxDivResizer(bg);
@@ -2363,11 +2363,11 @@ App.prototype.start = function()
 App.prototype.showSplash = function(force)
 {
 	var serviceCount = this.getServiceCount(false) + 1;
-	
+
 	var showSecondDialog = mxUtils.bind(this, function()
 	{
 		var dlg = new SplashDialog(this);
-		
+
 		this.showDialog(dlg.container, 340, (serviceCount < 2 ||
 			mxClient.IS_CHROMEAPP || EditorUi.isElectronApp) ? 200 : 260, true, true,
 			mxUtils.bind(this, function(cancel)
@@ -2382,7 +2382,7 @@ App.prototype.showSplash = function(force)
 				}
 			}));
 	});
-	
+
 	if (this.editor.chromeless)
 	{
 		this.handleError({message: mxResources.get('noFileSelected')},
@@ -2394,13 +2394,13 @@ App.prototype.showSplash = function(force)
 	else if (this.mode == null || force)
 	{
 		var rowLimit = (serviceCount <= 4) ? 2 : 3;
-		
+
 		var dlg = new StorageDialog(this, mxUtils.bind(this, function()
 		{
 			this.hideDialog();
 			showSecondDialog();
 		}), rowLimit);
-		
+
 		this.showDialog(dlg.container, (rowLimit < 3) ? 260 : 300,
 			(serviceCount > rowLimit) ? 420 : 300, true, false);
 		dlg.init();
@@ -2420,11 +2420,11 @@ App.prototype.showSplash = function(force)
 App.prototype.addLanguageMenu = function(elt)
 {
 	var img = null;
-	
+
 	if (!this.isOfflineApp() || mxClient.IS_CHROMEAPP)
 	{
 		var langMenu = this.menus.get('language');
-		
+
 		if (langMenu != null)
 		{
 			img = document.createElement('div');
@@ -2434,7 +2434,7 @@ App.prototype.addLanguageMenu = function(elt)
 			img.style.cursor = 'pointer';
 			img.style.bottom = '20px';
 			img.style.right = '20px';
-			
+
 			mxEvent.addListener(img, 'click', mxUtils.bind(this, function(evt)
 			{
 				this.editor.graph.popupMenuHandler.hideMenu();
@@ -2443,25 +2443,25 @@ App.prototype.addLanguageMenu = function(elt)
 				menu.smartSeparators = true;
 				menu.showDisabled = true;
 				menu.autoExpand = true;
-				
+
 				// Disables autoexpand and destroys menu when hidden
 				menu.hideMenu = mxUtils.bind(this, function()
 				{
 					mxPopupMenu.prototype.hideMenu.apply(menu, arguments);
 					menu.destroy();
 				});
-		
+
 				var offset = mxUtils.getOffset(img);
 				menu.popup(offset.x, offset.y + img.offsetHeight, null, evt);
-				
+
 				// Allows hiding by clicking on document
 				this.setCurrentMenu(menu);
 			}));
-		
+
 			elt.appendChild(img);
 		}
 	}
-	
+
 	return img;
 };
 
@@ -4401,33 +4401,33 @@ App.prototype.updateHeader = function()
 		this.appIcon.style.width = '40px';
 		this.appIcon.style.backgroundColor = '#f18808';
 		this.appIcon.style.height = this.menubarHeight + 'px';
-		
+
 		mxEvent.disableContextMenu(this.appIcon);
-		
+
 		mxEvent.addListener(this.appIcon, 'click', mxUtils.bind(this, function(evt)
 		{
 			this.appIconClicked(evt);
 		}));
-		
+
 		// LATER: Use Alpha image loader in IE6
 		// NOTE: This uses the diagram bit of the old logo as it looks better in this case
 		//this.appIcon.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=' + IMAGE_PATH + '/logo-white.png,sizingMethod=\'scale\')';
 		var logo = (!mxClient.IS_SVG) ? 'url(\'' + IMAGE_PATH + '/logo-white.png\')' :
 			'url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIKICAgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzA2LjE4NSAxMjAuMjk2IgogICB2aWV3Qm94PSIyNCAyNiA2OCA2OCIKICAgeT0iMHB4IgogICB4PSIwcHgiCiAgIHZlcnNpb249IjEuMSI+CiAgIAkgPGc+PGxpbmUKICAgICAgIHkyPSI3Mi4zOTQiCiAgICAgICB4Mj0iNDEuMDYxIgogICAgICAgeTE9IjQzLjM4NCIKICAgICAgIHgxPSI1OC4wNjkiCiAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiCiAgICAgICBzdHJva2Utd2lkdGg9IjMuNTUyOCIKICAgICAgIHN0cm9rZT0iI0ZGRkZGRiIKICAgICAgIGZpbGw9Im5vbmUiIC8+PGxpbmUKICAgICAgIHkyPSI3Mi4zOTQiCiAgICAgICB4Mj0iNzUuMDc2IgogICAgICAgeTE9IjQzLjM4NCIKICAgICAgIHgxPSI1OC4wNjgiCiAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiCiAgICAgICBzdHJva2Utd2lkdGg9IjMuNTAwOCIKICAgICAgIHN0cm9rZT0iI0ZGRkZGRiIKICAgICAgIGZpbGw9Im5vbmUiIC8+PGc+PHBhdGgKICAgICAgICAgZD0iTTUyLjc3Myw3Ny4wODRjMCwxLjk1NC0xLjU5OSwzLjU1My0zLjU1MywzLjU1M0gzNi45OTljLTEuOTU0LDAtMy41NTMtMS41OTktMy41NTMtMy41NTN2LTkuMzc5ICAgIGMwLTEuOTU0LDEuNTk5LTMuNTUzLDMuNTUzLTMuNTUzaDEyLjIyMmMxLjk1NCwwLDMuNTUzLDEuNTk5LDMuNTUzLDMuNTUzVjc3LjA4NHoiCiAgICAgICAgIGZpbGw9IiNGRkZGRkYiIC8+PC9nPjxnCiAgICAgICBpZD0iZzM0MTkiPjxwYXRoCiAgICAgICAgIGQ9Ik02Ny43NjIsNDguMDc0YzAsMS45NTQtMS41OTksMy41NTMtMy41NTMsMy41NTNINTEuOTg4Yy0xLjk1NCwwLTMuNTUzLTEuNTk5LTMuNTUzLTMuNTUzdi05LjM3OSAgICBjMC0xLjk1NCwxLjU5OS0zLjU1MywzLjU1My0zLjU1M0g2NC4yMWMxLjk1NCwwLDMuNTUzLDEuNTk5LDMuNTUzLDMuNTUzVjQ4LjA3NHoiCiAgICAgICAgIGZpbGw9IiNGRkZGRkYiIC8+PC9nPjxnPjxwYXRoCiAgICAgICAgIGQ9Ik04Mi43NTIsNzcuMDg0YzAsMS45NTQtMS41OTksMy41NTMtMy41NTMsMy41NTNINjYuOTc3Yy0xLjk1NCwwLTMuNTUzLTEuNTk5LTMuNTUzLTMuNTUzdi05LjM3OSAgICBjMC0xLjk1NCwxLjU5OS0zLjU1MywzLjU1My0zLjU1M2gxMi4yMjJjMS45NTQsMCwzLjU1MywxLjU5OSwzLjU1MywzLjU1M1Y3Ny4wODR6IgogICAgICAgICBmaWxsPSIjRkZGRkZGIiAvPjwvZz48L2c+PC9zdmc+)';
-		this.appIcon.style.backgroundImage = logo;		
+		this.appIcon.style.backgroundImage = logo;
 		this.appIcon.style.backgroundPosition = 'center center';
 		this.appIcon.style.backgroundRepeat = 'no-repeat';
-		
+
 		mxUtils.setPrefixedStyle(this.appIcon.style, 'transition', 'all 125ms linear');
-	
+
 		mxEvent.addListener(this.appIcon, 'mouseover', mxUtils.bind(this, function()
 		{
 			var file = this.getCurrentFile();
-			
+
 			if (file != null)
 			{
 				var mode = file.getMode();
-				
+
 				if (mode == App.MODE_GOOGLE)
 				{
 					this.appIcon.style.backgroundImage = 'url(' + IMAGE_PATH + '/google-drive-logo-white.svg)';
@@ -4450,17 +4450,17 @@ App.prototype.updateHeader = function()
 				}
 			}
 		}));
-		
+
 		mxEvent.addListener(this.appIcon, 'mouseout', mxUtils.bind(this, function()
 		{
 			this.appIcon.style.backgroundImage = logo;
 		}));
-		
+
 		if (urlParams['embed'] != '1')
 		{
 			this.menubarContainer.appendChild(this.appIcon);
 		}
-	
+
 		this.fnameWrapper = document.createElement('div');
 		this.fnameWrapper.style.position = 'absolute';
 		this.fnameWrapper.style.right = '120px';
@@ -4470,7 +4470,7 @@ App.prototype.updateHeader = function()
 		this.fnameWrapper.style.display = 'none';
 		this.fnameWrapper.style.overflow = 'hidden';
 		this.fnameWrapper.style.textOverflow = 'ellipsis';
-		
+
 		this.fname = document.createElement('a');
 		this.fname.setAttribute('href', 'javascript:void(0);');
 		this.fname.setAttribute('title', mxResources.get('rename'));
@@ -4479,33 +4479,33 @@ App.prototype.updateHeader = function()
 		this.fname.style.display = 'inline';
 		this.fname.style.fontSize = '18px';
 		this.fname.style.whiteSpace = 'nowrap';
-		
+
 		mxEvent.addListener(this.fname, 'click', mxUtils.bind(this, function(evt)
 		{
 			var file = this.getCurrentFile();
-			
+
 			if (file != null && file.isRenamable())
 			{
 				this.actions.get('rename').funct();
 			}
-			
+
 			mxEvent.consume(evt);
 		}));
-		
+
 		this.fnameWrapper.appendChild(this.fname);
-		
+
 		if (urlParams['embed'] != '1')
 		{
 			this.menubarContainer.appendChild(this.fnameWrapper);
-		
+
 			this.menubar.container.style.position = 'absolute';
 			this.menubar.container.style.paddingLeft = '52px';
 			this.menubar.container.style.boxSizing = 'border-box';
 			this.menubar.container.style.top = '29px';
-			
+
 			this.toolbar.container.style.paddingLeft = '56px';
 		}
-		
+
 		/**
 		 * Adds format panel toggle.
 		 */
@@ -4542,7 +4542,7 @@ App.prototype.updateHeader = function()
 				this.toggleFormatElement.style.backgroundImage = 'url(\'' + this.formatHideImage + '\')';
 			}
 		});
-		
+
 		this.addListener('formatWidthChanged', toggleFormatPanel);
 		toggleFormatPanel();
 
@@ -4562,7 +4562,7 @@ App.prototype.updateHeader = function()
 		this.fullscreenElement.style.backgroundRepeat = 'no-repeat';
 		this.fullscreenElement.style.backgroundImage = 'url(\'' + this.fullscreenImage + '\')';
 		this.toolbarContainer.appendChild(this.fullscreenElement);
-		
+
 		var initialPosition = this.hsplitPosition;
 		var collapsed = false;
 
@@ -4579,7 +4579,7 @@ App.prototype.updateHeader = function()
 			collapsed = !collapsed;
 			mxEvent.consume(evt);
 		}));
-		
+
 		// Some style changes in Atlas theme
 		if (uiTheme == 'atlas')
 		{
@@ -4590,7 +4590,7 @@ App.prototype.updateHeader = function()
 			this.toggleFormatElement.style.top = '8px';
 			this.fullscreenElement.style.top = '8px';
 		}
-		
+
 		/**
 		 * Adds compact UI toggle.
 		 */
@@ -4611,22 +4611,22 @@ App.prototype.updateHeader = function()
 			this.toggleElement.style.fontSize = '14px';
 			this.toggleElement.style.textDecoration = 'none';
 			this.toggleElement.style.backgroundImage = 'url(\'' + this.chevronUpImage + '\')';
-				
+
 			this.toggleElement.style.backgroundPosition = '50% 50%';
 			this.toggleElement.style.backgroundRepeat = 'no-repeat';
-			
+
 			// Toggles compact mode
 			mxEvent.addListener(this.toggleElement, 'click', mxUtils.bind(this, function(evt)
 			{
 				this.toggleCompactMode();
 				mxEvent.consume(evt);
 			}));
-		
+
 			if (uiTheme != 'atlas')
 			{
 				this.toolbarContainer.appendChild(this.toggleElement);
 			}
-			
+
 			// Enable compact mode for small screens
 			if (screen.height <= 740 && typeof this.toggleElement.click !== 'undefined')
 			{
@@ -4714,7 +4714,7 @@ App.prototype.updateUserElement = function()
 			this.userElement.style.backgroundImage =  'url(' + IMAGE_PATH + '/expanded.gif)';
 			this.userElement.style.backgroundPosition = '100% 60%';
 			this.userElement.style.backgroundRepeat = 'no-repeat';
-			
+
 			this.menubarContainer.appendChild(this.userElement);
 
 			mxEvent.addListener(this.userElement, 'click', mxUtils.bind(this, function(evt)
@@ -4730,7 +4730,7 @@ App.prototype.updateUserElement = function()
 
 					this.userPanel = div;
 				}
-				
+
 				if (this.userPanel.parentNode != null)
 				{
 					this.userPanel.parentNode.removeChild(this.userPanel);
@@ -4739,7 +4739,7 @@ App.prototype.updateUserElement = function()
 				{
 					var connected = false;
 					this.userPanel.innerHTML = '';
-					
+
 					var img = document.createElement('img');
 
 					img.setAttribute('src', Dialog.prototype.closeImage);
@@ -4747,7 +4747,7 @@ App.prototype.updateUserElement = function()
 					img.className = 'geDialogClose';
 					img.style.top = '8px';
 					img.style.right = '8px';
-					
+
 					mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
 					{
 						if (this.userPanel.parentNode != null)
@@ -4755,13 +4755,13 @@ App.prototype.updateUserElement = function()
 							this.userPanel.parentNode.removeChild(this.userPanel);
 						}
 					}));
-					
+
 					this.userPanel.appendChild(img);
-										
+
 					if (this.drive != null)
 					{
 						var driveUser = this.drive.getUser();
-						
+
 						if (driveUser != null)
 						{
 							connected = true;
@@ -4793,20 +4793,20 @@ App.prototype.updateUserElement = function()
 									this.confirm(mxResources.get('areYouSure'), mxUtils.bind(this, function()
 									{
 										this.spinner.spin(document.body, mxResources.get('signOut'));
-										
+
 										this.diagramContainer.style.display = 'none';
 										this.formatContainer.style.display = 'none';
 										this.hsplit.style.display = 'none';
 										this.sidebarContainer.style.display = 'none';
 										this.sidebarFooterContainer.style.display = 'none';
-										
+
 										if (this.tabContainer != null)
 										{
 											this.tabContainer.style.display = 'none';
 										}
-											
+
 										file.close();
-	
+
 										// LATER: Use callback to wait for thumbnail update
 										window.setTimeout(mxUtils.bind(this, function()
 										{
@@ -4815,7 +4815,7 @@ App.prototype.updateUserElement = function()
 											window.location.hash = '';
 											this.drive.clearUserId();
 											gapi.auth.signOut();
-											
+
 											// Reload page to reset client auth
 											window.location.reload();
 										}), (file != null && file.constructor == DriveFile) ? 2000 : 0);
@@ -4828,11 +4828,11 @@ App.prototype.updateUserElement = function()
 									gapi.auth.signOut();
 								}
 							})));
-							
+
 							this.userPanel.appendChild(div);
 						}
 					}
-					
+
 					var addUser = mxUtils.bind(this, function(user, logo, logout)
 					{
 						if (user != null)
@@ -4841,7 +4841,7 @@ App.prototype.updateUserElement = function()
 							{
 								this.userPanel.appendChild(document.createElement('hr'));
 							}
-							
+
 							connected = true;
 							this.userPanel.innerHTML += '<table style="font-size:10pt;padding:20px 20px 10px 10px;"><tr><td valign="top">' +
 								((logo != null) ? '<img style="margin-right:10px;" src="' + logo + '" width="40" height="40"/></td>' : '') +
@@ -4854,16 +4854,16 @@ App.prototype.updateUserElement = function()
 							div.style.background = 'whiteSmoke';
 							div.style.borderTop = '1px solid #e0e0e0';
 							div.style.whiteSpace = 'nowrap';
-							
+
 							if (logout != null)
 							{
 								div.appendChild(mxUtils.button(mxResources.get('signOut'), logout));
 							}
-							
+
 							this.userPanel.appendChild(div);
 						}
 					});
-					
+
 					if (this.dropbox != null)
 					{
 						addUser(this.dropbox.getUser(), IMAGE_PATH + '/dropbox-logo.svg', mxUtils.bind(this, function()
@@ -4877,7 +4877,7 @@ App.prototype.updateUserElement = function()
 									this.dropbox.logout();
 									window.location.hash = '';
 								});
-								
+
 								if (!file.isModified())
 								{
 									doLogout();
@@ -4908,7 +4908,7 @@ App.prototype.updateUserElement = function()
 									this.oneDrive.logout();
 									window.location.hash = '';
 								});
-								
+
 								if (!file.isModified())
 								{
 									doLogout();
@@ -4939,7 +4939,7 @@ App.prototype.updateUserElement = function()
 									this.gitHub.logout();
 									window.location.hash = '';
 								});
-								
+
 								if (!file.isModified())
 								{
 									doLogout();
@@ -4956,7 +4956,7 @@ App.prototype.updateUserElement = function()
 							}
 						}));
 					}
-					
+
 					//TODO We have no user info from Trello, how we can create a user?
 					if (this.trello != null)
 					{
@@ -4971,7 +4971,7 @@ App.prototype.updateUserElement = function()
 									this.trello.logout();
 									window.location.hash = '';
 								});
-								
+
 								if (!file.isModified())
 								{
 									doLogout();
@@ -4988,23 +4988,23 @@ App.prototype.updateUserElement = function()
 							}
 						}));
 					}
-					
+
 					if (!connected)
 					{
 						var div = document.createElement('div');
 						div.style.textAlign = 'center';
 						div.style.padding = '20px 20px 10px 10px';
 						div.innerHTML = mxResources.get('notConnected');
-						
+
 						this.userPanel.appendChild(div);
 					}
 
 					document.body.appendChild(this.userPanel);
 				}
-				
+
 				mxEvent.consume(evt);
 			}));
-			
+
 			mxEvent.addListener(document.body, 'click', mxUtils.bind(this, function(evt)
 			{
 				if (!mxEvent.isConsumed(evt) && this.userPanel != null && this.userPanel.parentNode != null)
@@ -5013,9 +5013,9 @@ App.prototype.updateUserElement = function()
 				}
 			}));
 		}
-		
+
 		var user = null;
-		
+
 		if (this.drive != null && this.drive.getUser() != null)
 		{
 			user = this.drive.getUser();
@@ -5033,11 +5033,11 @@ App.prototype.updateUserElement = function()
 			user = this.gitHub.getUser();
 		}
 		//TODO Trello no user issue
-		
+
 		if (user != null)
 		{
 			this.userElement.innerHTML = '';
-			
+
 			if (screen.width > 560)
 			{
 				mxUtils.write(this.userElement, user.displayName);

@@ -625,12 +625,12 @@
 		}
 
 
-		this.addBpmnPalette();
-        this.addBasicPalette();
-        this.addArchiMatePalette();
-        this.addAzurePalette();
+		this.addGoalModelPalette();
+        this.addRespModelPalette();
+        this.addObjectModelPalette();
+        this.addOperationModelPalette();
 	};
-	
+
 	/**
 	 * Overridden to manually create search index for stencil files which are not pre-loaded
 	 * and no entries are created programmatically.
@@ -638,19 +638,19 @@
 	if (urlParams['createindex'] == '1')
 	{
 		var sidebarAddStencilPalette = Sidebar.prototype.addStencilPalette;
-		
+
 		Sidebar.prototype.addStencilPalette = function(id, title, stencilFile, style, ignore, onInit, scale, tags)
 		{
 			sidebarAddStencilPalette.apply(this, arguments);
 			scale = (scale != null) ? scale : 1;
-	
+
 			// Used for creating index
 			mxStencilRegistry.loadStencilSet(stencilFile, mxUtils.bind(this, function(packageName, stencilName, displayName, w, h)
 			{
 				if (ignore == null || mxUtils.indexOf(ignore, stencilName) < 0)
 				{
 					var tmpTags = (tags != null) ? tags[stencilName] : null;
-	
+
 					mxLog.debug('<shape style="shape=' + packageName + stencilName + style + '" ' +
 						'w="' + Math.round(w * scale) + '" h="' + Math.round(h * scale) + '"' +
 						((tmpTags != null) ? ' tags="' + tmpTags + '"' : '') + '/>');
@@ -658,16 +658,16 @@
 			}), true);
 		};
 	}
-	
+
 	/**
 	 * Adds server icon results to local search results
 	 */
 	var sidebarSearchEntries = Sidebar.prototype.searchEntries;
-	
+
 	Sidebar.prototype.searchEntries = function(searchTerms, count, page, success, error)
 	{
 		var succ = success;
-		
+
 		// Logs search terms for improving search results
 		if (EditorUi.enableLogging && !this.editorUi.isOffline() && page == 0)
 		{
@@ -676,13 +676,13 @@
 				var img = new Image();
 				var logDomain = window.DRAWIO_LOG_URL != null ? window.DRAWIO_LOG_URL : '';
 				img.src = logDomain + '/log?severity=CONFIG&msg=shapesearch:' + encodeURIComponent(searchTerms) + '&v=' + encodeURIComponent(EditorUi.VERSION);
-		 	}
-	    	catch (e)
-	    	{
-	    		// ignore
-	    	}
+			}
+			catch (e)
+			{
+				// ignore
+			}
 		}
-		
+
 		success = mxUtils.bind(this, function(results, len, more, terms)
 		{
 			if (!this.editorUi.isOffline() && results.length <= count / 4)
@@ -691,81 +691,81 @@
 
 				mxUtils.get(ICONSEARCH_PATH + '?v=2&q=' + encodeURIComponent(searchTerms) +
 					'&p=' + pg + '&c=' + count, mxUtils.bind(this, function(req)
-				{
-					try
 					{
-						if (req.getStatus() >= 200 && req.getStatus() <= 299)
+						try
 						{
-							try
+							if (req.getStatus() >= 200 && req.getStatus() <= 299)
 							{
-								var res = JSON.parse(req.getText());
-								
-								if (res == null || res.icons == null)
+								try
+								{
+									var res = JSON.parse(req.getText());
+
+									if (res == null || res.icons == null)
+									{
+										succ(results, len, false, terms);
+										this.editorUi.handleError(res);
+									}
+									else
+									{
+										for (var i = 0; i < res.icons.length; i++)
+										{
+											var sizes = res.icons[i].raster_sizes;
+											var index = sizes.length - 1;
+
+											while (index > 0 && sizes[index].size > 128)
+											{
+												index--;
+											}
+
+											var size = sizes[index].size;
+											var url = sizes[index].formats[0].preview_url;
+
+											if (size != null && url != null)
+											{
+												(mxUtils.bind(this, function(s, u)
+												{
+													results.push(mxUtils.bind(this, function()
+													{
+														return this.createVertexTemplate('shape=image;html=1;verticalAlign=top;' +
+															'verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;' +
+															'aspect=fixed;image=' + u, s, s, '');
+													}));
+												}))(size, url);
+											}
+										}
+
+										succ(results, (page - 1) * count + results.length, res.icons.length == count, terms);
+									}
+								}
+								catch (e)
 								{
 									succ(results, len, false, terms);
-									this.editorUi.handleError(res);
-								}
-								else
-								{
-									for (var i = 0; i < res.icons.length; i++)
-									{
-										var sizes = res.icons[i].raster_sizes;
-										var index = sizes.length - 1;
-										
-										while (index > 0 && sizes[index].size > 128)
-										{
-											index--;
-										}
-				
-										var size = sizes[index].size;
-										var url = sizes[index].formats[0].preview_url;
-				
-										if (size != null && url != null)
-										{
-											(mxUtils.bind(this, function(s, u)
-											{
-												results.push(mxUtils.bind(this, function()
-												{
-													return this.createVertexTemplate('shape=image;html=1;verticalAlign=top;' +
-														'verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;' +
-														'aspect=fixed;image=' + u, s, s, '');
-												}));
-											}))(size, url);
-										}
-									}
-				
-									succ(results, (page - 1) * count + results.length, res.icons.length == count, terms);
+									this.editorUi.handleError(e);
 								}
 							}
-							catch (e)
+							else
 							{
 								succ(results, len, false, terms);
-								this.editorUi.handleError(e);
+								this.editorUi.handleError({message: mxResources.get('unknownError')});
 							}
 						}
-						else
+						catch (e)
 						{
 							succ(results, len, false, terms);
-							this.editorUi.handleError({message: mxResources.get('unknownError')});
+							this.editorUi.handleError(e);
 						}
-					}
-					catch (e)
+					},
+					function()
 					{
 						succ(results, len, false, terms);
-						this.editorUi.handleError(e);
-					}
-				},
-				function()
-				{
-					succ(results, len, false, terms);
-				}));
+					}));
 			}
 			else
 			{
 				succ(results, len, more || !this.editorUi.isOffline(), terms);
 			}
 		});
-		
+
 		sidebarSearchEntries.apply(this, arguments);
 	};
 
@@ -773,16 +773,16 @@
 	 * Adds a click handler for inserting the cell as target for dangling edge.
 	 */
 	var sidebarItemClicked = Sidebar.prototype.itemClicked;
-	
+
 	Sidebar.prototype.itemClicked = function(cells, ds, evt)
 	{
 		var graph = this.editorUi.editor.graph;
 		var handled = false;
-		
+
 		if (cells != null && graph.getSelectionCount() == 1 && graph.getModel().isVertex(cells[0]))
 		{
 			var target = graph.cloneCells(cells)[0];
-			
+
 			// Inserts cell as target of selected edge if not connected
 			if (graph.getModel().isEdge(graph.getSelectionCell()) && graph.getModel().getTerminal(graph.getSelectionCell(), false) == null &&
 				graph.getModel().isVertex(target))
@@ -791,7 +791,7 @@
 				try
 				{
 					var edgeState = graph.view.getState(graph.getSelectionCell());
-					
+
 					if (edgeState != null)
 					{
 						var tr = graph.view.translate;
@@ -801,7 +801,7 @@
 						target.geometry.x = pt.x / s - tr.x - target.geometry.width / 2;
 						target.geometry.y = pt.y / s - tr.y - target.geometry.height / 2;
 					}
-					
+
 					graph.addCell(target);
 					graph.getModel().setTerminal(graph.getSelectionCell(), target, false);
 				}
@@ -809,13 +809,13 @@
 				{
 					graph.getModel().endUpdate();
 				}
-				
+
 				graph.scrollCellToVisible(target);
 				graph.setSelectionCell(target);
 				handled = true;
 			}
 		}
-		
+
 		if (!handled)
 		{
 			sidebarItemClicked.apply(this, arguments);

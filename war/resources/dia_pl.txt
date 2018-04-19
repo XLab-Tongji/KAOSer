@@ -707,3 +707,4 @@ webLink=Hiperłącze strony
 wireframes=Projekty ramowe 
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern

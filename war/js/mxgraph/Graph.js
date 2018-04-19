@@ -2615,10 +2615,6 @@ HoverIcons.prototype.init = function()
 
 	this.graph.selectionModel.addListener(mxEvent.CHANGE, this.repaintHandler);
 
-	// mxEvent.addListener(mxEvent.AFTER_ADD_VERTEX,mxUtils.bind(this,function () {
-	// 	alert("hello");
-	// }));
-
 	this.graph.model.addListener(mxEvent.CHANGE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.SCALE_AND_TRANSLATE, this.repaintHandler);
 	this.graph.view.addListener(mxEvent.TRANSLATE, this.repaintHandler);
@@ -2668,7 +2664,7 @@ HoverIcons.prototype.init = function()
 	    {
 	    	connectionHandlerActive = false;
 	    	var evt = me.getEvent();
-	    	
+
 	    	if (this.isResetEvent(evt))
 	    	{
 	    		this.reset();
@@ -2676,33 +2672,33 @@ HoverIcons.prototype.init = function()
 	    	else if (!this.isActive())
 	    	{
 	    		var state = this.getState(me.getState());
-	    		
+
 	    		if (state != null || !mxEvent.isTouchEvent(evt))
 	    		{
 	    			this.update(state);
 	    		}
 	    	}
-	    	
+
 	    	this.setDisplay('none');
 	    }),
-	    mouseMove: mxUtils.bind(this, function(sender, me)
-	    {
-	    	var evt = me.getEvent();
-	    	
-	    	if (this.isResetEvent(evt))
-	    	{
-	    		this.reset();
-	    	}
-	    	else if (!this.graph.isMouseDown && !mxEvent.isTouchEvent(evt))
-	    	{
-	    		this.update(this.getState(me.getState()), me.getGraphX(), me.getGraphY());
-	    	}
-	    	
-	    	if (this.graph.connectionHandler != null && this.graph.connectionHandler.shape != null)
-	    	{
-	    		connectionHandlerActive = true;
-	    	}
-	    }),
+		mouseMove: mxUtils.bind(this, function(sender, me)
+		{
+			var evt = me.getEvent();
+
+			if (this.isResetEvent(evt))
+			{
+				this.reset();
+			}
+			else if (!this.graph.isMouseDown && !mxEvent.isTouchEvent(evt))
+			{
+				this.update(this.getState(me.getState()), me.getGraphX(), me.getGraphY());
+			}
+
+			if (this.graph.connectionHandler != null && this.graph.connectionHandler.shape != null)
+			{
+				connectionHandlerActive = true;
+			}
+		}),
 	    mouseUp: mxUtils.bind(this, function(sender, me)
 	    {
 	    	var evt = me.getEvent();

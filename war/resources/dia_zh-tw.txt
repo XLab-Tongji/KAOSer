@@ -707,3 +707,4 @@ webLink=網頁連結
 wireframes=線框圖
 saveToDatabase=Save to Database
 mongo=MongoDB
+pattern=Pattern
