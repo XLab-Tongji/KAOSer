@@ -1110,29 +1110,22 @@ Actions.prototype.init = function()
 	//add new action
 	var div = document.getElementById("light");
 	var div3 = document.getElementById("lightExport");
-	var jsonText;
+
 	//序列化后的json
 	//var jsonStr;
 	var fid;//判断输出文件的类型
-	var result;
 	this.addAction('mongo',function(){
 		div.style.display="block";
 		displayDiv();
-		var encoder = new mxCodec();
-		var node = encoder.encode(graph.getModel());
-		result=mxUtils.getXml(node,'\n');
-		var xotree = new XML.ObjTree();
-		var json = xotree.parseXML(result);
-		//将json对象转为格式化的字符串
-		var dumper = new JKL.Dumper();
-		jsonText = dumper.dump(json);
-		//mxUtils.popup(jsonText, true);
+		getJSONs(graph.getModel());
 		//对数组进行json序列化，不然无法传递到服务端
 		// jsonStr = JSON.stringify(jsonText);
 		// alert(jsonStr);
 	});
 	$("#affirm").click(function () {
 		var jsname=document.getElementById("txtname").value;
+        document.getElementById('light').style.display='none';
+        removeDiv(mybg);
 		if(jsname==""){
 			alert("名称不能为空");
 		}
@@ -1147,8 +1140,7 @@ Actions.prototype.init = function()
 				success:function (data) {
 					var obj = JSON.parse(data);
 					if(obj.name=="success"){
-						document.getElementById('light').style.display='none';
-						removeDiv(mybg);
+
 						alert("保存成功");
 					}
 					else{
@@ -1233,10 +1225,12 @@ Actions.prototype.init = function()
 			}
 		}
 	}
+	var location = "http://"+window.location.host+window.location.pathname;
 	this.addAction('GeneralRequirement',mxUtils.bind(this,function () {
         advice('GeneralRequirement');
 		if(geMenus[tar].innerHTML=='SpecialRequirement'){
-            window.location.href='http://localhost:63342/KAOSer-master/war/index.html?tag=general';
+			//alert("hello")
+            window.location.href=location+'?tag=general&id='+username;
 
 		}
 
@@ -1245,7 +1239,7 @@ Actions.prototype.init = function()
 	this.addAction('SpecialRequirement',mxUtils.bind(this,function () {
         advice('SpecialRequirement');
         if(geMenus[tar].innerHTML=='GeneralRequirement'){
-            window.location.href='http://localhost:63342/KAOSer-master/war/index.html?tag=Requirement';
+            window.location.href=location+'?tag=Requirement&id='+username;
 
 		}
 	}));

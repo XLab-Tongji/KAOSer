@@ -3190,6 +3190,8 @@ HoverIcons.prototype.repaint = function()
 					motherdiv.style.visibility='hidden';
 				}
 			}
+			var gm=this.graph.getModel();
+
 			this.myTableGoal.onclick=function () {
 				if(curr.style['shape']=='goal'){
 					if (mgoaldiv.style.visibility == 'visible') {
@@ -3198,6 +3200,7 @@ HoverIcons.prototype.repaint = function()
 						that.participant=document.getElementById("participant").value;
 						that.preCondition=document.getElementById("preCondition").value;
 						that.aftCondition=document.getElementById("aftCondition").value;
+						//that.RefinesTo=getmyWant(gm,that.id,"RefinesTo");
 						flagGoal=0;
 						mgoaldiv.style.visibility = 'hidden';
 
@@ -3206,6 +3209,9 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("participant").value='';
 						document.getElementById("preCondition").value='';
 						document.getElementById("aftCondition").value='';
+						document.getElementById("RefinesTo").innerHTML='';
+						document.getElementById("RefinedBy").innerHTML='';
+						document.getElementById("Resolves").value='';
 					}
 					else {
 						flagGoal=1;
@@ -3214,6 +3220,9 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("participant").value=that.participant;
 						document.getElementById("preCondition").value=that.preCondition;
 						document.getElementById("aftCondition").value=that.aftCondition;
+                        document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,"RefinesTo");
+                        document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,"RefinedBy");
+                        document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id,"ResolveObstacle");
 						mgoaldiv.style.visibility = 'visible';
 					}
 				}
@@ -3268,19 +3277,28 @@ HoverIcons.prototype.repaint = function()
 				if((document.getElementById("usecaseId").innerHTML==that.value)&&(document.getElementById("usecaseDiscription").value!=that.usecaseDiscription
 				||document.getElementById("participant").value!=that.participant
 				||document.getElementById("preCondition").value!=that.preCondition
-				||document.getElementById("aftCondition").value!=that.aftCondition)){
+				||document.getElementById("aftCondition").value!=that.aftCondition
+				||document.getElementById("RefinesTo").value!=getmyWant(gm,that.id,"RefinesTo")
+				||document.getElementById("RefinedBy").value!=getmyWant(gm,that.id,"RefinedBy"))){
 					this.currentState.cell.value=document.getElementById("usecaseId").innerHTML;
 					this.currentState.cell.usecaseDiscription=document.getElementById("usecaseDiscription").value;
 					this.currentState.cell.participant=document.getElementById("participant").value;
 					this.currentState.cell.preCondition=document.getElementById("preCondition").value;
 					this.currentState.cell.aftCondition=document.getElementById("aftCondition").value;
-				}
-				else{
+                    //this.currentState.cell.RefinesTo=getmyWant(gm,that.id,"RefinesTo");
+                    //this.currentState.cell.RefinedBy=document.getElementById("RefinedBy").value;
+                    //this.currentState.cell.Resolves=document.getElementById("Resolves").value;
+
+                }
+				else {
 					document.getElementById("usecaseId").innerHTML=this.currentState.cell.value;
 					document.getElementById("usecaseDiscription").value=this.currentState.cell.usecaseDiscription;
 					document.getElementById("participant").value=this.currentState.cell.participant;
 					document.getElementById("preCondition").value=this.currentState.cell.preCondition;
 					document.getElementById("aftCondition").value=this.currentState.cell.aftCondition;
+                    document.getElementById("RefinesTo").innerHTML=getmyWant(gm,this.currentState.cell.id,"RefinesTo");
+                    document.getElementById("RefinedBy").innerHTML=getmyWant(gm,this.currentState.cell.id,"RefinedBy");
+                    document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id,"ResolveObstacle");
 				}
 			}
 

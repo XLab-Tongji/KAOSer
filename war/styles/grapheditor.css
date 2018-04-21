@@ -220,7 +220,7 @@ fieldset {
       z-index: 10;
     }
 #detailcontainer{
-	height: 180px;
+	height: auto;
 }
 #detailcontainer2{
 	height: 480px;
@@ -270,6 +270,19 @@ fieldset {
     #detailtable tr:nth-child(5) td{
       height: 30px;
     }
+
+#detailtable tr:nth-child(6) td{
+	height: 30px;
+
+
+}
+
+#detailtable tr:nth-child(7) td{
+	height: 60px;
+}
+#detailtable tr:nth-child(8) td{
+	height: 60px;
+}
 	#detailtable2 tr:nth-child(1) td{
 		height: 30px;
 	}

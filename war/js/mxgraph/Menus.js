@@ -33,9 +33,17 @@ Menus.prototype.defaultFontSize = '12';
 
 var thisURL=document.URL;
 var getVal=thisURL.split('?')[1];
-var showVal=getVal.split("=")[1];
+var getType = getVal.split('&')[0];
+var getUsername = getVal.split('&')[1];
+if(getUsername!=null){
+    username = getUsername.split('=')[1];
+}
+
+var showVal=getType.split("=")[1];
+
 var what;
 function g(){
+	alert(username);
     if(showVal=="general"){
         what="GeneralRequirement";
         alert(what);
@@ -44,7 +52,7 @@ function g(){
         what="SpecialRequirement";
         alert(showVal);
         if(showVal!="SpecialRequirement"){
-        	username = showVal;
+        	//username = showVal;
 		}
     }
 }
@@ -510,8 +518,13 @@ Menus.prototype.init = function()
 	})));
 	this.put(what, new Menu(mxUtils.bind(this, function(menu, parent)
 	{
-		this.addMenuItems(menu, ['GeneralRequirement']);
-		this.addMenuItems(menu, ['SpecialRequirement']);
+		if(what=="GeneralRequirement"){
+            this.addMenuItems(menu, ['SpecialRequirement']);
+		}
+		else{
+            this.addMenuItems(menu, ['GeneralRequirement']);
+		}
+
 	})));
     this.put('importFromDB', new Menu(mxUtils.bind(this, function(menu, parent)
     {

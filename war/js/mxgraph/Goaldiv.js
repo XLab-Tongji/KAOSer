@@ -129,6 +129,58 @@ function createGoalDiv() {
         tr5.appendChild(td5_2);
         table.appendChild(tr5);
 
+        //行 - refines to
+        var tr6 = document.createElement("tr");
+        var td6_1 = document.createElement("td");
+        td6_1.innerHTML = "Refines to";
+        var td6_1_width = document.createAttribute("width");
+        td6_1_width.value = "100px";
+        td6_1.setAttributeNode(td6_1_width);
+        var td6_2 = document.createElement("td");
+        var input6 = document.createElement("h4");
+        var input6_id = document.createAttribute("id");
+        input6_id.value = "RefinesTo";
+        input6.setAttributeNode(input6_id);
+        td6_2.appendChild(input6);
+        tr6.appendChild(td6_1);
+        tr6.appendChild(td6_2);
+        table.appendChild(tr6);
+
+
+        //行 - refined by
+        var tr7 = document.createElement("tr");
+        var td7_1 = document.createElement("td");
+        td7_1.innerHTML = "Refined by";
+        var td7_1_width = document.createAttribute("width");
+        td7_1_width.value = "100px";
+        td7_1.setAttributeNode(td7_1_width);
+        var td7_2 = document.createElement("td");
+        var input7 = document.createElement("h4");
+        var input7_id = document.createAttribute("id");
+        input7_id.value = "RefinedBy";
+        input7.setAttributeNode(input7_id);
+        td7_2.appendChild(input7);
+        tr7.appendChild(td7_1);
+        tr7.appendChild(td7_2);
+        table.appendChild(tr7);
+
+        //行 - resolves
+        var tr8 = document.createElement("tr");
+        var td8_1 = document.createElement("td");
+        td8_1.innerHTML = "Resolves";
+        var td8_1_width = document.createAttribute("width");
+        td8_1_width.value = "100px";
+        td8_1.setAttributeNode(td8_1_width);
+        var td8_2 = document.createElement("td");
+        var input8 = document.createElement("h4");
+        var input8_id = document.createAttribute("id");
+        input8_id.value = "Resolves";
+        input8.setAttributeNode(input8_id);
+        td8_2.appendChild(input8);
+        tr8.appendChild(td8_1);
+        tr8.appendChild(td8_2);
+        table.appendChild(tr8);
+
         form.appendChild(table);
         arrow.appendChild(form);
 
