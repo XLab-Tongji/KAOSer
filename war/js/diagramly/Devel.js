@@ -13,6 +13,7 @@ mxscript('js/deflate/base64.js');
 mxscript('js/sanitizer/sanitizer.min.js');
 
 // Uses grapheditor from devhost
+mxscript('js/mxgraph/Obstructs.js');
 mxscript('js/mxgraph/jsonArray.js');
 mxscript('js/mxgraph/downLoadDiv.js');
 mxscript('js/mxgraph/user.js');

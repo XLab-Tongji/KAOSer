@@ -63,6 +63,7 @@ function createOtherDiv() {
 
         form.appendChild(table);
         arrow.appendChild(form);
+
     }
     else {
 

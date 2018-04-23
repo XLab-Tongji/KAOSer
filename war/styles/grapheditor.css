@@ -223,10 +223,10 @@ fieldset {
 	height: auto;
 }
 #detailcontainer2{
-	height: 480px;
+	height: auto;
 }
 #detailcontainer3{
-	height: 240px;
+	height: auto;
 }
     #detailtable,#detailtable2,#detailtable3{
       width: 100%;
@@ -309,6 +309,9 @@ fieldset {
 		padding-top: 5px;
 		height: 200px;
 	}
+#detailtable3 tr:nth-child(3) td{
+	height: 60px;
+}
     .detailform-single-text{
       text-align: left;
       vertical-align: middle;
