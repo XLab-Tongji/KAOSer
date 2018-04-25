@@ -1,4 +1,7 @@
 node{
+    stage('Prepare'){
+        sh "cd /var/jenkins_home/workspace/vuekaoser"
+    }
     stage('install'){
         sh "npm install"
     }
