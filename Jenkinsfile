@@ -1,4 +1,10 @@
 node{
+    stage('Clone Sources') {
+      steps {
+        git url:'https://gitlab.com/chiminyau/ci-test.git',
+            branch:'multi-vue'
+      }
+    }
     stage('Prepare'){
         sh "cd /var/jenkins_home/workspace/vuekaoser"
     }
