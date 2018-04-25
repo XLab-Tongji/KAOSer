@@ -3,10 +3,8 @@ node{
         sh "pwd"
     }
     stage('Clone Sources') {
-      steps {
         git url:'https://github.com/XLab-Tongji/KAOSer.git',
             branch:'multi-vue'
-      }
     }
     stage('Prepare'){
         sh "cd /var/jenkins_home/workspace/vuekaoser/KAOSer"
