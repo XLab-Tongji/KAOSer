@@ -1,0 +1,12 @@
+{
+	"message.title": "Ein toller Titel",
+	"message.body": "Und etwas weniger interessanter Inhalt",
+	"message": {
+		"footer": "Hier steht eine Fusszeile"
+	},
+	"listing": [
+		"Dies ist der Block {first}",
+		"Dies ist der Block {second}"
+	],
+	"plural": "Wir haben einen Block ::: Wir haben {count} Blöcke"
+}
