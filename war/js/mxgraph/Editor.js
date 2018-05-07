@@ -761,46 +761,50 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose)
 	left += origin.x;
 	top += origin.y;
 
-	if (modal)
-	{
-		document.body.appendChild(this.bg);
-	}
-	
-	var div = editorUi.createDiv('geDialog');
-	div.style.width = w + 'px';
-	div.style.height = h + 'px';
-	div.style.left = left + 'px';
-	div.style.top = top + 'px';
-	div.style.zIndex = this.zIndex;
-	
-	div.appendChild(elt);
-	document.body.appendChild(div);
-	
+    // if (modal)
+    // {
+    // 	document.body.appendChild(this.bg);
+    // }
+
+    var div = editorUi.createDiv('geDialog');
+    div.style.width = w + 'px';
+    div.style.height = h + 'px';
+    div.style.left = left + 'px';
+    div.style.top = top + 'px';
+    div.style.zIndex = this.zIndex;
+	div.style.display = 'none';
+    div.appendChild(elt);
+    document.body.appendChild(div);
+
+    //
 	if (closable)
 	{
 		var img = document.createElement('img');
 
 		img.setAttribute('src', Dialog.prototype.closeImage);
 		img.setAttribute('title', mxResources.get('close'));
+		img.setAttribute('id','hidethis');
 		img.className = 'geDialogClose';
 		img.style.top = (top + 14) + 'px';
 		img.style.left = (left + w + 38 - dx) + 'px';
 		img.style.zIndex = this.zIndex;
-		
-		mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
-		{
-			editorUi.hideDialog(true);
-		}));
-		
-		document.body.appendChild(img);
-		this.dialogImg = img;
-		
+		img.style.display="none";
+		// mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
+		// {
+		// 	editorUi.hideDialog(true);
+		// }));
+		img.onclick=function(){
+            editorUi.hideDialog(true);
+		};
+        document.body.appendChild(img);
+        this.dialogImg = img;
+
 		mxEvent.addGestureListeners(this.bg, null, null, mxUtils.bind(this, function(evt)
 		{
 			editorUi.hideDialog(true);
 		}));
 	}
-	
+
 	this.resizeListener = mxUtils.bind(this, function()
 	{
 		dh = Math.max(document.body.clientHeight, document.documentElement.clientHeight);

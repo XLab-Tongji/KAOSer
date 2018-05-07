@@ -12,7 +12,7 @@
 			 this.createVertexTemplateEntry('shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFD966;strokeColor=#FFD306;fontSize=18', 120, 40, '', 'Domain Property'),
 			this.addEntry('FF', function()
 			{
-				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#000000');
+				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#000000;strokeWidth=3');
 				edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
 				edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
 				edge.geometry.relative = true;
@@ -29,7 +29,7 @@
 			}),
 			this.addEntry('conflict', function()
 			{
-				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=none;html=1;strokeColor=#000000');
+				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=none;html=1;strokeColor=#000000;strokeWidth=3');
 				edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
 				edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
 				edge.geometry.relative = true;
@@ -44,6 +44,39 @@
 
 				return sb.createEdgeTemplateFromCells([edge], 100, 0, 'Conflict');
 			}),
+            this.addEntry('and', function()
+            {
+                var cell = new mxCell('', new mxGeometry(0, 0, 30, 30), 'shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;');
+                cell.vertex = true;
+                cell.flag = 'middle';
+
+                var edge1 = new mxCell('', new mxGeometry(0, 0, 0, 0), 'html=1;align=left;verticalAlign=bottom;endArrow=classic;endSize=8;strokeWidth=2;strokeColor=#000000');
+                edge1.geometry.setTerminalPoint(new mxPoint(60, 60), false);
+                edge1.geometry.relative = true;
+                edge1.geometry.x = -1;
+                edge1.edge = true;
+				edge1.flag = 'and';
+                cell.insertEdge(edge1, true);
+
+                var edge2 = new mxCell('', new mxGeometry(0, 0, 0, 0), 'html=1;align=left;verticalAlign=top;endArrow=classic;endSize=8;strokeWidth=2;strokeColor=#000000');
+                edge2.geometry.setTerminalPoint(new mxPoint(-30, 60), false);
+                edge2.geometry.relative = true;
+                edge2.geometry.x = -1;
+                edge2.edge = true;
+                edge2.flag = 'and';
+                cell.insertEdge(edge2, true);
+
+
+                var edge3 = new mxCell('',new mxGeometry(0,0,0,0),'html=1;align=left;verticalAlign=top;endArrow=none;endSize=8;strokeWidth=2;strokeColor=#000000');
+                edge3.geometry.setTerminalPoint(new mxPoint(15, -50), false);
+                edge3.geometry.relative = true;
+                edge3.geometry.x = -1;
+                edge3.edge = true;
+                edge3.flag = 'tem';
+                cell.insertEdge(edge3, true);
+
+                return sb.createVertexTemplateFromCells([cell, edge1, edge2,edge3], 180, 100, 'And');
+            }),
 		]);
 
 	};

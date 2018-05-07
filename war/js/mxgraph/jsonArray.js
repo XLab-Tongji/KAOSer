@@ -121,7 +121,7 @@ function getmyWant(s,id_value,SourceorTarget,flag,information){
     //alert(jsonResult);
 
     var jsons = jQuery.parseJSON(jsonResult);
-    var i,j,k;
+    var i,j,k,m;
     var results;
     //var getUseful;
 
@@ -136,12 +136,65 @@ function getmyWant(s,id_value,SourceorTarget,flag,information){
     }else if(sourceorTarget == '-target'){
         sot = '-source';
     }
+    var term ;
 
-    for(i=0;i<jsons.length;i++){
-        if((sourceorTarget in jsons[i])&&(jsons[i][sourceorTarget]==id_value)){
-            bridges.push(jsons[i][sot]);
+
+    if(sourceorTarget=='-source') {
+        for (i = 0; i < jsons.length; i++) {
+            if ((sourceorTarget in jsons[i]) && (jsons[i][sourceorTarget] == id_value) && (!('-flag' in jsons[i]))) {
+                bridges.push(jsons[i][sot]);
+            }
+
+            else if (('-flag' in jsons[i]) && (jsons[i]['-flag'] != 'and') && (sot in jsons[i])&&(jsons[i][sot] == id_value)) {
+                for (m = 0; m < jsons.length; m++) {
+                    if ((jsons[m]['-id'] == jsons[i][sourceorTarget]) && (jsons[m]['-flag'] == 'middle')) {
+                        term=jsons[m]['-id'];
+                        //alert(term);
+                    }
+                }
+                for(m = 0;m<jsons.length;m++){
+                    if((sourceorTarget in jsons[m])&&(jsons[m][sourceorTarget]==term)&&(sot in jsons[m])&&(jsons[m]['-flag']!='tem')){
+                        bridges.push([jsons[m][sot]]);
+                        //alert(bridges);
+                    }
+                }
+            }
         }
     }
+    else if(sourceorTarget=='-target'){
+        for (i = 0; i < jsons.length; i++) {
+            if ((sourceorTarget in jsons[i]) && (jsons[i][sourceorTarget] == id_value) && (!('-flag' in jsons[i]))&&(findSource(jsons,jsons[i]['-source'])==-1)) {
+                bridges.push(jsons[i][sot]);
+            }
+            // else if ((('-flag' in jsons[i]) && (jsons[i]['-flag'] != 'tem') && (jsons[i][sourceorTarget] == id_value)&&(findSource(jsons,jsons[i]['-source'])=='1'))) {
+            //     for (m = 0; m < jsons.length; m++) {
+            //         if ((jsons[m]['-id'] == jsons[i][sot]) && (jsons[m]['-flag'] == 'middle')) {
+            //             term=jsons[m]['-id'];
+            //         }
+            //     }
+            //     for(m = 0;m<jsons.length;m++){
+            //         if((jsons[m][sot]==term)&&(jsons[m]['-flag']=='tem')){
+            //             bridges.push([jsons[m]['-target']]);
+            //             //alert(bridges);
+            //         }
+            //     }
+            // }
+            else if((jsons[i][sourceorTarget] == id_value)&&(findSource(jsons,jsons[i]['-source'])!=-1)&&((!('-flag' in jsons[i]))||(('-flag' in jsons[i])&&(jsons[i]['-flag']!='tem')))){
+                for (m = 0; m < jsons.length; m++) {
+                    if ((jsons[m]['-id'] == jsons[i][sot]) && (jsons[m]['-flag'] == 'middle')) {
+                        term=jsons[m]['-id'];
+                    }
+                }
+                for(m = 0;m<jsons.length;m++){
+                    if((jsons[m][sot]==term)&&(jsons[m]['-flag']=='tem')){
+                        bridges.push([jsons[m]['-target']]);
+                        //alert(bridges);
+                    }
+                }
+            }
+        }
+    }
+
 
     for(i=0;i<jsons.length;i++){
         for(j=0;j<bridges.length;j++){
@@ -150,7 +203,7 @@ function getmyWant(s,id_value,SourceorTarget,flag,information){
             }
         }
     }
-    results=wirtieResults(valueResults);
+    results=wirtieResults(uniqueArray(valueResults));
     return results;
 }
 
@@ -166,4 +219,29 @@ function wirtieResults(array) {
         }
     }
     return results;
+}
+function uniqueArray(array){
+    var n = {}, r = [], len = array.length, val, type;
+    for (var i = 0; i < array.length; i++) {
+        val = array[i];
+        type = typeof val;
+        if (!n[val]) {
+            n[val] = [type];
+            r.push(val);
+        } else if (n[val].indexOf(type) < 0) {
+            n[val].push(type);
+            r.push(val);
+        }
+    }
+    return r;
+}
+
+function findSource(jsons,jid) {
+    var s=-1;
+    for(var h=0;h<jsons.length;h++){
+        if((jsons[h]["-id"]==jid)&&(jsons[h]['-flag']=='middle')) {
+            s=h;
+        }
+    }
+    return s;
 }

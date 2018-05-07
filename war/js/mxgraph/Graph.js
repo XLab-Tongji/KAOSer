@@ -3262,8 +3262,10 @@ HoverIcons.prototype.repaint = function()
 					if(motherdiv.style.visibility=='visible'){
 						that.gedetail=document.getElementById("detail").value;
 						flagOthers=0;
-						motherdiv.style.visibility = 'hidden';
-						document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
+						if($('#Obstacle').length!=0){
+                            document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
+                        }
+                        motherdiv.style.visibility = 'hidden';
 						document.getElementById("othId").value='';
 						document.getElementById("detail").value='';
 					}
@@ -3271,6 +3273,7 @@ HoverIcons.prototype.repaint = function()
 						flagOthers=1;
 						document.getElementById("othId").innerHTML=that.value;
 						document.getElementById("detail").value=that.gedetail;
+                        motherdiv.style.visibility = 'visible';
 						if(curr.style['shape']=='obstacle'){
 							if($('#Obstacle').length==0) {
                                 //行 - Obstructs
@@ -3283,7 +3286,7 @@ HoverIcons.prototype.repaint = function()
                                 document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
                             }
 						}
-						motherdiv.style.visibility = 'visible';
+
 					}
 				}
 			}
@@ -4485,7 +4488,7 @@ if (typeof mxVertexHandler != 'undefined')
 		 * Contains the default style for edges.
 		 */
 		Graph.prototype.defaultEdgeStyle = {'edgeStyle': 'straightEdgeStyle', 'rounded': '0',
-			'jettySize': 'auto', 'orthogonalLoop': '1','strokeColor':'#FFFF00'};
+			'jettySize': 'auto', 'orthogonalLoop': '1','strokeColor':'#000000','endSize':'8','strokeSize':'2'};
 
 		/**
 		 * Returns the current edge style as a string.

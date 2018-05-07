@@ -37,12 +37,14 @@ var getType = getVal.split('&')[0];
 var getUsername = getVal.split('&')[1];
 if(getUsername!=null){
     username = getUsername.split('=')[1];
+}else{
+
 }
 
 var showVal=getType.split("=")[1];
 
 var what;
-function g(){
+function loadIn(){
 	alert(username);
     if(showVal=="general"){
         what="GeneralRequirement";
@@ -55,8 +57,17 @@ function g(){
         	//username = showVal;
 		}
     }
+
+	if(username==''){
+    	alert("处于离线状态");
+	}
+	$("geDialog").hide();
+	$(function () {
+        $('#hidethis').trigger('click');
+    });
+
 }
-window.onload=g();
+window.onload=loadIn();
 
 
 Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase','exportTemplate',what,'importFromDB'];

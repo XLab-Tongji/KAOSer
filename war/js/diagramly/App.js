@@ -2391,24 +2391,8 @@ App.prototype.showSplash = function(force)
 			this.showSplash();
 		}));
 	}
-	else if (this.mode == null || force)
-	{
-		var rowLimit = (serviceCount <= 4) ? 2 : 3;
-
-		var dlg = new StorageDialog(this, mxUtils.bind(this, function()
-		{
-			this.hideDialog();
-			showSecondDialog();
-		}), rowLimit);
-
-		this.showDialog(dlg.container, (rowLimit < 3) ? 260 : 300,
-			(serviceCount > rowLimit) ? 420 : 300, true, false);
-		dlg.init();
-	}
-	else if (urlParams['create'] == null)
-	{
 		showSecondDialog();
-	}
+
 };
 
 /**

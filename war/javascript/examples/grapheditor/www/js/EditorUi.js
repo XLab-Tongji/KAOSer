@@ -3109,7 +3109,7 @@ EditorUi.prototype.showDialog = function(elt, w, h, modal, closable, onClose)
 		this.dialogs = [];
 	}
 	
-	this.dialog = new Dialog(this, elt, w, h, modal, closable, onClose);
+	//this.dialog = new Dialog(this, elt, w, h, modal, closable, onClose);
 	this.dialogs.push(this.dialog);
 };
 

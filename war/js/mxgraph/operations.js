@@ -183,10 +183,7 @@ if (urlParams['dev'] != '1')
         drawDevUrl = document.location.protocol + '//drawhost.jgraph.com/';
     }
 }
-else
-{
-    mxscript('../app.min.js');
-}
+
 
 if (window && window.process && window.process.type)
 {
