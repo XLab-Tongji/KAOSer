@@ -48,18 +48,18 @@ function loadIn(){
 	alert(username);
     if(showVal=="general"){
         what="GeneralRequirement";
-        alert(what);
+        //alert(what);
     }
     else{
         what="SpecialRequirement";
-        alert(showVal);
+        //alert(showVal);
         if(showVal!="SpecialRequirement"){
         	//username = showVal;
 		}
     }
 
 	if(username==''){
-    	alert("处于离线状态");
+    	//alert("处于离线状态");
 	}
 	$("geDialog").hide();
 	$(function () {
