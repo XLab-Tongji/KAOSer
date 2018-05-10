@@ -2391,8 +2391,7 @@ App.prototype.showSplash = function(force)
 			this.showSplash();
 		}));
 	}
-		showSecondDialog();
-
+    showSecondDialog();
 };
 
 /**

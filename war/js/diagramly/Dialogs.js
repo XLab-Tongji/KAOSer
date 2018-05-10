@@ -2,443 +2,443 @@
  * Copyright (c) 2006-2017, JGraph Ltd
  * Copyright (c) 2006-2017, Gaudenz Alder
  */
-// var StorageDialog = function(editorUi, fn, rowLimit)
-// {
-// 	rowLimit = (rowLimit != null) ? rowLimit : 3;
-//
-// 	var div = document.createElement('div');
-// 	div.style.textAlign = 'center';
-// 	div.style.whiteSpace = 'nowrap';
-// 	div.style.paddingTop = '0px';
-// 	div.style.paddingBottom = '20px';
-//
-// 	var elt = editorUi.addLanguageMenu(div);
-// 	var bottom = '28px';
-//
-// 	if (elt != null)
-// 	{
-// 		elt.style.bottom = bottom;
-// 	}
-//
-// 	if (!editorUi.isOffline() && editorUi.getServiceCount() > 1)
-// 	{
-// 		var help = document.createElement('a');
-// 		help.setAttribute('href', 'https://support.draw.io/display/DO/Selecting+Storage');
-// 		help.setAttribute('title', mxResources.get('help'));
-// 		help.setAttribute('target', '_blank');
-// 		help.style.position = 'absolute';
-// 		help.style.textDecoration = 'none';
-// 		help.style.cursor = 'pointer';
-// 		help.style.fontSize = '12px';
-// 		help.style.bottom = bottom;
-// 		help.style.left = '26px';
-// 		help.style.color = 'gray';
-//
-// 		var icon = document.createElement('img');
-// 		icon.setAttribute('border', '0');
-// 		icon.setAttribute('valign', 'bottom');
-// 		icon.setAttribute('src', Editor.helpImage);
-// 		icon.style.marginRight = '2px';
-// 		help.appendChild(icon);
-//
-// 		mxUtils.write(help, mxResources.get('help'));
-//
-// 		div.appendChild(help);
-// 	}
-//
-// 	var demo = document.createElement('div');
-// 	demo.style.position = 'absolute';
-// 	demo.style.cursor = 'pointer';
-// 	demo.style.fontSize = '12px';
-// 	demo.style.bottom = bottom;
-// 	demo.style.color = 'gray';
-// 	mxUtils.write(demo, mxResources.get('decideLater'));
-//
-// 	if (editorUi.isOfflineApp())
-// 	{
-// 		demo.style.right = '20px';
-// 	}
-// 	else
-// 	{
-// 		mxUtils.setPrefixedStyle(demo.style, 'transform', 'translate(-50%,0)');
-// 		demo.style.left = '50%';
-// 	}
-//
-// 	this.init = function()
-// 	{
-// 		if (mxClient.IS_QUIRKS || document.documentMode == 8)
-// 		{
-// 			demo.style.marginLeft = -Math.round(demo.clientWidth / 2) + 'px';
-// 		}
-// 	};
-//
-// 	div.appendChild(demo);
-//
-// 	mxEvent.addListener(demo, 'click', function()
-// 	{
-// 		editorUi.hideDialog();
-// 		var prev = Editor.useLocalStorage;
-// 		editorUi.createFile(editorUi.defaultFilename, null, null, null, null, null, null, true);
-// 		Editor.useLocalStorage = prev;
-// 	});
-//
-// 	var buttons = document.createElement('div');
-//
-// 	if (mxClient.IS_QUIRKS)
-// 	{
-// 		buttons.style.whiteSpace = 'nowrap';
-// 		buttons.style.cssFloat = 'left';
-// 	}
-//
-// 	buttons.style.border = '1px solid #d3d3d3';
-// 	buttons.style.borderWidth = '1px 0px 1px 0px';
-// 	buttons.style.padding = '12px 0px 12px 0px';
-//
-// 	var cb = document.createElement('input');
-// 	cb.setAttribute('type', 'checkbox');
-// 	cb.setAttribute('checked', 'checked');
-// 	cb.defaultChecked = true;
-// 	var count = 0;
-//
-// 	var p3 = document.createElement('p');
-//
-// 	function addLogo(img, title, mode, clientName, labels, clientFn)
-// 	{
-// 		var button = document.createElement('a');
-// 		button.style.overflow = 'hidden';
-// 		button.style.display = (mxClient.IS_QUIRKS) ? 'inline' : 'inline-block';
-// 		button.className = 'geBaseButton';
-// 		button.style.fontSize = '11px';
-// 		button.style.position = 'relative';
-// 		button.style.margin = '4px';
-// 		button.style.padding = '8px 10px 12px 10px';
-// 		button.style.width = '68px';
-// 		button.style.height = '80px';
-// 		button.style.whiteSpace = 'nowrap';
-// 		button.setAttribute('title', title);
-//
-// 		// Workaround for quirks is a vertical list (limited to max 2 items)
-// 		if (mxClient.IS_QUIRKS)
-// 		{
-// 			button.style.cssFloat = 'left';
-// 			button.style.zoom = '1';
-// 		}
-//
-// 		var label = document.createElement('div');
-// 		label.style.textOverflow = 'ellipsis';
-// 		label.style.overflow = 'hidden';
-//
-// 		if (img != null)
-// 		{
-// 			var logo = document.createElement('img');
-// 			logo.setAttribute('src', img);
-// 			logo.setAttribute('border', '0');
-// 			logo.setAttribute('align', 'absmiddle');
-// 			logo.style.width = '60px';
-// 			logo.style.height = '60px';
-// 			logo.style.paddingBottom = '6px';
-//
-// 			button.appendChild(logo);
-// 		}
-// 		else
-// 		{
-// 			label.style.paddingTop = '5px';
-// 			label.style.whiteSpace = 'normal';
-//
-// 			// Handles special case
-// 			if (mxClient.IS_IOS)
-// 			{
-// 				button.style.padding = '0px 10px 20px 10px';
-// 				button.style.top = '6px';
-// 			}
-// 			else if (mxClient.IS_FF)
-// 			{
-// 				label.style.paddingTop = '0px';
-// 				label.style.marginTop = '-2px';
-// 			}
-// 		}
-//
-// 		button.appendChild(label);
-// 		mxUtils.write(label, title);
-//
-// 		if (labels != null)
-// 		{
-// 			for (var i = 0; i < labels.length; i++)
-// 			{
-// 				mxUtils.br(label);
-// 				mxUtils.write(label, labels[i]);
-// 			}
-// 		}
-//
-// 		function initButton()
-// 		{
-// 			mxEvent.addListener(button, 'click', (clientFn != null) ? clientFn : function()
-// 			{
-// 				// Special case: Redirect all drive users to draw.io pro
-// 				if (mode == App.MODE_GOOGLE && !editorUi.isDriveDomain())
-// 				{
-// 					window.location.hostname = DriveClient.prototype.newAppHostname;
-// 				}
-// 				else if (mode == App.MODE_GOOGLE && editorUi.spinner.spin(document.body, mxResources.get('authorizing')))
-// 				{
-// 					// Tries immediate authentication
-// 					editorUi.drive.checkToken(mxUtils.bind(this, function()
-// 					{
-// 						editorUi.spinner.stop();
-// 						editorUi.setMode(mode, cb.checked);
-// 						fn();
-// 					}));
-// 				}
-// 				else
-// 				{
-// 					editorUi.setMode(mode, cb.checked);
-// 					fn();
-// 				}
-// 			});
-// 		};
-//
-// 		// Supports lazy loading
-// 		if (clientName != null && editorUi[clientName] == null)
-// 		{
-// 			logo.style.visibility = 'hidden';
-// 			mxUtils.setOpacity(label, 10);
-// 			var size = 12;
-//
-// 			var spinner = new Spinner({
-// 				lines: 12, // The number of lines to draw
-// 				length: size, // The length of each line
-// 				width: 5, // The line thickness
-// 				radius: 10, // The radius of the inner circle
-// 				rotate: 0, // The rotation offset
-// 				color: '#000', // #rgb or #rrggbb
-// 				speed: 1.5, // Rounds per second
-// 				trail: 60, // Afterglow percentage
-// 				shadow: false, // Whether to render a shadow
-// 				hwaccel: false, // Whether to use hardware acceleration
-// 				top: '40%',
-// 				zIndex: 2e9 // The z-index (defaults to 2000000000)
-// 			});
-// 			spinner.spin(button);
-//
-// 			// Timeout after 30 secs
-// 			var timeout = window.setTimeout(function()
-// 			{
-// 				if (editorUi[clientName] == null)
-// 				{
-// 					spinner.stop();
-// 					button.style.display = 'none';
-// 				}
-// 			}, 30000);
-//
-// 			editorUi.addListener('clientLoaded', mxUtils.bind(this, function()
-// 			{
-// 				if (editorUi[clientName] != null)
-// 				{
-// 					window.clearTimeout(timeout);
-// 					mxUtils.setOpacity(label, 100);
-// 					logo.style.visibility = '';
-// 					spinner.stop();
-// 					initButton();
-//
-// 					if (clientName == 'drive' && p3.parentNode != null)
-// 					{
-// 						p3.parentNode.removeChild(p3);
-// 					}
-// 				}
-// 			}));
-// 		}
-// 		else
-// 		{
-// 			initButton();
-// 		}
-//
-// 		buttons.appendChild(button);
-//
-// 		if (++count >= rowLimit)
-// 		{
-// 			mxUtils.br(buttons);
-// 			count = 0;
-// 		}
-// 	};
-//
-// 	var hd = document.createElement('p');
-// 	hd.style.fontSize = '16pt';
-// 	hd.style.padding = '0px';
-// 	hd.style.paddingTop = '4px';
-// 	hd.style.paddingBottom = '16px';
-// 	hd.style.margin = '0px';
-// 	hd.style.color = 'gray';
-// 	mxUtils.write(hd, mxResources.get('saveDiagramsTo') + ':');
-// 	div.appendChild(hd);
-//
-// 	if (typeof window.DriveClient === 'function')
-// 	{
-// 		addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('googleDrive'), App.MODE_GOOGLE, 'drive');
-// 	}
-//
-// 	if (editorUi.gitHub != null)
-// 	{
-// 		addLogo(IMAGE_PATH + '/github-logo.svg', mxResources.get('github'), App.MODE_GITHUB, 'gitHub');
-// 	}
-//
-// 	if (typeof window.DropboxClient === 'function')
-// 	{
-// 		addLogo(IMAGE_PATH + '/dropbox-logo.svg', mxResources.get('dropbox'), App.MODE_DROPBOX, 'dropbox');
-// 	}
-//
-// 	if (typeof window.OneDriveClient === 'function')
-// 	{
-// 		addLogo(IMAGE_PATH + '/onedrive-logo.svg', mxResources.get('oneDrive'), App.MODE_ONEDRIVE, 'oneDrive');
-// 	}
-//
-// 	if (typeof window.TrelloClient === 'function')
-// 	{
-// 		addLogo(IMAGE_PATH + '/trello-logo.svg', mxResources.get('trello'), App.MODE_TRELLO, 'trello');
-// 	}
-//
-// 	if (!mxClient.IS_IOS || urlParams['storage'] == 'device')
-// 	{
-// 		addLogo(IMAGE_PATH + '/osa_drive-harddisk.png', mxResources.get('device'), App.MODE_DEVICE);
-// 	}
-//
-// 	if (isLocalStorage && (urlParams['browser'] == '1' || urlParams['offline'] == '1'))
-// 	{
-// 		addLogo(IMAGE_PATH + '/osa_database.png', mxResources.get('browser'), App.MODE_BROWSER);
-// 	}
-//
-// 	div.appendChild(buttons);
-//
-// 	var p2 = document.createElement('p');
-// 	p2.style.marginTop = '12px';
-// 	p2.style.marginBottom = '6px';
-// 	p2.appendChild(cb);
-//
-// 	var span = document.createElement('span');
-// 	span.style.color = 'gray';
-// 	span.style.fontSize = '12px';
-// 	mxUtils.write(span, ' ' + mxResources.get('rememberThisSetting'));
-// 	p2.appendChild(span);
-// 	mxUtils.br(p2);
-//
-// 	var recent = editorUi.getRecent();
-//
-// 	if (recent != null && recent.length > 0)
-// 	{
-// 		var recentSelect = document.createElement('select');
-// 		recentSelect.style.marginTop = '8px';
-// 		recentSelect.style.width = '140px';
-//
-// 		var titleOption = document.createElement('option');
-// 		titleOption.setAttribute('value', '');
-// 		titleOption.setAttribute('selected', 'selected');
-// 		titleOption.style.textAlign = 'center';
-// 		mxUtils.write(titleOption, mxResources.get('openRecent') + '...');
-// 		recentSelect.appendChild(titleOption);
-//
-// 		for (var i = 0; i < recent.length; i++)
-// 		{
-// 			(function(entry)
-// 			{
-// 				var modeKey = entry.mode;
-//
-// 				// Google and oneDrive use different keys
-// 				if (modeKey == App.MODE_GOOGLE)
-// 				{
-// 					modeKey = 'googleDrive';
-// 				}
-// 				else if (modeKey == App.MODE_ONEDRIVE)
-// 				{
-// 					modeKey = 'oneDrive';
-// 				}
-//
-// 				var entryOption = document.createElement('option');
-// 				entryOption.setAttribute('value', entry.id);
-// 				mxUtils.write(entryOption, entry.title + ' (' + mxResources.get(modeKey) + ')');
-// 				recentSelect.appendChild(entryOption);
-// 			})(recent[i]);
-// 		}
-//
-// 		p2.appendChild(recentSelect);
-//
-// 		mxEvent.addListener(recentSelect, 'change', function(evt)
-// 		{
-// 			if (recentSelect.value != '')
-// 			{
-// 				editorUi.loadFile(recentSelect.value);
-// 			}
-// 		});
-// 	}
-// 	else
-// 	{
-// 		p2.style.marginTop = '20px';
-// 		buttons.style.padding = '30px 0px 26px 0px';
-// 	}
-//
-// 	if (Graph.fileSupport && !mxClient.IS_IE && !mxClient.IS_IE11)
-// 	{
-// 		var link = document.createElement('div');
-// 		link.style.cursor = 'pointer';
-// 		link.style.padding = '18px 0px 6px 0px';
-// 		link.style.fontSize = '12px';
-// 		link.style.color = 'gray';
-// 		mxUtils.write(link, mxResources.get('import') + ' ' + mxResources.get('gliffy') + ', ' +
-// 				mxResources.get('formatVssx') + ', ' + mxResources.get('formatVsdx') + ', ' +
-// 				mxResources.get('lucidchart') + '...');
-//
-// 		mxEvent.addListener(link, 'click', function()
-// 		{
-// 			var input = document.createElement('input');
-// 			input.setAttribute('type', 'file');
-//
-// 			mxEvent.addListener(input, 'change', function()
-// 			{
-// 				if (input.files != null)
-// 				{
-// 					// Using null for position will disable crop of input file
-// 					editorUi.hideDialog();
-// 					editorUi.openFiles(input.files, true);
-// 				}
-// 			});
-//
-// 			input.click();
-// 		});
-//
-// 		p2.appendChild(link);
-// 		buttons.style.paddingBottom = '4px';
-// 	}
-//
-// 	buttons.appendChild(p2);
-//
-// 	mxEvent.addListener(span, 'click', function(evt)
-// 	{
-// 		cb.checked = !cb.checked;
-// 		mxEvent.consume(evt);
-// 	});
-//
-// 	// Checks if Google Drive is missing after a 5 sec delay
-// 	if (mxClient.IS_SVG && isLocalStorage && urlParams['gapi'] != '0' &&
-// 		(document.documentMode == null || document.documentMode >= 10))
-// 	{
-// 		window.setTimeout(function()
-// 		{
-// 			if (editorUi.drive == null)
-// 			{
-// 				// To check for Disconnect plugin in chrome use mxClient.IS_GC and check for URL:
-// 				// chrome-extension://jeoacafpbcihiomhlakheieifhpjdfeo/scripts/vendor/jquery/jquery-2.0.3.min.map
-// 				p3.style.padding = '8px';
-// 				p3.style.fontSize = '9pt';
-// 				p3.style.marginTop = '-14px';
-// 				p3.innerHTML = '<a style="background-color:#dcdcdc;padding:5px;color:black;text-decoration:none;" ' +
-// 					'href="https://plus.google.com/u/0/+DrawIo1/posts/1HTrfsb5wDN" target="_blank">' +
-// 					'<img border="0" src="' + mxGraph.prototype.warningImage.src + '" align="top"> ' +
-// 					mxResources.get('googleDriveMissingClickHere') + '</a>';
-// 				div.appendChild(p3);
-// 			}
-// 		}, 5000);
-// 	}
-//
-// 	this.container = div;
-// };
+var StorageDialog = function(editorUi, fn, rowLimit)
+{
+	rowLimit = (rowLimit != null) ? rowLimit : 3;
+
+	var div = document.createElement('div');
+	div.style.textAlign = 'center';
+	div.style.whiteSpace = 'nowrap';
+	div.style.paddingTop = '0px';
+	div.style.paddingBottom = '20px';
+
+	var elt = editorUi.addLanguageMenu(div);
+	var bottom = '28px';
+
+	if (elt != null)
+	{
+		elt.style.bottom = bottom;
+	}
+
+	if (!editorUi.isOffline() && editorUi.getServiceCount() > 1)
+	{
+		var help = document.createElement('a');
+		help.setAttribute('href', 'https://support.draw.io/display/DO/Selecting+Storage');
+		help.setAttribute('title', mxResources.get('help'));
+		help.setAttribute('target', '_blank');
+		help.style.position = 'absolute';
+		help.style.textDecoration = 'none';
+		help.style.cursor = 'pointer';
+		help.style.fontSize = '12px';
+		help.style.bottom = bottom;
+		help.style.left = '26px';
+		help.style.color = 'gray';
+
+		var icon = document.createElement('img');
+		icon.setAttribute('border', '0');
+		icon.setAttribute('valign', 'bottom');
+		icon.setAttribute('src', Editor.helpImage);
+		icon.style.marginRight = '2px';
+		help.appendChild(icon);
+
+		mxUtils.write(help, mxResources.get('help'));
+
+		div.appendChild(help);
+	}
+
+	var demo = document.createElement('div');
+	demo.style.position = 'absolute';
+	demo.style.cursor = 'pointer';
+	demo.style.fontSize = '12px';
+	demo.style.bottom = bottom;
+	demo.style.color = 'gray';
+	mxUtils.write(demo, mxResources.get('decideLater'));
+
+	if (editorUi.isOfflineApp())
+	{
+		demo.style.right = '20px';
+	}
+	else
+	{
+		mxUtils.setPrefixedStyle(demo.style, 'transform', 'translate(-50%,0)');
+		demo.style.left = '50%';
+	}
+
+	this.init = function()
+	{
+		if (mxClient.IS_QUIRKS || document.documentMode == 8)
+		{
+			demo.style.marginLeft = -Math.round(demo.clientWidth / 2) + 'px';
+		}
+	};
+
+	div.appendChild(demo);
+
+	mxEvent.addListener(demo, 'click', function()
+	{
+		editorUi.hideDialog();
+		var prev = Editor.useLocalStorage;
+		editorUi.createFile(editorUi.defaultFilename, null, null, null, null, null, null, true);
+		Editor.useLocalStorage = prev;
+	});
+
+	var buttons = document.createElement('div');
+
+	if (mxClient.IS_QUIRKS)
+	{
+		buttons.style.whiteSpace = 'nowrap';
+		buttons.style.cssFloat = 'left';
+	}
+
+	buttons.style.border = '1px solid #d3d3d3';
+	buttons.style.borderWidth = '1px 0px 1px 0px';
+	buttons.style.padding = '12px 0px 12px 0px';
+
+	var cb = document.createElement('input');
+	cb.setAttribute('type', 'checkbox');
+	cb.setAttribute('checked', 'checked');
+	cb.defaultChecked = true;
+	var count = 0;
+
+	var p3 = document.createElement('p');
+
+	function addLogo(img, title, mode, clientName, labels, clientFn)
+	{
+		var button = document.createElement('a');
+		button.style.overflow = 'hidden';
+		button.style.display = (mxClient.IS_QUIRKS) ? 'inline' : 'inline-block';
+		button.className = 'geBaseButton';
+		button.style.fontSize = '11px';
+		button.style.position = 'relative';
+		button.style.margin = '4px';
+		button.style.padding = '8px 10px 12px 10px';
+		button.style.width = '68px';
+		button.style.height = '80px';
+		button.style.whiteSpace = 'nowrap';
+		button.setAttribute('title', title);
+
+		// Workaround for quirks is a vertical list (limited to max 2 items)
+		if (mxClient.IS_QUIRKS)
+		{
+			button.style.cssFloat = 'left';
+			button.style.zoom = '1';
+		}
+
+		var label = document.createElement('div');
+		label.style.textOverflow = 'ellipsis';
+		label.style.overflow = 'hidden';
+
+		if (img != null)
+		{
+			var logo = document.createElement('img');
+			logo.setAttribute('src', img);
+			logo.setAttribute('border', '0');
+			logo.setAttribute('align', 'absmiddle');
+			logo.style.width = '60px';
+			logo.style.height = '60px';
+			logo.style.paddingBottom = '6px';
+
+			button.appendChild(logo);
+		}
+		else
+		{
+			label.style.paddingTop = '5px';
+			label.style.whiteSpace = 'normal';
+
+			// Handles special case
+			if (mxClient.IS_IOS)
+			{
+				button.style.padding = '0px 10px 20px 10px';
+				button.style.top = '6px';
+			}
+			else if (mxClient.IS_FF)
+			{
+				label.style.paddingTop = '0px';
+				label.style.marginTop = '-2px';
+			}
+		}
+
+		button.appendChild(label);
+		mxUtils.write(label, title);
+
+		if (labels != null)
+		{
+			for (var i = 0; i < labels.length; i++)
+			{
+				mxUtils.br(label);
+				mxUtils.write(label, labels[i]);
+			}
+		}
+
+		function initButton()
+		{
+			mxEvent.addListener(button, 'click', (clientFn != null) ? clientFn : function()
+			{
+				// Special case: Redirect all drive users to draw.io pro
+				if (mode == App.MODE_GOOGLE && !editorUi.isDriveDomain())
+				{
+					window.location.hostname = DriveClient.prototype.newAppHostname;
+				}
+				else if (mode == App.MODE_GOOGLE && editorUi.spinner.spin(document.body, mxResources.get('authorizing')))
+				{
+					// Tries immediate authentication
+					editorUi.drive.checkToken(mxUtils.bind(this, function()
+					{
+						editorUi.spinner.stop();
+						editorUi.setMode(mode, cb.checked);
+						fn();
+					}));
+				}
+				else
+				{
+					editorUi.setMode(mode, cb.checked);
+					fn();
+				}
+			});
+		};
+
+		// Supports lazy loading
+		if (clientName != null && editorUi[clientName] == null)
+		{
+			logo.style.visibility = 'hidden';
+			mxUtils.setOpacity(label, 10);
+			var size = 12;
+
+			var spinner = new Spinner({
+				lines: 12, // The number of lines to draw
+				length: size, // The length of each line
+				width: 5, // The line thickness
+				radius: 10, // The radius of the inner circle
+				rotate: 0, // The rotation offset
+				color: '#000', // #rgb or #rrggbb
+				speed: 1.5, // Rounds per second
+				trail: 60, // Afterglow percentage
+				shadow: false, // Whether to render a shadow
+				hwaccel: false, // Whether to use hardware acceleration
+				top: '40%',
+				zIndex: 2e9 // The z-index (defaults to 2000000000)
+			});
+			spinner.spin(button);
+
+			// Timeout after 30 secs
+			var timeout = window.setTimeout(function()
+			{
+				if (editorUi[clientName] == null)
+				{
+					spinner.stop();
+					button.style.display = 'none';
+				}
+			}, 30000);
+
+			editorUi.addListener('clientLoaded', mxUtils.bind(this, function()
+			{
+				if (editorUi[clientName] != null)
+				{
+					window.clearTimeout(timeout);
+					mxUtils.setOpacity(label, 100);
+					logo.style.visibility = '';
+					spinner.stop();
+					initButton();
+
+					if (clientName == 'drive' && p3.parentNode != null)
+					{
+						p3.parentNode.removeChild(p3);
+					}
+				}
+			}));
+		}
+		else
+		{
+			initButton();
+		}
+
+		buttons.appendChild(button);
+
+		if (++count >= rowLimit)
+		{
+			mxUtils.br(buttons);
+			count = 0;
+		}
+	};
+
+	var hd = document.createElement('p');
+	hd.style.fontSize = '16pt';
+	hd.style.padding = '0px';
+	hd.style.paddingTop = '4px';
+	hd.style.paddingBottom = '16px';
+	hd.style.margin = '0px';
+	hd.style.color = 'gray';
+	mxUtils.write(hd, mxResources.get('saveDiagramsTo') + ':');
+	div.appendChild(hd);
+
+	if (typeof window.DriveClient === 'function')
+	{
+		addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('googleDrive'), App.MODE_GOOGLE, 'drive');
+	}
+
+	if (editorUi.gitHub != null)
+	{
+		addLogo(IMAGE_PATH + '/github-logo.svg', mxResources.get('github'), App.MODE_GITHUB, 'gitHub');
+	}
+
+	if (typeof window.DropboxClient === 'function')
+	{
+		addLogo(IMAGE_PATH + '/dropbox-logo.svg', mxResources.get('dropbox'), App.MODE_DROPBOX, 'dropbox');
+	}
+
+	if (typeof window.OneDriveClient === 'function')
+	{
+		addLogo(IMAGE_PATH + '/onedrive-logo.svg', mxResources.get('oneDrive'), App.MODE_ONEDRIVE, 'oneDrive');
+	}
+
+	if (typeof window.TrelloClient === 'function')
+	{
+		addLogo(IMAGE_PATH + '/trello-logo.svg', mxResources.get('trello'), App.MODE_TRELLO, 'trello');
+	}
+
+	if (!mxClient.IS_IOS || urlParams['storage'] == 'device')
+	{
+		addLogo(IMAGE_PATH + '/osa_drive-harddisk.png', mxResources.get('device'), App.MODE_DEVICE);
+	}
+
+	if (isLocalStorage && (urlParams['browser'] == '1' || urlParams['offline'] == '1'))
+	{
+		addLogo(IMAGE_PATH + '/osa_database.png', mxResources.get('browser'), App.MODE_BROWSER);
+	}
+
+	div.appendChild(buttons);
+
+	var p2 = document.createElement('p');
+	p2.style.marginTop = '12px';
+	p2.style.marginBottom = '6px';
+	p2.appendChild(cb);
+
+	var span = document.createElement('span');
+	span.style.color = 'gray';
+	span.style.fontSize = '12px';
+	mxUtils.write(span, ' ' + mxResources.get('rememberThisSetting'));
+	p2.appendChild(span);
+	mxUtils.br(p2);
+
+	var recent = editorUi.getRecent();
+
+	if (recent != null && recent.length > 0)
+	{
+		var recentSelect = document.createElement('select');
+		recentSelect.style.marginTop = '8px';
+		recentSelect.style.width = '140px';
+
+		var titleOption = document.createElement('option');
+		titleOption.setAttribute('value', '');
+		titleOption.setAttribute('selected', 'selected');
+		titleOption.style.textAlign = 'center';
+		mxUtils.write(titleOption, mxResources.get('openRecent') + '...');
+		recentSelect.appendChild(titleOption);
+
+		for (var i = 0; i < recent.length; i++)
+		{
+			(function(entry)
+			{
+				var modeKey = entry.mode;
+
+				// Google and oneDrive use different keys
+				if (modeKey == App.MODE_GOOGLE)
+				{
+					modeKey = 'googleDrive';
+				}
+				else if (modeKey == App.MODE_ONEDRIVE)
+				{
+					modeKey = 'oneDrive';
+				}
+
+				var entryOption = document.createElement('option');
+				entryOption.setAttribute('value', entry.id);
+				mxUtils.write(entryOption, entry.title + ' (' + mxResources.get(modeKey) + ')');
+				recentSelect.appendChild(entryOption);
+			})(recent[i]);
+		}
+
+		p2.appendChild(recentSelect);
+
+		mxEvent.addListener(recentSelect, 'change', function(evt)
+		{
+			if (recentSelect.value != '')
+			{
+				editorUi.loadFile(recentSelect.value);
+			}
+		});
+	}
+	else
+	{
+		p2.style.marginTop = '20px';
+		buttons.style.padding = '30px 0px 26px 0px';
+	}
+
+	if (Graph.fileSupport && !mxClient.IS_IE && !mxClient.IS_IE11)
+	{
+		var link = document.createElement('div');
+		link.style.cursor = 'pointer';
+		link.style.padding = '18px 0px 6px 0px';
+		link.style.fontSize = '12px';
+		link.style.color = 'gray';
+		mxUtils.write(link, mxResources.get('import') + ' ' + mxResources.get('gliffy') + ', ' +
+				mxResources.get('formatVssx') + ', ' + mxResources.get('formatVsdx') + ', ' +
+				mxResources.get('lucidchart') + '...');
+
+		mxEvent.addListener(link, 'click', function()
+		{
+			var input = document.createElement('input');
+			input.setAttribute('type', 'file');
+
+			mxEvent.addListener(input, 'change', function()
+			{
+				if (input.files != null)
+				{
+					// Using null for position will disable crop of input file
+					editorUi.hideDialog();
+					editorUi.openFiles(input.files, true);
+				}
+			});
+
+			input.click();
+		});
+
+		p2.appendChild(link);
+		buttons.style.paddingBottom = '4px';
+	}
+
+	buttons.appendChild(p2);
+
+	mxEvent.addListener(span, 'click', function(evt)
+	{
+		cb.checked = !cb.checked;
+		mxEvent.consume(evt);
+	});
+
+	// Checks if Google Drive is missing after a 5 sec delay
+	if (mxClient.IS_SVG && isLocalStorage && urlParams['gapi'] != '0' &&
+		(document.documentMode == null || document.documentMode >= 10))
+	{
+		window.setTimeout(function()
+		{
+			if (editorUi.drive == null)
+			{
+				// To check for Disconnect plugin in chrome use mxClient.IS_GC and check for URL:
+				// chrome-extension://jeoacafpbcihiomhlakheieifhpjdfeo/scripts/vendor/jquery/jquery-2.0.3.min.map
+				p3.style.padding = '8px';
+				p3.style.fontSize = '9pt';
+				p3.style.marginTop = '-14px';
+				p3.innerHTML = '<a style="background-color:#dcdcdc;padding:5px;color:black;text-decoration:none;" ' +
+					'href="https://plus.google.com/u/0/+DrawIo1/posts/1HTrfsb5wDN" target="_blank">' +
+					'<img border="0" src="' + mxGraph.prototype.warningImage.src + '" align="top"> ' +
+					mxResources.get('googleDriveMissingClickHere') + '</a>';
+				div.appendChild(p3);
+			}
+		}, 5000);
+	}
+
+	this.container = div;
+};
 
 /**
  * Constructs a dialog for creating new files from templates.

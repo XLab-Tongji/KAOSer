@@ -54,15 +54,12 @@ function loadIn(){
         what="SpecialRequirement";
         //alert(showVal);
         if(showVal!="SpecialRequirement"){
-        	//username = showVal;
+        	username = showVal;
 		}
     }
 
-	if(username==''){
-    	//alert("处于离线状态");
-	}
-	$("geDialog").hide();
-	$(function () {
+    $("geDialog").hide();
+    $(function () {
         $('#hidethis').trigger('click');
     });
 

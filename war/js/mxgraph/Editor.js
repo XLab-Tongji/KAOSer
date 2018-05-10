@@ -761,10 +761,10 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose)
 	left += origin.x;
 	top += origin.y;
 
-    // if (modal)
-    // {
-    // 	document.body.appendChild(this.bg);
-    // }
+    if (modal)
+    {
+    	document.body.appendChild(this.bg);
+    }
 
     var div = editorUi.createDiv('geDialog');
     div.style.width = w + 'px';
@@ -789,13 +789,15 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose)
 		img.style.left = (left + w + 38 - dx) + 'px';
 		img.style.zIndex = this.zIndex;
 		img.style.display="none";
-		// mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
-		// {
-		// 	editorUi.hideDialog(true);
-		// }));
+		mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
+		{
+			editorUi.hideDialog(true);
+		}));
+
 		img.onclick=function(){
             editorUi.hideDialog(true);
-		};
+
+        };
         document.body.appendChild(img);
         this.dialogImg = img;
 
