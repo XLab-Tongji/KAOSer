@@ -4,7 +4,8 @@ LABEL maintainer="Florian JUDITH <florian.judith.b@gmail.com>"
 
 ENV VERSION=7.7.5
 
-RUN apt-get update -y && \
+#RUN apt-get update -y && \
+RUN apt-get update -y -o Acquire-by-hash=yes && \
     apt-get install -y --no-install-recommends openjdk-8-jdk ant git patch xmlstarlet certbot
 
 

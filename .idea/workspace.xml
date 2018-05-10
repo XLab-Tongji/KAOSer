@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/diagramly/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/diagramly/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/diagramly/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/diagramly/Dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Menus.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Menus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menus.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Menus.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -101,6 +97,15 @@
                 <element signature="n#style#0;n#pre#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#blockquote#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -221,6 +226,7 @@
         <option value="$PROJECT_DIR$/war/js/mxgraph/Menus.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Editor.js" />
         <option value="$PROJECT_DIR$/war/js/diagramly/App.js" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile" />
       </list>
     </option>
   </component>
@@ -262,6 +268,17 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
+              <item name="docker" type="cbb8eebc:String" user="docker" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
+              <item name="docker" type="cbb8eebc:String" user="docker" />
+              <item name="assets" type="cbb8eebc:String" user="assets" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -494,12 +511,12 @@
       <workItem from="1525412556525" duration="7293000" />
       <workItem from="1525422036147" duration="2446000" />
       <workItem from="1525632546631" duration="4874000" />
-      <workItem from="1525936772975" duration="2908000" />
+      <workItem from="1525936772975" duration="3228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105879000" />
+    <option name="totallyTimeSpent" value="106199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -578,13 +595,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -937,6 +947,13 @@
             <element signature="n#style#0;n#pre#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#blockquote#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
         </state>
       </provider>
     </entry>
