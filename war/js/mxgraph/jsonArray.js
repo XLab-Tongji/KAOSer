@@ -1,6 +1,6 @@
 var jsonText;
 //序列化后的json
-//var jsonStr;
+var jsonStr;
 
 var result;
 function getJSONs(s) {
@@ -12,7 +12,8 @@ function getJSONs(s) {
     //将json对象转为格式化的字符串
     var dumper = new JKL.Dumper();
     jsonText = dumper.dump(json);
-    //mxUtils.popup(jsonText, true);
+    jsonStr = JSON.stringify(jsonText);
+    //mxUtils.popup(jsonStr, true);
 }
 
 // 三个参数

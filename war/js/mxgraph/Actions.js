@@ -1165,7 +1165,7 @@ Actions.prototype.init = function()
 			$.ajax({
 				type:"POST",
 				url:"http://localhost:8880/template/" + fid,
-				data:{jsname:jsname,jsonStr:jsonText},
+				data:{jsname:jsname,jsonStr:jsonStr},
 				dataType:"html",
 				async: false,
 				success:function (data) {
@@ -1192,7 +1192,7 @@ Actions.prototype.init = function()
         var dumper = new JKL.Dumper();
         jsonText = dumper.dump(json);
         //对数组进行json序列化，不然无法传递到服务端
-        //jsonStr = JSON.stringify(jsonText);
+        jsonStr = JSON.stringify(jsonText);
     }
 
 	this.addAction('TemplateMD',mxUtils.bind(this,function () {
