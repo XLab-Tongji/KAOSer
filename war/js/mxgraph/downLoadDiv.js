@@ -14,7 +14,7 @@ function showDownloadDiv(){
     var fieldset2 = document.createElement("fieldset");
     var gubutton = document.createElement("button");
     gubutton.setAttribute("id","giveup");
-    dlbutton.setAttribute("type","button");
+    gubutton.setAttribute("type","button");
     gubutton.innerHTML = "取消";
     gubutton.onclick = function (ev) {
         document.body.removeChild(downLoadDiv);

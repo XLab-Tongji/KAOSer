@@ -1856,6 +1856,7 @@ Sidebar.prototype.createItem = function(cells, title, showLabel, showTitle, widt
 	var elt = document.createElement('a');
 	elt.setAttribute('href', 'javascript:void(0);');
 	elt.className = 'geItem';
+	//elt.setAttribute('id','title');
 	elt.style.overflow = 'hidden';
 	var border = (mxClient.IS_QUIRKS) ? 8 + 2 * this.thumbPadding : 2 * this.thumbBorder;
 	elt.style.width = (this.thumbWidth + border) + 'px';

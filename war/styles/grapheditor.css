@@ -1,3 +1,18 @@
+#RenameDiv{
+	width:400px;
+	height:250px;
+	z-index:999;
+	position:absolute;
+	margin: auto;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	text-align: center;
+	/*display: none;*/
+}
+
 #table_content{
 	width: 200px;
 	height: 165px;
@@ -141,19 +156,26 @@ fieldset {
 	overflow: auto;
 	-webkit-box-shadow: #666 0px 0px 10px;
 }
-#DownloadDiv{
+#DownloadDiv,#renameDiv{
 	text-align: center;
 	display: none;
 	position: absolute;
 	top: 30%;
 	left: 40%;
 	width: 20%;
-	height: 36%;
 	padding: 10px;
 	background-color: white;
 	z-index: 1002;
 	overflow: auto;
 	-webkit-box-shadow: #666 0px 0px 10px;
+}
+
+#DownloadDiv{
+	height: 36%;
+}
+
+#renameDiv{
+	height: 16%;
 }
 #ExportFiles h3 ,#SaveFiles h3,#DownloadDiv h3{
 	font-family:"Open Sans", Helvetica, Arial, sans-serif;
@@ -182,6 +204,13 @@ fieldset {
 	margin:0 0 5px;
 	padding:10px;
 	font-size:15px;
+}
+
+#dlbutton,#gubutton{
+	cursor:pointer;
+	background:#0CF;
+	color:#FFF;
+	/*padding:10px;*/
 }
 #ExportFiles button[type="button"]:hover,#SaveFiles button[type="button"]:hover ,#DownloadDiv button[type="button"]:hover{
 	background:#09C;

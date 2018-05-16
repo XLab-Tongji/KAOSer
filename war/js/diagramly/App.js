@@ -4458,22 +4458,57 @@ App.prototype.updateHeader = function()
 		this.fname.setAttribute('href', 'javascript:void(0);');
 		this.fname.setAttribute('title', mxResources.get('rename'));
 		this.fname.className = 'geItem';
+		this.fname.setAttribute('id','title');
 		this.fname.style.padding = '2px 8px 2px 8px';
 		this.fname.style.display = 'inline';
 		this.fname.style.fontSize = '18px';
 		this.fname.style.whiteSpace = 'nowrap';
 
-		mxEvent.addListener(this.fname, 'click', mxUtils.bind(this, function(evt)
-		{
-			var file = this.getCurrentFile();
+		this.fname.onclick=function(){
+            var renameDiv = document.createElement('div');
+            renameDiv.setAttribute('id','renameDiv');
+            renameDiv.setAttribute('class','white_content');
+            renameDiv.style.display='block';
+            var h = document.createElement("h3");
+            h.innerHTML="Quick Rename";
+            var fieldset1 = document.createElement("fieldset");
 
-			if (file != null && file.isRenamable())
-			{
-				this.actions.get('rename').funct();
-			}
+            var inputName = document.createElement("input");
+            inputName.placeholder = document.getElementById('title').innerText;
+            inputName.setAttribute('id','mytitle');
+            var fieldset2 = document.createElement("fieldset");
+            var dlbutton = document.createElement("button");
+            //dlbutton.setAttribute("id","downloadBtn");
+            dlbutton.onclick = downloadFile;
+            dlbutton.setAttribute("type","button");
+            dlbutton.innerHTML = "确定";
+            dlbutton.setAttribute("id","dlbutton");
+            dlbutton.onclick=function () {
+                document.getElementById('title').innerText = document.getElementById('mytitle').value;
+                alert(document.getElementById('mytitle').value);
 
-			mxEvent.consume(evt);
-		}));
+                document.body.removeChild(renameDiv);
+            };
+
+            var gubutton = document.createElement("button");
+            //gubutton.setAttribute("id","giveup");
+            gubutton.setAttribute("type","button");
+            gubutton.innerHTML = "取消";
+            gubutton.setAttribute("id","gubutton");
+            gubutton.onclick=function () {
+                document.body.removeChild(renameDiv);
+            }
+            inputName.type = 'text';
+            //inputName.tab='1';
+
+            renameDiv.appendChild(h);
+            renameDiv.appendChild(fieldset1);
+			fieldset1.appendChild(inputName);
+            renameDiv.appendChild(fieldset2);
+            fieldset2.appendChild(dlbutton);
+            fieldset2.appendChild(gubutton);
+            document.body.appendChild(renameDiv);
+		};
 
 		this.fnameWrapper.appendChild(this.fname);
 

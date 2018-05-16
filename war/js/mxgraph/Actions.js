@@ -1134,7 +1134,13 @@ Actions.prototype.init = function()
 			$.ajax({
 				type:"POST",
 				url:"http://localhost:8880/save",
-				data:{jsname:jsname,jsonStr:jsonText,myname:username},
+				data:{
+
+					jsname:jsname,
+					jsonStr:jsonText,
+					myname:username,
+					mytitle:document.getElementById('title').innerText,
+				},
 				dataType:"html",
 				async: false,
 				success:function (data) {
