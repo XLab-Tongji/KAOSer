@@ -9,7 +9,7 @@ function createRequirementDiv() {
     var divattr = document.createAttribute("id");
     divattr.value = "detailcontainer2";
     arrow.setAttributeNode(divattr);
-    if(flag==1) {
+    //if(flag==1) {
         //创建form
         var form = document.createElement("form");
         var formattr = document.createAttribute("id");
@@ -137,9 +137,25 @@ function createRequirementDiv() {
         //arrow.style.height = "600px";
         //arrow.style.width = "430px";
         //return arrow;
-    }
-    else {
-        //return arrow;
-    }
+        //行 - agent
+        var tr10 = document.createElement("tr");
+        var td10_1 = document.createElement("td");
+        td10_1.innerHTML = "Agents";
+        var td10_1_width = document.createAttribute("width");
+        td10_1_width.value = "100px";
+        td10_1.setAttributeNode(td10_1_width);
+        var td10_2 = document.createElement("td");
+        var input10 = document.createElement("h4");
+        var input10_id = document.createAttribute("id");
+        input10_id.value = "Agents";
+        input10.setAttributeNode(input10_id);
+        td10_2.appendChild(input10);
+        tr10.appendChild(td10_1);
+        tr10.appendChild(td10_2);
+        table.appendChild(tr10);
+    // }
+    // else {
+    //     //return arrow;
+    // }
     return arrow;
 }

@@ -30,7 +30,7 @@ function showDownloadDiv(){
 function downloadFile() {
     document.getElementById("DownloadDiv").style.display="none";
     console.log("ajaxDownloadSynchronized");
-    var url = "http://localhost:8880/ServletDownload";
+    var url = mxResources.get("urlservletdownload");
     var fileName = document.getElementById("txtname1").value;
     var form = $("<form></form>").attr("action", url).attr("method", "post");
     form.append($("<input />").attr("type", "hidden").attr("name", "fileName").attr("value", fileName));

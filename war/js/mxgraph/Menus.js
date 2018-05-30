@@ -32,16 +32,20 @@ Menus.prototype.defaultFontSize = '12';
  */
 
 var thisURL=document.URL;
-var getVal=thisURL.split('?')[1];
-var getType = getVal.split('&')[0];
-var getUsername = getVal.split('&')[1];
-if(getUsername!=null){
-    username = getUsername.split('=')[1];
-}else{
+if(thisURL.indexOf('?')!=-1){
+    var getVal=thisURL.split('?')[1];
+    if(getVal.indexOf('&')!=-1){
+        var getType = getVal.split('&')[0];
+        var showVal=getType.split("=")[1];
+        var getUsername = getVal.split('&')[1];
+        if(getUsername!=null){
+            username = getUsername.split('=')[1];
+        }else{
 
+        }
+	}
 }
 
-var showVal=getType.split("=")[1];
 
 var what;
 function loadIn(){

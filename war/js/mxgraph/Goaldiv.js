@@ -8,7 +8,7 @@ function createGoalDiv() {
     var divattr = document.createAttribute("id");
     divattr.value = "detailcontainer";
     arrow.setAttributeNode(divattr);
-    if(flag==1) {
+   // if(flag==1) {
         //创建form
         var form = document.createElement("form");
         var formattr = document.createAttribute("id");
@@ -188,9 +188,9 @@ function createGoalDiv() {
         //arrow.style.height = "600px";
         //arrow.style.width = "430px";
         return arrow;
-    }
-    else{
-
-        return arrow;
-    }
+    // }
+    // else{
+    //
+    //     return arrow;
+    // }
 };

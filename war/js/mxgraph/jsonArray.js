@@ -13,7 +13,7 @@ function getJSONs(s) {
     var dumper = new JKL.Dumper();
     jsonText = dumper.dump(json);
     jsonStr = JSON.stringify(jsonText);
-    //mxUtils.popup(jsonStr, true);
+    console.log(jsonStr);
 }
 
 // 三个参数

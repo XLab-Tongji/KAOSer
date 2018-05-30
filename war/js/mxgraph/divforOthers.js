@@ -9,7 +9,7 @@ function createOtherDiv() {
     var divattr = document.createAttribute("id");
     divattr.value = "detailcontainer3";
     arrow.setAttributeNode(divattr);
-    if(flag==1) {
+    //if(flag==1) {
         //创建form
         var form = document.createElement("form");
         var formattr = document.createAttribute("id");
@@ -64,9 +64,9 @@ function createOtherDiv() {
         form.appendChild(table);
         arrow.appendChild(form);
 
-    }
-    else {
-
-    }
+    // }
+    // else {
+    //
+    // }
     return arrow;
 }

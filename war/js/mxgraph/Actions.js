@@ -1133,7 +1133,7 @@ Actions.prototype.init = function()
 
 			$.ajax({
 				type:"POST",
-				url:"http://localhost:8880/save",
+				url:mxResources.get("urlsave"),
 				data:{
 
 					jsname:jsname,
@@ -1170,7 +1170,7 @@ Actions.prototype.init = function()
 
 			$.ajax({
 				type:"POST",
-				url:"http://localhost:8880/template/" + fid,
+				url:mxResources.get("urltemplate") + fid,
 				data:{jsname:jsname,jsonStr:jsonStr},
 				dataType:"html",
 				async: false,
@@ -1262,15 +1262,13 @@ Actions.prototype.init = function()
         return this.__strings__.join("");
     };
 
-
-
     var boarddiv = "<div class='act_table' id='act_table'><div id='table_content'></div><button id='importQuit' type='button'>取消</button></div>";
     $(document.body).append(boarddiv);
 
     function getXML() {
         $.ajax({
             type:"Get",
-            url:"http://localhost:8880/importFromMongo",
+            url:mxResources.get("urlimportfrommongo"),
             data:{myname:username},
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
             cache: false,

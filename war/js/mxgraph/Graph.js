@@ -3202,7 +3202,11 @@ HoverIcons.prototype.repaint = function()
 						that.participant=document.getElementById("participant").value;
 						that.preCondition=document.getElementById("preCondition").value;
 						that.aftCondition=document.getElementById("aftCondition").value;
-						//that.RefinesTo=getmyWant(gm,that.id,"RefinesTo");
+						that.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
+                        that.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy");
+                        that.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
+
+                        //that.RefinesTo=getmyWant(gm,that.id,"RefinesTo");
 						flagGoal=0;
 						mgoaldiv.style.visibility = 'hidden';
 
@@ -3237,6 +3241,7 @@ HoverIcons.prototype.repaint = function()
 						that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 						that.businessRule=document.getElementById("businessRule").value;
 						that.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+						that.Agents=getmyWant(gm,that.id,'source','hexagon','Agents');
 						flagRequirement=0;
 						mrequirementdiv.style.visibility = 'hidden';
 
@@ -3245,6 +3250,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("addtionEventFlow").value='';
 						document.getElementById("businessRule").value='';
 						document.getElementById("nonFunctionalRule").value='';
+                        document.getElementById("Agents").innerHTML='';
 					}
 					else {
 						flagRequirement=1;
@@ -3253,6 +3259,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("addtionEventFlow").value=that.addtionEventFlow;
 						document.getElementById("businessRule").value=that.businessRule;
 						document.getElementById("nonFunctionalRule").value=that.nonFunctionalRule;
+						document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'source','hexagon','Agents');
 						mrequirementdiv.style.visibility = 'visible';
 					}
 				}
@@ -3302,9 +3309,9 @@ HoverIcons.prototype.repaint = function()
 					this.currentState.cell.participant=document.getElementById("participant").value;
 					this.currentState.cell.preCondition=document.getElementById("preCondition").value;
 					this.currentState.cell.aftCondition=document.getElementById("aftCondition").value;
-                    //this.currentState.cell.RefinesTo=getmyWant(gm,that.id,"RefinesTo");
-                    //this.currentState.cell.RefinedBy=document.getElementById("RefinedBy").value;
-                    //this.currentState.cell.Resolves=document.getElementById("Resolves").value;
+                    this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
+                    this.currentState.cell.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy");
+                    this.currentState.cell.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
 
                 }
 				else {
@@ -3329,14 +3336,17 @@ HoverIcons.prototype.repaint = function()
 					this.currentState.cell.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 					this.currentState.cell.businessRule=document.getElementById("businessRule").value;
 					this.currentState.cell.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
-				}
+                    this.currentState.cell.Agents=getmyWant(gm,that.id,'source','hexagon','Agents');
+
+                }
 				else{
 					document.getElementById("reqId").innerHTML=this.currentState.cell.value;
 					document.getElementById("basicEventFlow").value=this.currentState.cell.basicEventFlow;
 					document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
 					document.getElementById("businessRule").value=this.currentState.cell.businessRule;
 					document.getElementById("nonFunctionalRule").value=this.currentState.cell.nonFunctionalRule;
-				}
+                    document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'source','hexagon','Agents');
+                }
 			}
 
 			if(motherdiv.style.visibility=="visible"){
