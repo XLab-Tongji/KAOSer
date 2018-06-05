@@ -1,6 +1,5 @@
 FROM tomcat:8-jre8
 
-
 LABEL maintainer="Florian JUDITH <florian.judith.b@gmail.com>"
 
 ENV VERSION=7.7.5
