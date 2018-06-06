@@ -1,6 +1,7 @@
-var downLoadDiv = document.createElement("div");
+var downLoadDiv
 //downLoadDiv.setAttribute("id","DownloadDiv");
 function showDownloadDiv(){
+    downLoadDiv = document.createElement("div");
     downLoadDiv.setAttribute("id","DownloadDiv");
     downLoadDiv.setAttribute("class","white_content");
     var h = document.createElement("h3");

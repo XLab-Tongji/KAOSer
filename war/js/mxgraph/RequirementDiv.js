@@ -110,7 +110,7 @@ function createRequirementDiv() {
         //行 - 补充说明-非功能性需求
         var tr9 = document.createElement("tr");
         var td9 = document.createElement("td");
-        td9.innerHTML = "补充说明-非功能性需求";
+        td9.innerHTML = "补充说明";
         var td9_colspan = document.createAttribute("colspan");
         td9_colspan.value = "2";
         td9.setAttributeNode(td9_colspan);
@@ -118,13 +118,13 @@ function createRequirementDiv() {
         td9.appendChild(br9);
         var textarea9 = document.createElement("textarea");
         var textarea9_name = document.createAttribute("name");
-        textarea9_name.value = "nonFunctionalRule";
+        textarea9_name.value = "Description";
         textarea9.setAttributeNode(textarea9_name);
         var textarea9_class = document.createAttribute("class");
         textarea9_class.value = "detailform-textarea"
         textarea9.setAttributeNode(textarea9_class);
         var input9_id = document.createAttribute("id");
-        input9_id.value = "nonFunctionalRule";
+        input9_id.value = "Description";
         textarea9.setAttributeNode(input9_id);
         td9.appendChild(textarea9);
         tr9.appendChild(td9);

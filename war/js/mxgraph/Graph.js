@@ -3205,6 +3205,7 @@ HoverIcons.prototype.repaint = function()
 						that.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
                         that.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy");
                         that.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
+                        that.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
                         //that.RefinesTo=getmyWant(gm,that.id,"RefinesTo");
 						flagGoal=0;
@@ -3218,7 +3219,9 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("RefinesTo").innerHTML='';
 						document.getElementById("RefinedBy").innerHTML='';
 						document.getElementById("Resolves").innerHTML='';
-					}
+                        document.getElementById("Obstructs").innerHTML='';
+
+                    }
 					else {
 						flagGoal=1;
 						document.getElementById("usecaseId").innerHTML=that.value;
@@ -3229,7 +3232,9 @@ HoverIcons.prototype.repaint = function()
                         document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinesTo");
                         document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy");
                         document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
-						mgoaldiv.style.visibility = 'visible';
+                        document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+
+                        mgoaldiv.style.visibility = 'visible';
 					}
 				}
 			};
@@ -3240,7 +3245,7 @@ HoverIcons.prototype.repaint = function()
 						that.basicEventFlow=document.getElementById("basicEventFlow").value;
 						that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 						that.businessRule=document.getElementById("businessRule").value;
-						that.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+						that.Description=document.getElementById("Description").value;
 						that.Agents=getmyWant(gm,that.id,'source','hexagon','Agents');
 						flagRequirement=0;
 						mrequirementdiv.style.visibility = 'hidden';
@@ -3249,7 +3254,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("basicEventFlow").value='';
 						document.getElementById("addtionEventFlow").value='';
 						document.getElementById("businessRule").value='';
-						document.getElementById("nonFunctionalRule").value='';
+						document.getElementById("Description").value='';
                         document.getElementById("Agents").innerHTML='';
 					}
 					else {
@@ -3258,7 +3263,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("basicEventFlow").value=that.basicEventFlow;
 						document.getElementById("addtionEventFlow").value=that.addtionEventFlow;
 						document.getElementById("businessRule").value=that.businessRule;
-						document.getElementById("nonFunctionalRule").value=that.nonFunctionalRule;
+						document.getElementById("Description").value=that.Description;
 						document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'source','hexagon','Agents');
 						mrequirementdiv.style.visibility = 'visible';
 					}
@@ -3271,6 +3276,9 @@ HoverIcons.prototype.repaint = function()
 						flagOthers=0;
 						if($('#Obstacle').length!=0){
                             document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
+                            document.getElementById('detailtable3').removeChild(document.getElementById('Targets'));
+                            that.Obstructs = getmyWant(gm,that.id,'source','goal','IObstructs');
+                            that.Goal = getmyWant(gm,that.id,'target','goal','Target');
                         }
                         motherdiv.style.visibility = 'hidden';
 						document.getElementById("othId").value='';
@@ -3282,15 +3290,24 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("detail").value=that.gedetail;
                         motherdiv.style.visibility = 'visible';
 						if(curr.style['shape']=='obstacle'){
-							if($('#Obstacle').length==0) {
+							if($('#IObstacle').length==0) {
                                 //行 - Obstructs
                                 document.getElementById('detailtable3').appendChild(addObstructs());
-                                document.getElementById('Obstructs').innerHTML = getmyWant(gm,that.id,'source','goal','Obstructs');
+                                //行 - solves
+                                document.getElementById('detailtable3').appendChild(addTarget());
+
+                                document.getElementById('IObstructs').innerHTML = getmyWant(gm,that.id,'source','goal','IObstructs');
+                                document.getElementById('Target').innerHTML = getmyWant(gm,that.id,'target','goal','Target');
+
                             }
-						}
+                            that.Obstructs = getmyWant(gm,that.id,'source','goal','IObstructs');
+                            that.Goal = getmyWant(gm,that.id,'target','goal','Target');
+                        }
 						else{
 							if($('#Obstacle').length>0){
                                 document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
+                                document.getElementById('detailtable3').removeChild(document.getElementById('Targets'));
+
                             }
 						}
 
@@ -3312,6 +3329,8 @@ HoverIcons.prototype.repaint = function()
                     this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
                     this.currentState.cell.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy");
                     this.currentState.cell.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
+                    this.currentState.cell.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+
 
                 }
 				else {
@@ -3323,19 +3342,21 @@ HoverIcons.prototype.repaint = function()
                     document.getElementById("RefinesTo").innerHTML=getmyWant(gm,this.currentState.cell.id,'target','goal',"RefinesTo");
                     document.getElementById("RefinedBy").innerHTML=getmyWant(gm,this.currentState.cell.id,'source','goal',"RefinedBy");
                     document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id, "source",'obstacle',"ResolveObstacle");
-				}
+                    document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+
+                }
 			}
 
 			if(mrequirementdiv.style.visibility=="visible"){
 				if((document.getElementById("reqId").innerHTML==that.value)&&(document.getElementById("basicEventFlow").value!=that.basicEventFlow
 					||document.getElementById("addtionEventFlow").value!=that.addtionEventFlow
 					||document.getElementById("businessRule").value!=that.businessRule
-					||document.getElementById("nonFunctionalRule").value!=that.nonFunctionalRule)){
+					||document.getElementById("Description").value!=that.Description)){
 					this.currentState.cell.value=document.getElementById("reqId").innerHTML;
 					this.currentState.cell.basicEventFlow=document.getElementById("basicEventFlow").value;
 					this.currentState.cell.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 					this.currentState.cell.businessRule=document.getElementById("businessRule").value;
-					this.currentState.cell.nonFunctionalRule=document.getElementById("nonFunctionalRule").value;
+					this.currentState.cell.Description=document.getElementById("Description").value;
                     this.currentState.cell.Agents=getmyWant(gm,that.id,'source','hexagon','Agents');
 
                 }
@@ -3344,7 +3365,7 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("basicEventFlow").value=this.currentState.cell.basicEventFlow;
 					document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
 					document.getElementById("businessRule").value=this.currentState.cell.businessRule;
-					document.getElementById("nonFunctionalRule").value=this.currentState.cell.nonFunctionalRule;
+					document.getElementById("Description").value=this.currentState.cell.Description;
                     document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'source','hexagon','Agents');
                 }
 			}
@@ -3364,12 +3385,21 @@ HoverIcons.prototype.repaint = function()
                 if(this.currentState.cell.flag!='obstacle'){
                     if($("#Obstacle").length>0){
                         document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
+                        document.getElementById('detailtable3').removeChild(document.getElementById('Targets'));
+
                     }
                 }else{
                     if($("#Obstacle").length==0){
                         document.getElementById('detailtable3').appendChild(addObstructs());
+                        document.getElementById('detailtable3').appendChild(addTarget());
+
                     }
-                    document.getElementById('Obstructs').innerHTML=getmyWant(gm,that.id,'source','goal','Obstructs');
+                    this.currentState.cell.Obstructs = getmyWant(gm,that.id,'source','goal','IObstructs');
+                    this.currentState.cell.Goal = getmyWant(gm,that.id,'target','goal','Target');
+
+                    document.getElementById('IObstructs').innerHTML=getmyWant(gm,that.id,'source','goal','IObstructs');
+                    document.getElementById('Target').innerHTML=getmyWant(gm,that.id,'target','goal','Target');
+
                 }
 			}
 

@@ -181,6 +181,23 @@ function createGoalDiv() {
         tr8.appendChild(td8_2);
         table.appendChild(tr8);
 
+        //行 - obstructs
+        var tr9 = document.createElement("tr");
+        var td9_1 = document.createElement("td");
+        td9_1.innerHTML = "Obstructs";
+        var td9_1_width = document.createAttribute("width");
+        td9_1_width.value = "100px";
+        td9_1.setAttributeNode(td9_1_width);
+        var td9_2 = document.createElement("td");
+        var input9 = document.createElement("h4");
+        var input9_id = document.createAttribute("id");
+        input9_id.value = "Obstructs";
+        input9.setAttributeNode(input9_id);
+        td9_2.appendChild(input9);
+        tr9.appendChild(td9_1);
+        tr9.appendChild(td9_2);
+        table.appendChild(tr9);
+
         form.appendChild(table);
         arrow.appendChild(form);
 

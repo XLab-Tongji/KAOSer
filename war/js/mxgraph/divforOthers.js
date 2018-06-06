@@ -61,6 +61,23 @@ function createOtherDiv() {
         tr.appendChild(td);
         table.appendChild(tr);
 
+
+        // //行 - 目标
+        // var tr2 = document.createElement("tr");
+        // var td2_1 = document.createElement("td");
+        // td2_1.innerHTML = "target";
+        // var td2_1_width = document.createAttribute("width");
+        // td2_1_width.value = "100px";
+        // td2_1.setAttributeNode(td2_1_width);
+        // var td2_2 = document.createElement("td");
+        // var input2 = document.createElement("h4");
+        // var input2_id = document.createAttribute("id");
+        // input2_id.value = "Target";
+        // input2.setAttributeNode(input2_id);
+        // td2_2.appendChild(input2);
+        // tr2.appendChild(td2_1);
+        // tr2.appendChild(td2_2);
+        // table.appendChild(tr2);
         form.appendChild(table);
         arrow.appendChild(form);
 

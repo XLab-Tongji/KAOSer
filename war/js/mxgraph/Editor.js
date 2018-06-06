@@ -767,12 +767,13 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose)
     }
 
     var div = editorUi.createDiv('geDialog');
+    div.setAttribute('id','loadDialog');
     div.style.width = w + 'px';
     div.style.height = h + 'px';
     div.style.left = left + 'px';
     div.style.top = top + 'px';
     div.style.zIndex = this.zIndex;
-	div.style.display = 'none';
+	//document.getElementById('loadDialog').style.display = 'none';
     div.appendChild(elt);
     document.body.appendChild(div);
 
@@ -788,13 +789,15 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose)
 		img.style.top = (top + 14) + 'px';
 		img.style.left = (left + w + 38 - dx) + 'px';
 		img.style.zIndex = this.zIndex;
-		img.style.display="none";
+		//img.style.display="none";
 		mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
 		{
+			div.style.display = 'none';
 			editorUi.hideDialog(true);
 		}));
 
 		img.onclick=function(){
+            div.style.display = 'none';
             editorUi.hideDialog(true);
 
         };
