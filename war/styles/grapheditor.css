@@ -332,7 +332,11 @@ fieldset {
       padding-top: 5px;
       height: 90px;
     }
-	#detailtable2 tr:nth-child(5) td{
+	#detailtable2 tr:nth-child(6) td{
+		padding-top: 5px;
+		height: 90px;
+	}
+	#detailtable2 tr:nth-child(7) td{
 		padding-top: 5px;
 		height: 90px;
 	}

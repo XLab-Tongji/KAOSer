@@ -130,13 +130,28 @@ function createRequirementDiv() {
         tr9.appendChild(td9);
         table.appendChild(tr9);
 
-        form.appendChild(table);
-        arrow.appendChild(form);
-
         //添加样式
         //arrow.style.height = "600px";
         //arrow.style.width = "430px";
         //return arrow;
+
+        //行 - RefinesToReq
+        var tr11 = document.createElement("tr");
+        var td11_1 = document.createElement("td");
+        td11_1.innerHTML = "RefinesTo";
+        var td11_1_width = document.createAttribute("width");
+        td11_1_width.value = "100px";
+        td11_1.setAttributeNode(td11_1_width);
+        var td11_2 = document.createElement("td");
+        var input11 = document.createElement("h4");
+        var input11_id = document.createAttribute("id");
+        input11_id.value = "RefinesToReq";
+        input11.setAttributeNode(input11_id);
+        td11_2.appendChild(input11);
+        tr11.appendChild(td11_1);
+        tr11.appendChild(td11_2);
+        table.appendChild(tr11);
+
         //行 - agent
         var tr10 = document.createElement("tr");
         var td10_1 = document.createElement("td");
@@ -157,5 +172,7 @@ function createRequirementDiv() {
     // else {
     //     //return arrow;
     // }
+    form.appendChild(table);
+    arrow.appendChild(form);
     return arrow;
 }

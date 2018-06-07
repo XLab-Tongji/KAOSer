@@ -219,7 +219,7 @@ function wirtieResults(array) {
             results+='</br>'+'- '+array[k];
         }
     }
-    return results;
+    return results+'</br>';
 }
 function uniqueArray(array){
     var n = {}, r = [], len = array.length, val, type;

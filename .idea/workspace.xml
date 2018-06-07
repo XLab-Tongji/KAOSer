@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Goaldiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Goaldiv.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Obstructs.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Obstructs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/divforOthers.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/divforOthers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/jsonArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/jsonArray.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/war/styles/grapheditor.css" beforeDir="false" afterPath="$PROJECT_DIR$/war/styles/grapheditor.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,65 +23,21 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
+            <state relative-caret-position="-99">
               <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Format.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1186">
+              <caret line="3732" column="187" selection-start-line="3732" selection-start-column="187" selection-end-line="3732" selection-end-column="187" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sidebar-ObjectModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sidebar-OperationModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-OperationModel.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="EditorUi.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="3061" column="29" selection-start-line="3061" selection-start-column="19" selection-end-line="3061" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Editor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="791" column="10" selection-start-line="791" selection-start-column="10" selection-end-line="791" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/diagramly/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="4169" column="19" selection-start-line="4169" selection-start-column="9" selection-end-line="4169" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,7 +46,7 @@
       <file leaf-file-name="Actions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="1197">
               <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
             </state>
           </provider>
@@ -104,7 +55,7 @@
       <file leaf-file-name="Sidebar-RespModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
+            <state relative-caret-position="1406">
               <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
@@ -113,8 +64,40 @@
       <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1685">
-              <caret line="3280" column="87" selection-start-line="3280" selection-start-column="87" selection-end-line="3280" selection-end-column="87" />
+            <state relative-caret-position="-812">
+              <caret line="3342" column="77" selection-start-line="3342" selection-start-column="77" selection-end-line="3342" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequirementDiv.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="153" selection-start-line="153" selection-end-line="153" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="whatType.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/whatType.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="jsonArray.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/jsonArray.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="220" column="5" lean-forward="true" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grapheditor.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="341" column="5" lean-forward="true" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -130,8 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>txtname1</find>
-      <find>filter</find>
       <find>fieldset</find>
       <find>txtname</find>
       <find>DownloadDiv</find>
@@ -160,6 +141,8 @@
       <find>Description</find>
       <find>Target</find>
       <find>geDialog</find>
+      <find>end</find>
+      <find>stroke</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -208,17 +191,17 @@
         <option value="$PROJECT_DIR$/war/js/diagramly/App.js" />
         <option value="$PROJECT_DIR$/war/resources/dia.txt" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Actions.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/jsonArray.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Menus.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" />
         <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Goaldiv.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/divforOthers.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Obstructs.js" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/Editor.js" />
         <option value="$PROJECT_DIR$/war/styles/grapheditor.css" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Editor.js" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/jsonArray.js" />
       </list>
     </option>
   </component>
@@ -496,11 +479,12 @@
       <workItem from="1527640122604" duration="3674000" />
       <workItem from="1527850591409" duration="6131000" />
       <workItem from="1528299360954" duration="4236000" />
+      <workItem from="1528367913475" duration="2731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143511000" />
+    <option name="totallyTimeSpent" value="146242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -510,13 +494,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32893157" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -531,20 +514,21 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
       <window_info anchor="right" id="Maven Projects" order="3" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22108346" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -554,7 +538,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Maven Projects" order="4" />
@@ -579,6 +563,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62320">
+          <caret line="3280" column="87" selection-start-line="3280" selection-start-column="87" selection-end-line="3280" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/DrawioFile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-33" />
@@ -725,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70908">
-          <caret line="3732" column="187" selection-start-line="3732" selection-start-column="187" selection-end-line="3732" selection-end-column="187" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -781,20 +765,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Shapes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/jsonArray.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2204">
-          <caret line="116" column="37" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -819,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="343" column="8" selection-start-line="343" selection-start-column="8" selection-end-line="343" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Obstructs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -840,6 +807,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58121">
+          <caret line="3061" column="29" selection-start-line="3061" selection-start-column="19" selection-end-line="3061" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79154">
+          <caret line="4169" column="19" selection-start-line="4169" selection-start-column="9" selection-end-line="4169" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14991">
+          <caret line="791" column="10" selection-start-line="791" selection-start-column="10" selection-end-line="791" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -847,79 +849,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js">
+    <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-OperationModel.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="3061" column="29" selection-start-line="3061" selection-start-column="19" selection-end-line="3061" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="4169" column="19" selection-start-line="4169" selection-start-column="9" selection-end-line="4169" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="490">
+          <caret line="341" column="5" lean-forward="true" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2128">
-          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+        <state relative-caret-position="332">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/whatType.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1685">
-          <caret line="3280" column="87" selection-start-line="3280" selection-start-column="87" selection-end-line="3280" selection-end-column="87" />
+        <state relative-caret-position="-812">
+          <caret line="3342" column="77" selection-start-line="3342" selection-start-column="77" selection-end-line="3342" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Editor.js">
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/jsonArray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="791" column="10" selection-start-line="791" selection-start-column="10" selection-end-line="791" selection-end-column="10" />
+        <state relative-caret-position="391">
+          <caret line="220" column="5" lean-forward="true" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1186">
+          <caret line="3732" column="187" selection-start-line="3732" selection-start-column="187" selection-end-line="3732" selection-end-column="187" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
+        <state relative-caret-position="-99">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
