@@ -3203,7 +3203,8 @@ HoverIcons.prototype.repaint = function()
 						that.preCondition=document.getElementById("preCondition").value;
 						that.aftCondition=document.getElementById("aftCondition").value;
 						that.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                        that.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy")+getmyWant(gm,that.id,'source','requirement',"RefinedBy");
+                        var ifbr = (getmyWant(gm,that.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
+                        that.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,that.id,'source','requirement',"RefinedBy");
                         that.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
                         that.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3230,7 +3231,9 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("preCondition").value=that.preCondition;
 						document.getElementById("aftCondition").value=that.aftCondition;
                         document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                        document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy")+getmyWant(gm,that.id,'source','requirement',"RefinedBy");
+                        var ifbr = (getmyWant(gm,that.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
+
+                        document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,that.id,'source','requirement',"RefinedBy");
                         document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
                         document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3330,7 +3333,8 @@ HoverIcons.prototype.repaint = function()
 					this.currentState.cell.preCondition=document.getElementById("preCondition").value;
 					this.currentState.cell.aftCondition=document.getElementById("aftCondition").value;
                     this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                    this.currentState.cell.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy")+getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy");
+                    var ifbr = (getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
+                    this.currentState.cell.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy");
                     this.currentState.cell.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
                     this.currentState.cell.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3343,7 +3347,8 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("preCondition").value=this.currentState.cell.preCondition;
 					document.getElementById("aftCondition").value=this.currentState.cell.aftCondition;
                     document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                    document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy")+getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy");
+                    var ifbr = (getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
+                    document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy");
                     document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id, "source",'obstacle',"ResolveObstacle");
                     document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 

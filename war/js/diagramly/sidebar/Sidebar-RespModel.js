@@ -13,7 +13,7 @@
 			this.createVertexTemplateEntry('shape=ellipse;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#ffcd28;strokeColor=#FFD306;fontSize=18', 25, 25, '', 'Operation'),
 			this.createVertexTemplateEntry('whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFFFFF;strokeColor=#000000;fontSize=18;fontSize=18', 180, 40, '', 'Entity'),
 			this.createVertexTemplateEntry('shape=parallelogram;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=#fff2cc;strokeColor=#000000;fontSize=18', 160, 40, '', 'Expectation'),
-			this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#ffe6cc;strokeColor=#F19C99;fontSize=18', 160, 40, '', 'Obstacle'),
+			this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#ffe6cc;strokeColor=#F19C99;fontSize=18', 180, 40, '', 'Obstacle'),
 			this.addEntry('FF', function()
 			{
 				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2');
@@ -56,7 +56,7 @@
                 edge.geometry.relative = true;
                 edge.edge = true;
 
-                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#000000;strokeWidth=2');
+                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
                 cell.geometry.relative = true;
                 cell.setConnectable(false);
                 cell.vertex = true;

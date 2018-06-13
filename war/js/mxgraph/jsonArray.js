@@ -212,14 +212,16 @@ function wirtieResults(array) {
     var results;
     if(array.length==0){
         results='';
+        return results;
     }
     else{
         results = '- '+array[0];
         for(var k=1;k<array.length;k++){
             results+='</br>'+'- '+array[k];
         }
+        return results;
     }
-    return results+'</br>';
+
 }
 function uniqueArray(array){
     var n = {}, r = [], len = array.length, val, type;
