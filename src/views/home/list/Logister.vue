@@ -1,14 +1,14 @@
 <template>
     <div id="contaier">
-        <div id="leftbox">
-            <div id="left01">
-                <img src="./assets/KAOSER.png"/>
-            </div>
-            <div id="left-occp"></div>
-            <div id="left02">
-                <img src="./assets/img01.png"/>
-            </div>
-        </div>
+       <div id="leftbox">
+           <div id="left01">
+               <img src="./assets/KAOSER.png"/>
+           </div>
+           <div id="left-occp"></div>
+           <div id="left02">
+               <img src="./assets/img01.png"/>
+           </div>
+       </div>
 
         <div id="rightbox">
             <div id="right-container">
@@ -26,12 +26,12 @@
                         <div class="form-group">
                             <input type="password" class="form-input" placeholder="决定您的密码" v-model="password" required/>
                         </div>
-                        <div class="login-btn-box">
-                            <button class="valid-btn" v-on:click="register">SIGN UP</button>
-                            <router-link to='/login'>
-                                <p class="p-style">已有账号？现在登陆.</p>
-                            </router-link>
-                        </div>
+                            <div class="login-btn-box">
+                                <button class="valid-btn" v-on:click="register">SIGN UP</button>
+                                <router-link to='/login'>
+                                    <p class="p-style">已有账号？现在登陆.</p>
+                                </router-link>
+                            </div>
                     </form>
                 </div>
             </div>
@@ -57,7 +57,7 @@
             register: function () {
                 console.log('username: '+this.username);
                 if(this.username == "" || this.password== ""){
-                    //alert("请输入用户名和密码");
+                    alert("请输入用户名和密码");
                 }
                 else{
                     let data = {'username':this.username,'password':this.password};
