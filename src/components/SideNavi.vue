@@ -31,7 +31,7 @@
 
 <script>
 
-    import {apiBase,serviceapi} from "../../static/api.config";
+    import {apiBase,serviceapi,getFiles} from "../../static/api.config";
     import bus from "../../static/eventBus";
     export default {
         name: "side-navi",
@@ -45,21 +45,24 @@
                 ],
                 tabs:[],
                 url: apiBase(),
-                username:"",
+                username:getFiles(),
                 tabIndex: 0
             }
         },
-        created: function () {
-            bus.$on("sendUsernameToHome",function (arg) {
-                this.username = arg;
-                console.log(this.username);
-            })
-            var url = serviceapi()+"importFromMongo"+"?myname="+"test2";
+        // created: function () {
+        //     bus.$on("sendUsernameToHome",function (arg) {
+        //         this.username = arg;
+        //         // console.log(this.username);
+        //     })
+        // },
+        mounted:function () {
+            console.log("username:" + this.username);
+            var url = serviceapi()+"importFromMongo";
             this.$axios({
                 method: 'get',
                 url: url,
                 data:{
-                    myname: 'test2'
+                    myname: this.username
                 },
                 headers:{
                     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
