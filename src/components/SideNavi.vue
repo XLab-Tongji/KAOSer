@@ -1,26 +1,19 @@
 <template>
     <div id="side-navi">
-        <!--<b-card no-body id="tab-content">-->
-            <!--<b-tabs id="tabs-left" pills card vertical nav-wrapper-class="w-25" v-model="tabIndex">-->
-                <!--<b-tab :title="`${proj.items}`"  v-for="proj in projects" :key="proj.items" :title-link-class="linkClass(proj.idx)">-->
-                    <!--<a :href="url">{{proj.items}}</a>-->
-                <!--</b-tab>-->
-            <!--</b-tabs>-->
-        <!--</b-card>-->
         <vue-tabs active-text-color="black"
                   type="pills"
                   :start-index="1"
                   direction="vertical"
                   id="tabs-left">
-            <v-tab :title="`${proj.items}`"  v-for="proj in projects" :key="proj.items">
+            <v-tab :title="`${proj.projname}`"  v-for="proj in projects" :key="proj.items">
                 <!--<a :href="url">{{proj.items}}</a>-->
-                <div v-for="p in projects" :key="p.items" class="file-div">
-                    <a class="file-a">
-                        <div class="div-file-icon">
+                <div v-for="p in proj.files" class="file-div">
+                    <a class="file-a" :href= "drawurl">
+                        <div class="div-file-icon" v-on="linktodraw">
                             <img src="./assets/file_icon.png"/>
                         </div>
                         <p class="p-file-title">
-                            {{p.items}}
+                            {{p}}
                         </p>
                     </a>
                 </div>
@@ -31,65 +24,77 @@
 
 <script>
 
-    import {apiBase,serviceapi,getFiles} from "../../static/api.config";
+    import {apiBase,serviceapi} from "../../static/api.config";
     import bus from "../../static/eventBus";
+    import store from "../../static/store";
     export default {
         name: "side-navi",
         data() {
             return {
-                projects:[
-                    {items: "项目一", idx: 0},
-                    {items: "项目二", idx: 1},
-                    {items: "项目三", idx: 2},
-                    {items: "项目四", idx: 3}
-                ],
+                drawurl:apiBase(),
+                projects: [],
                 tabs:[],
                 url: apiBase(),
-                username:getFiles(),
+                username:'',
                 tabIndex: 0
             }
         },
-        // created: function () {
-        //     bus.$on("sendUsernameToHome",function (arg) {
-        //         this.username = arg;
-        //         // console.log(this.username);
-        //     })
-        // },
-        mounted:function () {
-            console.log("username:" + this.username);
-            var url = serviceapi()+"importFromMongo";
+        store,
+        beforeCreate:function () {
+            this.$store.commit('clearproject');
+            var self = this;
+            this.username = this.$store.state.username;
+            var url = serviceapi()+"importFromMongo?myname="+this.username;
             this.$axios({
                 method: 'get',
                 url: url,
                 data:{
-                    myname: this.username
                 },
                 headers:{
                     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
                 },
                 responseType: 'json'
             }).then(function (res) {
-                console.log(res);
-                for(var file in res.data){
-                    console.log(file.name);
+                console.log(res.data);
+                var projnames = [];
+                var name = '';
+                for(var i in res.data){  // 获得项目名称数组
+                    name = res.data[i].projectname;
+                    if(projnames.indexOf(name) === -1)
+                        projnames.push(name)
                 }
+                for(var i in projnames){
+                   var projname = projnames[i];
+                   var project = {projname:'',files:[]};
+                   project.projname = projname;
+                   for (var j in res.data){
+                       if(res.data[j].projectname == projname){
+                          project.files.push(res.data[j].name);
+                          console.log(project.projname+": "+res.data[j].name)
+                       }
+                   }
+                   self.$store.commit('addproject',project);
+                }
+               // console.log(self.$store.state.projects);
             })
         },
+        mounted: function () {
+            this.projects = this.$store.state.projects;
+            console.log(this.projects);
+        },
         methods: {
-            linkClass(idx){
-                if(this.tabIndex === idx){
-                    return ['bg-custom']
-                }
-                else{
-                    return ['bg-light','text-info']
-                }
-            },
-
+            linktodraw: function () {
+                window.location(apiBase());
+            }
         }
     }
 </script>
 
 <style lang="less">
+    button{
+        outline: none;
+    }
+
     #side-navi{
         float: left;
         width: 70%;

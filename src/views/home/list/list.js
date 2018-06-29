@@ -11,6 +11,8 @@ import VueResource from 'vue-resource'
 import axios from 'axios'
 import VueTabs from 'vue-nav-tabs'
 import 'vue-nav-tabs/themes/vue-tabs.css'
+import Vuex from 'vuex'
+import store from '../../../../static/store'
 const routes = [
     {path: '/',redirect: 'login'},
     { path: '/login', component: Login },
@@ -23,6 +25,7 @@ Vue.use(VueRouter)
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
 Vue.use(VueTabs)
+Vue.use(Vuex)
 
 Vue.prototype.$axios = axios
 
@@ -35,5 +38,6 @@ const router = new VueRouter({
 
 
 new Vue({
-    router: router
+    router: router,
+    store
 }).$mount('#app')

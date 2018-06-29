@@ -45,7 +45,9 @@
     //  import { Cell,Group,Divider } from 'vux'
     import {serviceapi} from "../../../../static/api.config";
     import {setCookie,} from "./assets/cookie";
+    import store from "../../../../static/store";
     import bus from '../../../../static/eventBus';
+    import { mapState,mapMutations } from 'vuex';
     export default {
         data() {
             return {
@@ -55,6 +57,7 @@
                 showHint: false
             }
         },
+		store,
         //相关操作事件
         methods: {
             login: function () {
@@ -77,6 +80,8 @@
                             setCookie('username',this.username,1000*60);
                             setTimeout(function () {
                                 bus.$emit("sendUsernameToHome",this.username);
+                                this.$store.commit('setname',this.username);
+                                console.log("store: "+this.$store.state.username)
                                 this.$router.push('/home');
                             }.bind(this),1000)
                         }
