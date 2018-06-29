@@ -6,14 +6,13 @@
                   direction="vertical"
                   id="tabs-left">
             <v-tab :title="`${proj.projname}`"  v-for="proj in projects" :key="proj.items">
-                <!--<a :href="url">{{proj.items}}</a>-->
                 <div v-for="p in proj.files" class="file-div">
-                    <a class="file-a" :href= "drawurl">
+                    <a class="file-a" :href= "drawurl+'?id='+p.id">
                         <div class="div-file-icon" v-on="linktodraw">
                             <img src="./assets/file_icon.png"/>
                         </div>
                         <p class="p-file-title">
-                            {{p}}
+                            {{p.filename}}
                         </p>
                     </a>
                 </div>
@@ -66,11 +65,14 @@
                 for(var i in projnames){
                    var projname = projnames[i];
                    var project = {projname:'',files:[]};
+                   var file = {id:'',filename:''};
                    project.projname = projname;
                    for (var j in res.data){
                        if(res.data[j].projectname == projname){
-                          project.files.push(res.data[j].name);
-                          console.log(project.projname+": "+res.data[j].name)
+                          file.id = res.data[j].id;
+                          file.filename = res.data[j].name;
+                          project.files.push(file);
+                          console.log(file.id);
                        }
                    }
                    self.$store.commit('addproject',project);
