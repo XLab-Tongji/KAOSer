@@ -4,8 +4,6 @@ RUN apt-get update -y && \
 WORKDIR /app
 COPY . /app/
 EXPOSE 8080
-RUN  npm install && \
-     npm run build && \
-     cp -r dist/* /var/www/html && \
-     rm -rf /app
+RUN  cnpm install && \
+     npm run dev && 
 CMD ["nginx","-g","daemon off;"]
