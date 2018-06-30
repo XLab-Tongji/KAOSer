@@ -1116,6 +1116,7 @@ Actions.prototype.init = function()
 	var fid;//判断输出文件的类型
 	this.addAction('mongo',function(){
 		div.style.display="block";
+		document.getElementById("txtname").value = theTitle;
 		displayDiv();
 		getJSONs(graph.getModel());
 		//对数组进行json序列化，不然无法传递到服务端
@@ -1355,8 +1356,10 @@ Actions.prototype.init = function()
                     console.log(res.kaoserFile.jsonStr);
                     projectname = res.kaoserFile.projectname;
                     username = res.kaoserFile.myname;
+                    theTitle = res.kaoserFile.name;
                     document.getElementById("title").innerText = res.kaoserFile.projectname;
                     document.getElementById("authName").innerText = res.kaoserFile.myname;
+                    document.getElementById("txtname").value = res.kaoserFile.name;
                     var curr = res.kaoserFile.jsonStr;
                     //alert(curr);
 
