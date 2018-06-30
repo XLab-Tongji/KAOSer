@@ -4,11 +4,12 @@
                   type="pills"
                   :start-index="1"
                   direction="vertical"
-                  id="tabs-left">
-            <v-tab :title="`${proj.projname}`"  v-for="proj in projects" :key="proj.items">
+                  id="tabs-left"
+                  v-model="selected_proj">
+            <v-tab :title="`${proj.projname}`"  v-for="proj in projects" :key="proj.projname">
                 <div v-for="p in proj.files" class="file-div">
                     <a class="file-a" :href= "drawurl+'?id='+p.id">
-                        <div class="div-file-icon" v-on="linktodraw">
+                        <div class="div-file-icon">
                             <img src="./assets/file_icon.png"/>
                         </div>
                         <p class="p-file-title">
@@ -35,7 +36,8 @@
                 tabs:[],
                 url: apiBase(),
                 username:'',
-                tabIndex: 0
+                tabIndex: 0,
+                selected_proj: ''
             }
         },
         store,
@@ -72,8 +74,9 @@
                           file.id = res.data[j].id;
                           file.filename = res.data[j].name;
                           project.files.push(file);
-                          console.log(file.id);
+                       //   console.log(file.id);
                        }
+                       file = {id:'',filename:''};
                    }
                    self.$store.commit('addproject',project);
                 }
@@ -82,7 +85,8 @@
         },
         mounted: function () {
             this.projects = this.$store.state.projects;
-            console.log(this.projects);
+            //console.log(this.projects);
+            console.log("selected_proj: "+this.selected_proj);
         },
         methods: {
             linktodraw: function () {
