@@ -792,6 +792,7 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose)
 		//img.style.display="none";
 		mxEvent.addListener(img, 'click', mxUtils.bind(this, function()
 		{
+			$("#toImport").click();
 			div.style.display = 'none';
 			editorUi.hideDialog(true);
 		}));

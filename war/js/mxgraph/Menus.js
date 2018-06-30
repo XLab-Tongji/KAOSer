@@ -27,41 +27,46 @@ Menus.prototype.defaultFont = 'Helvetica';
  */
 Menus.prototype.defaultFontSize = '12';
 
-/**
- * Sets the default font size.
- */
-
 var thisURL=document.URL;
 if(thisURL.indexOf('?')!=-1){
     var getVal=thisURL.split('?')[1];
-    if(getVal.indexOf('&')!=-1){
-        var getType = getVal.split('&')[0];
-        var showVal=getType.split("=")[1];
-        var getUsername = getVal.split('&')[1];
-        if(getUsername!=null){
-            username = getUsername.split('=')[1];
-        }else{
-
-        }
+    // if(getVal.indexOf('&')!=-1){
+    //    var getType = getVal.split('&')[0];
+    //    var showVal=getType.split("=")[1];
+    //    var getUsername = getVal.split('&')[1];
+    //    if(getUsername!=null){
+    //        username = getUsername.split('=')[1];
+    //    }else{
+    //
+    //    }
+    // }
+	if(getVal.split("=")[0]=='id'){
+        myId = getVal.split("=")[1];
+	}else if(getVal.split("=")[0]=='username'){
+		var sp = getVal.split("&");
+		username = sp[0].split("=")[1];
+		projectname = sp[1].split("=")[1];
 	}
+
 }
 
 
 var what;
 function loadIn(){
-	alert(username);
-    if(showVal=="general"){
-        what="GeneralRequirement";
-        //alert(what);
-    }
-    else{
-        what="SpecialRequirement";
-        //alert(showVal);
-        if(showVal!="SpecialRequirement"){
-        	username = showVal;
-		}
-    }
-
+    alert(myId);
+    // if(showVal=="general"){
+    //     what="GeneralRequirement";
+    //     //alert(what);
+    // }
+    // else{
+    //     what="SpecialRequirement";
+    //     //alert(showVal);
+    //     if(showVal!="SpecialRequirement"){
+    //     	username = showVal;
+    // }
+    // }
+	what = "GeneralRequirement";
+	$("#toImport").click();
     $("geDialog").hide();
     $(function () {
         $('#hidethis').trigger('click');

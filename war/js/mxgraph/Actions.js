@@ -1122,6 +1122,10 @@ Actions.prototype.init = function()
 		// jsonStr = JSON.stringify(jsonText);
 		// alert(jsonStr);
 	});
+
+    /**
+	 * 保存到数据库
+     */
 	$("#affirm").click(function () {
 		var jsname=document.getElementById("txtname").value;
         document.getElementById('light').style.display='none';
@@ -1135,11 +1139,11 @@ Actions.prototype.init = function()
 				type:"POST",
 				url:mxResources.get("urlsave"),
 				data:{
-
-					jsname:jsname,
+					id:myId,
+					title:jsname,
 					jsonStr:jsonText,
-					myname:username,
-					mytitle:document.getElementById('title').innerText,
+					myname:document.getElementById("authName").innerText,
+                    projectName:document.getElementById('title').innerText,
 				},
 				dataType:"html",
 				async: false,
@@ -1159,6 +1163,10 @@ Actions.prototype.init = function()
 			});
 		}
 	});
+
+    /**
+	 * 导出需求文档模版
+     */
 	$("#affirm1").click(function () {
 		var jsname=document.getElementById("txtname1").value;
 		if(jsname==""){
@@ -1268,8 +1276,10 @@ Actions.prototype.init = function()
     function getXML() {
         $.ajax({
             type:"Get",
-            url:mxResources.get("urlimportfrommongo"),
-            data:{myname:username},
+            url:mxResources.get("urlimportfromMongo"),
+            data:{
+            	myname:username
+			},
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
             cache: false,
             dataType: "json",
@@ -1325,6 +1335,66 @@ Actions.prototype.init = function()
         });
     }
 
+    /**
+	 * 通过id导入
+     */
+    document.getElementById("toImport").onclick=function () {
+        /**
+		 * 此时为点击某个文件
+         */
+    	if(myId!=''){
+            $.ajax({
+                type:"POST",
+                dataType:"json",
+                url:"http://localhost:8880/findFileById",
+                data:{
+                    id:myId
+                },
+                success:function (res) {
+                    //var kaosFile = JSON.parse(res);
+                    console.log(res.kaoserFile.jsonStr);
+                    projectname = res.kaoserFile.projectname;
+                    username = res.kaoserFile.myname;
+                    document.getElementById("title").innerText = res.kaoserFile.projectname;
+                    document.getElementById("authName").innerText = res.kaoserFile.myname;
+                    var curr = res.kaoserFile.jsonStr;
+                    //alert(curr);
+
+                    var xotree = new XML.ObjTree();
+                    var json = eval("(" + curr + ")");
+                    var xmlString =xotree.writeXML(json);
+                    //alert(xmlString);
+                    //removeDiv(mybg);
+                    document.getElementById("act_table").style.display="none";
+                    //导入
+                    try
+                    {
+                        editor.graph.removeCells(graph.getChildVertices(graph.getDefaultParent()));
+                        var doc = mxUtils.parseXml(xmlString);
+                        var model = new mxGraphModel();
+                        var codec = new mxCodec(doc);
+                        codec.decode(doc.documentElement, model);
+
+                        var children = model.getChildren(model.getChildAt(model.getRoot(), 0));
+                        editor.graph.setSelectionCells(editor.graph.importCells(children));
+                    }
+                    catch (e)
+                    {
+                        mxUtils.alert(mxResources.get('invalidOrMissingFile') + ': ' + e.message);
+                    }
+                }
+            });
+		}
+
+        /**
+		 * 此时为点击project新建文档
+         */
+		else{
+            document.getElementById("title").innerText = projectname;
+            document.getElementById("authName").innerText = username;
+		}
+
+    };
     this.addAction('fromMongo',mxUtils.bind(this,function () {
         document.getElementById("act_table").style.display='block';
 		displayDiv();

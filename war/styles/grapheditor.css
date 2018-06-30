@@ -1,3 +1,16 @@
+#returnBack{
+	color: #ffffff;
+	border: none;
+	padding: 10px;
+	font-size: 8pt;
+	white-space: nowrap;
+	border-radius: 6px;
+	text-shadow: rgb(41, 89, 137) 0px 1px 0px;
+	background-color: #428bca;
+	background-image: linear-gradient(rgb(70, 135, 206) 0px, rgb(48, 104, 162) 100%);
+}
+
+
 #RenameDiv{
 	width:400px;
 	height:250px;

@@ -78,7 +78,42 @@
 
                 return sb.createVertexTemplateFromCells([cell, edge1, edge2,edge3], 180, 100, 'And');
             }),
-		]);
+            this.addEntry('ObstructLine', function()
+            {
+                var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2');
+                edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
+                edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
+                edge.geometry.relative = true;
+                edge.edge = true;
+
+                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
+                cell.geometry.relative = true;
+                cell.setConnectable(false);
+                cell.vertex = true;
+                cell.geometry.offset = new mxPoint(-9, -9);
+                edge.insert(cell);
+
+                return sb.createEdgeTemplateFromCells([edge], 100, 0, 'Obstruct');
+            }),
+            this.addEntry('resolve', function()
+            {
+                var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#82b366;strokeWidth=2');
+                edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
+                edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
+                edge.geometry.relative = true;
+                edge.edge = true;
+
+                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=ellipse;html=1;strokeColor=#82b366;fillColor=#ffffff;strokeWidth=2');
+                cell.geometry.relative = true;
+                cell.setConnectable(false);
+                cell.vertex = true;
+                cell.geometry.offset = new mxPoint(-9, -9);
+                edge.insert(cell);
+
+                return sb.createEdgeTemplateFromCells([edge], 100, 0, 'resolve');
+            }),
+
+        ]);
 
 	};
 })();

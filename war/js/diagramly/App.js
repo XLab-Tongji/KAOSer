@@ -172,7 +172,7 @@ App.DROPBOX_URL = 'https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js';
 /**
  * Sets the delay for autosave in milliseconds. Default is 2000.
  */
-App.DROPINS_URL = 'https://www.dropbox.com/static/api/2/dropins.js';
+//App.DROPINS_URL = 'https://www.dropbox.com/static/api/2/dropins.js';
 
 /**
  * Sets the delay for autosave in milliseconds. Default is 2000.
@@ -325,7 +325,7 @@ App.getStoredMode = function()
 							mxscript(App.DROPBOX_URL);
 							
 							// Must load this after the dropbox SDK since they use the same namespace
-							mxscript(App.DROPINS_URL, null, 'dropboxjs', App.DROPBOX_APPKEY);
+							//mxscript(App.DROPINS_URL, null, 'dropboxjs', App.DROPBOX_APPKEY);
 						}
 						else if (urlParams['chrome'] == '0')
 						{
@@ -660,10 +660,10 @@ App.main = function(callback, createUi)
 				mxscript(App.DROPBOX_URL, function()
 				{
 					// Must load this after the dropbox SDK since they use the same namespace
-					mxscript(App.DROPINS_URL, function()
-					{
-						DrawDropboxClientCallback();
-					}, 'dropboxjs', App.DROPBOX_APPKEY);
+					// mxscript(App.DROPINS_URL, function()
+					// {
+					// 	DrawDropboxClientCallback();
+					// }, 'dropboxjs', App.DROPBOX_APPKEY);
 				});
 			}
 			// Disables client

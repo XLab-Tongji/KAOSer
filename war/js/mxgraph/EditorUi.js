@@ -2830,6 +2830,23 @@ EditorUi.prototype.createUi = function()
 	if (this.menubar != null)
 	{
 		this.menubarContainer.appendChild(this.menubar.container);
+		var authContainer = document.createElement("a");
+		authContainer.setAttribute("id","authName");
+		authContainer.style.position = "fixed";
+		authContainer.style.top = "10px";
+		authContainer.style.right = "50px";
+		this.menubarContainer.appendChild(authContainer);
+
+		var returnBack = document.createElement("button");
+		returnBack.setAttribute("id","returnBack");
+		returnBack.style.backgroundColor = "#428bca";
+
+		returnBack.innerText = "返回";
+
+		returnBack.style.position = "fixed";
+		returnBack.style.top = "30px";
+		returnBack.style.right = "50px";
+		this.menubarContainer.appendChild(returnBack);
 	}
 	
 	// Adds status bar in menubar
