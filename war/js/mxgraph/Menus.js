@@ -53,7 +53,7 @@ if(thisURL.indexOf('?')!=-1){
 
 var what;
 function loadIn(){
-    alert(myId);
+    //alert(myId);
     // if(showVal=="general"){
     //     what="GeneralRequirement";
     //     //alert(what);

@@ -1346,7 +1346,7 @@ Actions.prototype.init = function()
             $.ajax({
                 type:"POST",
                 dataType:"json",
-                url:"http://localhost:8880/findFileById",
+                url:"http://lab205.jios.org:3336/findFileById",
                 data:{
                     id:myId
                 },
