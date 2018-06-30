@@ -55,6 +55,7 @@
     import HeadNavi from 'components/HeadNavi'
     import SideNavi from 'components/SideNavi'
     import store from "../../../../static/store";
+    import Vue from "vue";
     //注册局部组件
     export default {
         name: "home-app",
@@ -159,7 +160,6 @@
                 var projects = this.$store.state.projects;
                 var idx = 0;
                 for(var i in projects){
-                    console.log(projects[i])
                     if(this.new_projname === projects[i].projname){
                         idx = i;
                         break;
@@ -167,11 +167,17 @@
                 }
                 var new_file = {id:'',filename:''};
                 new_file.filename = this.new_filename;
-                this.$store.state.projects[idx].files.push();
+                var self = this;
+                console.log("username: "+self.$store.state.username);
+                console.log("projname: "+self.selected_proj);
+                console.log("title: "+self.new_filename);
                 this.$axios({
                     method: 'get',
                     url: url,
-                    data:{
+                    params:{
+                        username: self.$store.state.username,
+                        projectName: self.selected_proj,
+                        title: self.new_filename
                     },
                     headers:{
                         'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -179,6 +185,12 @@
                     responseType: 'json'
                 }).then(function (res){
                     console.log(res.data.kaosfileId);
+                    new_file.id = res.data.kaosfileId;
+                    console.log(idx);
+                    self.$store.state.projects[idx].files.push(new_file);
+                    console.log(self.$store.state.projects[idx].files);
+                    self.edit_newFile = false;
+                   Vue.set( self.projects,self.$store.state.projects);
                 })
             }
         }
