@@ -16,10 +16,10 @@
  
  # 配置环境变量
  ENV HOST 0.0.0.0
- ENV PORT 8091
+ ENV PORT 8114
  
  # 容器对外暴露的端口号
- EXPOSE 8091
+ EXPOSE 8114
  
  # 容器启动时执行的命令，类似npm run start
  CMD ["npm", "run","dev"]
