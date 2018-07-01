@@ -9,8 +9,9 @@
  WORKDIR /app
  
  # 安装项目依赖包
- RUN npm install
- RUN npm rebuild node-sass --force
+ RUN npm install -g cnpm --registry=https://registry.npm.taobao.org  && \
+    cnpm install && \
+    cnpm rebuild node-sass --force
  
  # 配置环境变量
  ENV HOST 0.0.0.0
