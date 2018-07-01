@@ -21,4 +21,4 @@
  EXPOSE 8000
  
  # 容器启动时执行的命令，类似npm run start
- CMD ["npm", "start"]
+ CMD ["npm", "dev"]
