@@ -11,7 +11,7 @@
  # 安装项目依赖包
  RUN npm install -g cnpm --registry=https://registry.npm.taobao.org  && \
     cnpm install && \
-    cnpm install --save Vue vue-resource
+    cnpm install --save Vue vue-resource && \
     cnpm rebuild node-sass --force
  
  # 配置环境变量
