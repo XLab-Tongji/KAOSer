@@ -5,8 +5,8 @@ WORKDIR /app
 COPY . /app/
 EXPOSE 8091
 RUN  npm install -g cnpm --registry=https://registry.npm.taobao.org  && \ 
-     npm install && \ 
-     npm run build && \
+     cnpm install && \ 
+     cnpm run build && \
      cp -r dist/* /var/www/html && \
      rm -rf /app
 CMD ["nginx","-g","daemon off;"]
