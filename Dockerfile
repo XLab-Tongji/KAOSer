@@ -21,4 +21,4 @@
  EXPOSE 8091
  
  # 容器启动时执行的命令，类似npm run start
- CMD ["npm", "run","dev"]
+ CMD ["npm", "run","build"]
