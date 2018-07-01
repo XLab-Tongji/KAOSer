@@ -27,7 +27,7 @@
 							<input type="password" class="form-input" placeholder="密码" v-model="password" required/>
 						</div>
 						<div class="login-btn-box">
-							<button class="valid-btn" v-on:click="login">LOGIN</button>
+							<button class="valid-btn" v-on:click="login()">LOGIN</button>
 							<router-link to='/sign'>
 								<p class="p-style">没有账号？现在注册.</p>
 							</router-link>
