@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48cab53c-5841-4396-a9c5-4f2638f5b1ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/static/css/views/home/list.css" afterPath="$PROJECT_DIR$/dist/static/css/views/home/list.css" />
-      <change beforePath="$PROJECT_DIR$/dist/static/css/views/router/details.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/vendor.js" afterPath="$PROJECT_DIR$/dist/static/js/vendor.js" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/views/home/list.js" afterPath="$PROJECT_DIR$/dist/static/js/views/home/list.js" />
-      <change beforePath="$PROJECT_DIR$/dist/static/js/views/router/details.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/views/home/list.html" afterPath="$PROJECT_DIR$/dist/views/home/list.html" />
-    </list>
+    <list default="true" id="48cab53c-5841-4396-a9c5-4f2638f5b1ef" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -236,7 +229,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="457" />
     <option name="y" value="159" />
     <option name="width" value="1400" />
@@ -419,15 +412,15 @@
       <workItem from="1530274065390" duration="1676000" />
       <workItem from="1530337046020" duration="15232000" />
       <workItem from="1530375003142" duration="613000" />
-      <workItem from="1530432384606" duration="1101000" />
+      <workItem from="1530432384606" duration="1150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188998000" />
+    <option name="totallyTimeSpent" value="189047000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="457" y="159" width="1400" height="853" extended-state="0" />
+    <frame x="457" y="159" width="1400" height="853" extended-state="1" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18958032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
