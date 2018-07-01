@@ -720,3 +720,4 @@ urlsave=http://lab205.jios.org:3336/save
 urltemplate=http://lab205.jios.org:3336/template/
 urlimportfromMongo=http://lab205.jios.org:3336/importFromMongo
 urlservletdownload=http://lab205.jios.org:3336/ServletDownload
+urlfindbyid=http://lab205.jios.org:3336/findFileById

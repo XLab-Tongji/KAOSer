@@ -1180,7 +1180,10 @@ Actions.prototype.init = function()
 			$.ajax({
 				type:"POST",
 				url:mxResources.get("urltemplate") + fid,
-				data:{jsname:jsname,jsonStr:jsonStr},
+				data:{
+					jsname:jsname,
+					jsonStr:jsonStr
+				},
 				dataType:"html",
 				async: false,
 				success:function (data) {
@@ -1347,7 +1350,7 @@ Actions.prototype.init = function()
             $.ajax({
                 type:"POST",
                 dataType:"json",
-                url:"http://lab205.jios.org:3336/findFileById",
+                url:mxResources.get("urlfindbyid"),
                 data:{
                     id:myId
                 },
