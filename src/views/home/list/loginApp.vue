@@ -21,13 +21,13 @@
 							<p>Login to your account </p>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-input" placeholder="用户名" v-model="username" required/>
+							<input type="text" class="form-input" placeholder="用户名" v-model="username" required id="input-username"/>
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-input" placeholder="密码" v-model="password" required/>
+							<input type="password" class="form-input" placeholder="密码" v-model="password" required id="input-password"/>
 						</div>
 						<div class="login-btn-box">
-							<button class="valid-btn" v-on:click="login()">LOGIN</button>
+							<button class="valid-btn" v-on:click="login()" id="btn-login">LOGIN</button>
 							<router-link to='/sign'>
 								<p class="p-style">没有账号？现在注册.</p>
 							</router-link>

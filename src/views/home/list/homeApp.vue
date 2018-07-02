@@ -11,7 +11,7 @@
                       v-model="selected_proj">
                 <v-tab :title="`${proj.projname}`"  v-for="proj in projects" :key="proj.projname">
                     <div v-for="p in proj.files" class="file-div">
-                        <a class="file-a" :href= "drawurl+'?id='+p.id">
+                        <a class="file-a" :href= "drawurl+'?id='+p.id" :id="p.filename">
                             <div class="div-file-icon">
                                 <img src="./assets/file_icon.png"/>
                             </div>
@@ -25,27 +25,27 @@
         </div>
         <div class="right-btns">
             <div class="right-btns-box1">
-                <button class="btn" v-on:click="dispProjBox">新建项目</button>
+                <button class="btn" v-on:click="dispProjBox" id="btn-newproj">新建项目</button>
             </div>
             <div class="right-btns-box3">
-                <button class="btn" v-on:click="dispFileBox">新建文档</button>
+                <button class="btn" v-on:click="dispFileBox" id="btn-newfile">新建文档</button>
             </div>
         </div>
         <div class="div-edit" v-show="edit_newProj">
             <div class="div-edit-title">
                 <label>新建项目</label>
-                <input class="input-title" type="text" v-model="new_projname"/>
+                <input class="input-title" type="text" v-model="new_projname" id="input-newproj"/>
             </div>
-            <button class="btn btn-edit btn-cancel" v-on:click="cancel">取消</button>
-            <button class="btn btn-edit btn-confirm" v-on:click="newProj">确认</button>
+            <button class="btn btn-edit btn-cancel" v-on:click="cancel" id="btn-cancel-newproj">取消</button>
+            <button class="btn btn-edit btn-confirm" v-on:click="newProj" id="btn-confirm-newproj">确认</button>
         </div>
         <div class="div-edit" v-show="edit_newFile">
             <div class="div-edit-title">
                 <label>新建文档 | {{selected_proj}}</label>
-                <input class="input-title" type="text" v-model="new_filename"/>
+                <input class="input-title" type="text" v-model="new_filename" id="input-newfile"/>
             </div>
-            <button class="btn btn-edit btn-cancel" v-on:click="cancel">取消</button>
-            <button class="btn btn-edit btn-confirm" v-on:click="newFile">确认</button>
+            <button class="btn btn-edit btn-cancel" v-on:click="cancel" id="btn-cancel-newfile">取消</button>
+            <button class="btn btn-edit btn-confirm" v-on:click="newFile" id="btn-confirm-newfile">确认</button>
         </div>
     </div>
 </template>
