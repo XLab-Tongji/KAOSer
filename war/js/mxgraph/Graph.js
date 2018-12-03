@@ -4593,15 +4593,15 @@ if (typeof mxVertexHandler != 'undefined')
             {
                 state.style[key] = this.graph.currentEdgeStyle[key];
                 if(key == 'strokeColor') {
-                		if(START_GRAPH == "goal" && END_GRAPH == "resource") {
+                		if(START_GRAPH == "goal" && END_GRAPH == "reso") {
                             this.graph.currentEdgeStyle[key] = '#000fff';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
-                        else if(START_GRAPH == "obstacle" && END_GRAPH == "resource"){
+                        else if(START_GRAPH == "obstacle" && END_GRAPH == "reso"){
                             this.graph.currentEdgeStyle[key] = '#ff0000';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
-                        else if(START_GRAPH == "resource" && END_GRAPH == "resource"){
+                        else if(START_GRAPH == "resource" && END_GRAPH == "reso"){
                             this.graph.currentEdgeStyle[key] = '#9673A6';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
