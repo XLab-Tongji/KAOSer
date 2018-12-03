@@ -10,7 +10,7 @@
 			 this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#ffe6cc;strokeColor=#F19C99;fontSize=18', 180, 40, '', 'Obstacle'),
 			 this.createVertexTemplateEntry('shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFD966;strokeColor=#FFD306;fontSize=18', 120, 40, '', 'Domain Property'),
             this.createVertexTemplateEntry('shape=hexagon;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#fff2cc;strokeColor=#FFD306;fontSize=18', 80, 40, '', 'Agent'),
-
+            this.createVertexTemplateEntry('shape=resource;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=18', 120, 40, '', 'Resource'),
             this.addEntry('FF', function()
 			{
 				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#000000;strokeWidth=3');

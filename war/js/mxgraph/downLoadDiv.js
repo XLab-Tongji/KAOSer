@@ -1,6 +1,6 @@
 var downLoadDiv
 //downLoadDiv.setAttribute("id","DownloadDiv");
-function showDownloadDiv(){
+function showDownloadDiv(fid){
     downLoadDiv = document.createElement("div");
     downLoadDiv.setAttribute("id","DownloadDiv");
     downLoadDiv.setAttribute("class","white_content");
@@ -9,7 +9,7 @@ function showDownloadDiv(){
     var fieldset1 = document.createElement("fieldset");
     var dlbutton = document.createElement("button");
     dlbutton.setAttribute("id","downloadBtn");
-    dlbutton.onclick = downloadFile;
+    dlbutton.onclick = downloadFile(fid);
     dlbutton.setAttribute("type","button");
     dlbutton.innerHTML = "下载";
     var fieldset2 = document.createElement("fieldset");
@@ -28,10 +28,16 @@ function showDownloadDiv(){
     downLoadDiv.style.display = 'block';
     document.body.appendChild(downLoadDiv);
 }
-function downloadFile() {
-    document.getElementById("DownloadDiv").style.display="none";
+function downloadFile(fid) {
+    //document.getElementById("DownloadDiv").style.display="none";
     console.log("ajaxDownloadSynchronized");
-    var url = mxResources.get("urlservletdownload");
+    var url;
+    if(fid == 'rela'){
+         url = mxResources.get("localport")+mxResources.get("urlservletdownloadjson");
+     }
+     else{
+        url = mxResources.get("localport")+mxResources.get("urlservletdownload");
+    }
     var fileName = document.getElementById("txtname1").value;
     var form = $("<form></form>").attr("action", url).attr("method", "post");
     form.append($("<input />").attr("type", "hidden").attr("name", "fileName").attr("value", fileName));

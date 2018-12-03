@@ -531,7 +531,8 @@ Menus.prototype.init = function()
 	this.put('exportTemplate', new Menu(mxUtils.bind(this, function(menu, parent)
 	{
 		this.addMenuItems(menu, ['TemplateMD']);
-		this.addMenuItems(menu,['TemplateRST'])
+		this.addMenuItems(menu,['TemplateRST']);
+		this.addMenuItems(menu, ['TemplateRelations'])
 	})));
 	this.put(what, new Menu(mxUtils.bind(this, function(menu, parent)
 	{

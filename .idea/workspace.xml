@@ -2,105 +2,170 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/war/js/mxgraph/ResourceDiv.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/diagramly/Devel.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/diagramly/Devel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Menus.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Menus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/myShapes.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/myShapes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/mxgraph/mxClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/mxgraph/mxClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/war/resources/dia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/war/resources/dia.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="885413761">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="59" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="5" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="3" />
+          <entry key="project.open.time.19" value="7" />
+          <entry key="project.open.time.2" value="11" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="3" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.3" value="4" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.opened" value="59" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ChangeLog" value="1" />
+          <entry key="Dockerfile" value="1" />
+          <entry key="README" value="1" />
+          <entry key="css" value="2" />
+          <entry key="gif" value="7" />
+          <entry key="html" value="19" />
+          <entry key="iconfinder_client_id" value="1" />
+          <entry key="js" value="121" />
+          <entry key="json" value="1" />
+          <entry key="md" value="2" />
+          <entry key="png" value="37" />
+          <entry key="svg" value="4" />
+          <entry key="txt" value="3" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="Dockerfile" value="1" />
+          <entry key="HTML" value="19" />
+          <entry key="Image" value="44" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="121" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="SVG" value="4" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="2982" />
+          <entry key="txt" value="131" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="2982" />
+          <entry key="PLAIN_TEXT" value="131" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="KAOSer" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-205">
-              <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="703">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actions.js" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="1181" column="55" selection-start-line="1181" selection-start-column="55" selection-end-line="1181" selection-end-column="55" />
+            <state relative-caret-position="381">
+              <caret line="1188" column="41" selection-start-line="1188" selection-start-column="41" selection-end-line="1188" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dia.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/resources/dia.txt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="722" column="11" selection-start-line="722" selection-end-line="722" selection-end-column="11" />
+            <state relative-caret-position="163">
+              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operations.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/operations.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3515">
-              <caret line="185" selection-start-line="185" selection-end-line="185" />
+            <state relative-caret-position="209">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menus.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/ResourceDiv.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2052">
-              <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="1026">
+              <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jsonArray.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/jsonArray.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/mxgraph/mxClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3990">
-              <caret line="210" column="28" selection-start-line="210" selection-start-column="28" selection-end-line="210" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60819">
-              <caret line="3203" column="72" selection-start-line="3203" selection-start-column="72" selection-end-line="3203" selection-end-column="72" />
+            <state relative-caret-position="36936">
+              <caret line="1944" column="64" selection-start-line="1944" selection-start-column="64" selection-end-line="1944" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -116,36 +181,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>removeChild(document.getElementById('Obstac</find>
-      <find>detailcontainer3</find>
-      <find>Obstructs</find>
-      <find>nonFunctionalRule</find>
-      <find>Agent</find>
-      <find>xml</find>
-      <find>showSplash</find>
-      <find>showDialog</find>
-      <find>showdialog</find>
-      <find>gedialog</find>
-      <find>Description</find>
-      <find>Target</find>
-      <find>geDialog</find>
-      <find>end</find>
-      <find>stroke</find>
-      <find>Menus</find>
-      <find>DROPINS_URL</find>
-      <find>https://www.dropbox.com/static/api/2/dropins.js</find>
-      <find>hidethis</find>
-      <find>getXML</find>
-      <find>geMenubarContainer</find>
-      <find>menubarContainer</find>
-      <find>userId</find>
-      <find>urlimportfrommongo</find>
-      <find>alert</find>
-      <find>localhost</find>
-      <find>txtname</find>
-      <find>white_content</find>
-      <find>light</find>
-      <find>displayDiv</find>
+      <find>000000</find>
+      <find>action</find>
+      <find>resolve</find>
+      <find>straightedgeStyle</find>
+      <find>edge</find>
+      <find>connectionhandle</find>
+      <find>createEdgeState</find>
+      <find>isAncestorNode</find>
+      <find>mxEdgestyle</find>
+      <find>entityRelationEdgeStyle</find>
+      <find>fid</find>
+      <find>mybg</find>
+      <find>jsonStr</find>
+      <find>getmywant</find>
+      <find>resourcediv</find>
+      <find>template</find>
+      <find>mouseup</find>
+      <find>resourceshape</find>
+      <find>templatemd</find>
+      <find>resourceEdge</find>
+      <find>defaultEdgestyle</find>
+      <find>mousedown</find>
+      <find>refinedby</find>
+      <find>refinesto</find>
+      <find>-flag</find>
+      <find>flag</find>
+      <find>serva</find>
+      <find>servletdownload</find>
+      <find>ServletDownload1</find>
+      <find>ServletDownload</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -153,6 +218,10 @@
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>D:\Gitkaoser\KAOSer</dir>
+      <dir>D:\Gitkaoser\KAOSer\war\js</dir>
+      <dir>D:\Gitkaoser</dir>
+      <dir>D:\Gitkaoser\KAOSer\war\js\mxgraph</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -181,15 +250,12 @@
         <option value="$PROJECT_DIR$/war/js/diagramly/Devel.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/operations.js" />
         <option value="$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/Editor.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Format.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/main.js" />
         <option value="$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/EditorUi.js" />
         <option value="$PROJECT_DIR$/etc/build/build.xml" />
         <option value="$PROJECT_DIR$/war/js/diagramly/Dialogs.js" />
-        <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js" />
         <option value="$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/Sidebar.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Goaldiv.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/divforOthers.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Obstructs.js" />
@@ -197,16 +263,22 @@
         <option value="$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js" />
         <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/jsonArray.js" />
-        <option value="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
-        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" />
         <option value="$PROJECT_DIR$/war/js/diagramly/App.js" />
         <option value="$PROJECT_DIR$/war/index.html" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/EditorUi.js" />
         <option value="$PROJECT_DIR$/war/styles/grapheditor.css" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Menus.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/user.js" />
+        <option value="$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js" />
         <option value="$PROJECT_DIR$/war/resources/dia.txt" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/myShapes.js" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/Format.js" />
+        <option value="$PROJECT_DIR$/war/javascript/src/js/mxClient.js" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/ResourceDiv.js" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/Graph.js" />
         <option value="$PROJECT_DIR$/war/js/mxgraph/Actions.js" />
+        <option value="$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile" />
       </list>
     </option>
   </component>
@@ -216,74 +288,28 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/war/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="804" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="docker" type="cbb8eebc:String" user="docker" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-              <item name="javascript" type="cbb8eebc:String" user="javascript" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-              <item name="js" type="cbb8eebc:String" user="js" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-              <item name="js" type="cbb8eebc:String" user="js" />
-              <item name="mxgraph" type="cbb8eebc:String" user="mxgraph" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-              <item name="mxgraph" type="cbb8eebc:String" user="mxgraph" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-              <item name="resources" type="cbb8eebc:String" user="resources" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="KAOSer" type="cbb8eebc:String" user="KAOSer" />
-              <item name="war" type="cbb8eebc:String" user="war" />
-              <item name="styles" type="cbb8eebc:String" user="styles" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,23 +320,37 @@
             <path>
               <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
               <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
               <item name="war" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAOSer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAOSer" type="462c0819:PsiDirectoryNode" />
+              <item name="war" type="462c0819:PsiDirectoryNode" />
+              <item name="mxgraph" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Gitkaoser/KAOSer/war/index.html&#10;setline&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543813081500" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -330,8 +370,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.start">
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/KAOSer/war/index.html" />
-    <configuration name="start" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/KAOSer/war/index.html" />
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -344,9 +382,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
@@ -354,13 +389,6 @@
       <option name="cucumberJsArguments" value="" />
       <option name="executablePath" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
@@ -376,6 +404,12 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63343/KAOSer/war/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/KAOSer/war/index.html">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -383,16 +417,12 @@
       <tasks />
       <arguments />
       <envs />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.start" />
       <item itemvalue="JavaScript Debug.index.html" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.index.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -489,431 +519,521 @@
       <workItem from="1530277054363" duration="3707000" />
       <workItem from="1530342555484" duration="10190000" />
       <workItem from="1530449247572" duration="1127000" />
+      <workItem from="1538750791344" duration="1341000" />
+      <workItem from="1538753828537" duration="248000" />
+      <workItem from="1538810344337" duration="697000" />
+      <workItem from="1538811444890" duration="23000" />
+      <workItem from="1538818920312" duration="37000" />
+      <workItem from="1538819001782" duration="37000" />
+      <workItem from="1539249673720" duration="387000" />
+      <workItem from="1539253750859" duration="1188000" />
+      <workItem from="1539254980380" duration="472000" />
+      <workItem from="1539501508640" duration="25000" />
+      <workItem from="1539771386090" duration="929000" />
+      <workItem from="1540094933882" duration="886000" />
+      <workItem from="1540101228943" duration="672000" />
+      <workItem from="1540289633738" duration="320000" />
+      <workItem from="1540292712183" duration="1130000" />
+      <workItem from="1540727816465" duration="1752000" />
+      <workItem from="1540732872681" duration="11823000" />
+      <workItem from="1540857576226" duration="10156000" />
+      <workItem from="1540885911661" duration="2411000" />
+      <workItem from="1540891144939" duration="467000" />
+      <workItem from="1540891653719" duration="570000" />
+      <workItem from="1540897492374" duration="910000" />
+      <workItem from="1540920199266" duration="153000" />
+      <workItem from="1540989879443" duration="1245000" />
+      <workItem from="1541240334709" duration="1019000" />
+      <workItem from="1541406449969" duration="4246000" />
+      <workItem from="1541475248713" duration="39000" />
+      <workItem from="1541475814425" duration="1781000" />
+      <workItem from="1541483349469" duration="903000" />
+      <workItem from="1541655814041" duration="2320000" />
+      <workItem from="1541659835362" duration="10328000" />
+      <workItem from="1541671686055" duration="506000" />
+      <workItem from="1541673371593" duration="370000" />
+      <workItem from="1541673890439" duration="650000" />
+      <workItem from="1541765781199" duration="558000" />
+      <workItem from="1541902507593" duration="1889000" />
+      <workItem from="1542080772903" duration="5729000" />
+      <workItem from="1542090221848" duration="9518000" />
+      <workItem from="1542103964195" duration="1836000" />
+      <workItem from="1542110970093" duration="837000" />
+      <workItem from="1542522317698" duration="11027000" />
+      <workItem from="1542544702951" duration="1640000" />
+      <workItem from="1542546600310" duration="159000" />
+      <workItem from="1542546854492" duration="1160000" />
+      <workItem from="1542552534524" duration="279000" />
+      <workItem from="1542709300470" duration="777000" />
+      <workItem from="1542975826237" duration="1588000" />
+      <workItem from="1543048134251" duration="5146000" />
+      <workItem from="1543149538424" duration="1663000" />
+      <workItem from="1543152743304" duration="3048000" />
+      <workItem from="1543315031188" duration="391000" />
+      <workItem from="1543315482707" duration="2688000" />
+      <workItem from="1543411449582" duration="614000" />
+      <workItem from="1543737992321" duration="30000" />
+      <workItem from="1543739361577" duration="32000" />
+      <workItem from="1543740614101" duration="4119000" />
+      <workItem from="1543763252494" duration="1252000" />
+      <workItem from="1543812785001" duration="60000" />
+      <workItem from="1543812982371" duration="106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169206000" />
+    <option name="totallyTimeSpent" value="285393000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="804" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2503536" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32893157" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3589329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4987874" visible="true" weight="0.16548042" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49312854" weight="0.0569395" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5012126" side_tool="true" visible="true" weight="0.16548042" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291815" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3291815" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.0646726" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983023" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.04446241" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22108346" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Image Layers" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2716249" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32961783" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info id="Image Layers" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.06227758" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3291815" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32893157" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291815" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3291815" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.0646726" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983023" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32983023" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/war/js/mxgraph/jsonArray.js</url>
-          <line>149</line>
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60857">
-          <caret line="3203" column="72" selection-start-line="3203" selection-start-column="72" selection-end-line="3203" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25840">
-          <caret line="1360" column="36" selection-start-line="1360" selection-start-column="36" selection-end-line="1360" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DriveClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26644" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DriveFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DropboxClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DropboxFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DropboxLibrary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="192" column="33" selection-start-line="192" selection-start-column="33" selection-end-line="192" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/GraphViewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="1649" column="377" selection-start-line="1649" selection-start-column="377" selection-end-line="1649" selection-end-column="377" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DriveLibrary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/atlas-viewer.min.js" />
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-913" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/EditorUi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="3510" column="36" selection-start-line="3510" selection-start-column="36" selection-end-line="3510" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mxgraph/online/EmbedServlet2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5533">
-          <caret line="393" column="33" lean-forward="true" selection-start-line="393" selection-start-column="33" selection-end-line="393" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DriveRealtime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="1362" column="33" selection-start-line="1362" selection-start-column="33" selection-end-line="1362" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/app.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="2222" column="513" selection-start-line="2222" selection-start-column="505" selection-end-line="2222" selection-end-column="513" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Menus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="523" column="29" selection-start-line="523" selection-start-column="29" selection-end-line="523" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Dialogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/export2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15048">
-          <caret line="794" column="35" selection-start-line="794" selection-start-column="35" selection-end-line="794" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/EditorUi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="2718" column="31" lean-forward="true" selection-start-line="2718" selection-start-column="31" selection-end-line="2718" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/build/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="96" column="52" selection-start-line="96" selection-start-column="52" selection-end-line="96" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChangeLog">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="3285" column="24" selection-start-line="3285" selection-start-column="24" selection-end-line="3285" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Dialogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1460">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/styles/atlas.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35397">
-          <caret line="1865" column="24" selection-start-line="1865" selection-start-column="24" selection-end-line="1865" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/mxgraph/mxClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Devel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Goaldiv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3629">
-          <caret line="191" column="36" lean-forward="true" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/divforOthers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="228">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Obstructs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="-286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/src/js/util/mxAbstractCanvas2D.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7657">
+          <caret line="403" selection-start-line="403" selection-end-line="403" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/vsdx/VsdxExport.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/app.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="2396" column="55" selection-start-line="2396" selection-start-column="55" selection-end-line="2396" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/WEB-INF/iconfinder_client_id">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/myLineShapes.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/util/mxAsyncCanvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/util/mxJsCanvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/vsdx/mxVsdxCanvas2D.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/DriveClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21090">
+          <caret line="1110" column="39" selection-start-line="1110" selection-start-column="39" selection-end-line="1110" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/ruler/mxRuler.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/myShapes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2774">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/stencils/cisco/servers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14991">
-          <caret line="791" column="10" selection-start-line="791" selection-start-column="10" selection-end-line="791" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="153" selection-start-line="153" selection-end-line="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-ObjectModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-RespModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="84" selection-start-line="50" selection-start-column="12" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/sidebar/Sidebar-GoalModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2166">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="38247">
+          <caret line="2013" column="23" selection-start-line="2013" selection-start-column="23" selection-end-line="2013" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Format.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70908">
-          <caret line="3732" column="187" selection-start-line="3732" selection-start-column="187" selection-end-line="3732" selection-end-column="187" />
+        <state relative-caret-position="71079">
+          <caret line="3741" column="113" selection-start-line="3741" selection-start-column="113" selection-end-line="3741" selection-end-column="113" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js">
+    <entry file="file://$PROJECT_DIR$/war/plugins/trees/trees.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="-129">
+          <caret line="1063" column="13" lean-forward="true" selection-start-line="1062" selection-start-column="17" selection-end-line="1063" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/diagramly/App.js">
+    <entry file="file://$PROJECT_DIR$/war/javascript/mxClient.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3154">
-          <caret line="169" column="70" selection-start-line="169" selection-start-column="70" selection-end-line="169" selection-end-column="70" />
+        <state relative-caret-position="2014">
+          <caret line="106" column="525" selection-start-line="106" selection-start-column="525" selection-end-line="106" selection-end-column="525" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/src/js/view/mxCellState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7486">
+          <caret line="394" selection-start-line="394" selection-end-line="394" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32813">
+          <caret line="1727" column="88" selection-start-line="1727" selection-start-column="88" selection-end-line="1727" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Dialogs.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/resources/dia_sw.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13063" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/whatType.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/examples/webpack/src/anchors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/src/js/handler/mxConnectionHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="661" column="60" selection-start-line="661" selection-start-column="60" selection-end-line="661" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Dialogs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="1572" column="32" selection-start-line="1572" selection-start-column="32" selection-end-line="1572" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/divforOthers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/atlas.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2317" column="128" selection-start-line="2317" selection-start-column="128" selection-end-line="2317" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/GraphViewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="798" column="12" selection-start-line="798" selection-start-column="12" selection-end-line="798" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/EditorUi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7202" column="30" selection-start-line="7202" selection-start-column="30" selection-end-line="7202" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4083" column="40" selection-start-line="4083" selection-start-column="40" selection-end-line="4083" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/EditorUi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="2840" column="48" selection-start-line="2840" selection-start-column="38" selection-end-line="2840" selection-end-column="48" />
+        <state relative-caret-position="-197">
+          <caret line="423" column="22" selection-start-line="423" selection-start-column="22" selection-end-line="423" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/styles/grapheditor.css">
+    <entry file="file://$PROJECT_DIR$/war/js/diagramly/Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="3477">
+          <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/war/js/json/json2.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/src/js/io/mxCodec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1006">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/src/js/mxClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1540">
+          <caret line="37384" selection-start-line="37384" selection-end-line="37384" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/jsonArray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3990">
-          <caret line="210" column="28" selection-start-line="210" selection-start-column="28" selection-end-line="210" selection-end-column="28" />
+        <state relative-caret-position="474">
+          <caret line="185" column="45" selection-start-line="185" selection-end-line="186" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/main.js">
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/RequirementDiv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="1862">
+          <caret line="98" column="51" selection-start-line="98" selection-start-column="51" selection-end-line="98" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/operations.js">
+    <entry file="file://$PROJECT_DIR$/war/javascript/src/js/util/mxUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3515">
-          <caret line="185" selection-start-line="185" selection-end-line="185" />
+        <state relative-caret-position="474">
+          <caret line="3438" column="33" selection-start-line="3438" selection-start-column="33" selection-end-line="3438" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Menus.js">
+    <entry file="file://$PROJECT_DIR$/war/javascript/mxClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="110" column="27" selection-start-line="110" selection-start-column="27" selection-end-line="110" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="474">
+          <caret line="88645" column="13" selection-start-line="88645" selection-start-column="13" selection-end-line="88645" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/javascript/examples/grapheditor/www/js/EditorUi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="436" column="53" selection-start-line="436" selection-start-column="53" selection-end-line="436" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60819">
-          <caret line="3203" column="72" selection-start-line="3203" selection-start-column="72" selection-end-line="3203" selection-end-column="72" />
+        <state relative-caret-position="84246">
+          <caret line="4605" column="80" selection-start-line="4605" selection-start-column="80" selection-end-line="4605" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/user.js">
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Goaldiv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="1064">
+          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="703">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/resources/dia.txt">
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/downLoadDiv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="722" column="11" selection-start-line="722" selection-end-line="722" selection-end-column="11" />
+        <state relative-caret-position="209">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/js/mxgraph/ResourceDiv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/mxgraph/mxClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36936">
+          <caret line="1944" column="64" selection-start-line="1944" selection-start-column="64" selection-end-line="1944" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="1181" column="55" selection-start-line="1181" selection-start-column="55" selection-end-line="1181" selection-end-column="55" />
+        <state relative-caret-position="381">
+          <caret line="1188" column="41" selection-start-line="1188" selection-start-column="41" selection-end-line="1188" selection-end-column="41" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

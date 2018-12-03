@@ -83,6 +83,22 @@ DomainPropertyShape.prototype.redrawPath = function(c, x, y, w, h)
 
 mxCellRenderer.prototype.defaultShapes['domain_property'] = DomainPropertyShape;
 
+function ResourceShape()
+{
+    mxActor.call(this);
+};
+mxUtils.extend(ResourceShape, mxActor);
+ResourceShape.prototype.size = 0.2;
+ResourceShape.prototype.redrawPath = function(c, x, y, w, h)
+{
+    var arcSize = mxUtils.getValue(this.style, mxConstants.STYLE_ARCSIZE, mxConstants.LINE_ARCSIZE) / 2;
+    this.addPoints(c, [new mxPoint(0.25 * w, 0), new mxPoint(0.75 * w, 0), new mxPoint(w, 0.5 * h), new mxPoint(0.75 * w, h),
+        new mxPoint(0.25 * w, h), new mxPoint(0, 0.5 * h)], this.isRounded, arcSize, true);
+    c.end();
+};
+
+mxCellRenderer.prototype.defaultShapes['resource'] = ResourceShape;
+
 function EventShape()
 {
     mxActor.call(this);
@@ -144,6 +160,7 @@ DomainPropertyShape.prototype.constraints = mxRectangleShape.prototype.constrain
 EventShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 RequirementShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 ExpectationShape.prototype.constraints = mxRectangleShape.prototype.constraints;
+ResourceShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 
 
 

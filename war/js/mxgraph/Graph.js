@@ -2591,6 +2591,8 @@ HoverIcons.prototype.init = function()
 	this.myTableGoal.style.cursor='pointer';
 	this.myTableRequirement=this.createArrow(this.Information,'Information');
 	this.myTableRequirement.style.cursor='pointer';
+    this.myTableResource=this.createArrow(this.Information,'Information');
+    this.myTableResource.style.cursor='pointer';
 	this.myTableOthers=this.createArrow(this.Information,'Information');
 	this.myTableOthers.style.cursor='pointer';
 	// this.myTableGoal.style.visibility="hidden";
@@ -2602,9 +2604,11 @@ HoverIcons.prototype.init = function()
 	this.myGoalDiv=createGoalDiv();
 	this.myRequirementDiv=createRequirementDiv();
 	this.myOtherDiv=createOtherDiv();
+    this.myResourceDiv = createResourceDiv()
 
 	this.myGoalDiv.style.visibility='hidden';
 	this.myRequirementDiv.style.visibility='hidden';
+    this.myResourceDiv.style.visibility='hidden';
 	this.myOtherDiv.style.visibility='hidden';
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
@@ -3064,7 +3068,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal=0,flagRequirement=0,flagOthers=0;
+var flagGoal=0,flagRequirement=0,flagOthers=0, flagResource = 0;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3074,6 +3078,7 @@ HoverIcons.prototype.repaint = function()
 	{
 		this.myTableGoal.style.visibility='visible';
 		this.myTableRequirement.style.visibility='visible';
+		this.myTableResource.style.visibility='visible';
 		this.myTableOthers.style.visibility='visible';
 		// Checks if cell was deleted
 		this.currentState = this.getState(this.currentState);
@@ -3138,6 +3143,10 @@ HoverIcons.prototype.repaint = function()
 			this.myTableRequirement.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableRequirement,this.inactiveOpacity);
 
+            this.myTableResource.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+            this.myTableResource.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+            mxUtils.setOpacity(this.myTableResource,this.inactiveOpacity);
+
 			this.myTableOthers.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
 			this.myTableOthers.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableOthers,this.inactiveOpacity);
@@ -3148,11 +3157,15 @@ HoverIcons.prototype.repaint = function()
 			this.myRequirementDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myRequirementDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
+            this.myResourceDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+            this.myResourceDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
 			this.myOtherDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myOtherDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
 			var mgoaldiv=this.myGoalDiv;
 			var mrequirementdiv=this.myRequirementDiv;
+			var mrresourcediv = this.myResourceDiv;
 			var motherdiv=this.myOtherDiv;
 			var that=this.currentState.cell;
 			var curr=this.currentState;
@@ -3160,6 +3173,7 @@ HoverIcons.prototype.repaint = function()
 			if(curr.style['shape']=='goal'){
 				mrequirementdiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
+                mrresourcediv.style.visibility="hidden";
 				if(flagGoal==1){
 					mgoaldiv.style.visibility='visible';
 				}
@@ -3171,6 +3185,7 @@ HoverIcons.prototype.repaint = function()
 			else if(curr.style['shape']=='requirement'){
 				mgoaldiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
+                mrresourcediv.style.visibility="hidden";
 				if(flagRequirement==1){
 					mrequirementdiv.style.visibility='visible';
 				}
@@ -3178,13 +3193,21 @@ HoverIcons.prototype.repaint = function()
 					mrequirementdiv.style.visibility='hidden';
 				}
 			}
-			else if(curr.style['shape']=='goal'){
+			else if(curr.style['shape']=='resource'){
 				mrequirementdiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
+                mgoaldiv.style.visibility="hidden";
+                if(flagResource==1){
+                    mrresourcediv.style.visibility='visible';
+                }
+                else if(flagResource==0){
+                    mrresourcediv.style.visibility='hidden';
+                }
 			}
 			else{
 				mrequirementdiv.style.visibility='hidden';
 				mgoaldiv.style.visibility='hidden';
+                mrresourcediv.style.visibility="hidden";
 				if(flagOthers==1){
 					motherdiv.style.visibility='visible';
 				}
@@ -3192,6 +3215,7 @@ HoverIcons.prototype.repaint = function()
 					motherdiv.style.visibility='hidden';
 				}
 			}
+
 			var gm=this.graph.getModel();
 
 			this.myTableGoal.onclick=function () {
@@ -3275,51 +3299,92 @@ HoverIcons.prototype.repaint = function()
 					}
 				}
 			};
+/*无效？
+			this.myTableResource.onclick=function () {
+                if(curr.style['shape']=='resource'){
+                    if(mrresourcediv.style.visibility=='visible'){
+                        that.resourceId=document.getElementById("resourId").value;
+                        that.resourceType=document.getElementById("resourdesc").value;
+                        flagResource=0;
+                        mrresourcediv.style.visibility = 'hidden';
+
+                        document.getElementById("resourId").value='';
+                        document.getElementById("resourdesc").value='';
+                    }
+                    else {
+                        flagResource=1;
+                        document.getElementById("reqId").innerHTML=that.resourceId;
+                        document.getElementById("basicEventFlow").value=that.resourceType;
+                        mrresourcediv.style.visibility = 'visible';
+                    }
+                }
+            };
+*/
 			this.myTableOthers.onclick=function () {
-				if((curr.style['shape']!='requirement')&&(curr.style['shape']!='goal')){
-					if(motherdiv.style.visibility=='visible'){
-						that.gedetail=document.getElementById("detail").value;
-						flagOthers=0;
-						if($('#Obstacle').length!=0){
+                if (curr.style['shape'] == 'resource') {
+                        if (mrresourcediv.style.visibility == 'visible') {
+                            that.resourId = document.getElementById("resourId").value;
+                            that.resourType = document.getElementById("resourDesc").value;
+                            that.RelateTo = getmyWant(gm,that.id, "source",'resource',"RelateTo");
+                            flagResource = 0;
+                            mrresourcediv.style.visibility = 'hidden';
+
+                            document.getElementById("resourId").value = '';
+                            document.getElementById("resourDesc").value = '';
+                            document.getElementById("RelateTo").innerHTML='';
+                        }
+                        else {
+                            flagResource = 1;
+                            document.getElementById("resourId").innerHTML = that.resourId;
+                            document.getElementById("resourDesc").value = that.resourType;
+                            document.getElementById("RelateTo").innerHTML = getmyWant(gm,that.id, "source",'resource',"RelateTo");
+                            mrresourcediv.style.visibility = 'visible';
+                        }
+                }
+                else if ((curr.style['shape'] != 'requirement') && (curr.style['shape'] != 'goal')) {
+                    if (motherdiv.style.visibility == 'visible') {
+                        that.gedetail = document.getElementById("detail").value;
+                        flagOthers = 0;
+                        if ($('#Obstacle').length != 0) {
                             document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
                             document.getElementById('detailtable3').removeChild(document.getElementById('Targets'));
-                            that.Obstructs = getmyWant(gm,that.id,'target','goal','IObstructs');
-                            that.Goal = getmyWant(gm,that.id,'source','goal','Target');
+                            that.Obstructs = getmyWant(gm, that.id, 'target', 'goal', 'IObstructs');
+                            that.Goal = getmyWant(gm, that.id, 'source', 'goal', 'Target');
                         }
                         motherdiv.style.visibility = 'hidden';
-						document.getElementById("othId").value='';
-						document.getElementById("detail").value='';
-					}
-					else {
-						flagOthers=1;
-						document.getElementById("othId").innerHTML=that.value;
-						document.getElementById("detail").value=that.gedetail;
+                        document.getElementById("othId").value = '';
+                        document.getElementById("detail").value = '';
+                    }
+                    else {
+                        flagOthers = 1;
+                        document.getElementById("othId").innerHTML = that.value;
+                        document.getElementById("detail").value = that.gedetail;
                         motherdiv.style.visibility = 'visible';
-						if(curr.style['shape']=='obstacle'){
-							if($('#IObstacle').length==0) {
+                        if (curr.style['shape'] == 'obstacle') {
+                            if ($('#IObstacle').length == 0) {
                                 //行 - Obstructs
                                 document.getElementById('detailtable3').appendChild(addObstructs());
                                 //行 - solves
                                 document.getElementById('detailtable3').appendChild(addTarget());
 
-                                document.getElementById('IObstructs').innerHTML = getmyWant(gm,that.id,'target','goal','IObstructs');
-                                document.getElementById('Target').innerHTML = getmyWant(gm,that.id,'source','goal','Target');
+                                document.getElementById('IObstructs').innerHTML = getmyWant(gm, that.id, 'target', 'goal', 'IObstructs');
+                                document.getElementById('Target').innerHTML = getmyWant(gm, that.id, 'source', 'goal', 'Target');
 
                             }
-                            that.Obstructs = getmyWant(gm,that.id,'target','goal','IObstructs');
-                            that.Goal = getmyWant(gm,that.id,'source','goal','Target');
+                            that.Obstructs = getmyWant(gm, that.id, 'target', 'goal', 'IObstructs');
+                            that.Goal = getmyWant(gm, that.id, 'source', 'goal', 'Target');
                         }
-						else{
-							if($('#Obstacle').length>0){
+                        else {
+                            if ($('#Obstacle').length > 0) {
                                 document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
                                 document.getElementById('detailtable3').removeChild(document.getElementById('Targets'));
 
                             }
-						}
+                        }
 
-					}
-				}
-			}
+                    }
+                }
+            }
 			if(mgoaldiv.style.visibility=="visible"){
 				if((document.getElementById("usecaseId").innerHTML==that.value)&&(document.getElementById("usecaseDiscription").value!=that.usecaseDiscription
 				||document.getElementById("participant").value!=that.participant
@@ -3379,6 +3444,23 @@ HoverIcons.prototype.repaint = function()
 
                 }
 			}
+
+			if(mrresourcediv.style.visibility=="visible"){
+                if((document.getElementById("resourId").innerHTML==that.value)&&(document.getElementById("resourDesc").value!=that.basicEventFlow
+                    || document.getElementById("RelateTo").value!=getmyWant(gm,that.id,'source','resource',"RelateTo"))){
+                    this.currentState.cell.value=document.getElementById("resourId").innerHTML;
+                    this.currentState.cell.gedetail=document.getElementById("resourDesc").value;
+                    this.currentState.cell.RelateTo=getmyWant(gm,that.id,'source','resource',"RelateTo");
+
+
+                }
+                else{
+                    document.getElementById("resourId").innerHTML=this.currentState.cell.value;
+                    document.getElementById("resourDesc").value=this.currentState.cell.gedetail;
+                    document.getElementById("RelateTo").innerHTML=getmyWant(gm,that.id,'source','resource',"RelateTo");
+
+                }
+            }
 
 			if(motherdiv.style.visibility=="visible"){
 				if((document.getElementById("othId").innerHTML==that.value)&&(document.getElementById("detail").value!=that.gedetail)){
@@ -3499,6 +3581,7 @@ HoverIcons.prototype.repaint = function()
 				this.myTableOthers.style.visibility='visible';
                 this.myGoalDiv.style.visibility='visible';
 				this.myRequirementDiv.style.visibility='visible';
+				this.myResourceDiv.style.visibility='visible';
 				this.myOtherDiv.style.visibility='visible';
 			}
 			
@@ -3701,6 +3784,7 @@ HoverIcons.prototype.setCurrentState = function(state)
 	this.graph.container.appendChild(this.myTableOthers);
 	this.graph.container.appendChild(this.myGoalDiv);
 	this.graph.container.appendChild(this.myRequirementDiv);
+    this.graph.container.appendChild(this.myResourceDiv);
 	this.graph.container.appendChild(this.myOtherDiv);
 
 
@@ -4477,23 +4561,65 @@ if (typeof mxVertexHandler != 'undefined')
 		// Overrides edge preview to use current edge shape and default style
 		mxConnectionHandler.prototype.livePreview = true;
 		mxConnectionHandler.prototype.cursor = 'crosshair';
-		
-		// Uses current edge style for connect preview
-		mxConnectionHandler.prototype.createEdgeState = function(me)
-		{
-			var style = this.graph.createCurrentEdgeStyle();
-			var edge = this.graph.createEdge(null, null, null, null, null, style);
-			var state = new mxCellState(this.graph.view, edge, this.graph.getCellStyle(edge));
-			
-			for (var key in this.graph.currentEdgeStyle)
-			{
-				state.style[key] = this.graph.currentEdgeStyle[key];
-			}
-			
-			return state;
-		};
 
-		// Overrides dashed state with current edge style
+        mxConnectionHandler.prototype.isEdgeRight = function(me)
+        {
+            if (me.sourceState.cell.flag == 'resource')
+                return false
+            else
+            	return true
+        };
+		// Uses current edge style for connect preview
+		var START_GRAPH;
+        var END_GRAPH;
+        mxConnectionHandler.prototype.createEdgeState = function(me)
+        {
+
+            var style = this.graph.createCurrentEdgeStyle();
+            var edge = this.graph.createEdge(null, null, null, null, null, style);
+            var state = new mxCellState(this.graph.view, edge, this.graph.getCellStyle(edge));
+            START_GRAPH = me.sourceState.cell.flag;
+            return state;
+        };
+
+        mxConnectionHandler.prototype.changeEdgeStyle = function(me)
+        {
+
+            var style = this.graph.createCurrentEdgeStyle();
+            var edge = this.graph.createEdge(null, null, null, null, null, style);
+            var state = new mxCellState(this.graph.view, edge, this.graph.getCellStyle(edge));
+            END_GRAPH = me.sourceState.cell.getStyle().substring(6,10);
+            for (var key in this.graph.currentEdgeStyle)
+            {
+                state.style[key] = this.graph.currentEdgeStyle[key];
+                if(key == 'strokeColor') {
+                		if(START_GRAPH == "goal" && END_GRAPH == "resource") {
+                            this.graph.currentEdgeStyle[key] = '#000fff';
+                            state.style[key] = this.graph.currentEdgeStyle[key];
+                        }
+                        else if(START_GRAPH == "obstacle" && END_GRAPH == "resource"){
+                            this.graph.currentEdgeStyle[key] = '#ff0000';
+                            state.style[key] = this.graph.currentEdgeStyle[key];
+                        }
+                        else if(START_GRAPH == "resource" && END_GRAPH == "resource"){
+                            this.graph.currentEdgeStyle[key] = '#9673A6';
+                            state.style[key] = this.graph.currentEdgeStyle[key];
+                        }
+                        else if(START_GRAPH == "resource"){
+                        	alert("该条线违法！应该从其他模型指向资源");
+                            this.graph.currentEdgeStyle[key] = '#CCCCCC';
+                            state.style[key] = this.graph.currentEdgeStyle[key];
+                        }
+                        else {
+                            this.graph.currentEdgeStyle[key] = '#000000';
+                            state.style[key] = this.graph.currentEdgeStyle[key];
+						}
+                }
+            }
+            return state;
+        };
+
+        // Overrides dashed state with current edge style
 		var connectionHandlerCreateShape = mxConnectionHandler.prototype.createShape;
 		mxConnectionHandler.prototype.createShape = function()
 		{
@@ -4537,8 +4663,14 @@ if (typeof mxVertexHandler != 'undefined')
 		/**
 		 * Contains the default style for edges.
 		 */
+
 		Graph.prototype.defaultEdgeStyle = {'edgeStyle': 'straightEdgeStyle', 'rounded': '0',
-			'jettySize': 'auto', 'orthogonalLoop': '1','strokeColor':'#000000','endSize':'8','strokeWidth':'2'};
+            'jettySize': 'auto', 'orthogonalLoop': '1','strokeColor':'#000000','endSize':'8','strokeWidth':'2'};
+
+        Graph.prototype.resourceEdgeStyle = {'edgeStyle': 'straightEdgeStyle', 'rounded': '0',
+            'jettySize': 'auto', 'orthogonalLoop': '1','strokeColor':'#9673A6','endSize':'8','strokeWidth':'2'};
+
+
 
 		/**
 		 * Returns the current edge style as a string.

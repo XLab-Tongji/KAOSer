@@ -1138,7 +1138,7 @@ Actions.prototype.init = function()
 
 			$.ajax({
 				type:"POST",
-				url:mxResources.get("urlsave"),
+				url:mxResources.get("localport")+mxResources.get("urlsave"),
 				data:{
 					id:myId,
 					title:jsname,
@@ -1179,7 +1179,7 @@ Actions.prototype.init = function()
 
 			$.ajax({
 				type:"POST",
-				url:mxResources.get("urltemplate") + fid,
+				url: mxResources.get("localport")+mxResources.get("urltemplate")+ fid,
 				data:{
 					jsname:jsname,
 					jsonStr:jsonStr
@@ -1187,7 +1187,7 @@ Actions.prototype.init = function()
 				dataType:"html",
 				async: false,
 				success:function (data) {
-					showDownloadDiv();
+					showDownloadDiv(fid);
 					mxUtils.popup(data,true);
 				},
 				error:function (data) {
@@ -1220,6 +1220,10 @@ Actions.prototype.init = function()
 	this.addAction('TemplateRST',mxUtils.bind(this,function () {
 		tem();
 		fid='rst';
+    }));
+    this.addAction('TemplateRelations',mxUtils.bind(this,function () {
+        tem();
+        fid='rela';
     }));
 
 	$("#back1").click(function () {
@@ -1280,7 +1284,7 @@ Actions.prototype.init = function()
     function getXML() {
         $.ajax({
             type:"Get",
-            url:mxResources.get("urlimportfromMongo"),
+            url:mxResources.get("localport")+mxResources.get("urlimportfromMongo"),
             data:{
             	myname:username
 			},
@@ -1350,7 +1354,7 @@ Actions.prototype.init = function()
             $.ajax({
                 type:"POST",
                 dataType:"json",
-                url:mxResources.get("urlfindbyid"),
+                url:mxResources.get("localport")+mxResources.get("urlfindbyid"),
                 data:{
                     id:myId
                 },
