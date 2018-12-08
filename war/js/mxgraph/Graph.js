@@ -4582,6 +4582,30 @@ if (typeof mxVertexHandler != 'undefined')
             return state;
         };
 
+        mxConnectionHandler.prototype.resolveAndConflict = function(a){
+            START_GRAPH = a.source.flag;
+            END_GRAPH = a.target.style.substring(6,10);
+            if(START_GRAPH == "requirement" && END_GRAPH == "obst") {
+            	a.style = 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#82b366;strokeWidth=2';
+                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=ellipse;html=1;strokeColor=#82b366;fillColor=#ffffff;strokeWidth=2');
+                cell.geometry.relative = true;
+                cell.setConnectable(false);
+                cell.vertex = true;
+                cell.geometry.offset = new mxPoint(-9, -9);
+                a.insert(cell);
+            }
+            else if(START_GRAPH == "obstacle" && END_GRAPH == "goal"){
+                a.style = 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2';
+                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
+                cell.geometry.relative = true;
+                cell.setConnectable(false);
+                cell.vertex = true;
+                cell.geometry.offset = new mxPoint(-9, -9);
+                a.insert(cell);
+			}
+
+            return a
+        }
         mxConnectionHandler.prototype.changeEdgeStyle = function(me)
         {
 
