@@ -16208,9 +16208,14 @@ mxConnectionHandler.prototype.mouseUp = function (a, b) {
             var c = null != this.previous ? this.previous.cell : null, d = null;
             null != this.constraintHandler.currentConstraint && null != this.constraintHandler.currentFocus && (d = this.constraintHandler.currentFocus.cell);
             null == d && null != this.currentState && (d = this.currentState.cell);
-            this.connect(c, d, b.getEvent(), b.getCell())
+            /*var temp = this.resolveAndConflict(c,d);
+            c=temp[0];
+            d=temp[1];*/
+            this.connect(c, d, b.getEvent(), b.getCell());
+
         } else null !=
         this.previous && null != this.marker.validState && this.previous.cell == this.marker.validState.cell && this.graph.selectCellForEvent(this.marker.source, evt), 0 < this.error.length && this.graph.validationAlert(this.error);
+        //this.resolveAndConflict();
         this.destroyIcons();
         b.consume()
     }
@@ -16264,6 +16269,7 @@ mxConnectionHandler.prototype.connect = function (a, b, c, d) {
             var n = k = null;
             null != this.edgeState && (k = this.edgeState.cell.value, n = this.edgeState.cell.style);
             g = this.insertEdge(m, null, k, a, b, n);
+            g = this.resolveAndConflict(g);
             if (null != g) {
                 this.graph.setConnectionConstraint(g, a, !0, this.sourceConstraint);
                 this.graph.setConnectionConstraint(g, b, !1, this.constraintHandler.currentConstraint);
