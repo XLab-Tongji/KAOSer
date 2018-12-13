@@ -4585,7 +4585,7 @@ if (typeof mxVertexHandler != 'undefined')
         mxConnectionHandler.prototype.resolveAndConflict = function(a){
             START_GRAPH = a.source.flag;
             END_GRAPH = a.target.style.substring(6,10);
-            if(START_GRAPH == "requirement" && END_GRAPH == "obst") {
+            if(END_GRAPH == "obst"&& (START_GRAPH == "requirement"||START_GRAPH == "goal")) {
             	a.style = 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#82b366;strokeWidth=2';
                 var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=ellipse;html=1;strokeColor=#82b366;fillColor=#ffffff;strokeWidth=2');
                 cell.geometry.relative = true;

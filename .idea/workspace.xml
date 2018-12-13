@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55db6ebc-a54d-41e2-a2be-64ab13c7f895" name="Default" comment="conflict and resolve">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/系统总结功能.xml" beforeDir="false" afterPath="$PROJECT_DIR$/系统总结功能.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/war/js/mxgraph/Graph.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="4594" column="31" selection-start-line="4594" selection-start-column="31" selection-end-line="4594" selection-end-column="31" />
+            <state relative-caret-position="230">
+              <caret line="4587" column="41" lean-forward="true" selection-start-line="4587" selection-start-column="41" selection-end-line="4587" selection-end-column="41" />
               <folding>
                 <element signature="e#91851#120500#0" />
               </folding>
@@ -226,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -239,6 +237,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -472,7 +471,9 @@
       <workItem from="1544526096854" duration="616000" />
       <workItem from="1544537384949" duration="91000" />
       <workItem from="1544614233663" duration="37000" />
-      <workItem from="1544680840973" duration="1348000" />
+      <workItem from="1544680840973" duration="1494000" />
+      <workItem from="1544683475357" duration="12000" />
+      <workItem from="1544685990600" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="little modify">
       <created>1543816960952</created>
@@ -495,11 +496,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544537437543</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="a">
+      <created>1544683099284</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544683099284</updated>
+    </task>
+    <task id="LOCAL-00005" summary="conflict and resolve">
+      <created>1544683199846</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544683199846</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305949000" />
+    <option name="totallyTimeSpent" value="306364000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,8 +527,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36260054" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37265417" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -531,11 +547,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5012126" side_tool="true" weight="0.2642857" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291815" />
-      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.2266289" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="2" />
@@ -545,6 +560,7 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.0646726" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983023" />
       <window_info anchor="right" id="Database" order="8" visible="true" weight="0.044235926" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2716249" />
@@ -624,9 +640,10 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="little modify" />
-    <MESSAGE value="conflict and resolve" />
     <MESSAGE value="temp file" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp file" />
+    <MESSAGE value="a" />
+    <MESSAGE value="conflict and resolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="conflict and resolve" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -955,8 +972,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/js/mxgraph/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="4594" column="31" selection-start-line="4594" selection-start-column="31" selection-end-line="4594" selection-end-column="31" />
+        <state relative-caret-position="230">
+          <caret line="4587" column="41" lean-forward="true" selection-start-line="4587" selection-start-column="41" selection-end-line="4587" selection-end-column="41" />
           <folding>
             <element signature="e#91851#120500#0" />
           </folding>
