@@ -215,9 +215,9 @@ function wirtieResults(array) {
         return results;
     }
     else{
-        results = '- '+array[0];
+        results = array[0];
         for(var k=1;k<array.length;k++){
-            results+='</br>'+'- '+array[k];
+            results+='</br>'+ array[k];
         }
         return results;
     }
