@@ -26,6 +26,8 @@ mxscript('js/mxgraph/Goaldiv.js');
 mxscript('js/mxgraph/RequirementDiv.js');
 mxscript('js/mxgraph/divforOthers.js');
 mxscript('js/mxgraph/ResourceDiv.js');
+mxscript('js/mxgraph/AgentDiv.js');
+mxscript('js/mxgraph/DomainPropertyDiv.js');
 mxscript('js/mxgraph/Graph.js');
 mxscript('js/mxgraph/Shapes.js');
 mxscript('js/mxgraph/Actions.js');

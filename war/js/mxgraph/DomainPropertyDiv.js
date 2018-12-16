@@ -3,18 +3,18 @@ function createDomainPropertyDiv() {
     var arrow = document.createElement('div');
     arrow.style.backgroundColor="#ffffff";
     var divattr = document.createAttribute("id");
-    divattr.value = "detailcontainer6";
+    divattr.value = "detailcontainer";
     arrow.setAttributeNode(divattr);
     //if(flag==1) {
     //创建form
     var form = document.createElement("form");
     var formattr = document.createAttribute("id");
-    formattr.value = "detailform6";
+    formattr.value = "detailform";
     form.setAttributeNode(formattr);
     //创建table
     var table = document.createElement("table");
     var tableattr = document.createAttribute("id");
-    tableattr.value = "detailtable6";
+    tableattr.value = "detailtable";
     table.setAttributeNode(tableattr);
 
     //行 - 描述

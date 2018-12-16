@@ -2593,6 +2593,10 @@ HoverIcons.prototype.init = function()
 	this.myTableRequirement.style.cursor='pointer';
     this.myTableResource=this.createArrow(this.Information,'Information');
     this.myTableResource.style.cursor='pointer';
+    this.myTableAgent=this.createArrow(this.Information,'Information');
+    this.myTableAgent.style.cursor='pointer';
+    this.myTableDomainProperty=this.createArrow(this.Information,'Information');
+    this.myTableDomainProperty.style.cursor='pointer';
 	this.myTableOthers=this.createArrow(this.Information,'Information');
 	this.myTableOthers.style.cursor='pointer';
 	// this.myTableGoal.style.visibility="hidden";
@@ -2604,11 +2608,15 @@ HoverIcons.prototype.init = function()
 	this.myGoalDiv=createGoalDiv();
 	this.myRequirementDiv=createRequirementDiv();
 	this.myOtherDiv=createOtherDiv();
-    this.myResourceDiv = createResourceDiv()
+    this.myResourceDiv = createResourceDiv();
+    this.myAgentDiv = createAgentDiv();
+    this.myDomainPropertyDiv = createDomainPropertyDiv();
 
 	this.myGoalDiv.style.visibility='hidden';
 	this.myRequirementDiv.style.visibility='hidden';
     this.myResourceDiv.style.visibility='hidden';
+    this.myAgentDiv.style.visibility='hidden';
+    this.myDomainPropertyDiv.style.visibility='hidden';
 	this.myOtherDiv.style.visibility='hidden';
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
@@ -3068,7 +3076,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal=0,flagRequirement=0,flagOthers=0, flagResource = 0;
+var flagGoal=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3078,6 +3086,8 @@ HoverIcons.prototype.repaint = function()
 	{
 		this.myTableGoal.style.visibility='visible';
 		this.myTableRequirement.style.visibility='visible';
+        this.myTableAgent.style.visibility='visible';
+        this.myTableDomainProperty.style.visibility='visible';
 		this.myTableResource.style.visibility='visible';
 		this.myTableOthers.style.visibility='visible';
 		// Checks if cell was deleted
@@ -3147,6 +3157,14 @@ HoverIcons.prototype.repaint = function()
             this.myTableResource.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
             mxUtils.setOpacity(this.myTableResource,this.inactiveOpacity);
 
+            this.myTableAgent.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+            this.myTableAgent.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+            mxUtils.setOpacity(this.myTableAgent,this.inactiveOpacity);
+
+            this.myTableDomainProperty.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+            this.myTableDomainProperty.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+            mxUtils.setOpacity(this.myTableDomainProperty,this.inactiveOpacity);
+
 			this.myTableOthers.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
 			this.myTableOthers.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableOthers,this.inactiveOpacity);
@@ -3160,12 +3178,20 @@ HoverIcons.prototype.repaint = function()
             this.myResourceDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myResourceDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
+            this.myAgentDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+            this.myAgentDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
+            this.myDomainPropertyDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+            this.myDomainPropertyDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
 			this.myOtherDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myOtherDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
 			var mgoaldiv=this.myGoalDiv;
 			var mrequirementdiv=this.myRequirementDiv;
 			var mrresourcediv = this.myResourceDiv;
+			var magentdiv=this.myAgentDiv;
+			var mdomainpropertydiv=this.myDomainPropertyDiv;
 			var motherdiv=this.myOtherDiv;
 			var that=this.currentState.cell;
 			var curr=this.currentState;
@@ -3173,6 +3199,8 @@ HoverIcons.prototype.repaint = function()
 			if(curr.style['shape']=='goal'){
 				mrequirementdiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
+                magentdiv.style.visibility="hidden";
+                mdomainpropertydiv.style.visibility="hidden";
                 mrresourcediv.style.visibility="hidden";
 				if(flagGoal==1){
 					mgoaldiv.style.visibility='visible';
@@ -3185,6 +3213,8 @@ HoverIcons.prototype.repaint = function()
 			else if(curr.style['shape']=='requirement'){
 				mgoaldiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
+                magentdiv.style.visibility="hidden";
+                mdomainpropertydiv.style.visibility="hidden";
                 mrresourcediv.style.visibility="hidden";
 				if(flagRequirement==1){
 					mrequirementdiv.style.visibility='visible';
@@ -3196,6 +3226,8 @@ HoverIcons.prototype.repaint = function()
 			else if(curr.style['shape']=='resource'){
 				mrequirementdiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
+                magentdiv.style.visibility="hidden";
+                mdomainpropertydiv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
                 if(flagResource==1){
                     mrresourcediv.style.visibility='visible';
@@ -3204,10 +3236,38 @@ HoverIcons.prototype.repaint = function()
                     mrresourcediv.style.visibility='hidden';
                 }
 			}
+            else if(curr.style['shape']=='hexagon'){
+                mrequirementdiv.style.visibility='hidden';
+                mrresourcediv.style.visibility="hidden";
+                motherdiv.style.visibility="hidden";
+                mdomainpropertydiv.style.visibility="hidden";
+                mgoaldiv.style.visibility="hidden";
+                if(flagAgent==1){
+                    magentdiv.style.visibility='visible';
+                }
+                else if(flagAgent==0){
+                    magentdiv.style.visibility='hidden';
+                }
+            }
+            else if(curr.style['shape']=='domain_property'){
+                mrequirementdiv.style.visibility='hidden';
+                mrresourcediv.style.visibility="hidden";
+                motherdiv.style.visibility="hidden";
+                magentdiv.style.visibility="hidden";
+                mgoaldiv.style.visibility="hidden";
+                if(flagDomainProperty==1){
+                    mdomainpropertydiv.style.visibility='visible';
+                }
+                else if(flagDomainProperty==0){
+                    mdomainpropertydiv.style.visibility='hidden';
+                }
+            }
 			else{
 				mrequirementdiv.style.visibility='hidden';
 				mgoaldiv.style.visibility='hidden';
                 mrresourcediv.style.visibility="hidden";
+                magentdiv.style.visibility="hidden";
+                mdomainpropertydiv.style.visibility="hidden";
 				if(flagOthers==1){
 					motherdiv.style.visibility='visible';
 				}
@@ -3341,6 +3401,38 @@ HoverIcons.prototype.repaint = function()
                             mrresourcediv.style.visibility = 'visible';
                         }
                 }
+                else if(curr.style['shape'] == 'hexagon') {
+                    if (magentdiv.style.visibility == 'visible') {
+                        that.agentType = document.getElementById("agentType").value;
+                        flagAgent = 0;
+                        magentdiv.style.visibility = 'hidden';
+
+                        document.getElementById("agentId").value = '';
+                        document.getElementById("agentType").value = '';
+                    }
+                    else {
+                        flagAgent = 1;
+                        document.getElementById("agentId").innerHTML = that.value;
+                        document.getElementById("agentType").value = that.agentType;
+                        magentdiv.style.visibility = 'visible';
+                    }
+                }
+                else if(curr.style['shape'] == 'domain_property') {
+                    if (mdomainpropertydiv.style.visibility == 'visible') {
+                        that.domainPropertyRef = document.getElementById("domainPropertyRef").value;
+                        flagDomainProperty = 0;
+                        mdomainpropertydiv.style.visibility = 'hidden';
+
+                        document.getElementById("domainPropertyId").value = '';
+                        document.getElementById("domainPropertyRef").value = '';
+                    }
+                    else {
+                        flagDomainProperty = 1;
+                        document.getElementById("domainPropertyId").innerHTML = that.value;
+                        document.getElementById("domainPropertyRef").value = that.domainPropertyRef;
+                        mdomainpropertydiv.style.visibility = 'visible';
+                    }
+                }
                 else if ((curr.style['shape'] != 'requirement') && (curr.style['shape'] != 'goal')) {
                     if (motherdiv.style.visibility == 'visible') {
                         that.gedetail = document.getElementById("detail").value;
@@ -3458,6 +3550,30 @@ HoverIcons.prototype.repaint = function()
                     document.getElementById("resourId").innerHTML=this.currentState.cell.value;
                     document.getElementById("resourDesc").value=this.currentState.cell.gedetail;
                     document.getElementById("RelateTo").innerHTML=getmyWant(gm,that.id,'source','resource',"RelateTo");
+
+                }
+            }
+
+            if(magentdiv.style.visibility=="visible"){
+                if((document.getElementById("agentId").innerHTML==that.value)&&(document.getElementById("agentType").value!=that.agentType)){
+                    this.currentState.cell.value=document.getElementById("agentId").innerHTML;
+                    this.currentState.cell.agentType=document.getElementById("agentType").value;
+                }
+                else{
+                    document.getElementById("agentId").innerHTML=this.currentState.cell.value;
+                    document.getElementById("agentType").value=this.currentState.cell.agentType;
+
+                }
+            }
+
+            if(mdomainpropertydiv.style.visibility=="visible"){
+                if((document.getElementById("domainPropertyId").innerHTML==that.value)&&(document.getElementById("domainPropertyRef").value!=that.domainPropertyRef)){
+                    this.currentState.cell.value=document.getElementById("domainPropertyId").innerHTML;
+                    this.currentState.cell.domainPropertyRef=document.getElementById("domainPropertyRef").value;
+                }
+                else{
+                    document.getElementById("domainPropertyId").innerHTML=this.currentState.cell.value;
+                    document.getElementById("domainPropertyRef").value=this.currentState.cell.domainPropertyRef;
 
                 }
             }
@@ -3582,6 +3698,8 @@ HoverIcons.prototype.repaint = function()
                 this.myGoalDiv.style.visibility='visible';
 				this.myRequirementDiv.style.visibility='visible';
 				this.myResourceDiv.style.visibility='visible';
+                this.myAgentDiv.style.visibility='visible';
+                this.myDomainPropertyDiv.style.visibility='visible';
 				this.myOtherDiv.style.visibility='visible';
 			}
 			
@@ -3785,6 +3903,8 @@ HoverIcons.prototype.setCurrentState = function(state)
 	this.graph.container.appendChild(this.myGoalDiv);
 	this.graph.container.appendChild(this.myRequirementDiv);
     this.graph.container.appendChild(this.myResourceDiv);
+    this.graph.container.appendChild(this.myAgentDiv);
+    this.graph.container.appendChild(this.myDomainPropertyDiv);
 	this.graph.container.appendChild(this.myOtherDiv);
 
 
