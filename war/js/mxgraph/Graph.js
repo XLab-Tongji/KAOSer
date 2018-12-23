@@ -4749,6 +4749,10 @@ if (typeof mxVertexHandler != 'undefined')
                             this.graph.currentEdgeStyle[key] = '#9673A6';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
+						else if(START_GRAPH == "hexagon" && END_GRAPH == "requ"){
+							this.graph.currentEdgeStyle[key] = '#D6B656';
+							state.style[key] = this.graph.currentEdgeStyle[key];
+						}
                         else if(START_GRAPH == "resource"){
                         	alert("该条线违法！应该从其他模型指向资源");
                             this.graph.currentEdgeStyle[key] = '#CCCCCC';
