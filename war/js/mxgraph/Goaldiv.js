@@ -184,7 +184,7 @@ function createGoalDiv() {
         //行 - obstructs
         var tr9 = document.createElement("tr");
         var td9_1 = document.createElement("td");
-        td9_1.innerHTML = "Obstructs";
+        td9_1.innerHTML = "Obstructed by";
         var td9_1_width = document.createAttribute("width");
         td9_1_width.value = "100px";
         td9_1.setAttributeNode(td9_1_width);
