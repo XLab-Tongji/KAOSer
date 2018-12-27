@@ -17,6 +17,23 @@ function createDomainPropertyDiv() {
     tableattr.value = "detailtable";
     table.setAttributeNode(tableattr);
 
+    //行 - 名称
+    var tr0 = document.createElement("tr");
+    var td0_1 = document.createElement("td");
+    td0_1.innerHTML = "Name";
+    var td0_1_width = document.createAttribute("width");
+    td0_1_width.value = "100px";
+    td0_1.setAttributeNode(td0_1_width);
+    var td0_2 = document.createElement("td");
+    var input0 = document.createElement("h4");
+    var input0_id = document.createAttribute("id");
+    input0_id.value = "domainPropertyId";
+    input0.setAttributeNode(input0_id);
+    td0_2.appendChild(input0);
+    tr0.appendChild(td0_1);
+    tr0.appendChild(td0_2);
+    table.appendChild(tr0);
+
     //行 - 描述
     var tr1 = document.createElement("tr");
     var td1_1 = document.createElement("td");
