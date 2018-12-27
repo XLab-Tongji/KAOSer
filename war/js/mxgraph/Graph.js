@@ -3286,9 +3286,9 @@ HoverIcons.prototype.repaint = function()
 						that.participant=document.getElementById("participant").value;
 						that.preCondition=document.getElementById("preCondition").value;
 						that.aftCondition=document.getElementById("aftCondition").value;
-						that.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                        var ifbr = (getmyWant(gm,that.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
-                        that.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,that.id,'source','requirement',"RefinedBy");
+						that.RefinesTo=getmyWant(gm,that.id,'source','goal',"RefinesTo");
+                        var ifbr = (getmyWant(gm,that.id,'target','requirement',"RefinedBy")=='')?'':"</br>";
+                        that.RefinedBy=getmyWant(gm,that.id,'target','goal',"RefinedBy")+ifbr+getmyWant(gm,that.id,'target','requirement',"RefinedBy");
                         that.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
                         that.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3314,10 +3314,10 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("participant").value=that.participant;
 						document.getElementById("preCondition").value=that.preCondition;
 						document.getElementById("aftCondition").value=that.aftCondition;
-                        document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                        var ifbr = (getmyWant(gm,that.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
+                        document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesTo");
+                        var ifbr = (getmyWant(gm,that.id,'target','requirement',"RefinedBy")=='')?'':"</br>";
 
-                        document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,that.id,'source','requirement',"RefinedBy");
+                        document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedBy")+ifbr+getmyWant(gm,that.id,'target','requirement',"RefinedBy");
                         document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
                         document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3333,8 +3333,8 @@ HoverIcons.prototype.repaint = function()
 						that.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 						that.businessRule=document.getElementById("businessRule").value;
 						that.Description=document.getElementById("Description").value;
-						that.RefinesTo=getmyWant(gm,that.id,'target','goal','');
-						that.Agents=getmyWant(gm,that.id,'source','hexagon','Agents');
+						that.RefinesTo=getmyWant(gm,that.id,'source','goal','RefinesToReq');
+						that.Agents=getmyWant(gm,that.id,'target','hexagon','Agents');
 						flagRequirement=0;
 						mrequirementdiv.style.visibility = 'hidden';
 
@@ -3353,8 +3353,8 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("addtionEventFlow").value=that.addtionEventFlow;
 						document.getElementById("businessRule").value=that.businessRule;
 						document.getElementById("Description").value=that.Description;
-                        document.getElementById("RefinesToReq").innerHTML=getmyWant(gm,that.id,'target','goal','');
-                        document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'source','hexagon','Agents');
+                        document.getElementById("RefinesToReq").innerHTML=getmyWant(gm,that.id,'source','goal','RefinesToReq');
+                        document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'target','hexagon','Agents');
 						mrequirementdiv.style.visibility = 'visible';
 					}
 				}
@@ -3385,7 +3385,7 @@ HoverIcons.prototype.repaint = function()
                         if (mrresourcediv.style.visibility == 'visible') {
                             that.resourId = document.getElementById("resourId").value;
                             that.resourType = document.getElementById("resourDesc").value;
-                            that.RelateTo = getmyWant(gm,that.id, "source",'resource',"RelateTo");
+                            that.RelateTo = getmyWant(gm,that.id, "target",'resource',"RelateTo");
                             flagResource = 0;
                             mrresourcediv.style.visibility = 'hidden';
 
@@ -3397,7 +3397,7 @@ HoverIcons.prototype.repaint = function()
                             flagResource = 1;
                             document.getElementById("resourId").innerHTML = that.resourId;
                             document.getElementById("resourDesc").value = that.resourType;
-                            document.getElementById("RelateTo").innerHTML = getmyWant(gm,that.id, "source",'resource',"RelateTo");
+                            document.getElementById("RelateTo").innerHTML = getmyWant(gm,that.id, "target",'resource',"RelateTo");
                             mrresourcediv.style.visibility = 'visible';
                         }
                 }
@@ -3440,8 +3440,9 @@ HoverIcons.prototype.repaint = function()
                         if ($('#Obstacle').length != 0) {
                             document.getElementById('detailtable3').removeChild(document.getElementById('Obstacle'));
                             document.getElementById('detailtable3').removeChild(document.getElementById('Targets'));
-                            that.Obstructs = getmyWant(gm, that.id, 'target', 'goal', 'IObstructs');
-                            that.Goal = getmyWant(gm, that.id, 'source', 'goal', 'Target');
+                            that.Obstructs = getmyWant(gm, that.id, 'source', 'goal', 'IObstructs');
+                            var ifbr = (getmyWant(gm,that.id,'target','requirement',"Target")=='')?'':"</br>";
+                            that.Goal = getmyWant(gm, that.id, 'target', 'goal', 'Target')+ifbr+getmyWant(gm,that.id,'target','requirement',"Target");
                         }
                         motherdiv.style.visibility = 'hidden';
                         document.getElementById("othId").value = '';
@@ -3459,12 +3460,14 @@ HoverIcons.prototype.repaint = function()
                                 //行 - solves
                                 document.getElementById('detailtable3').appendChild(addTarget());
 
-                                document.getElementById('IObstructs').innerHTML = getmyWant(gm, that.id, 'target', 'goal', 'IObstructs');
-                                document.getElementById('Target').innerHTML = getmyWant(gm, that.id, 'source', 'goal', 'Target');
+                                document.getElementById('IObstructs').innerHTML = getmyWant(gm, that.id, 'source', 'goal', 'IObstructs');
+                                var ifbr = (getmyWant(gm,that.id,'target','requirement',"Target")=='')?'':"</br>";
+                                document.getElementById('Target').innerHTML = getmyWant(gm, that.id, 'target', 'goal', 'Target')+ifbr+getmyWant(gm,that.id,'target','requirement',"Target");
 
                             }
-                            that.Obstructs = getmyWant(gm, that.id, 'target', 'goal', 'IObstructs');
-                            that.Goal = getmyWant(gm, that.id, 'source', 'goal', 'Target');
+                            that.Obstructs = getmyWant(gm, that.id, 'source', 'goal', 'IObstructs');
+                            var ifbr = (getmyWant(gm,that.id,'target','requirement',"Target")=='')?'':"</br>";
+                            that.Goal = getmyWant(gm, that.id, 'target', 'goal', 'Target')+ifbr+getmyWant(gm,that.id,'target','requirement',"Target");
                         }
                         else {
                             if ($('#Obstacle').length > 0) {
@@ -3482,16 +3485,16 @@ HoverIcons.prototype.repaint = function()
 				||document.getElementById("participant").value!=that.participant
 				||document.getElementById("preCondition").value!=that.preCondition
 				||document.getElementById("aftCondition").value!=that.aftCondition
-				||document.getElementById("RefinesTo").value!=getmyWant(gm,that.id,'target','goal',"RefinesTo")
-				||document.getElementById("RefinedBy").value!=getmyWant(gm,that.id,'source','goal',"RefinedBy"))){
+				||document.getElementById("RefinesTo").value!=getmyWant(gm,that.id,'source','goal',"RefinesTo")
+				||document.getElementById("RefinedBy").value!=getmyWant(gm,that.id,'target','goal',"RefinedBy"))){
 					this.currentState.cell.value=document.getElementById("usecaseId").innerHTML;
 					this.currentState.cell.usecaseDiscription=document.getElementById("usecaseDiscription").value;
 					this.currentState.cell.participant=document.getElementById("participant").value;
 					this.currentState.cell.preCondition=document.getElementById("preCondition").value;
 					this.currentState.cell.aftCondition=document.getElementById("aftCondition").value;
-                    this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                    var ifbr = (getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
-                    this.currentState.cell.RefinedBy=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy");
+                    this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'source','goal',"RefinesTo");
+                    var ifbr = (getmyWant(gm,this.currentState.cell.id,'target','requirement',"RefinedBy")=='')?'':"</br>";
+                    this.currentState.cell.RefinedBy=getmyWant(gm,that.id,'target','goal',"RefinedBy")+ifbr+getmyWant(gm,this.currentState.cell.id,'target','requirement',"RefinedBy");
                     this.currentState.cell.Resolves=getmyWant(gm,that.id, "source",'obstacle',"ResolveObst");
                     this.currentState.cell.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3503,9 +3506,9 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("participant").value=this.currentState.cell.participant;
 					document.getElementById("preCondition").value=this.currentState.cell.preCondition;
 					document.getElementById("aftCondition").value=this.currentState.cell.aftCondition;
-                    document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinesTo");
-                    var ifbr = (getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy")=='')?'':"</br>";
-                    document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinedBy")+ifbr+getmyWant(gm,this.currentState.cell.id,'source','requirement',"RefinedBy");
+                    document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesTo");
+                    var ifbr = (getmyWant(gm,this.currentState.cell.id,'target','requirement',"RefinedBy")=='')?'':"</br>";
+                    document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedBy")+ifbr+getmyWant(gm,this.currentState.cell.id,'target','requirement',"RefinedBy");
                     document.getElementById("Resolves").innerHTML=getmyWant(gm,that.id, "source",'obstacle',"ResolveObstacle");
                     document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
 
@@ -3522,8 +3525,8 @@ HoverIcons.prototype.repaint = function()
 					this.currentState.cell.addtionEventFlow=document.getElementById("addtionEventFlow").value;
 					this.currentState.cell.businessRule=document.getElementById("businessRule").value;
 					this.currentState.cell.Description=document.getElementById("Description").value;
-                    this.currentState.cell.Agents=getmyWant(gm,that.id,'source','hexagon','Agents');
-                    this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'target','goal','Agents');
+                    this.currentState.cell.Agents=getmyWant(gm,that.id,'target','hexagon','Agents');
+                    this.currentState.cell.RefinesTo=getmyWant(gm,that.id,'source','goal','RefinesToReq');
                 }
 				else{
 					document.getElementById("reqId").innerHTML=this.currentState.cell.value;
@@ -3531,25 +3534,25 @@ HoverIcons.prototype.repaint = function()
 					document.getElementById("addtionEventFlow").value=this.currentState.cell.addtionEventFlow;
 					document.getElementById("businessRule").value=this.currentState.cell.businessRule;
 					document.getElementById("Description").value=this.currentState.cell.Description;
-                    document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'source','hexagon','Agents');
-                    document.getElementById("RefinesToReq").innerHTML=getmyWant(gm,that.id,'target','goal','Agents');
+                    document.getElementById("Agents").innerHTML=getmyWant(gm,that.id,'target','hexagon','Agents');
+                    document.getElementById("RefinesToReq").innerHTML=getmyWant(gm,that.id,'source','goal','RefinesToReq');
 
                 }
 			}
 
 			if(mrresourcediv.style.visibility=="visible"){
                 if((document.getElementById("resourId").innerHTML==that.value)&&(document.getElementById("resourDesc").value!=that.basicEventFlow
-                    || document.getElementById("RelateTo").value!=getmyWant(gm,that.id,'source','resource',"RelateTo"))){
+                    || document.getElementById("RelateTo").value!=getmyWant(gm,that.id,'target','resource',"RelateTo"))){
                     this.currentState.cell.value=document.getElementById("resourId").innerHTML;
                     this.currentState.cell.gedetail=document.getElementById("resourDesc").value;
-                    this.currentState.cell.RelateTo=getmyWant(gm,that.id,'source','resource',"RelateTo");
+                    this.currentState.cell.RelateTo=getmyWant(gm,that.id,'target','resource',"RelateTo");
 
 
                 }
                 else{
                     document.getElementById("resourId").innerHTML=this.currentState.cell.value;
                     document.getElementById("resourDesc").value=this.currentState.cell.gedetail;
-                    document.getElementById("RelateTo").innerHTML=getmyWant(gm,that.id,'source','resource',"RelateTo");
+                    document.getElementById("RelateTo").innerHTML=getmyWant(gm,that.id,'target','resource',"RelateTo");
 
                 }
             }
@@ -3602,11 +3605,13 @@ HoverIcons.prototype.repaint = function()
                         document.getElementById('detailtable3').appendChild(addTarget());
 
                     }
-                    this.currentState.cell.Obstructs = getmyWant(gm,that.id,'target','goal','IObstructs');
-                    this.currentState.cell.Goal = getmyWant(gm,that.id,'source','goal','Target');
+                    this.currentState.cell.Obstructs = getmyWant(gm,that.id,'source','goal','IObstructs');
+                    var ifbr = (getmyWant(gm,that.id,'target','requirement',"Target")=='')?'':"</br>";
+                    this.currentState.cell.Goal = getmyWant(gm,that.id,'target','goal','Target')+ifbr+getmyWant(gm,that.id,'target','requirement',"Target");
 
-                    document.getElementById('IObstructs').innerHTML=getmyWant(gm,that.id,'target','goal','IObstructs');
-                    document.getElementById('Target').innerHTML=getmyWant(gm,that.id,'source','goal','Target');
+                    document.getElementById('IObstructs').innerHTML=getmyWant(gm,that.id,'source','goal','IObstructs');
+                    var ifbr = (getmyWant(gm,that.id,'target','requirement',"Target")=='')?'':"</br>";
+                    document.getElementById('Target').innerHTML=getmyWant(gm,that.id,'target','goal','Target')+ifbr+getmyWant(gm,that.id,'target','requirement',"Target");
 
                 }
 			}

@@ -62,7 +62,7 @@ function createResourceDiv() {
     //行 - rely by
     var tr3 = document.createElement("tr");
     var td3_1 = document.createElement("td");
-    td3_1.innerHTML = "RelateTo";
+    td3_1.innerHTML = "Calls";
     var td3_1_width = document.createAttribute("width");
     td3_1_width.value = "100px";
     td3_1.setAttributeNode(td3_1_width);

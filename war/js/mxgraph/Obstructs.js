@@ -21,7 +21,7 @@ function addTarget() {
     var tr3 = document.createElement("tr");
     tr3.setAttribute("id","Targets");
     var td3_1 = document.createElement("td");
-    td3_1.innerHTML = "Solve";
+    td3_1.innerHTML = "Resolved by";
     var td3_1_width = document.createAttribute("width");
     td3_1_width.value = "100px";
     td3_1.setAttributeNode(td3_1_width);
