@@ -3420,15 +3420,18 @@ HoverIcons.prototype.repaint = function()
                 else if(curr.style['shape'] == 'domain_property') {
                     if (mdomainpropertydiv.style.visibility == 'visible') {
                         that.domainPropertyRef = document.getElementById("domainPropertyRef").value;
+                        that.domainPropertyDes = document.getElementById("domainPropertyDes").value;
                         flagDomainProperty = 0;
                         mdomainpropertydiv.style.visibility = 'hidden';
 
                         document.getElementById("domainPropertyId").value = '';
+                        document.getElementById("domainPropertyDes").value = '';
                         document.getElementById("domainPropertyRef").value = '';
                     }
                     else {
                         flagDomainProperty = 1;
                         document.getElementById("domainPropertyId").innerHTML = that.value;
+                        document.getElementById("domainPropertyDes").value = that.domainPropertyDes;
                         document.getElementById("domainPropertyRef").value = that.domainPropertyRef;
                         mdomainpropertydiv.style.visibility = 'visible';
                     }
@@ -3570,12 +3573,15 @@ HoverIcons.prototype.repaint = function()
             }
 
             if(mdomainpropertydiv.style.visibility=="visible"){
-                if((document.getElementById("domainPropertyId").innerHTML==that.value)&&(document.getElementById("domainPropertyRef").value!=that.domainPropertyRef)){
+                if((document.getElementById("domainPropertyId").innerHTML==that.value)&&((document.getElementById("domainPropertyRef").value!=that.domainPropertyRef)
+					|| (document.getElementById("domainPropertyDes").value!=that.domainPropertyDes))){
                     this.currentState.cell.value=document.getElementById("domainPropertyId").innerHTML;
                     this.currentState.cell.domainPropertyRef=document.getElementById("domainPropertyRef").value;
+                    this.currentState.cell.domainPropertyDes=document.getElementById("domainPropertyDes").value;
                 }
                 else{
                     document.getElementById("domainPropertyId").innerHTML=this.currentState.cell.value;
+                    document.getElementById("domainPropertyDes").value=this.currentState.cell.domainPropertyDes;
                     document.getElementById("domainPropertyRef").value=this.currentState.cell.domainPropertyRef;
 
                 }
