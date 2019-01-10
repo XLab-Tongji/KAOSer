@@ -4760,12 +4760,12 @@ if (typeof mxVertexHandler != 'undefined')
                             this.graph.currentEdgeStyle[key] = '#9673A6';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
-						else if(START_GRAPH == "hexagon" && END_GRAPH == "requ"){
+						else if(START_GRAPH == "hexagon" && (END_GRAPH == "requ"||END_GRAPH == "goal") ){
 							this.graph.currentEdgeStyle[key] = '#D6B656';
 							state.style[key] = this.graph.currentEdgeStyle[key];
 						}
 						else if(START_GRAPH == "domain_property" && END_GRAPH == "requ"){
-							this.graph.currentEdgeStyle[key] = '#FFD966';
+							this.graph.currentEdgeStyle[key] = '#916740';
 							state.style[key] = this.graph.currentEdgeStyle[key];
 						}
                         else if(START_GRAPH == "resource"){
