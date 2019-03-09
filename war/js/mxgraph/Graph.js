@@ -2611,14 +2611,14 @@ HoverIcons.prototype.init = function()
     this.myResourceDiv = createResourceDiv();
     this.myAgentDiv = createAgentDiv();
     this.myDomainPropertyDiv = createDomainPropertyDiv();
-	this.myTextDiv = createTextDiv();
+	//this.myTextDiv = createTextDiv();
 
 	this.myGoalDiv.style.visibility='hidden';
 	this.myRequirementDiv.style.visibility='hidden';
     this.myResourceDiv.style.visibility='hidden';
     this.myAgentDiv.style.visibility='hidden';
     this.myDomainPropertyDiv.style.visibility='hidden';
-    this.myTextDiv.style.visibility='hidden';
+    //this.myTextDiv.style.visibility='hidden';
 	this.myOtherDiv.style.visibility='hidden';
 
 	this.elts = [this.arrowUp, this.arrowRight, this.arrowDown, this.arrowLeft];
@@ -3194,7 +3194,7 @@ HoverIcons.prototype.repaint = function()
 			var mrresourcediv = this.myResourceDiv;
 			var magentdiv=this.myAgentDiv;
 			var mdomainpropertydiv=this.myDomainPropertyDiv;
-			var mrtextdiv = this.myTextDiv;
+			//var mrtextdiv = this.myTextDiv;
 			var motherdiv=this.myOtherDiv;
 			var that=this.currentState.cell;
 			var curr=this.currentState;
@@ -3232,7 +3232,7 @@ HoverIcons.prototype.repaint = function()
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
 				mgoaldiv.style.visibility="hidden";
-				mrtextdiv.style.visibility='hidden';
+				//mrtextdiv.style.visibility='hidden';
 				}
 			else if(curr.style['shape']=='resource'){
 				mrequirementdiv.style.visibility='hidden';
@@ -3414,7 +3414,7 @@ HoverIcons.prototype.repaint = function()
                 }
                 else if(curr.style['shape'] == 'rectangle'){
                 	flagText = 0;
-                	mrtextdiv.style.visibility = 'hidden';
+                	//mrtextdiv.style.visibility = 'hidden';
 				}
                 else if(curr.style['shape'] == 'hexagon') {
                     if (magentdiv.style.visibility == 'visible') {
@@ -3931,7 +3931,7 @@ HoverIcons.prototype.setCurrentState = function(state)
     this.graph.container.appendChild(this.myResourceDiv);
     this.graph.container.appendChild(this.myAgentDiv);
     this.graph.container.appendChild(this.myDomainPropertyDiv);
-	this.graph.container.appendChild(this.myTextDiv);
+	//this.graph.container.appendChild(this.myTextDiv);
 	this.graph.container.appendChild(this.myOtherDiv);
 
 
