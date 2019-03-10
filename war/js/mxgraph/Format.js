@@ -232,7 +232,7 @@ Format.prototype.isRoundedState = function(state)
 {
 	var shape = mxUtils.getValue(state.style, mxConstants.STYLE_SHAPE, null);
 	
-	return (shape == 'label' || shape == 'rectangle' || shape == 'internalStorage' || shape == 'corner' ||
+	return (shape == 'label' || shape == 'rectangle' || shape == 'goal' ||shape == 'internalStorage' || shape == 'corner' ||
 			shape == 'parallelogram' || shape == 'swimlane' || shape == 'triangle' || shape == 'trapezoid' ||
 			shape == 'ext' || shape == 'step' || shape == 'tee' || shape == 'process' || shape == 'link' ||
 			shape == 'rhombus' || shape == 'offPageConnector' || shape == 'loopLimit' || shape == 'hexagon' ||
@@ -257,7 +257,7 @@ Format.prototype.isComicState = function(state)
 {
 	var shape = mxUtils.getValue(state.style, mxConstants.STYLE_SHAPE, null);
 	
-	return mxUtils.indexOf(['label', 'rectangle', 'internalStorage', 'corner', 'parallelogram', 'note', 'collate',
+	return mxUtils.indexOf(['label', 'rectangle','goal', 'internalStorage', 'corner', 'parallelogram', 'note', 'collate',
 	                        'swimlane', 'triangle', 'trapezoid', 'ext', 'step', 'tee', 'process', 'link', 'rhombus',
 	                        'offPageConnector', 'loopLimit', 'hexagon', 'manualInput', 'singleArrow', 'doubleArrow',
 	                        'flexArrow', 'filledEdge', 'card', 'umlLifeline', 'connector', 'folder', 'component', 'sortShape',

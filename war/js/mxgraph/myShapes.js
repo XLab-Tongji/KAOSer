@@ -13,7 +13,6 @@ GoalShape.prototype.redrawPath = function(c, x, y, w, h)
         this.isRounded, arcSize, true);
     c.end();
 };
-
 mxCellRenderer.prototype.defaultShapes['goal'] = GoalShape;
 
 function ExpectationShape()

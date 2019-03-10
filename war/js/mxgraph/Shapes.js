@@ -424,6 +424,7 @@
 
 	mxCellRenderer.prototype.defaultShapes['parallelogram'] = ParallelogramShape;
 
+
 	// Trapezoid shape
 	function TrapezoidShape()
 	{
@@ -3389,7 +3390,7 @@
 			'card': createCubeHandleFunction(0.5, CardShape.prototype.size, true),
 			'loopLimit': createCubeHandleFunction(0.5, LoopLimitShape.prototype.size, true),
 			'trapezoid': createTrapezoidHandleFunction(0.5),
-			'parallelogram': createTrapezoidHandleFunction(1)
+            'parallelogram': createTrapezoidHandleFunction(1)
 		};
 		
 		// Exposes custom handles
