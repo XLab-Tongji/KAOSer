@@ -24,7 +24,7 @@ function createRequirementDiv() {
         //行 - 用例名
         var tr1 = document.createElement("tr");
         var td1_1 = document.createElement("td");
-        td1_1.innerHTML = "value";
+        td1_1.innerHTML = "name";
         var td1_1_width = document.createAttribute("width");
         td1_1_width.value = "100px";
         td1_1.setAttributeNode(td1_1_width);

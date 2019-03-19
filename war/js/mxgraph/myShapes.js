@@ -15,6 +15,23 @@ GoalShape.prototype.redrawPath = function(c, x, y, w, h)
 };
 mxCellRenderer.prototype.defaultShapes['goal'] = GoalShape;
 
+function ResilienceShape()
+{
+    mxActor.call(this);
+};
+mxUtils.extend(ResilienceShape, mxActor);
+ResilienceShape.prototype.size = 0.2;
+ResilienceShape.prototype.redrawPath = function(c, x, y, w, h)
+{
+    var dx = w * Math.max(0, Math.min(1, parseFloat(mxUtils.getValue(this.style, 'size', this.size))));
+    var arcSize = mxUtils.getValue(this.style, mxConstants.STYLE_ARCSIZE, mxConstants.LINE_ARCSIZE) / 2;
+    this.addPoints(c, [new mxPoint(0, h), new mxPoint(dx, 0), new mxPoint(w, 0), new mxPoint(w - dx, h)],
+        this.isRounded, arcSize, true);
+    c.end();
+};
+mxCellRenderer.prototype.defaultShapes['resilience'] = ResilienceShape;
+
+
 function ExpectationShape()
 {
     mxActor.call(this);
@@ -64,6 +81,24 @@ ObstacleShape.prototype.redrawPath = function(c, x, y, w, h)
 };
 
 mxCellRenderer.prototype.defaultShapes['obstacle'] = ObstacleShape;
+
+function DisruptionShape(){
+    mxActor.call(this);
+};
+mxUtils.extend(DisruptionShape, mxActor);
+DisruptionShape.prototype.size = 0.2;
+DisruptionShape.prototype.redrawPath = function(c, x, y, w, h)
+{
+    var dx = w * Math.max(0, Math.min(1, parseFloat(mxUtils.getValue(this.style, 'size', this.size))));
+    var arcSize = mxUtils.getValue(this.style, mxConstants.STYLE_ARCSIZE, mxConstants.LINE_ARCSIZE) / 2;
+    this.addPoints(c, [new mxPoint(dx, h), new mxPoint(0, 0), new mxPoint(w-dx, 0), new mxPoint(w , h)],
+        this.isRounded, arcSize, true);
+    c.end();
+};
+
+mxCellRenderer.prototype.defaultShapes['disruption'] = DisruptionShape;
+
+
 
 function DomainPropertyShape()
 {
@@ -160,6 +195,8 @@ EventShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 RequirementShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 ExpectationShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 ResourceShape.prototype.constraints = mxRectangleShape.prototype.constraints;
+ResilienceShape.prototype.constraints = mxRectangleShape.prototype.constraints;
+DisruptionShape.prototype.constraints = mxRectangleShape.prototype.constraints;
 
 
 

@@ -2589,6 +2589,10 @@ HoverIcons.prototype.init = function()
 
 	this.myTableGoal=this.createArrow(this.Information,'Information');
 	this.myTableGoal.style.cursor='pointer';
+	this.myTableResilience=this.createArrow(this.Information,'Information');
+	this.myTableResilience.style.cursor='pointer';
+	this.myTableDisruption=this.createArrow(this.Information,'Information');
+	this.myTableDisruption.style.cursor='pointer';
 	this.myTableRequirement=this.createArrow(this.Information,'Information');
 	this.myTableRequirement.style.cursor='pointer';
     this.myTableResource=this.createArrow(this.Information,'Information');
@@ -2606,6 +2610,8 @@ HoverIcons.prototype.init = function()
 
 	//生成表格
 	this.myGoalDiv=createGoalDiv();
+	this.myResilienceDiv=createResilienceDiv();
+	this.myDisruptionDiv=createDisruptionDiv();
 	this.myRequirementDiv=createRequirementDiv();
 	this.myOtherDiv=createOtherDiv();
     this.myResourceDiv = createResourceDiv();
@@ -2614,6 +2620,8 @@ HoverIcons.prototype.init = function()
 	//this.myTextDiv = createTextDiv();
 
 	this.myGoalDiv.style.visibility='hidden';
+	this.myResilienceDiv.style.visibility='hidden';
+	this.myDisruptionDiv.style.visibility='hidden';
 	this.myRequirementDiv.style.visibility='hidden';
     this.myResourceDiv.style.visibility='hidden';
     this.myAgentDiv.style.visibility='hidden';
@@ -3078,7 +3086,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagText=0;
+var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagText=0;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3087,6 +3095,8 @@ HoverIcons.prototype.repaint = function()
 	if (this.currentState != null)
 	{
 		this.myTableGoal.style.visibility='visible';
+		this.myTableResilience.style.visibility='visible';
+		this.myTableDisruption.style.visibility='visible';
 		this.myTableRequirement.style.visibility='visible';
         this.myTableAgent.style.visibility='visible';
         this.myTableDomainProperty.style.visibility='visible';
@@ -3151,6 +3161,14 @@ HoverIcons.prototype.repaint = function()
 			this.myTableGoal.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableGoal,this.inactiveOpacity);
 
+			this.myTableResilience.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTableResilience.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTableResilience,this.inactiveOpacity);
+
+			this.myTableDisruption.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTableDisruption.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTableDisruption,this.inactiveOpacity);
+
 			this.myTableRequirement.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
 			this.myTableRequirement.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableRequirement,this.inactiveOpacity);
@@ -3174,6 +3192,12 @@ HoverIcons.prototype.repaint = function()
             this.myGoalDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myGoalDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
+			this.myResilienceDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+			this.myResilienceDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
+			this.myDisruptionDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+			this.myDisruptionDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
 			this.myRequirementDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myRequirementDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
@@ -3190,6 +3214,8 @@ HoverIcons.prototype.repaint = function()
 			this.myOtherDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
 			var mgoaldiv=this.myGoalDiv;
+			var mresiliencediv=this.myResilienceDiv;
+			var mdisruptiondiv=this.myDisruptionDiv;
 			var mrequirementdiv=this.myRequirementDiv;
 			var mrresourcediv = this.myResourceDiv;
 			var magentdiv=this.myAgentDiv;
@@ -3200,6 +3226,8 @@ HoverIcons.prototype.repaint = function()
 			var curr=this.currentState;
 
 			if(curr.style['shape']=='goal'){
+				mdisruptiondiv.style.visibility='hidden';
+				mresiliencediv.style.visibility='hidden';
 				mrequirementdiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
@@ -3213,8 +3241,40 @@ HoverIcons.prototype.repaint = function()
 				}
 			}
 
-			else if(curr.style['shape']=='requirement'){
+			else if(curr.style['shape']=='resilience'){
+				mdisruptiondiv.style.visibility='hidden';
 				mgoaldiv.style.visibility='hidden';
+				mrequirementdiv.style.visibility='hidden';
+				motherdiv.style.visibility="hidden";
+				magentdiv.style.visibility="hidden";
+				mdomainpropertydiv.style.visibility="hidden";
+				mrresourcediv.style.visibility="hidden";
+				if(flagResilience==1){
+					mresiliencediv.style.visibility='visible';
+				}
+				else if(flagResilience==0){
+					mresiliencediv.style.visibility='hidden';
+				}
+			}
+			else if(curr.style['shape']=='disruption'){
+				mrresourcediv.style.visibility='hidden';
+				mrequirementdiv.style.visibility='hidden';
+				motherdiv.style.visibility="hidden";
+				magentdiv.style.visibility="hidden";
+				mdomainpropertydiv.style.visibility="hidden";
+				mgoaldiv.style.visibility="hidden";
+				mresiliencediv.style.visibility='hidden';
+				if(flagDisruption==1){
+					mdisruptiondiv.style.visibility='visible';
+				}
+				else if(flagDisruption==0){
+					mdisruptiondiv.style.visibility='hidden';
+				}
+			}
+			else if(curr.style['shape']=='requirement'){
+				mdisruptiondiv.style.visibility='hidden';
+				mgoaldiv.style.visibility='hidden';
+				mresiliencediv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
@@ -3227,6 +3287,8 @@ HoverIcons.prototype.repaint = function()
 				}
 			}
 			else if(curr.style['shape']=='rectangle'){
+				mresiliencediv.style.visibility='hidden';
+				mdisruptiondiv.style.visibility='hidden';
 				mrequirementdiv.style.visibility='hidden';
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
@@ -3240,6 +3302,8 @@ HoverIcons.prototype.repaint = function()
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
+				mresiliencediv.style.visibility='hidden';
+				mdisruptiondiv.style.visibility='hidden';
                 if(flagResource==1){
                     mrresourcediv.style.visibility='visible';
                 }
@@ -3253,6 +3317,8 @@ HoverIcons.prototype.repaint = function()
                 motherdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
+				mresiliencediv.style.visibility='hidden';
+				mdisruptiondiv.style.visibility='hidden';
                 if(flagAgent==1){
                     magentdiv.style.visibility='visible';
                 }
@@ -3266,6 +3332,8 @@ HoverIcons.prototype.repaint = function()
                 motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
+				mresiliencediv.style.visibility='hidden';
+				mdisruptiondiv.style.visibility='hidden';
                 if(flagDomainProperty==1){
                     mdomainpropertydiv.style.visibility='visible';
                 }
@@ -3276,6 +3344,8 @@ HoverIcons.prototype.repaint = function()
 			else{
 				mrequirementdiv.style.visibility='hidden';
 				mgoaldiv.style.visibility='hidden';
+				mresiliencediv.style.visibility='hidden';
+				mdisruptiondiv.style.visibility='hidden';
                 mrresourcediv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
@@ -3432,6 +3502,87 @@ HoverIcons.prototype.repaint = function()
                         magentdiv.style.visibility = 'visible';
                     }
                 }
+
+                else if(curr.style['shape'] == 'resilience'){
+					if (mresiliencediv.style.visibility == 'visible') {
+						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
+						that.BenchmarkedBy=getmyWant(gm,that.id, 'source','domain_property','BenchmarkedBy');
+						that.DisruptionTol=document.getElementById("DisruptionTol").value;
+						that.RecoveryTime=document.getElementById("RecoveryTime").value;
+						that.QualityLoss=document.getElementById("QualityLoss").value;
+						that.RefinesTo=getmyWant(gm,that.id,'source','goal',"RefinesTo");
+						that.RefinedBy=getmyWant(gm,that.id,'target','goal',"RefinedBy");
+						that.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+
+
+						flagResilience=0;
+						mresiliencediv.style.visibility = 'hidden';
+
+						document.getElementById("resiId").value='';
+						document.getElementById("TargetRes").innerHTML='';
+						document.getElementById("BenchmarkedBy").innerHTML='';
+						document.getElementById("DisruptionTol").value='';
+						document.getElementById("RecoveryTime").value='';
+						document.getElementById("QualityLoss").value='';
+						document.getElementById("RefinesTo").innerHTML='';
+						document.getElementById("RefinedBy").innerHTML='';
+						document.getElementById("Obstructs").innerHTML='';
+
+					}
+					else {
+						flagResilience=1;
+						document.getElementById("resiId").innerHTML=that.value;
+						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
+						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'source','domain_property','BenchmarkedBy');
+						document.getElementById("DisruptionTol").value=that.DisruptionTol;
+						document.getElementById("RecoveryTime").value=that.RecoveryTime;
+						document.getElementById("QualityLoss").value=that.QualityLoss;
+						document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesTo");
+						document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedBy");
+						document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+
+						mresiliencediv.style.visibility = 'visible';
+					}
+				}
+
+				else if(curr.style['shape'] == 'disruption'){
+					if (mdisruptiondiv.style.visibility == 'visible') {
+						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
+						that.description=document.getElementById("description").value;
+						that.DisruptionTol=document.getElementById("DisruptionTol").value;
+						that.RecoveryTime=document.getElementById("RecoveryTime").value;
+						that.QualityLoss=document.getElementById("QualityLoss").value;
+						that.Obstructs=getmyWant(gm,that.id,'source','goal','Obstructs');
+						that.ResolvedBy=getmyWant(gm,that.id,'target','goal','ResolvedBy');
+
+
+						flagDisruption=0;
+						mdisruptiondiv.style.visibility = 'hidden';
+
+						document.getElementById("disruptionId").value='';
+						document.getElementById("TargetRes").innerHTML='';
+						document.getElementById("description").value='';
+						document.getElementById("DisruptionTol").value='';
+						document.getElementById("RecoveryTime").value='';
+						document.getElementById("QualityLoss").value='';
+						document.getElementById("Obstructs").innerHTML='';
+						document.getElementById("ResolvedBy").innerHTML='';
+					}
+					else {
+						flagDisruption=1;
+						document.getElementById("disruptionId").innerHTML=that.value;
+						document.getElementById("description").value=that.description;
+						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
+						document.getElementById("DisruptionTol").value=that.DisruptionTol;
+						document.getElementById("RecoveryTime").value=that.RecoveryTime;
+						document.getElementById("QualityLoss").value=that.QualityLoss;
+						document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id,'source','goal','Obstructs');
+						document.getElementById("ResolvedBy").innerHTML=getmyWant(gm,that.id,'target','goal',"ResolvedBy");
+
+						mdisruptiondiv.style.visibility = 'visible';
+					}
+				}
+
                 else if(curr.style['shape'] == 'domain_property') {
                     if (mdomainpropertydiv.style.visibility == 'visible') {
                         that.domainPropertyRef = document.getElementById("domainPropertyRef").value;
@@ -3722,6 +3873,8 @@ HoverIcons.prototype.repaint = function()
 				this.myTableRequirement.style.visibility='visible';
 				this.myTableOthers.style.visibility='visible';
                 this.myGoalDiv.style.visibility='visible';
+                this.myResilienceDiv.style.visibility='visible';
+				this.myDisruptionDiv.style.visibility='visible';
 				this.myRequirementDiv.style.visibility='visible';
 				this.myResourceDiv.style.visibility='visible';
                 this.myAgentDiv.style.visibility='visible';
@@ -3927,6 +4080,8 @@ HoverIcons.prototype.setCurrentState = function(state)
 	this.graph.container.appendChild(this.myTableRequirement);
 	this.graph.container.appendChild(this.myTableOthers);
 	this.graph.container.appendChild(this.myGoalDiv);
+	this.graph.container.appendChild(this.myResilienceDiv);
+	this.graph.container.appendChild(this.myDisruptionDiv);
 	this.graph.container.appendChild(this.myRequirementDiv);
     this.graph.container.appendChild(this.myResourceDiv);
     this.graph.container.appendChild(this.myAgentDiv);
