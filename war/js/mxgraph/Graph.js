@@ -3510,9 +3510,9 @@ HoverIcons.prototype.repaint = function()
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
-						that.RefinesTo=getmyWant(gm,that.id,'source','goal',"RefinesTo");
-						that.RefinedBy=getmyWant(gm,that.id,'target','goal',"RefinedBy");
-						that.Obstructs=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+						that.RefinesToResi=getmyWant(gm,that.id,'source','goal',"RefinesToResi");
+						that.RefinedByResi=getmyWant(gm,that.id,'target','goal',"RefinedByResi");
+						that.ObstructsResi=getmyWant(gm,that.id, "target",'obstacle',"ObstructsResi");
 
 
 						flagResilience=0;
@@ -3524,9 +3524,9 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("DisruptionTol").value='';
 						document.getElementById("RecoveryTime").value='';
 						document.getElementById("QualityLoss").value='';
-						document.getElementById("RefinesTo").innerHTML='';
-						document.getElementById("RefinedBy").innerHTML='';
-						document.getElementById("Obstructs").innerHTML='';
+						document.getElementById("RefinesToResi").innerHTML='';
+						document.getElementById("RefinedByResi").innerHTML='';
+						document.getElementById("ObstructsResi").innerHTML='';
 
 					}
 					else {
@@ -3537,9 +3537,9 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
-						document.getElementById("RefinesTo").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesTo");
-						document.getElementById("RefinedBy").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedBy");
-						document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"Obstructs");
+						document.getElementById("RefinesToResi").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesToResi");
+						document.getElementById("RefinedByResi").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedByResi");
+						document.getElementById("ObstructsResi").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"ObstructsResi");
 
 						mresiliencediv.style.visibility = 'visible';
 					}
@@ -3547,37 +3547,37 @@ HoverIcons.prototype.repaint = function()
 
 				else if(curr.style['shape'] == 'disruption'){
 					if (mdisruptiondiv.style.visibility == 'visible') {
-						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
+						that.TargetResDis=getmyWant(gm,that.id,'source','resource','TargetResDis');
 						that.description=document.getElementById("description").value;
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
-						that.Obstructs=getmyWant(gm,that.id,'source','goal','Obstructs');
-						that.ResolvedBy=getmyWant(gm,that.id,'target','goal','ResolvedBy');
+						that.ObstructsDis=getmyWant(gm,that.id,'source','goal','ObstructsDis');
+						that.ResolvedByDis=getmyWant(gm,that.id,'target','goal','ResolvedByDis');
 
 
 						flagDisruption=0;
 						mdisruptiondiv.style.visibility = 'hidden';
 
 						document.getElementById("disruptionId").value='';
-						document.getElementById("TargetRes").innerHTML='';
+						document.getElementById("TargetResDis").innerHTML='';
 						document.getElementById("description").value='';
 						document.getElementById("DisruptionTol").value='';
 						document.getElementById("RecoveryTime").value='';
 						document.getElementById("QualityLoss").value='';
-						document.getElementById("Obstructs").innerHTML='';
-						document.getElementById("ResolvedBy").innerHTML='';
+						document.getElementById("ObstructsDis").innerHTML='';
+						document.getElementById("ResolvedByDis").innerHTML='';
 					}
 					else {
 						flagDisruption=1;
 						document.getElementById("disruptionId").innerHTML=that.value;
 						document.getElementById("description").value=that.description;
-						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
+						document.getElementById("TargetResDis").innerHTML=getmyWant(gm,that.id,'source','resource','TargetResDis');
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
-						document.getElementById("Obstructs").innerHTML=getmyWant(gm,that.id,'source','goal','Obstructs');
-						document.getElementById("ResolvedBy").innerHTML=getmyWant(gm,that.id,'target','goal',"ResolvedBy");
+						document.getElementById("ObstructsDis").innerHTML=getmyWant(gm,that.id,'source','goal','ObstructsDis');
+						document.getElementById("ResolvedByDis").innerHTML=getmyWant(gm,that.id,'target','goal',"ResolvedByDis");
 
 						mdisruptiondiv.style.visibility = 'visible';
 					}

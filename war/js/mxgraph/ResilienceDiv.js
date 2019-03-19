@@ -140,17 +140,33 @@ function createResilienceDiv() {
 
 
 
-    //行 - refined to
+    // var tr7 = document.createElement("tr");
+    // var td7_1 = document.createElement("td");
+    // td7_1.innerHTML = "Refined To";
+    // var td7_1_width = document.createAttribute("width");
+    // td7_1_width.value = "100px";
+    // td7_1.setAttributeNode(td7_1_width);
+    // var td7_2 = document.createElement("td");
+    // var input7 = document.createElement("h4");
+    // var input7_id = document.createAttribute("id");
+    // input7_id.value = "RefinedToResi";
+    // input7.setAttributeNode(input7_id);
+    // td7_2.appendChild(input7);
+    // tr7.appendChild(td7_1);
+    // tr7.appendChild(td7_2);
+    // table.appendChild(tr7);
+    //
+    //行 - refines to
     var tr7 = document.createElement("tr");
     var td7_1 = document.createElement("td");
-    td7_1.innerHTML = "Refined To";
+    td7_1.innerHTML = "Refines To";
     var td7_1_width = document.createAttribute("width");
     td7_1_width.value = "100px";
     td7_1.setAttributeNode(td7_1_width);
     var td7_2 = document.createElement("td");
     var input7 = document.createElement("h4");
     var input7_id = document.createAttribute("id");
-    input7_id.value = "RefinedTo";
+    input7_id.value = "RefinesToResi";
     input7.setAttributeNode(input7_id);
     td7_2.appendChild(input7);
     tr7.appendChild(td7_1);
@@ -167,7 +183,7 @@ function createResilienceDiv() {
     var td8_2 = document.createElement("td");
     var input8 = document.createElement("h4");
     var input8_id = document.createAttribute("id");
-    input8_id.value = "RefinedBy";
+    input8_id.value = "RefinedByResi";
     input8.setAttributeNode(input8_id);
     td8_2.appendChild(input8);
     tr8.appendChild(td8_1);
@@ -183,7 +199,7 @@ function createResilienceDiv() {
     var td9_2 = document.createElement("td");
     var input9 = document.createElement("h4");
     var input9_id = document.createAttribute("id");
-    input9_id.value = "Obstructs";
+    input9_id.value = "ObstructsResi";
     input9.setAttributeNode(input9_id);
     td9_2.appendChild(input9);
     tr9.appendChild(td9_1);

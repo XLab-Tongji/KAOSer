@@ -44,7 +44,7 @@ function createDisruptionDiv() {
     var td2_2 = document.createElement("td");
     var input2 = document.createElement("h4");
     var input2_id = document.createAttribute("id");
-    input2_id.value = "TargetRes";
+    input2_id.value = "TargetResDis";
     input2.setAttributeNode(input2_id);
     td2_2.appendChild(input2);
     tr2.appendChild(td2_1);
@@ -154,7 +154,7 @@ function createDisruptionDiv() {
     var td7_2 = document.createElement("td");
     var input7 = document.createElement("h4");
     var input7_id = document.createAttribute("id");
-    input7_id.value = "Obstructs";
+    input7_id.value = "ObstructsDis";
     input7.setAttributeNode(input7_id);
     td7_2.appendChild(input7);
     tr7.appendChild(td7_1);
@@ -171,7 +171,7 @@ function createDisruptionDiv() {
     var td8_2 = document.createElement("td");
     var input8 = document.createElement("h4");
     var input8_id = document.createAttribute("id");
-    input8_id.value = "ResolvedBy";
+    input8_id.value = "ResolvedByDis";
     input8.setAttributeNode(input8_id);
     td8_2.appendChild(input8);
     tr8.appendChild(td8_1);
