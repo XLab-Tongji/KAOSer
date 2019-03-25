@@ -22,7 +22,7 @@ function createResourceDiv() {
     //行 - 资源名
     var tr1 = document.createElement("tr");
     var td1_1 = document.createElement("td");
-    td1_1.innerHTML = "资源名";
+    td1_1.innerHTML = "Resource Name";
     var td1_1_width = document.createAttribute("width");
     td1_1_width.value = "100px";
     td1_1.setAttributeNode(td1_1_width);
@@ -39,7 +39,7 @@ function createResourceDiv() {
     //行 - 资源类型
     var tr2 = document.createElement("tr");
     var td2_1 = document.createElement("td");
-    td2_1.innerHTML = "资源类型";
+    td2_1.innerHTML = "Resource Type";
     var td2_2 = document.createElement("td");
     var input2 = document.createElement("input");
     var input2_type = document.createAttribute("type");

@@ -24,7 +24,7 @@ function createRequirementDiv() {
         //行 - 用例名
         var tr1 = document.createElement("tr");
         var td1_1 = document.createElement("td");
-        td1_1.innerHTML = "name";
+        td1_1.innerHTML = "Name";
         var td1_1_width = document.createAttribute("width");
         td1_1_width.value = "100px";
         td1_1.setAttributeNode(td1_1_width);
@@ -41,7 +41,7 @@ function createRequirementDiv() {
         //行 - 基本事件流
         var tr6 = document.createElement("tr");
         var td6 = document.createElement("td");
-        td6.innerHTML = "基本事件流";
+        td6.innerHTML = "Basic Event Flow";
         var td6_colspan = document.createAttribute("colspan");
         td6_colspan.value = "2";
         td6.setAttributeNode(td6_colspan);
@@ -64,7 +64,7 @@ function createRequirementDiv() {
         //行 - 附加事件流
         var tr7 = document.createElement("tr");
         var td7 = document.createElement("td");
-        td7.innerHTML = "附加事件流";
+        td7.innerHTML = "Addition Event Flow";
         var td7_colspan = document.createAttribute("colspan");
         td7_colspan.value = "2";
         td7.setAttributeNode(td7_colspan);
@@ -87,7 +87,7 @@ function createRequirementDiv() {
         //行 - 补充说明-业务规则
         var tr8 = document.createElement("tr");
         var td8 = document.createElement("td");
-        td8.innerHTML = "补充说明-业务规则";
+        td8.innerHTML = "Business Rule";
         var td8_colspan = document.createAttribute("colspan");
         td8_colspan.value = "2";
         td8.setAttributeNode(td8_colspan);
@@ -110,7 +110,7 @@ function createRequirementDiv() {
         //行 - 补充说明-非功能性需求
         var tr9 = document.createElement("tr");
         var td9 = document.createElement("td");
-        td9.innerHTML = "补充说明";
+        td9.innerHTML = "Description";
         var td9_colspan = document.createAttribute("colspan");
         td9_colspan.value = "2";
         td9.setAttributeNode(td9_colspan);
@@ -138,7 +138,7 @@ function createRequirementDiv() {
         //行 - RefinesToReq
         var tr11 = document.createElement("tr");
         var td11_1 = document.createElement("td");
-        td11_1.innerHTML = "RefinesTo";
+        td11_1.innerHTML = "Refines To";
         var td11_1_width = document.createAttribute("width");
         td11_1_width.value = "100px";
         td11_1.setAttributeNode(td11_1_width);
