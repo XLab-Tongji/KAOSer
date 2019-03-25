@@ -3510,9 +3510,14 @@ HoverIcons.prototype.repaint = function()
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
-						that.RefinesToResi=getmyWant(gm,that.id,'source','goal',"RefinesToResi");
-						that.RefinedByResi=getmyWant(gm,that.id,'target','goal',"RefinedByResi");
-						that.ObstructsResi=getmyWant(gm,that.id, "target",'obstacle',"ObstructsResi");
+						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"RefinesToResi")=='')?'':"</br>";
+						that.RefinesToResi=getmyWant(gm,that.id,'source','goal',"RefinesToResi")+ifbr1+getmyWant(gm,that.id,'source','resilience',"RefinesToResi");
+						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"RefinedByResi")=='')?'':"</br>";
+						var ifbr3 = (getmyWant(gm,that.id,'target','requirement',"RefinedByResi")=='')?'':"</br>";
+						that.RefinedByResi=getmyWant(gm,that.id,'target','goal',"RefinedByResi")+ifbr2+getmyWant(gm,that.id,'target','resilience',"RefinedByResi");
+						that.RefinedByResi = RefinedByResi + ifbr3 + getmyWant(gm,that.id,'target','requirement',"RefinedByResi");
+						var ifbr4 = (getmyWant(gm,that.id,'target','disruption',"ObstructsResi")=='')?'':"</br>";
+						that.ObstructsResi=getmyWant(gm,that.id, 'target','obstacle',"ObstructsResi")+ifbr4+getmyWant(gm,that.id,'target','disruption',"ObstructsResi");
 
 
 						flagResilience=0;
@@ -3537,9 +3542,14 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
-						document.getElementById("RefinesToResi").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesToResi");
-						document.getElementById("RefinedByResi").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedByResi");
-						document.getElementById("ObstructsResi").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"ObstructsResi");
+						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"RefinesToResi")=='')?'':"</br>";
+						document.getElementById("RefinesToResi").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesToResi")+ifbr1+getmyWant(gm,that.id,'source','resilience',"RefinesToResi");
+						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"RefinedByResi")=='')?'':"</br>";
+						var ifbr3 = (getmyWant(gm,that.id,'target','requirement',"RefinedByResi")=='')?'':"</br>";
+						document.getElementById("RefinedByResi").innerHTML=getmyWant(gm,that.id,'target','goal',"RefinedByResi")+ifbr2+getmyWant(gm,that.id,'target','resilience',"RefinedByResi");
+						document.getElementById("RefinedByResi").innerHTML=document.getElementById("RefinedByResi").innerHTML+ifbr3+getmyWant(gm,that.id,'target','requirement',"RefinedByResi");
+						var ifbr4 = (getmyWant(gm,that.id,'target','disruption',"ObstructsResi")=='')?'':"</br>";
+						document.getElementById("ObstructsResi").innerHTML=getmyWant(gm,that.id, "target",'obstacle',"ObstructsResi")+ifbr4+getmyWant(gm,that.id,'target','disruption',"ObstructsResi");
 
 						mresiliencediv.style.visibility = 'visible';
 					}
@@ -3552,8 +3562,12 @@ HoverIcons.prototype.repaint = function()
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
-						that.ObstructsDis=getmyWant(gm,that.id,'source','goal','ObstructsDis');
-						that.ResolvedByDis=getmyWant(gm,that.id,'target','goal','ResolvedByDis');
+						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"ObstructsDis")=='')?'':"</br>";
+						that.ObstructsDis=getmyWant(gm,that.id,'source','goal','ObstructsDis')+ifbr1+getmyWant(gm,that.id,'source','resilience',"ObstructsDis");
+						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"ResolvedByDis")=='')?'':"</br>";
+						var ifbr3 = (getmyWant(gm,that.id,'target','requirement',"ResolvedByDis")=='')?'':"</br>";
+						that.ResolvedByDis=getmyWant(gm,that.id,'target','goal','ResolvedByDis')+ifbr2+getmyWant(gm,that.id,'target','resilience',"ResolvedByDis");
+						that.ResolvedByDis=ResolvedByDis+ifbr3+getmyWant(gm,that.id,'target','requirement',"ResolvedByDis");
 
 
 						flagDisruption=0;
@@ -3576,8 +3590,12 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
-						document.getElementById("ObstructsDis").innerHTML=getmyWant(gm,that.id,'source','goal','ObstructsDis');
-						document.getElementById("ResolvedByDis").innerHTML=getmyWant(gm,that.id,'target','goal',"ResolvedByDis");
+						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"ObstructsDis")=='')?'':"</br>";
+						document.getElementById("ObstructsDis").innerHTML=getmyWant(gm,that.id,'source','goal','ObstructsDis')+ifbr1+getmyWant(gm,that.id,'source','resilience',"ObstructsDis");
+						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"ResolvedByDis")=='')?'':"</br>";
+						var ifbr3 = (getmyWant(gm,that.id,'target','requirement',"ResolvedByDis")=='')?'':"</br>";
+						document.getElementById("ResolvedByDis").innerHTML=getmyWant(gm,that.id,'target','goal',"ResolvedByDis")+ifbr2+getmyWant(gm,that.id,'target','resilience',"ResolvedByDis");
+						document.getElementById("ResolvedByDis").innerHTML=document.getElementById("ResolvedByDis").innerHTML+ifbr3+getmyWant(gm,that.id,'target','requirement',"ResolvedByDis");
 
 						mdisruptiondiv.style.visibility = 'visible';
 					}

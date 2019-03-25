@@ -23,7 +23,7 @@ function createGoalDiv() {
         //行 - 用例名
         var tr1 = document.createElement("tr");
         var td1_1 = document.createElement("td");
-        td1_1.innerHTML = "用例名";
+        td1_1.innerHTML = "Name";
         var td1_1_width = document.createAttribute("width");
         td1_1_width.value = "100px";
         td1_1.setAttributeNode(td1_1_width);
@@ -40,7 +40,7 @@ function createGoalDiv() {
         //行 - 简要描述
         var tr2 = document.createElement("tr");
         var td2_1 = document.createElement("td");
-        td2_1.innerHTML = "简要描述";
+        td2_1.innerHTML = "Description";
         var td2_2 = document.createElement("td");
         var input2 = document.createElement("input");
         var input2_type = document.createAttribute("type");
@@ -63,7 +63,7 @@ function createGoalDiv() {
         //行 - 参与者
         var tr3 = document.createElement("tr");
         var td3_1 = document.createElement("td");
-        td3_1.innerHTML = "参与者";
+        td3_1.innerHTML = "Participant";
         var td3_2 = document.createElement("td");
         var input3 = document.createElement("input");
         var input3_type = document.createAttribute("type");
@@ -86,7 +86,7 @@ function createGoalDiv() {
         //行 - 前置条件
         var tr4 = document.createElement("tr");
         var td4_1 = document.createElement("td");
-        td4_1.innerHTML = "前置条件";
+        td4_1.innerHTML = "PreCondition";
         var td4_2 = document.createElement("td");
         var input4 = document.createElement("input");
         var input4_type = document.createAttribute("type");
@@ -109,7 +109,7 @@ function createGoalDiv() {
         //行 - 后置条件
         var tr5 = document.createElement("tr");
         var td5_1 = document.createElement("td");
-        td5_1.innerHTML = "后置条件";
+        td5_1.innerHTML = "AftCondition";
         var td5_2 = document.createElement("td");
         var input5 = document.createElement("input");
         var input5_type = document.createAttribute("type");
@@ -132,7 +132,7 @@ function createGoalDiv() {
         //行 - refines to
         var tr6 = document.createElement("tr");
         var td6_1 = document.createElement("td");
-        td6_1.innerHTML = "Refines to";
+        td6_1.innerHTML = "Refines To";
         var td6_1_width = document.createAttribute("width");
         td6_1_width.value = "100px";
         td6_1.setAttributeNode(td6_1_width);
@@ -150,7 +150,7 @@ function createGoalDiv() {
         //行 - refined by
         var tr7 = document.createElement("tr");
         var td7_1 = document.createElement("td");
-        td7_1.innerHTML = "Refined by";
+        td7_1.innerHTML = "Refined By";
         var td7_1_width = document.createAttribute("width");
         td7_1_width.value = "100px";
         td7_1.setAttributeNode(td7_1_width);
@@ -184,7 +184,7 @@ function createGoalDiv() {
         //行 - obstructs
         var tr9 = document.createElement("tr");
         var td9_1 = document.createElement("td");
-        td9_1.innerHTML = "Obstructed by";
+        td9_1.innerHTML = "Obstructed By";
         var td9_1_width = document.createAttribute("width");
         td9_1_width.value = "100px";
         td9_1.setAttributeNode(td9_1_width);

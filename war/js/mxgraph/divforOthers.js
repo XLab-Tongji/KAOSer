@@ -24,7 +24,7 @@ function createOtherDiv() {
         //行 - 用例名
         var tr1 = document.createElement("tr");
         var td1_1 = document.createElement("td");
-        td1_1.innerHTML = "name";
+        td1_1.innerHTML = "Name";
         var td1_1_width = document.createAttribute("width");
         td1_1_width.value = "100px";
         td1_1.setAttributeNode(td1_1_width);
@@ -41,7 +41,7 @@ function createOtherDiv() {
         //行 - 细节
         var tr = document.createElement("tr");
         var td = document.createElement("td");
-        td.innerHTML = "补充说明";
+        td.innerHTML = "Description";
         var td_colspan = document.createAttribute("colspan");
         td_colspan.value = "2";
         td.setAttributeNode(td_colspan);
