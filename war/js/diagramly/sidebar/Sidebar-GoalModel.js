@@ -15,7 +15,7 @@
             this.createVertexTemplateEntry('shape=disruption;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#ffe6cc;strokeColor=#F19C99;fontSize=18', 180, 40, '', 'Disruption'),
             this.createVertexTemplateEntry('text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;',
                 40, 20, 'Text', 'Text', null, null, 'text textbox textarea label'),
-            this.addEntry('FF', function()
+            /*this.addEntry('FF', function()
 			{
 				var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#000000;strokeWidth=3');
 				edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
@@ -48,7 +48,7 @@
 				edge.insert(cell);
 
 				return sb.createEdgeTemplateFromCells([edge], 100, 0, 'Conflict');
-			}),
+			}),*/
             this.addEntry('and', function()
             {
                 var cell = new mxCell('', new mxGeometry(0, 0, 30, 30), 'shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;');

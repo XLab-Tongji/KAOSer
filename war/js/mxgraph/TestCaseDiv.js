@@ -40,7 +40,7 @@ function createTestCaseDiv() {
     td1_1.innerHTML = "Action";
     var td1_1_width = document.createAttribute("width");
     td1_1_width.value = "100px";
-    td1_1.setAttributeNode(td11_1_width);
+    td1_1.setAttributeNode(td1_1_width);
     var td1_2 = document.createElement("td");
     var input1 = document.createElement("h4");
     var input1_id = document.createAttribute("id");
