@@ -3657,22 +3657,22 @@ HoverIcons.prototype.repaint = function()
                         mdomainpropertydiv.style.visibility = 'visible';
                     }
                 }
-				else if(curr.style['shape'] == 'textcase') {
+				else if(curr.style['shape'] == 'testcase') {
 					if (mtestcasediv.style.visibility == 'visible') {
 						that.Action=getmyWant(gm,that.id,'target','resilience','Action');
 						that.Checkpoint=getmyWant(gm,that.id,'target','disruption','Checkpoint');
 						flagTestCase = 0;
 						mtestcasediv.style.visibility = 'hidden';
 
-						document.getElementById("testcaseId").value = '';
-						document.getElementById("Action").value = '';
-						document.getElementById("Checkpoint").value = '';
+						document.getElementById("testCaseId").value = '';
+						document.getElementById("Action").innerHTML = '';
+						document.getElementById("Checkpoint").innerHTML = '';
 					}
 					else {
 						flagTestCase = 1;
-						document.getElementById("testcaseId").innerHTML = that.value;
-						document.getElementById("Action").value = getmyWant(gm,that.id,'target','resilience','Action');
-						document.getElementById("Checkpoint").value = getmyWant(gm,that.id,'target','disruption','Checkpoint');
+						document.getElementById("testCaseId").innerHTML = that.value;
+						document.getElementById("Action").innerHTML = getmyWant(gm,that.id,'target','resilience','Action');
+						document.getElementById("Checkpoint").innerHTML = getmyWant(gm,that.id,'target','disruption','Checkpoint');
 						mtestcasediv.style.visibility = 'visible';
 					}
 				}
