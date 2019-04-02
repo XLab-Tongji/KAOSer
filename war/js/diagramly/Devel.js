@@ -44,6 +44,7 @@ mxscript('js/mxgraph/myLineShapes.js');
 mxscript('js/diagramly/sidebar/Sidebar.js');
 
 mxscript('js/diagramly/sidebar/Sidebar-ObjectModel.js');
+mxscript('js/diagramly/sidebar/Sidebar-ResilienceModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-OperationModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-RespModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-GoalModel.js');
