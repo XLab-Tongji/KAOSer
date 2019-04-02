@@ -629,6 +629,7 @@
         this.addRespModelPalette();
         this.addObjectModelPalette();
         this.addOperationModelPalette();
+        this.addResilienceModelPalette();
 	};
 
 	/**
