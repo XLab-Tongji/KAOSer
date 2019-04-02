@@ -3657,6 +3657,25 @@ HoverIcons.prototype.repaint = function()
                         mdomainpropertydiv.style.visibility = 'visible';
                     }
                 }
+				else if(curr.style['shape'] == 'textcase') {
+					if (mtestcasediv.style.visibility == 'visible') {
+						that.Action=getmyWant(gm,that.id,'target','resilience','Action');
+						that.Checkpoint=getmyWant(gm,that.id,'target','disruption','Checkpoint');
+						flagTestCase = 0;
+						mtestcasediv.style.visibility = 'hidden';
+
+						document.getElementById("testcaseId").value = '';
+						document.getElementById("Action").value = '';
+						document.getElementById("Checkpoint").value = '';
+					}
+					else {
+						flagTestCase = 1;
+						document.getElementById("testcaseId").innerHTML = that.value;
+						document.getElementById("Action").value = getmyWant(gm,that.id,'target','resilience','Action');
+						document.getElementById("Checkpoint").value = getmyWant(gm,that.id,'target','disruption','Checkpoint');
+						mtestcasediv.style.visibility = 'visible';
+					}
+				}
                 else if ((curr.style['shape'] != 'requirement') && (curr.style['shape'] != 'goal')) {
                     if (motherdiv.style.visibility == 'visible') {
                         that.gedetail = document.getElementById("detail").value;
