@@ -30,6 +30,7 @@ mxscript('js/mxgraph/ResilienceDiv.js');
 mxscript('js/mxgraph/DisruptionDiv.js');
 mxscript('js/mxgraph/AgentDiv.js');
 mxscript('js/mxgraph/DomainPropertyDiv.js');
+mxscript('js/mxgraph/TestCaseDiv.js');
 mxscript('js/mxgraph/Graph.js');
 mxscript('js/mxgraph/Shapes.js');
 mxscript('js/mxgraph/Actions.js');
@@ -47,6 +48,7 @@ mxscript('js/diagramly/sidebar/Sidebar-ObjectModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-OperationModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-RespModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-GoalModel.js');
+mxscript('js/diagramly/sidebar/Sidebar-ResilienceModel.js');
 
 mxscript('js/diagramly/util/mxJsCanvas.js');
 mxscript('js/diagramly/util/mxAsyncCanvas.js');

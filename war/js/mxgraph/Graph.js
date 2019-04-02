@@ -2601,6 +2601,8 @@ HoverIcons.prototype.init = function()
     this.myTableAgent.style.cursor='pointer';
     this.myTableDomainProperty=this.createArrow(this.Information,'Information');
     this.myTableDomainProperty.style.cursor='pointer';
+	this.myTableTestCase=this.createArrow(this.Information,'Information');
+	this.myTableTestCase.style.cursor='pointer';
 	this.myTableOthers=this.createArrow(this.Information,'Information');
 	this.myTableOthers.style.cursor='pointer';
 	// this.myTableGoal.style.visibility="hidden";
@@ -2617,6 +2619,7 @@ HoverIcons.prototype.init = function()
     this.myResourceDiv = createResourceDiv();
     this.myAgentDiv = createAgentDiv();
     this.myDomainPropertyDiv = createDomainPropertyDiv();
+	this.myTestCaseDiv=createTestCaseDiv();
 	//this.myTextDiv = createTextDiv();
 
 	this.myGoalDiv.style.visibility='hidden';
@@ -2626,6 +2629,7 @@ HoverIcons.prototype.init = function()
     this.myResourceDiv.style.visibility='hidden';
     this.myAgentDiv.style.visibility='hidden';
     this.myDomainPropertyDiv.style.visibility='hidden';
+    this.myTestCaseDiv.style.visibility='hidden';
     //this.myTextDiv.style.visibility='hidden';
 	this.myOtherDiv.style.visibility='hidden';
 
@@ -3086,7 +3090,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagText=0;
+var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3100,6 +3104,7 @@ HoverIcons.prototype.repaint = function()
 		this.myTableRequirement.style.visibility='visible';
         this.myTableAgent.style.visibility='visible';
         this.myTableDomainProperty.style.visibility='visible';
+        this.myTableTestCase.style.visibility='visible';
 		this.myTableResource.style.visibility='visible';
 		this.myTableOthers.style.visibility='visible';
 		// Checks if cell was deleted
@@ -3185,6 +3190,10 @@ HoverIcons.prototype.repaint = function()
             this.myTableDomainProperty.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
             mxUtils.setOpacity(this.myTableDomainProperty,this.inactiveOpacity);
 
+			this.myTableTestCase.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
+			this.myTableTestCase.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+			mxUtils.setOpacity(this.myTableTestCase,this.inactiveOpacity);
+
 			this.myTableOthers.style.left=Math.round(bds.x + this.triangleLeft.width + this.tolerance) + 'px';
 			this.myTableOthers.style.top=Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 			mxUtils.setOpacity(this.myTableOthers,this.inactiveOpacity);
@@ -3210,6 +3219,9 @@ HoverIcons.prototype.repaint = function()
             this.myDomainPropertyDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myDomainPropertyDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
+			this.myTestCaseDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+			this.myTestCaseDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
 			this.myOtherDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myOtherDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
@@ -3220,6 +3232,7 @@ HoverIcons.prototype.repaint = function()
 			var mrresourcediv = this.myResourceDiv;
 			var magentdiv=this.myAgentDiv;
 			var mdomainpropertydiv=this.myDomainPropertyDiv;
+			var mtestcasediv=this.myTestCaseDiv;
 			//var mrtextdiv = this.myTextDiv;
 			var motherdiv=this.myOtherDiv;
 			var that=this.currentState.cell;
@@ -3232,6 +3245,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
                 mrresourcediv.style.visibility="hidden";
 				if(flagGoal==1){
 					mgoaldiv.style.visibility='visible';
@@ -3248,6 +3262,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
 				mrresourcediv.style.visibility="hidden";
 				if(flagResilience==1){
 					mresiliencediv.style.visibility='visible';
@@ -3262,6 +3277,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
 				mgoaldiv.style.visibility="hidden";
 				mresiliencediv.style.visibility='hidden';
 				if(flagDisruption==1){
@@ -3278,6 +3294,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
                 mrresourcediv.style.visibility="hidden";
 				if(flagRequirement==1){
 					mrequirementdiv.style.visibility='visible';
@@ -3293,6 +3310,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
 				mgoaldiv.style.visibility="hidden";
 				//mrtextdiv.style.visibility='hidden';
 				}
@@ -3301,6 +3319,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
 				mresiliencediv.style.visibility='hidden';
 				mdisruptiondiv.style.visibility='hidden';
@@ -3316,6 +3335,7 @@ HoverIcons.prototype.repaint = function()
                 mrresourcediv.style.visibility="hidden";
                 motherdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mtestcasediv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
 				mresiliencediv.style.visibility='hidden';
 				mdisruptiondiv.style.visibility='hidden';
@@ -3327,6 +3347,7 @@ HoverIcons.prototype.repaint = function()
                 }
             }
             else if(curr.style['shape']=='domain_property'){
+				mtestcasediv.style.visibility="hidden";
                 mrequirementdiv.style.visibility='hidden';
                 mrresourcediv.style.visibility="hidden";
                 motherdiv.style.visibility="hidden";
@@ -3341,6 +3362,22 @@ HoverIcons.prototype.repaint = function()
                     mdomainpropertydiv.style.visibility='hidden';
                 }
             }
+			else if(curr.style['shape']=='testcase'){
+				mrequirementdiv.style.visibility='hidden';
+				mrresourcediv.style.visibility="hidden";
+				motherdiv.style.visibility="hidden";
+				magentdiv.style.visibility="hidden";
+				mgoaldiv.style.visibility="hidden";
+				mresiliencediv.style.visibility='hidden';
+				mdisruptiondiv.style.visibility='hidden';
+				mdomainpropertydiv.style.visibility='hidden';
+				if(flagTestCase==1){
+					mtestcasediv.style.visibility="visible";
+				}
+				else if(flagTestCase==0){
+					mtestcasediv.style.visibility="hidden";
+				}
+			}
 			else{
 				mrequirementdiv.style.visibility='hidden';
 				mgoaldiv.style.visibility='hidden';
@@ -3897,6 +3934,7 @@ HoverIcons.prototype.repaint = function()
 				this.myResourceDiv.style.visibility='visible';
                 this.myAgentDiv.style.visibility='visible';
                 this.myDomainPropertyDiv.style.visibility='visible';
+                this.myTestCaseDiv.style.visibility='visible';
 				this.myOtherDiv.style.visibility='visible';
 			}
 			
@@ -4104,6 +4142,7 @@ HoverIcons.prototype.setCurrentState = function(state)
     this.graph.container.appendChild(this.myResourceDiv);
     this.graph.container.appendChild(this.myAgentDiv);
     this.graph.container.appendChild(this.myDomainPropertyDiv);
+	this.graph.container.appendChild(this.myTestCaseDiv);
 	//this.graph.container.appendChild(this.myTextDiv);
 	this.graph.container.appendChild(this.myOtherDiv);
 

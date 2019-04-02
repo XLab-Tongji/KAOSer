@@ -58,6 +58,7 @@ LocalLibrary.prototype.saveAs = function(title, success, error)
 LocalLibrary.prototype.updateFileData = function()
 {
 	// Do nothing
+
 };
 
 /**
