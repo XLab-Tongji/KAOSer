@@ -3542,6 +3542,7 @@ HoverIcons.prototype.repaint = function()
 
                 else if(curr.style['shape'] == 'resilience'){
 					if (mresiliencediv.style.visibility == 'visible') {
+						that.ResiDescription=document.getElementById("ResiDescription").value;
 						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
 						that.BenchmarkedBy=getmyWant(gm,that.id, 'source','domain_property','BenchmarkedBy');
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
@@ -3561,6 +3562,7 @@ HoverIcons.prototype.repaint = function()
 						mresiliencediv.style.visibility = 'hidden';
 
 						document.getElementById("resiId").value='';
+						document.getElementById("ResiDescription").value='';
 						document.getElementById("TargetRes").innerHTML='';
 						document.getElementById("BenchmarkedBy").innerHTML='';
 						document.getElementById("DisruptionTol").value='';
@@ -3574,6 +3576,7 @@ HoverIcons.prototype.repaint = function()
 					else {
 						flagResilience=1;
 						document.getElementById("resiId").innerHTML=that.value;
+						document.getElementById("ResiDescription").value=that.ResiDescription;
 						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
 						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'source','domain_property','BenchmarkedBy');
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
@@ -3659,8 +3662,8 @@ HoverIcons.prototype.repaint = function()
                 }
 				else if(curr.style['shape'] == 'testcase') {
 					if (mtestcasediv.style.visibility == 'visible') {
-						that.Action=getmyWant(gm,that.id,'target','resilience','Action');
-						that.Checkpoint=getmyWant(gm,that.id,'target','disruption','Checkpoint');
+						that.Action=getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
+						that.Checkpoint=getmyWantAttri(gm,that.id,'target','disruption','description');
 						flagTestCase = 0;
 						mtestcasediv.style.visibility = 'hidden';
 
@@ -3671,8 +3674,8 @@ HoverIcons.prototype.repaint = function()
 					else {
 						flagTestCase = 1;
 						document.getElementById("testCaseId").innerHTML = that.value;
-						document.getElementById("Action").innerHTML = getmyWant(gm,that.id,'target','resilience','Action');
-						document.getElementById("Checkpoint").innerHTML = getmyWant(gm,that.id,'target','disruption','Checkpoint');
+						document.getElementById("Action").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
+						document.getElementById("Checkpoint").innerHTML = getmyWantAttri(gm,that.id,'target','disruption','description');
 						mtestcasediv.style.visibility = 'visible';
 					}
 				}

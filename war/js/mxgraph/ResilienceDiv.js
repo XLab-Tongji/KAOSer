@@ -34,6 +34,29 @@ function createResilienceDiv() {
     tr1.appendChild(td1_2);
     table.appendChild(tr1);
 
+    //行 - 描述
+    var tr10 = document.createElement("tr");
+    var td10_1 = document.createElement("td");
+    td10_1.innerHTML = "Description";
+    var td10_2 = document.createElement("td");
+    var input10 = document.createElement("input");
+    var input10_type = document.createAttribute("type");
+    input10_type.value = "text";
+    input10.setAttributeNode(input10_type)
+    var input10_name = document.createAttribute("name");
+    input10_name.value = "ResiDescription";
+    input10.setAttributeNode(input10_name);
+    var input10_class = document.createAttribute("class");
+    input10_class.value = "detailform-single-text"
+    input10.setAttributeNode(input10_class);
+    var input10_id = document.createAttribute("id");
+    input10_id.value = "ResiDescription";
+    input10.setAttributeNode(input10_id);
+    td10_2.appendChild(input10);
+    tr10.appendChild(td10_1);
+    tr10.appendChild(td10_2);
+    table.appendChild(tr10);
+
     //依赖于某个资源
     var tr2 = document.createElement("tr");
     var td2_1 = document.createElement("td");
