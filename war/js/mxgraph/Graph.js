@@ -4975,7 +4975,7 @@ if (typeof mxVertexHandler != 'undefined')
                 cell.geometry.offset = new mxPoint(-9, -9);
                 a.insert(cell);
             }
-            else if((START_GRAPH == "obstacle"||START_GRAPH == "disruption") && (END_GRAPH == "goal"||END_GRAPH == "resi")){
+            else if((START_GRAPH == "obstacle"||START_GRAPH == "disruption") && (END_GRAPH == "goal"||END_GRAPH == "resi" || END_GRAPH == "requ")){
                 a.style = 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2';
                 var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
                 cell.geometry.relative = true;
@@ -4998,7 +4998,7 @@ if (typeof mxVertexHandler != 'undefined')
             {
                 state.style[key] = this.graph.currentEdgeStyle[key];
                 if(key == 'strokeColor') {
-                		if((START_GRAPH == "goal" || START_GRAPH == "resilience")&& END_GRAPH == "reso") {
+                		if((START_GRAPH == "goal" || START_GRAPH == "resilience")&& (END_GRAPH == "reso" ||END_GRAPH =="requ" )) {
                             this.graph.currentEdgeStyle[key] = '#000fff';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
