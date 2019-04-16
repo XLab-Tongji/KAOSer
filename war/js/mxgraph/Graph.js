@@ -3661,21 +3661,38 @@ HoverIcons.prototype.repaint = function()
                     }
                 }
 				else if(curr.style['shape'] == 'testcase') {
+
 					if (mtestcasediv.style.visibility == 'visible') {
-						that.Action=getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
-						that.Checkpoint=getmyWantAttri(gm,that.id,'target','disruption','description');
+
+						that.Action=getmyWantAttri(gm,that.id,'target','disruption','description');
+						that.testGoalname=getmyWant(gm,that.id,'target','resilience','testGoalname');
+						that.testDesc = getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
+						that.testDT = getmyWantAttri(gm,that.id,'target','resilience','DisruptionTol');
+						that.testRT = getmyWantAttri(gm,that.id,'target','resilience','RecoveryTime');
+						that.testQL = getmyWantAttri(gm,that.id,'target','resilience','QualityLoss');
+						that.testBench = getmyWantAttri(gm,that.id,'target','resilience','BenchmarkedBy');
 						flagTestCase = 0;
 						mtestcasediv.style.visibility = 'hidden';
 
 						document.getElementById("testCaseId").value = '';
 						document.getElementById("Action").innerHTML = '';
-						document.getElementById("Checkpoint").innerHTML = '';
+						document.getElementById("testGoalname").innerHTML = '';
+						document.getElementById("testGoaldesc").innerHTML = '';
+						document.getElementById("testDT").innerHTML = '';
+						document.getElementById("testRT").innerHTML = '';
+						document.getElementById("testQL").innerHTML = '';
+						document.getElementById("testBench").innerHTML = '';
 					}
 					else {
 						flagTestCase = 1;
 						document.getElementById("testCaseId").innerHTML = that.value;
-						document.getElementById("Action").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
-						document.getElementById("Checkpoint").innerHTML = getmyWantAttri(gm,that.id,'target','disruption','description');
+						document.getElementById("Action").innerHTML = getmyWantAttri(gm,that.id,'target','disruption','description');
+						document.getElementById("testGoalname").innerHTML = getmyWant(gm,that.id,'target','resilience','testGoalname');
+						document.getElementById("testGoaldesc").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
+						document.getElementById("testDT").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','DisruptionTol');
+						document.getElementById("testRT").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','RecoveryTime');
+						document.getElementById("testQL").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','QualityLoss');
+						document.getElementById("testBench").innerHTML = getmyWantAttri(gm,that.id,'target','resilience','BenchmarkedBy');
 						mtestcasediv.style.visibility = 'visible';
 					}
 				}
@@ -4998,7 +5015,7 @@ if (typeof mxVertexHandler != 'undefined')
             {
                 state.style[key] = this.graph.currentEdgeStyle[key];
                 if(key == 'strokeColor') {
-                		if((START_GRAPH == "goal" || START_GRAPH == "resilience")&& (END_GRAPH == "reso" ||END_GRAPH =="requ" )) {
+                		if((START_GRAPH == "goal" || START_GRAPH == "resilience")&& (END_GRAPH == "reso" || END_GRAPH =="requ")) {
                             this.graph.currentEdgeStyle[key] = '#000fff';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }

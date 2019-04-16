@@ -300,6 +300,91 @@ function getmyWantAttri(s,id_value,SourceorTarget,flag,Attribute){
 }
 
 
+function getmyNumber(s,id_value,SourceorTarget,flag){
+    getJSONs(s);
+    //alert(jsonText);
+    var jsonResult= JSON.stringify(JSON.parse(jsonText).mxGraphModel.root.mxCell);
+
+    //alert(jsonResult);
+
+    var jsons = jQuery.parseJSON(jsonResult);
+    var i,j,k,m;
+    var results;
+    //var getUseful;
+
+    var bridges = new Array();
+    var valueResults = new Array();
+
+    var sourceorTarget = '-'+SourceorTarget;
+
+    var sot ;
+    if(sourceorTarget=='-source'){
+        sot = '-target';
+    }else if(sourceorTarget == '-target'){
+        sot = '-source';
+    }
+    var term ;
+
+
+    if(sourceorTarget=='-source') {
+        for (i = 0; i < jsons.length; i++) {
+            if ((sourceorTarget in jsons[i]) && (jsons[i][sourceorTarget] == id_value) && (!('-flag' in jsons[i]))) {
+                bridges.push(jsons[i][sot]);
+            }
+
+            else if (('-flag' in jsons[i]) && (jsons[i]['-flag'] != 'and') && (sot in jsons[i])&&(jsons[i][sot] == id_value)) {
+                for (m = 0; m < jsons.length; m++) {
+                    if ((jsons[m]['-id'] == jsons[i][sourceorTarget]) && (jsons[m]['-flag'] == 'middle')) {
+                        term=jsons[m]['-id'];
+                        //alert(term);
+                    }
+                }
+                for(m = 0;m<jsons.length;m++){
+                    if((sourceorTarget in jsons[m])&&(jsons[m][sourceorTarget]==term)&&(sot in jsons[m])&&(jsons[m]['-flag']!='tem')){
+                        bridges.push([jsons[m][sot]]);
+                        //alert(bridges);
+                    }
+                }
+            }
+        }
+    }
+    else if(sourceorTarget=='-target'){
+        for (i = 0; i < jsons.length; i++) {
+            if ((sourceorTarget in jsons[i]) && (jsons[i][sourceorTarget] == id_value) && (!('-flag' in jsons[i]))&&(findSource(jsons,jsons[i]['-source'])==-1)) {
+                bridges.push(jsons[i][sot]);
+            }
+            // else if ((('-flag' in jsons[i]) && (jsons[i]['-flag'] != 'tem') && (jsons[i][sourceorTarget] == id_value)&&(findSource(jsons,jsons[i]['-source'])=='1'))) {
+            //     for (m = 0; m < jsons.length; m++) {
+            //         if ((jsons[m]['-id'] == jsons[i][sot]) && (jsons[m]['-flag'] == 'middle')) {
+            //             term=jsons[m]['-id'];
+            //         }
+            //     }
+            //     for(m = 0;m<jsons.length;m++){
+            //         if((jsons[m][sot]==term)&&(jsons[m]['-flag']=='tem')){
+            //             bridges.push([jsons[m]['-target']]);
+            //             //alert(bridges);
+            //         }
+            //     }
+            // }
+            else if((jsons[i][sourceorTarget] == id_value)&&(findSource(jsons,jsons[i]['-source'])!=-1)&&((!('-flag' in jsons[i]))||(('-flag' in jsons[i])&&(jsons[i]['-flag']!='tem')))){
+                for (m = 0; m < jsons.length; m++) {
+                    if ((jsons[m]['-id'] == jsons[i][sot]) && (jsons[m]['-flag'] == 'middle')) {
+                        term=jsons[m]['-id'];
+                    }
+                }
+                for(m = 0;m<jsons.length;m++){
+                    if((jsons[m][sot]==term)&&(jsons[m]['-flag']=='tem')){
+                        bridges.push([jsons[m]['-target']]);
+                        //alert(bridges);
+                    }
+                }
+            }
+        }
+    }
+   return bridges.length;
+}
+
+
 
 function wirtieResults(array) {
     var results;
