@@ -63,8 +63,8 @@ function createTestCaseDiv() {
     td2_1.setAttributeNode(td2_1_rowspan);
 
     var tr2_2 = document.createElement("tr");
+    tr2_2.style.backgroundColor = "#DAE8FC";
     var td2_2_1 = document.createElement("td");
-    td2_2_1.style.backgroundColor = "#D5E8D4";
     td2_2_1.innerHTML = "Goal Name";
     var td2_2_1_width = document.createAttribute("width");
     td2_2_1_width.value = "100px";
@@ -75,7 +75,7 @@ function createTestCaseDiv() {
     input2_id.value = "testGoalname";
     input2.setAttributeNode(input2_id);
     td2_2_2.appendChild(input2);
-    tr2_2.appendChild(td2_2_1)
+    tr2_2.appendChild(td2_2_1);
     tr2_2.appendChild(td2_2_2);
 
     var tr2_3 = document.createElement("tr");
@@ -91,7 +91,7 @@ function createTestCaseDiv() {
     input3_id.value = "testGoaldesc";
     input3.setAttributeNode(input3_id);
     td2_3_2.appendChild(input3);
-    tr2_3.appendChild(td2_3_1)
+    tr2_3.appendChild(td2_3_1);
     tr2_3.appendChild(td2_3_2);
 
     var tr2_4 = document.createElement("tr");
@@ -107,7 +107,7 @@ function createTestCaseDiv() {
     input4_id.value = "testDT";
     input4.setAttributeNode(input4_id);
     td2_4_2.appendChild(input4);
-    tr2_4.appendChild(td2_4_1)
+    tr2_4.appendChild(td2_4_1);
     tr2_4.appendChild(td2_4_2);
 
     var tr2_5 = document.createElement("tr");
@@ -123,7 +123,7 @@ function createTestCaseDiv() {
     input5_id.value = "testRT";
     input5.setAttributeNode(input5_id);
     td2_5_2.appendChild(input5);
-    tr2_5.appendChild(td2_5_1)
+    tr2_5.appendChild(td2_5_1);
     tr2_5.appendChild(td2_5_2);
 
     var tr2_6 = document.createElement("tr");
@@ -139,7 +139,7 @@ function createTestCaseDiv() {
     input6_id.value = "testQL";
     input6.setAttributeNode(input6_id);
     td2_6_2.appendChild(input6);
-    tr2_6.appendChild(td2_6_1)
+    tr2_6.appendChild(td2_6_1);
     tr2_6.appendChild(td2_6_2);
 
     var tr2_7 = document.createElement("tr");
@@ -155,7 +155,7 @@ function createTestCaseDiv() {
     input7_id.value = "testBench";
     input7.setAttributeNode(input7_id);
     td2_7_2.appendChild(input7);
-    tr2_7.appendChild(td2_7_1)
+    tr2_7.appendChild(td2_7_1);
     tr2_7.appendChild(td2_7_2);
 
     var td2_2 = document.createElement("td");
@@ -180,10 +180,14 @@ function createTestCaseDiv() {
     return arrow;
 }
 
-function addCheckpoint () {
+function addGoalName(i) {
     var tr2_2 = document.createElement("tr");
+    tr2_2.style.backgroundColor = "#DAE8FC";
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestGoalName"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
     var td2_2_1 = document.createElement("td");
-    td2_2_1.style.backgroundColor = "#D5E8D4";
     td2_2_1.innerHTML = "Goal Name";
     var td2_2_1_width = document.createAttribute("width");
     td2_2_1_width.value = "100px";
@@ -191,96 +195,130 @@ function addCheckpoint () {
     var td2_2_2 = document.createElement("td");
     var input2 = document.createElement("h4");
     var input2_id = document.createAttribute("id");
-    input2_id.value = "testGoalname";
+    var inputtemp = "testGoalname"+i;
+    input2_id.value = inputtemp;
     input2.setAttributeNode(input2_id);
     td2_2_2.appendChild(input2);
-    tr2_2.appendChild(td2_2_1)
+    tr2_2.appendChild(td2_2_1);
     tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
+function addGoalDesc(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestGoalDesc"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Description";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testGoaldesc"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
 
-    var tr2_3 = document.createElement("tr");
-    var td2_3_1 = document.createElement("td");
-    td2_3_1.innerHTML = "Description";
-    td2_3_1.style.borderBottom ="solid 1px #d4d4d4";
-    var td2_3_1_width = document.createAttribute("width");
-    td2_3_1_width.value = "100px";
-    td2_3_1.setAttributeNode(td2_3_1_width);
-    var td2_3_2 = document.createElement("td");
-    var input3 = document.createElement("h4");
-    var input3_id = document.createAttribute("id");
-    input3_id.value = "testGoaldesc";
-    input3.setAttributeNode(input3_id);
-    td2_3_2.appendChild(input3);
-    tr2_3.appendChild(td2_3_1)
-    tr2_3.appendChild(td2_3_2);
+function addGoalDT(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestGoalDT"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Disruption Tolerance";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testGoalDT"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
 
-    var tr2_4 = document.createElement("tr");
-    var td2_4_1 = document.createElement("td");
-    td2_4_1.innerHTML = "Disruption Tolerance";
-    td2_4_1.style.borderBottom ="solid 1px #d4d4d4";
-    var td2_4_1_width = document.createAttribute("width");
-    td2_4_1_width.value = "100px";
-    td2_4_1.setAttributeNode(td2_4_1_width);
-    var td2_4_2 = document.createElement("td");
-    var input4 = document.createElement("h4");
-    var input4_id = document.createAttribute("id");
-    input4_id.value = "testDT";
-    input4.setAttributeNode(input4_id);
-    td2_4_2.appendChild(input4);
-    tr2_4.appendChild(td2_4_1)
-    tr2_4.appendChild(td2_4_2);
+function addGoalRT(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestGoalRT"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Recovery Time";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testGoalRT"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
 
-    var tr2_5 = document.createElement("tr");
-    var td2_5_1 = document.createElement("td");
-    td2_5_1.innerHTML = "Recovery Time";
-    td2_5_1.style.borderBottom ="solid 1px #d4d4d4";
-    var td2_5_1_width = document.createAttribute("width");
-    td2_5_1_width.value = "100px";
-    td2_5_1.setAttributeNode(td2_5_1_width);
-    var td2_5_2 = document.createElement("td");
-    var input5 = document.createElement("h4");
-    var input5_id = document.createAttribute("id");
-    input5_id.value = "testRT";
-    input5.setAttributeNode(input5_id);
-    td2_5_2.appendChild(input5);
-    tr2_5.appendChild(td2_5_1)
-    tr2_5.appendChild(td2_5_2);
+function addGoalQL(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestGoalQL"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Quality Loss";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testGoalQL"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
 
-    var tr2_6 = document.createElement("tr");
-    var td2_6_1 = document.createElement("td");
-    td2_6_1.innerHTML = "Quality Loss";
-    td2_6_1.style.borderBottom ="solid 1px #d4d4d4";
-    var td2_6_1_width = document.createAttribute("width");
-    td2_6_1_width.value = "100px";
-    td2_6_1.setAttributeNode(td2_6_1_width);
-    var td2_6_2 = document.createElement("td");
-    var input6 = document.createElement("h4");
-    var input6_id = document.createAttribute("id");
-    input6_id.value = "testQL";
-    input6.setAttributeNode(input6_id);
-    td2_6_2.appendChild(input6);
-    tr2_6.appendChild(td2_6_1)
-    tr2_6.appendChild(td2_6_2);
-
-    var tr2_7 = document.createElement("tr");
-    var td2_7_1 = document.createElement("td");
-    td2_7_1.innerHTML = "Benchmarked By";
-    td2_7_1.style.borderBottom ="solid 1px #d4d4d4";
-    var td2_7_1_width = document.createAttribute("width");
-    td2_7_1_width.value = "100px";
-    td2_7_1.setAttributeNode(td2_7_1_width);
-    var td2_7_2 = document.createElement("td");
-    var input7 = document.createElement("h4");
-    var input7_id = document.createAttribute("id");
-    input7_id.value = "testBench";
-    input7.setAttributeNode(input7_id);
-    td2_7_2.appendChild(input7);
-    tr2_7.appendChild(td2_7_1)
-    tr2_7.appendChild(td2_7_2);
-
-    document.getElementById("checkpointdetail").appendChild(tr2_2);
-    document.getElementById("checkpointdetail").appendChild(tr2_3);
-    document.getElementById("checkpointdetail").appendChild(tr2_4);
-    document.getElementById("checkpointdetail").appendChild(tr2_5);
-    document.getElementById("checkpointdetail").appendChild(tr2_6);
-    document.getElementById("checkpointdetail").appendChild(tr2_7);
+function addGoalBench(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestGoalBench"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Benchmarked By";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testGoalBench"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
 }
