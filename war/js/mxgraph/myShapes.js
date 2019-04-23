@@ -117,6 +117,23 @@ DomainPropertyShape.prototype.redrawPath = function(c, x, y, w, h)
 
 mxCellRenderer.prototype.defaultShapes['domain_property'] = DomainPropertyShape;
 
+function PerformanceShape()
+{
+    mxActor.call(this);
+};
+mxUtils.extend(PerformanceShape, mxActor);
+PerformanceShape.prototype.size = 0.2;
+PerformanceShape.prototype.redrawPath = function(c, x, y, w, h)
+{
+    var s =  w * Math.max(0, Math.min(1, parseFloat(mxUtils.getValue(this.style, 'size', this.size))));
+    var arcSize = mxUtils.getValue(this.style, mxConstants.STYLE_ARCSIZE, mxConstants.LINE_ARCSIZE) / 2;
+    this.addPoints(c, [new mxPoint(w/2, 0), new mxPoint(w, s), new mxPoint(w, h), new mxPoint(0, h),
+        new mxPoint(0, s)], this.isRounded, arcSize, true);
+    c.end();
+};
+
+mxCellRenderer.prototype.defaultShapes['performancebenchmark'] = PerformanceShape;
+
 function TestCaseShape()
 {
     mxActor.call(this);

@@ -31,6 +31,7 @@ mxscript('js/mxgraph/ResilienceDiv.js');
 mxscript('js/mxgraph/DisruptionDiv.js');
 mxscript('js/mxgraph/AgentDiv.js');
 mxscript('js/mxgraph/DomainPropertyDiv.js');
+mxscript('js/mxgraph/PerformanceBenchmark.js');
 mxscript('js/mxgraph/TestCaseDiv.js');
 mxscript('js/mxgraph/Graph.js');
 mxscript('js/mxgraph/Shapes.js');

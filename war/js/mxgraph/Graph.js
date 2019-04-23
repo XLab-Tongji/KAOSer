@@ -2619,6 +2619,7 @@ HoverIcons.prototype.init = function()
     this.myResourceDiv = createResourceDiv();
     this.myAgentDiv = createAgentDiv();
     this.myDomainPropertyDiv = createDomainPropertyDiv();
+    this.myPerformanceBenchmark = createPerformanceBenchmarkDiv();
 	this.myTestCaseDiv=createTestCaseDiv();
 	//this.myTextDiv = createTextDiv();
 
@@ -2629,6 +2630,7 @@ HoverIcons.prototype.init = function()
     this.myResourceDiv.style.visibility='hidden';
     this.myAgentDiv.style.visibility='hidden';
     this.myDomainPropertyDiv.style.visibility='hidden';
+    this.myPerformanceBenchmark.style.visibility='hidden'
     this.myTestCaseDiv.style.visibility='hidden';
     //this.myTextDiv.style.visibility='hidden';
 	this.myOtherDiv.style.visibility='hidden';
@@ -3090,7 +3092,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0;
+var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0,flagPerformance=0;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3219,6 +3221,9 @@ HoverIcons.prototype.repaint = function()
             this.myDomainPropertyDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
             this.myDomainPropertyDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
+			this.myPerformanceBenchmark.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
+			this.myPerformanceBenchmark.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
+
 			this.myTestCaseDiv.style.left = Math.round(bds.x + bds.width + 3*this.tolerance) + 'px';
 			this.myTestCaseDiv.style.top = Math.round(this.currentState.getCenterY() - this.triangleRight.height / 2 - this.tolerance) + 'px';
 
@@ -3232,6 +3237,7 @@ HoverIcons.prototype.repaint = function()
 			var mrresourcediv = this.myResourceDiv;
 			var magentdiv=this.myAgentDiv;
 			var mdomainpropertydiv=this.myDomainPropertyDiv;
+			var mperformancediv = this.myPerformanceBenchmark;
 			var mtestcasediv=this.myTestCaseDiv;
 			//var mrtextdiv = this.myTextDiv;
 			var motherdiv=this.myOtherDiv;
@@ -3245,6 +3251,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+                mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
                 mrresourcediv.style.visibility="hidden";
 				if(flagGoal==1){
@@ -3262,6 +3269,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
 				mrresourcediv.style.visibility="hidden";
 				if(flagResilience==1){
@@ -3277,6 +3285,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
 				mgoaldiv.style.visibility="hidden";
 				mresiliencediv.style.visibility='hidden';
@@ -3294,6 +3303,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
                 mrresourcediv.style.visibility="hidden";
 				if(flagRequirement==1){
@@ -3310,6 +3320,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
 				magentdiv.style.visibility="hidden";
 				mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
 				mgoaldiv.style.visibility="hidden";
 				//mrtextdiv.style.visibility='hidden';
@@ -3319,6 +3330,7 @@ HoverIcons.prototype.repaint = function()
 				motherdiv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
 				mresiliencediv.style.visibility='hidden';
@@ -3335,6 +3347,7 @@ HoverIcons.prototype.repaint = function()
                 mrresourcediv.style.visibility="hidden";
                 motherdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				mtestcasediv.style.visibility="hidden";
                 mgoaldiv.style.visibility="hidden";
 				mresiliencediv.style.visibility='hidden';
@@ -3346,6 +3359,23 @@ HoverIcons.prototype.repaint = function()
                     magentdiv.style.visibility='hidden';
                 }
             }
+			else if(curr.style['shape']=='performancebenchmark'){
+			mtestcasediv.style.visibility="hidden";
+			mrequirementdiv.style.visibility='hidden';
+			mrresourcediv.style.visibility="hidden";
+			motherdiv.style.visibility="hidden";
+			magentdiv.style.visibility="hidden";
+			mgoaldiv.style.visibility="hidden";
+			mresiliencediv.style.visibility='hidden';
+			mdisruptiondiv.style.visibility='hidden';
+			mdomainpropertydiv.style.visibility='hidden'
+			if(flagPerformance==1){
+				mperformancediv.style.visibility='visible';
+			}
+			else if(flagPerformance==0){
+				mperformancediv.style.visibility='hidden';
+			}
+		}
             else if(curr.style['shape']=='domain_property'){
 				mtestcasediv.style.visibility="hidden";
                 mrequirementdiv.style.visibility='hidden';
@@ -3371,6 +3401,7 @@ HoverIcons.prototype.repaint = function()
 				mresiliencediv.style.visibility='hidden';
 				mdisruptiondiv.style.visibility='hidden';
 				mdomainpropertydiv.style.visibility='hidden';
+				mperformancediv.style.visibility='hidden';
 				if(flagTestCase==1){
 					mtestcasediv.style.visibility="visible";
 				}
@@ -3386,6 +3417,7 @@ HoverIcons.prototype.repaint = function()
                 mrresourcediv.style.visibility="hidden";
                 magentdiv.style.visibility="hidden";
                 mdomainpropertydiv.style.visibility="hidden";
+				mperformancediv.style.visibility='hidden';
 				if(flagOthers==1){
 					motherdiv.style.visibility='visible';
 				}
@@ -3641,25 +3673,44 @@ HoverIcons.prototype.repaint = function()
 					}
 				}
 
-                else if(curr.style['shape'] == 'domain_property') {
+                else if(curr.style['shape'] == 'performancebenchmark') {
                     if (mdomainpropertydiv.style.visibility == 'visible') {
-                        that.domainPropertyRef = document.getElementById("domainPropertyRef").value;
-                        that.domainPropertyDes = document.getElementById("domainPropertyDes").value;
-                        flagDomainProperty = 0;
-                        mdomainpropertydiv.style.visibility = 'hidden';
+                        that.PerformanceValue = document.getElementById("PerformanceValue").value;
+                        that.PerformanceTarget = document.getElementById("PerformanceTarget").value;
+                        flagPerformance = 0;
+                        mperformancediv.style.visibility = 'hidden';
 
-                        document.getElementById("domainPropertyId").value = '';
-                        document.getElementById("domainPropertyDes").value = '';
-                        document.getElementById("domainPropertyRef").value = '';
+                        document.getElementById("PerformanceId").value = '';
+                        document.getElementById("PerformanceValue").value = '';
+                        document.getElementById("PerformanceTarget").value = '';
                     }
                     else {
-                        flagDomainProperty = 1;
-                        document.getElementById("domainPropertyId").innerHTML = that.value;
-                        document.getElementById("domainPropertyDes").value = that.domainPropertyDes;
-                        document.getElementById("domainPropertyRef").value = that.domainPropertyRef;
+						flagPerformance = 1;
+                        document.getElementById("PerformanceId").innerHTML = that.value;
+                        document.getElementById("PerformanceValue").value = that.PerformanceValue;
+                        document.getElementById("PerformanceTarget").value = that.PerformanceTarget;
                         mdomainpropertydiv.style.visibility = 'visible';
                     }
                 }
+				else if(curr.style['shape'] == 'domain_property') {
+					if (mdomainpropertydiv.style.visibility == 'visible') {
+						that.domainPropertyRef = document.getElementById("domainPropertyRef").value;
+						that.domainPropertyDes = document.getElementById("domainPropertyDes").value;
+						flagDomainProperty = 0;
+						mdomainpropertydiv.style.visibility = 'hidden';
+
+						document.getElementById("domainPropertyId").value = '';
+						document.getElementById("domainPropertyDes").value = '';
+						document.getElementById("domainPropertyRef").value = '';
+					}
+					else {
+						flagDomainProperty = 1;
+						document.getElementById("domainPropertyId").innerHTML = that.value;
+						document.getElementById("domainPropertyDes").value = that.domainPropertyDes;
+						document.getElementById("domainPropertyRef").value = that.domainPropertyRef;
+						mdomainpropertydiv.style.visibility = 'visible';
+					}
+				}
 				else if(curr.style['shape'] == 'testcase') {
 					if (mtestcasediv.style.visibility == 'visible') {
 						that.Action=getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
@@ -3956,6 +4007,7 @@ HoverIcons.prototype.repaint = function()
 				this.myResourceDiv.style.visibility='visible';
                 this.myAgentDiv.style.visibility='visible';
                 this.myDomainPropertyDiv.style.visibility='visible';
+                yhis.myPerformanceBenchmark.style.visibility='visible';
                 this.myTestCaseDiv.style.visibility='visible';
 				this.myOtherDiv.style.visibility='visible';
 			}
@@ -4164,6 +4216,7 @@ HoverIcons.prototype.setCurrentState = function(state)
     this.graph.container.appendChild(this.myResourceDiv);
     this.graph.container.appendChild(this.myAgentDiv);
     this.graph.container.appendChild(this.myDomainPropertyDiv);
+    this.graph.container.appendChild(this.myPerformanceBenchmark);
 	this.graph.container.appendChild(this.myTestCaseDiv);
 	//this.graph.container.appendChild(this.myTextDiv);
 	this.graph.container.appendChild(this.myOtherDiv);
@@ -5003,7 +5056,7 @@ if (typeof mxVertexHandler != 'undefined')
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
                         else if((START_GRAPH == "obstacle"|| START_GRAPH == "disruption") && END_GRAPH == "reso"){
-                            this.graph.currentEdgeStyle[key] = '#ff0000';
+                            this.graph.currentEdgeStyle[key] = '#cc0000';
                             state.style[key] = this.graph.currentEdgeStyle[key];
                         }
                         else if(START_GRAPH == "resource" && END_GRAPH == "reso"){
