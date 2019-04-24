@@ -3092,7 +3092,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  * 
  */
-var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0,flagPerformance=0;
+var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0,flagPerformance=0,checkNum=1;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3576,7 +3576,7 @@ HoverIcons.prototype.repaint = function()
 					if (mresiliencediv.style.visibility == 'visible') {
 						that.ResiDescription=document.getElementById("ResiDescription").value;
 						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
-						that.BenchmarkedBy=getmyWant(gm,that.id, 'source','domain_property','BenchmarkedBy');
+						that.BenchmarkedBy=getmyWant(gm,that.id, 'source','performancebenchmark','BenchmarkedBy');
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
@@ -3610,7 +3610,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("resiId").innerHTML=that.value;
 						document.getElementById("ResiDescription").value=that.ResiDescription;
 						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
-						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'source','domain_property','BenchmarkedBy');
+						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'source','performancebenchmark','BenchmarkedBy');
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
@@ -3674,7 +3674,7 @@ HoverIcons.prototype.repaint = function()
 				}
 
                 else if(curr.style['shape'] == 'performancebenchmark') {
-                    if (mdomainpropertydiv.style.visibility == 'visible') {
+                    if (mperformancediv.style.visibility == 'visible') {
                         that.PerformanceValue = document.getElementById("PerformanceValue").value;
                         that.PerformanceTarget = document.getElementById("PerformanceTarget").value;
                         flagPerformance = 0;
@@ -3689,7 +3689,7 @@ HoverIcons.prototype.repaint = function()
                         document.getElementById("PerformanceId").innerHTML = that.value;
                         document.getElementById("PerformanceValue").value = that.PerformanceValue;
                         document.getElementById("PerformanceTarget").value = that.PerformanceTarget;
-                        mdomainpropertydiv.style.visibility = 'visible';
+                        mperformancediv.style.visibility = 'visible';
                     }
                 }
 				else if(curr.style['shape'] == 'domain_property') {
