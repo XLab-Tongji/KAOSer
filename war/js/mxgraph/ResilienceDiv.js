@@ -42,12 +42,12 @@ function createResilienceDiv() {
     var input10 = document.createElement("input");
     var input10_type = document.createAttribute("type");
     input10_type.value = "text";
-    input10.setAttributeNode(input10_type)
+    input10.setAttributeNode(input10_type);
     var input10_name = document.createAttribute("name");
     input10_name.value = "ResiDescription";
     input10.setAttributeNode(input10_name);
     var input10_class = document.createAttribute("class");
-    input10_class.value = "detailform-single-text"
+    input10_class.value = "detailform-single-text";
     input10.setAttributeNode(input10_class);
     var input10_id = document.createAttribute("id");
     input10_id.value = "ResiDescription";
@@ -100,19 +100,24 @@ function createResilienceDiv() {
     var input4 = document.createElement("input");
     var input4_type = document.createAttribute("type");
     input4_type.value = "text";
-    input4.setAttributeNode(input4_type)
+    input4.setAttributeNode(input4_type);
     var input4_name = document.createAttribute("name");
     input4_name.value = "DisruptionTol";
     input4.setAttributeNode(input4_name);
     var input4_class = document.createAttribute("class");
-    input4_class.value = "detailform-single-text"
+    input4_class.value = "detailform-single-text";
     input4.setAttributeNode(input4_class);
     var input4_id = document.createAttribute("id");
     input4_id.value = "DisruptionTol";
     input4.setAttributeNode(input4_id);
     td4_2.appendChild(input4);
+    var td4_3 = document.createElement("td");
+    var td4_3_id = document.createAttribute("id");
+    td4_3_id.value = "DTUnit";
+    td4_3.setAttributeNode(td4_3_id);
     tr4.appendChild(td4_1);
     tr4.appendChild(td4_2);
+    tr4.appendChild(td4_3);
     table.appendChild(tr4);
 
     //Recovery Time
@@ -123,19 +128,22 @@ function createResilienceDiv() {
     var input5 = document.createElement("input");
     var input5_type = document.createAttribute("type");
     input5_type.value = "text";
-    input5.setAttributeNode(input5_type)
+    input5.setAttributeNode(input5_type);
     var input5_name = document.createAttribute("name");
     input5_name.value = "RecoveryTime";
     input5.setAttributeNode(input5_name);
     var input5_class = document.createAttribute("class");
-    input5_class.value = "detailform-single-text"
+    input5_class.value = "detailform-single-text";
     input5.setAttributeNode(input5_class);
     var input5_id = document.createAttribute("id");
     input5_id.value = "RecoveryTime";
     input5.setAttributeNode(input5_id);
     td5_2.appendChild(input5);
+    var td5_3 = document.createElement("td");
+    td5_3.innerHTML = "second";
     tr5.appendChild(td5_1);
     tr5.appendChild(td5_2);
+    tr5.appendChild(td5_3);
     table.appendChild(tr5);
 
     //Quality Loss
@@ -146,19 +154,24 @@ function createResilienceDiv() {
     var input6 = document.createElement("input");
     var input6_type = document.createAttribute("type");
     input6_type.value = "text";
-    input6.setAttributeNode(input6_type)
+    input6.setAttributeNode(input6_type);
     var input6_name = document.createAttribute("name");
     input6_name.value = "QualityLoss";
     input6.setAttributeNode(input6_name);
     var input6_class = document.createAttribute("class");
-    input6_class.value = "detailform-single-text"
+    input6_class.value = "detailform-single-text";
     input6.setAttributeNode(input6_class);
     var input6_id = document.createAttribute("id");
     input6_id.value = "QualityLoss";
     input6.setAttributeNode(input6_id);
     td6_2.appendChild(input6);
+    var td6_3 = document.createElement("td");
+    var td6_3_id = document.createAttribute("id");
+    td6_3_id.value = "QLUnit";
+    td6_3.setAttributeNode(td6_3_id);
     tr6.appendChild(td6_1);
     tr6.appendChild(td6_2);
+    tr6.appendChild(td6_3);
     table.appendChild(tr6);
 
 

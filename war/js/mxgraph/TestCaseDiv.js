@@ -107,8 +107,13 @@ function createTestCaseDiv() {
     input4_id.value = "testDT";
     input4.setAttributeNode(input4_id);
     td2_4_2.appendChild(input4);
+    var td2_4_3 = document.createElement("td");
+    var td2_4_3_id = document.createAttribute("id");
+    td2_4_3_id.value = "testDTUnit";
+    td2_4_3.setAttributeNode(td2_4_3_id);
     tr2_4.appendChild(td2_4_1);
     tr2_4.appendChild(td2_4_2);
+    tr2_4.appendChild(td2_4_3);
 
     var tr2_5 = document.createElement("tr");
     var td2_5_1 = document.createElement("td");
@@ -123,8 +128,11 @@ function createTestCaseDiv() {
     input5_id.value = "testRT";
     input5.setAttributeNode(input5_id);
     td2_5_2.appendChild(input5);
+    var td2_5_3 = document.createElement("td");
+    td2_5_3.innerHTML = "second";
     tr2_5.appendChild(td2_5_1);
     tr2_5.appendChild(td2_5_2);
+    tr2_5.appendChild(td2_5_3);
 
     var tr2_6 = document.createElement("tr");
     var td2_6_1 = document.createElement("td");
@@ -139,8 +147,13 @@ function createTestCaseDiv() {
     input6_id.value = "testQL";
     input6.setAttributeNode(input6_id);
     td2_6_2.appendChild(input6);
+    var td2_6_3 = document.createElement("td");
+    var td2_6_3_id = document.createAttribute("id");
+    td2_6_3_id.value = "testQLUnit";
+    td2_6_3.setAttributeNode(td2_6_3_id);
     tr2_6.appendChild(td2_6_1);
     tr2_6.appendChild(td2_6_2);
+    tr2_6.appendChild(td2_6_3);
 
     var tr2_7 = document.createElement("tr");
     var td2_7_1 = document.createElement("td");
@@ -246,8 +259,15 @@ function addGoalDT(i) {
     input2_id.value = inputtemp;
     input2.setAttributeNode(input2_id);
     td2_2_2.appendChild(input2);
+
+    var td2_2_3 = document.createElement("td");
+    var td2_2_3_id = document.createAttribute("id");
+    td2_2_3_id.value = "testDTUnit"+i;
+    td2_2_3.setAttributeNode(td2_2_3_id);
+
     tr2_2.appendChild(td2_2_1);
     tr2_2.appendChild(td2_2_2);
+    tr2_2.appendChild(td2_2_3);
     return tr2_2;
 }
 
@@ -270,8 +290,13 @@ function addGoalRT(i) {
     input2_id.value = inputtemp;
     input2.setAttributeNode(input2_id);
     td2_2_2.appendChild(input2);
+
+    var td2_2_3 = document.createElement("td");
+    td2_2_3.innerHTML = "second";
+
     tr2_2.appendChild(td2_2_1);
     tr2_2.appendChild(td2_2_2);
+    tr2_2.appendChild(td2_2_3);
     return tr2_2;
 }
 
@@ -294,8 +319,15 @@ function addGoalQL(i) {
     input2_id.value = inputtemp;
     input2.setAttributeNode(input2_id);
     td2_2_2.appendChild(input2);
+
+    var td2_2_3 = document.createElement("td");
+    var td2_2_3_id = document.createAttribute("id");
+    td2_2_3_id.value = "testQLUnit"+i;
+    td2_2_3.setAttributeNode(td2_2_3_id);
+
     tr2_2.appendChild(td2_2_1);
     tr2_2.appendChild(td2_2_2);
+    tr2_2.appendChild(td2_2_3);
     return tr2_2;
 }
 

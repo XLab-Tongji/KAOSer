@@ -57,28 +57,46 @@ function createPerformanceBenchmarkDiv() {
     tr1.appendChild(td1_2);
     table.appendChild(tr1);
 
-    //行 - 参考
+    //行 - Asset
     var tr2 = document.createElement("tr");
     var td2_1 = document.createElement("td");
     td2_1.innerHTML = "TargetAsset";
+    var td2_1_width = document.createAttribute("width");
+    td2_1_width.value = "100px";
+    td2_1.setAttributeNode(td2_1_width);
     var td2_2 = document.createElement("td");
-    var input2 = document.createElement("input");
-    var input2_type = document.createAttribute("type");
-    input2_type.value = "text";
-    input2.setAttributeNode(input2_type);
-    var input2_name = document.createAttribute("name");
-    input2_name.value = "PerformanceTarget";
-    input2.setAttributeNode(input2_name);
+    var input2 = document.createElement("h4");
     var input2_id = document.createAttribute("id");
     input2_id.value = "PerformanceTarget";
     input2.setAttributeNode(input2_id);
-    var input2_class = document.createAttribute("class");
-    input2_class.value = "detailform-single-text";
-    input2.setAttributeNode(input2_class);
     td2_2.appendChild(input2);
     tr2.appendChild(td2_1);
     tr2.appendChild(td2_2);
     table.appendChild(tr2);
+
+
+    //行 - 单位
+    var tr3 = document.createElement("tr");
+    var td3_1 = document.createElement("td");
+    td3_1.innerHTML = "Unit";
+    var td3_2 = document.createElement("td");
+    var input3 = document.createElement("input");
+    var input3_type = document.createAttribute("type");
+    input3_type.value = "text";
+    input3.setAttributeNode(input3_type);
+    var input3_name = document.createAttribute("name");
+    input3_name.value = "Unit";
+    input3.setAttributeNode(input3_name);
+    var input3_class = document.createAttribute("class");
+    input3_class.value = "detailform-single-text";
+    input3.setAttributeNode(input3_class);
+    var input3_id = document.createAttribute("id");
+    input3_id.value = "Unit";
+    input3.setAttributeNode(input3_id);
+    td3_2.appendChild(input3);
+    tr3.appendChild(td3_1);
+    tr3.appendChild(td3_2);
+    table.appendChild(tr3);
 
     form.appendChild(table);
     arrow.appendChild(form);

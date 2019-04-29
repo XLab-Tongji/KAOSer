@@ -3576,10 +3576,12 @@ HoverIcons.prototype.repaint = function()
 					if (mresiliencediv.style.visibility == 'visible') {
 						that.ResiDescription=document.getElementById("ResiDescription").value;
 						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
-						that.BenchmarkedBy=getmyWant(gm,that.id, 'source','performancebenchmark','BenchmarkedBy');
+						that.BenchmarkedBy=getmyWant(gm,that.id, 'target','performancebenchmark','BenchmarkedBy');
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
+						that.DTUnit = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
+						that.QLUnit = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit') + " * second";
 						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"RefinesToResi")=='')?'':"</br>";
 						that.RefinesToResi=getmyWant(gm,that.id,'source','goal',"RefinesToResi")+ifbr1+getmyWant(gm,that.id,'source','resilience',"RefinesToResi");
 						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"RefinedByResi")=='')?'':"</br>";
@@ -3603,6 +3605,8 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("RefinesToResi").innerHTML='';
 						document.getElementById("RefinedByResi").innerHTML='';
 						document.getElementById("ObstructsResi").innerHTML='';
+						document.getElementById("DTUnit").innerHTML = '';
+						document.getElementById("QLUnit").innerHTML = '';
 
 					}
 					else {
@@ -3610,10 +3614,12 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("resiId").innerHTML=that.value;
 						document.getElementById("ResiDescription").value=that.ResiDescription;
 						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
-						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'source','performancebenchmark','BenchmarkedBy');
+						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'target','performancebenchmark','BenchmarkedBy');
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
+						document.getElementById("DTUnit").innerHTML = getmyWantAttri(gm,that.id, 'target','performancebenchmark', 'Unit');
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
+						document.getElementById("QLUnit").innerHTML = getmyWantAttri(gm,that.id, 'target','performancebenchmark', 'Unit') + " * second";
 						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"RefinesToResi")=='')?'':"</br>";
 						document.getElementById("RefinesToResi").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesToResi")+ifbr1+getmyWant(gm,that.id,'source','resilience',"RefinesToResi");
 						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"RefinedByResi")=='')?'':"</br>";
@@ -3676,19 +3682,22 @@ HoverIcons.prototype.repaint = function()
                 else if(curr.style['shape'] == 'performancebenchmark') {
                     if (mperformancediv.style.visibility == 'visible') {
                         that.PerformanceValue = document.getElementById("PerformanceValue").value;
-                        that.PerformanceTarget = document.getElementById("PerformanceTarget").value;
+                        that.PerformanceTarget = getmyWant(gm,that.id,'source','resource','PerformanceTarget');
+                        that.Unit = document.getElementById("Unit").value;
                         flagPerformance = 0;
                         mperformancediv.style.visibility = 'hidden';
 
                         document.getElementById("PerformanceId").value = '';
                         document.getElementById("PerformanceValue").value = '';
-                        document.getElementById("PerformanceTarget").value = '';
+                        document.getElementById("PerformanceTarget").innerHTML = '';
+                        document.getElementById("Unit").value = '';
                     }
                     else {
 						flagPerformance = 1;
                         document.getElementById("PerformanceId").innerHTML = that.value;
                         document.getElementById("PerformanceValue").value = that.PerformanceValue;
-                        document.getElementById("PerformanceTarget").value = that.PerformanceTarget;
+                        document.getElementById("PerformanceTarget").innerHTML = getmyWant(gm,that.id,'source','resource','PerformanceTarget');
+                        document.getElementById("Unit").value = that.Unit;
                         mperformancediv.style.visibility = 'visible';
                     }
                 }
@@ -3784,8 +3793,10 @@ HoverIcons.prototype.repaint = function()
 						that.testGoalname=getmyWant(gm,that.id,'target','resilience','testGoalname');
 						that.testDesc = getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
 						that.testDT = getmyWantAttri(gm,that.id,'target','resilience','DisruptionTol');
+						that.testDTUnit = getmyWantAttri(gm,that.id,'target','resilience','DTUnit');
 						that.testRT = getmyWantAttri(gm,that.id,'target','resilience','RecoveryTime');
 						that.testQL = getmyWantAttri(gm,that.id,'target','resilience','QualityLoss');
+						that.testQLUnit = getmyWantAttri(gm,that.id,'target','resilience','QLUnit');
 						that.testBench = getmyWantAttri(gm,that.id,'target','resilience','BenchmarkedBy');
 						flagTestCase = 0;
 						mtestcasediv.style.visibility = 'hidden';
@@ -3795,8 +3806,10 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("testGoalname").innerHTML = '';
 						document.getElementById("testGoaldesc").innerHTML = '';
 						document.getElementById("testDT").innerHTML = '';
+						document.getElementById("testDTUnit").innerHTML = '';
 						document.getElementById("testRT").innerHTML = '';
 						document.getElementById("testQL").innerHTML = '';
+						document.getElementById("testQLUnit").innerHTML = '';
 						document.getElementById("testBench").innerHTML = '';
 
 						if(that.resiNum > 1){
@@ -3811,12 +3824,22 @@ HoverIcons.prototype.repaint = function()
 								var testdttemp = "testGoalDT" + curren;
 								var testdt = testdttemp;
 								document.getElementById(testdt).innerHTML ='';
+
+								var testdtunittemp = "testDTUnit" + curren;
+								var testdtunit = testdtunittemp;
+								document.getElementById(testdtunit).innerHTML ='';
+
 								var testrttemp = "testGoalRT" + curren;
 								var testrt = testrttemp;
 								document.getElementById(testrt).innerHTML = '';
 								var testqltemp = "testGoalQL" + curren;
 								var testql = testqltemp;
 								document.getElementById(testql).innerHTML = '';
+
+								var testqlunittemp = "testQLUnit" + curren;
+								var testqlunit = testqlunittemp;
+								document.getElementById(testqlunit).innerHTML ='';
+
 								var testbenchtemp = "testGoalBench" + curren;
 								var testbench = testbenchtemp;
 								document.getElementById(testbench).innerHTML ='';
@@ -3880,8 +3903,10 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("testGoalname").innerHTML =  getmyWantSingle(gm,that.id,'target','resilience','value', first);
 						document.getElementById("testGoaldesc").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','ResiDescription', first);
 						document.getElementById("testDT").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DisruptionTol', first);
+						document.getElementById("testDTUnit").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DTUnit', first);
 						document.getElementById("testRT").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','RecoveryTime', first);
 						document.getElementById("testQL").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','QualityLoss', first);
+						document.getElementById("testQLUnit").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','QLUnit', first);
 						document.getElementById("testBench").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','BenchmarkedBy',first);
 						if(that.resiNum > 1){
 							for(var current = 1; current < that.resiNum; current++){
@@ -3895,12 +3920,23 @@ HoverIcons.prototype.repaint = function()
 								var testdttemp = "testGoalDT" + curren;
 								var testdt = testdttemp;
 								document.getElementById(testdt).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DisruptionTol', curren);
+
+								var testdtunittemp = "testDTUnit" + curren;
+								var testdtunit = testdtunittemp;
+								document.getElementById(testdtunit).innerHTML =  getmyWantSingle(gm,that.id,'target','resilience','DTUnit', curren);
+
+
 								var testrttemp = "testGoalRT" + curren;
 								var testrt = testrttemp;
 								document.getElementById(testrt).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','RecoveryTime', curren);
 								var testqltemp = "testGoalQL" + curren;
 								var testql = testqltemp;
 								document.getElementById(testql).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','QualityLoss', curren);
+
+								var testqlunittemp = "testQLUnit" + curren;
+								var testqlunit = testqlunittemp;
+								document.getElementById(testqlunit).innerHTML =  getmyWantSingle(gm,that.id,'target','resilience','QLUnit', curren);
+
 								var testbenchtemp = "testGoalBench" + curren;
 								var testbench = testbenchtemp;
 								document.getElementById(testbench).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','BenchmarkedBy', curren);
@@ -5214,7 +5250,7 @@ if (typeof mxVertexHandler != 'undefined')
             }
             else if((START_GRAPH == "obstacle"||START_GRAPH == "disruption") && (END_GRAPH == "goal"||END_GRAPH == "resi" || END_GRAPH == "requ")){
                 a.style = 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2';
-                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
+                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2;');
                 cell.geometry.relative = true;
                 cell.setConnectable(false);
                 cell.vertex = true;
