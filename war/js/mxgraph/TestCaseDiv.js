@@ -80,7 +80,7 @@ function createTestCaseDiv() {
 
     var tr2_3 = document.createElement("tr");
     var td2_3_1 = document.createElement("td");
-    td2_3_1.innerHTML = "Description";
+    td2_3_1.innerHTML = "Target";
     td2_3_1.style.borderBottom ="solid 1px #d4d4d4";
     var td2_3_1_width = document.createAttribute("width");
     td2_3_1_width.value = "100px";
@@ -88,7 +88,7 @@ function createTestCaseDiv() {
     var td2_3_2 = document.createElement("td");
     var input3 = document.createElement("h4");
     var input3_id = document.createAttribute("id");
-    input3_id.value = "testGoaldesc";
+    input3_id.value = "testGoaltarget";
     input3.setAttributeNode(input3_id);
     td2_3_2.appendChild(input3);
     tr2_3.appendChild(td2_3_1);
@@ -216,14 +216,14 @@ function addGoalName(i) {
     tr2_2.appendChild(td2_2_2);
     return tr2_2;
 }
-function addGoalDesc(i) {
+function addGoalTarget(i) {
     var tr2_2 = document.createElement("tr");
     var tr2_2_id = document.createAttribute("id");
-    var idtemp = "TestGoalDesc"+i;
+    var idtemp = "TestGoalTarget"+i;
     tr2_2_id.value = idtemp;
     tr2_2.setAttributeNode(tr2_2_id);
     var td2_2_1 = document.createElement("td");
-    td2_2_1.innerHTML = "Description";
+    td2_2_1.innerHTML = "Target";
     td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
     var td2_2_1_width = document.createAttribute("width");
     td2_2_1_width.value = "100px";
@@ -231,7 +231,7 @@ function addGoalDesc(i) {
     var td2_2_2 = document.createElement("td");
     var input2 = document.createElement("h4");
     var input2_id = document.createAttribute("id");
-    var inputtemp = "testGoaldesc"+i;
+    var inputtemp = "testGoaltarget"+i;
     input2_id.value = inputtemp;
     input2.setAttributeNode(input2_id);
     td2_2_2.appendChild(input2);

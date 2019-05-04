@@ -3574,14 +3574,22 @@ HoverIcons.prototype.repaint = function()
 
                 else if(curr.style['shape'] == 'resilience'){
 					if (mresiliencediv.style.visibility == 'visible') {
-						that.ResiDescription=document.getElementById("ResiDescription").value;
 						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
 						that.BenchmarkedBy=getmyWant(gm,that.id, 'target','performancebenchmark','BenchmarkedBy');
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.DTUnit = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
-						that.QLUnit = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit') + " * second";
+						var QLUnitDetail = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
+						var QLUnitLen = QLUnitDetail.length;
+						if(QLUnitDetail[QLUnitLen -1] == 's' && (QLUnitDetail[QLUnitLen -2] == '/' || QLUnitDetail[QLUnitLen -2] == '\\')){
+							that.QLUnit = QLUnitDetail.substr(0, QLUnitLen-2);
+						}
+						else{
+							that.QLUnit = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit') + " * second";
+						}
+
+
 						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"RefinesToResi")=='')?'':"</br>";
 						that.RefinesToResi=getmyWant(gm,that.id,'source','goal',"RefinesToResi")+ifbr1+getmyWant(gm,that.id,'source','resilience',"RefinesToResi");
 						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"RefinedByResi")=='')?'':"</br>";
@@ -3596,7 +3604,6 @@ HoverIcons.prototype.repaint = function()
 						mresiliencediv.style.visibility = 'hidden';
 
 						document.getElementById("resiId").value='';
-						document.getElementById("ResiDescription").value='';
 						document.getElementById("TargetRes").innerHTML='';
 						document.getElementById("BenchmarkedBy").innerHTML='';
 						document.getElementById("DisruptionTol").value='';
@@ -3612,14 +3619,24 @@ HoverIcons.prototype.repaint = function()
 					else {
 						flagResilience=1;
 						document.getElementById("resiId").innerHTML=that.value;
-						document.getElementById("ResiDescription").value=that.ResiDescription;
 						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
 						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'target','performancebenchmark','BenchmarkedBy');
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("DTUnit").innerHTML = getmyWantAttri(gm,that.id, 'target','performancebenchmark', 'Unit');
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
 						document.getElementById("QualityLoss").value=that.QualityLoss;
-						document.getElementById("QLUnit").innerHTML = getmyWantAttri(gm,that.id, 'target','performancebenchmark', 'Unit') + " * second";
+
+						var QLUnitDetail = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
+						var QLUnitLen = QLUnitDetail.length;
+						if(QLUnitDetail[QLUnitLen -1] == 's' && (QLUnitDetail[QLUnitLen -2] == '/' || QLUnitDetail[QLUnitLen -2] == '\\')){
+							document.getElementById("QLUnit").innerHTML = QLUnitDetail.substr(0, QLUnitLen-2);
+						}
+						else{
+							document.getElementById("QLUnit").innerHTML = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit') + " * second";
+						}
+
+
+
 						var ifbr1 = (getmyWant(gm,that.id,'source','resilience',"RefinesToResi")=='')?'':"</br>";
 						document.getElementById("RefinesToResi").innerHTML=getmyWant(gm,that.id,'source','goal',"RefinesToResi")+ifbr1+getmyWant(gm,that.id,'source','resilience',"RefinesToResi");
 						var ifbr2 = (getmyWant(gm,that.id,'target','resilience',"RefinedByResi")=='')?'':"</br>";
@@ -3727,7 +3744,7 @@ HoverIcons.prototype.repaint = function()
 						if(diff > 0){
 							for(var i = that.resiNum-1; i >= that.resiNum-diff; i--){
 								document.getElementById("checkpointdetail").appendChild(addGoalName(i));
-								document.getElementById("checkpointdetail").appendChild(addGoalDesc(i));
+								document.getElementById("checkpointdetail").appendChild(addGoalTarget(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalDT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalRT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalQL(i));
@@ -3744,9 +3761,9 @@ HoverIcons.prototype.repaint = function()
 								var testGoalNametemp = "TestGoalName"+idnumber;
 								var testGoalName = testGoalNametemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalName));
-								var testGoalDesctemp = "TestGoalDesc"+idnumber;
-								var testGoalDesc = testGoalDesctemp;
-								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDesc));
+								var testGoalTargettemp = "TestGoalTarget"+idnumber;
+								var testGoalTarget = testGoalTargettemp;
+								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalTarget));
 								var testGoalDTtemp = "TestGoalDT"+idnumber;
 								var testGoalDT = testGoalDTtemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDT));
@@ -3791,7 +3808,7 @@ HoverIcons.prototype.repaint = function()
 
 						that.Action=getmyWantAttri(gm,that.id,'target','disruption','description');
 						that.testGoalname=getmyWant(gm,that.id,'target','resilience','testGoalname');
-						that.testDesc = getmyWantAttri(gm,that.id,'target','resilience','ResiDescription');
+						that.testTarget = getmyWantAttri(gm,that.id,'target','resilience','TargetRes');
 						that.testDT = getmyWantAttri(gm,that.id,'target','resilience','DisruptionTol');
 						that.testDTUnit = getmyWantAttri(gm,that.id,'target','resilience','DTUnit');
 						that.testRT = getmyWantAttri(gm,that.id,'target','resilience','RecoveryTime');
@@ -3804,7 +3821,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("testCaseId").value = '';
 						document.getElementById("Action").innerHTML = '';
 						document.getElementById("testGoalname").innerHTML = '';
-						document.getElementById("testGoaldesc").innerHTML = '';
+						document.getElementById("testGoaltarget").innerHTML = '';
 						document.getElementById("testDT").innerHTML = '';
 						document.getElementById("testDTUnit").innerHTML = '';
 						document.getElementById("testRT").innerHTML = '';
@@ -3818,9 +3835,9 @@ HoverIcons.prototype.repaint = function()
 								var testNametemp = "testGoalname" + curren;
 								var testName = testNametemp;
 								document.getElementById(testName).innerHTML = '';
-								var testDesctemp = "testGoaldesc"+curren;
-								var testDesc = testDesctemp;
-								document.getElementById(testDesc).innerHTML = '';
+								var testTargettemp = "testGoaltarget"+curren;
+								var testTarget = testTargettemp;
+								document.getElementById(testTarget).innerHTML = '';
 								var testdttemp = "testGoalDT" + curren;
 								var testdt = testdttemp;
 								document.getElementById(testdt).innerHTML ='';
@@ -3862,7 +3879,7 @@ HoverIcons.prototype.repaint = function()
 						if(diff > 0){
 							for(var i = that.resiNum-1; i >= that.resiNum-diff; i--){
 								document.getElementById("checkpointdetail").appendChild(addGoalName(i));
-								document.getElementById("checkpointdetail").appendChild(addGoalDesc(i));
+								document.getElementById("checkpointdetail").appendChild(addGoalTarget(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalDT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalRT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalQL(i));
@@ -3877,9 +3894,9 @@ HoverIcons.prototype.repaint = function()
 								var testGoalNametemp = "TestGoalName" + idnumber;
 								var testGoalName = testGoalNametemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalName));
-								var testGoalDesctemp = "TestGoalDesc" + idnumber;
-								var testGoalDesc = testGoalDesctemp;
-								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDesc));
+								var testGoalTargettemp = "TestGoalTarget" + idnumber;
+								var testGoalTarget = testGoalTargettemp;
+								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalTarget));
 								var testGoalDTtemp = "TestGoalDT" + idnumber;
 								var testGoalDT = testGoalDTtemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDT));
@@ -3901,7 +3918,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("testCaseId").innerHTML = that.value;
 						document.getElementById("Action").innerHTML = getmyWantAttri(gm,that.id,'target','disruption','description');
 						document.getElementById("testGoalname").innerHTML =  getmyWantSingle(gm,that.id,'target','resilience','value', first);
-						document.getElementById("testGoaldesc").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','ResiDescription', first);
+						document.getElementById("testGoaltarget").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','TargetRes', first);
 						document.getElementById("testDT").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DisruptionTol', first);
 						document.getElementById("testDTUnit").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DTUnit', first);
 						document.getElementById("testRT").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','RecoveryTime', first);
@@ -3914,9 +3931,9 @@ HoverIcons.prototype.repaint = function()
 								var testNametemp = "testGoalname" + curren;
 								var testName = testNametemp;
 								document.getElementById(testName).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','value', curren);
-								var testDesctemp = "testGoaldesc"+curren;
-								var testDesc = testDesctemp;
-								document.getElementById(testDesc).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','ResiDescription', curren);
+								var testTargettemp = "testGoaltarget"+curren;
+								var testTarget = testTargettemp;
+								document.getElementById(testTarget).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','TargetRes', curren);
 								var testdttemp = "testGoalDT" + curren;
 								var testdt = testdttemp;
 								document.getElementById(testdt).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DisruptionTol', curren);
