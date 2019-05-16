@@ -1693,22 +1693,22 @@
 			// Workaround for close after any button click in IE8/quirks
 			if (!mxEvent.isConsumed(evt))
 			{
-				var fn = mxUtils.bind(this, function()
-				{
-					this.closeLibrary(file);
-				});
-				
-				if (saveBtn != null)
-				{
-					this.confirm(mxResources.get('allChangesLost'), null, fn,
-						mxResources.get('cancel'), mxResources.get('discardChanges'));
-				}
-				else
-				{
-					fn();
-				}
-		
-				mxEvent.consume(evt);
+				// var fn = mxUtils.bind(this, function()
+				// {
+				// 	this.closeLibrary(file);
+				// });
+				//
+				// if (saveBtn != null)
+				// {
+				// 	this.confirm(mxResources.get('allChangesLost'), null, fn,
+				// 		mxResources.get('cancel'), mxResources.get('discardChanges'));
+				// }
+				// else
+				// {
+				// 	fn();
+				// }
+				//
+				// mxEvent.consume(evt);
 			}
 		}));
 		

@@ -536,12 +536,12 @@ Menus.prototype.init = function()
 	})));
 	this.put(what, new Menu(mxUtils.bind(this, function(menu, parent)
 	{
-		if(what=="GeneralRequirement"){
-            this.addMenuItems(menu, ['SpecialRequirement']);
-		}
-		else{
-            this.addMenuItems(menu, ['GeneralRequirement']);
-		}
+		// if(what=="GeneralRequirement"){
+        //     this.addMenuItems(menu, ['SpecialRequirement']);
+		// }
+		// else{
+        //     this.addMenuItems(menu, ['GeneralRequirement']);
+		// }
 
 	})));
     this.put('importFromDB', new Menu(mxUtils.bind(this, function(menu, parent)

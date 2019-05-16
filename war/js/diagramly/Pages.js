@@ -1070,7 +1070,8 @@ EditorUi.prototype.createPageMenuTab = function()
 	tab.setAttribute('title', mxResources.get('pages'));
 	tab.style.position = 'absolute';
 	tab.style.left = '1px';
-	
+	tab.style.visibility = 'hidden';
+
 	mxEvent.addListener(tab, 'click', mxUtils.bind(this, function(evt)
 	{
 		this.editor.graph.popupMenuHandler.hideMenu();
@@ -1084,7 +1085,7 @@ EditorUi.prototype.createPageMenuTab = function()
 					{
 						this.selectPage(this.pages[index]);
 					}), parent);
-					
+
 					// Adds checkmark to current page
 					if (this.pages[index] == this.currentPage)
 					{
@@ -1092,34 +1093,34 @@ EditorUi.prototype.createPageMenuTab = function()
 					}
 				}))(i);
 			}
-			
+
 			if (this.editor.graph.isEnabled())
 			{
 				menu.addSeparator(parent);
-				
+
 				var item = menu.addItem(mxResources.get('insertPage'), null, mxUtils.bind(this, function()
 				{
 					this.insertPage();
 				}), parent);
 
 				var page = this.currentPage;
-				
+
 				if (page != null)
 				{
 					menu.addSeparator(parent);
-	
+
 					menu.addItem(mxResources.get('delete'), null, mxUtils.bind(this, function()
 					{
 						this.removePage(page);
 					}), parent);
-					
+
 					menu.addItem(mxResources.get('rename'), null, mxUtils.bind(this, function()
 					{
 						this.renamePage(page, page.getName());
 					}), parent);
-					
+
 					menu.addSeparator(parent);
-					
+
 					menu.addItem(mxResources.get('duplicate'), null, mxUtils.bind(this, function()
 					{
 						this.duplicatePage(page, mxResources.get('copyOf', [page.getName()]));
@@ -1127,29 +1128,29 @@ EditorUi.prototype.createPageMenuTab = function()
 				}
 			}
 		}));
-		
+
 		menu.div.className += ' geMenubarMenu';
 		menu.smartSeparators = true;
 		menu.showDisabled = true;
 		menu.autoExpand = true;
-		
+
 		// Disables autoexpand and destroys menu when hidden
 		menu.hideMenu = mxUtils.bind(this, function()
 		{
 			mxPopupMenu.prototype.hideMenu.apply(menu, arguments);
 			menu.destroy();
 		});
-	
+
 		var x = mxEvent.getClientX(evt);
 		var y = mxEvent.getClientY(evt);
 		menu.popup(x, y, null, evt);
-		
+
 		// Allows hiding by clicking on document
 		this.setCurrentMenu(menu);
 
 		mxEvent.consume(evt);
 	}));
-	
+
 	return tab;
 };
 
@@ -1160,14 +1161,15 @@ EditorUi.prototype.createPageInsertTab = function()
 {
 	var tab = this.createControlTab(4, '<div class="geSprite geSprite-plus" style="display:inline-block;width:21px;height:21px;"></div>');
 	tab.setAttribute('title', mxResources.get('insertPage'));
+	tab.style.visibility = 'hidden';
 	var graph = this.editor.graph;
-	
+
 	mxEvent.addListener(tab, 'click', mxUtils.bind(this, function(evt)
 	{
 		this.insertPage();
 		mxEvent.consume(evt);
 	}));
-	
+
 	return tab;
 };
 
@@ -1182,13 +1184,14 @@ EditorUi.prototype.createTabForPage = function(page, tabWidth, hoverEnabled)
 	mxUtils.write(tab, name);
 	tab.style.maxWidth = tabWidth + 'px';
 	tab.style.width = tabWidth + 'px';
+	tab.style.visibility = 'hidden';
 	this.addTabListeners(page, tab);
-	
+
 	if (tabWidth > 42)
 	{
 		tab.style.textOverflow = 'ellipsis';
 	}
-	
+
 	return tab;
 };
 

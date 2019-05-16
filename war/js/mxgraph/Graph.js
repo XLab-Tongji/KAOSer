@@ -3581,7 +3581,14 @@ HoverIcons.prototype.repaint = function()
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
 						that.QualityLoss=document.getElementById("QualityLoss").value;
 						var QLUnitDetail = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
-						var QLUnitLen = QLUnitDetail.length;
+						var QLUnitLen;
+						if (QLUnitDetail != ''){
+							QLUnitLen = QLUnitDetail.length;
+						}
+						else{
+							QLUnitLen = 0;
+						}
+
 						if(QLUnitDetail[QLUnitLen -1] == 's' && (QLUnitDetail[QLUnitLen -2] == '/' || QLUnitDetail[QLUnitLen -2] == '\\')){
 							that.QLUnit = QLUnitDetail.substr(0, QLUnitLen-2);
 						}
@@ -3627,7 +3634,13 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("QualityLoss").value=that.QualityLoss;
 
 						var QLUnitDetail = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
-						var QLUnitLen = QLUnitDetail.length;
+						var QLUnitLen;
+						if (QLUnitDetail != ''){
+							QLUnitLen = QLUnitDetail.length;
+						}
+						else{
+							QLUnitLen = 0;
+						}
 						if(QLUnitDetail[QLUnitLen -1] == 's' && (QLUnitDetail[QLUnitLen -2] == '/' || QLUnitDetail[QLUnitLen -2] == '\\')){
 							document.getElementById("QLUnit").innerHTML = QLUnitDetail.substr(0, QLUnitLen-2);
 						}
