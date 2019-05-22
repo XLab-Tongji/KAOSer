@@ -96,6 +96,7 @@
 				<file name="Sidebar-OperationModel.js" />
 				<file name="Sidebar-RespModel.js" />
 				<file name="Sidebar-ResilienceModel.js" />
+				<file name="Sidebar-MyModel.js" />
 			</sources>
 		</jscomp>
 		

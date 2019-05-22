@@ -1650,7 +1650,8 @@
 		{
 			addImages(images, content);
 	    }));
-	
+
+
 		this.repositionLibrary(nextSibling);
 		
 		// Adds tooltip for backend
@@ -1724,28 +1725,24 @@
 				contentDiv.removeAttribute('title');
 			}
 		}));
-		
-		if (file.isEditable())
-		{
+
+		if (!file.isEditable()) {
+		} else {
 			var graph = this.editor.graph;
-			
-			var editLibrary = mxUtils.bind(this, function(evt)
-			{
+
+			var editLibrary = mxUtils.bind(this, function (evt) {
 				this.showLibraryDialog(file.getTitle(), contentDiv, images, file, file.getMode());
 				mxEvent.consume(evt);
 			});
-			
-			var saveLibrary = mxUtils.bind(this, function(evt)
-			{
+
+			var saveLibrary = mxUtils.bind(this, function (evt) {
 				file.setModified(true);
-				
-				if (file.isAutosave())
-				{
-					if (spinBtn != null && spinBtn.parentNode != null)
-					{
+
+				if (file.isAutosave()) {
+					if (spinBtn != null && spinBtn.parentNode != null) {
 						spinBtn.parentNode.removeChild(spinBtn);
 					}
-					
+
 					spinBtn = btn.cloneNode(false);
 					spinBtn.setAttribute('src', Editor.spinImage);
 					spinBtn.setAttribute('title', mxResources.get('saving'));
@@ -1754,96 +1751,214 @@
 					spinBtn.style.marginTop = '-2px';
 					buttons.insertBefore(spinBtn, buttons.firstChild);
 					title.style.paddingRight = (buttons.childNodes.length * btnWidth) + 'px';
-					
-					this.saveLibrary(file.getTitle(), images, file, file.getMode(), true, true, function()
-					{
-						if (spinBtn != null && spinBtn.parentNode != null)
-						{
+
+					this.saveLibrary(file.getTitle(), images, file, file.getMode(), true, true, function () {
+						if (spinBtn != null && spinBtn.parentNode != null) {
 							spinBtn.parentNode.removeChild(spinBtn);
 							title.style.paddingRight = (buttons.childNodes.length * btnWidth) + 'px';
 						}
 					});
-				}
-				else if (saveBtn == null)
-				{
+				} else if (saveBtn == null) {
 					saveBtn = btn.cloneNode(false);
 					saveBtn.setAttribute('src', IMAGE_PATH + '/download.png');
 					saveBtn.setAttribute('title', mxResources.get('save'));
 					buttons.insertBefore(saveBtn, buttons.firstChild);
-					
-					mxEvent.addListener(saveBtn, 'click', mxUtils.bind(this, function(evt)
-					{
+
+					mxEvent.addListener(saveBtn, 'click', mxUtils.bind(this, function (evt) {
 						this.saveLibrary(file.getTitle(), images, file, file.getMode(),
-							file.constructor == LocalLibrary, true, function()
-							{
-								if (saveBtn != null && !file.isModified())
-								{
+							file.constructor == LocalLibrary, true, function () {
+								if (saveBtn != null && !file.isModified()) {
 									title.style.paddingRight = (buttons.childNodes.length * btnWidth) + 'px';
 									saveBtn.parentNode.removeChild(saveBtn);
 									saveBtn = null;
 								}
 							});
-						
+
 						mxEvent.consume(evt);
 					}));
-					
+
 					title.style.paddingRight = (buttons.childNodes.length * btnWidth) + 'px';
 				}
 			});
-			
+
+
+
+			var myShapesModel = this.sidebar.addPalette('MyShapes', 'MyShapes Modeling', true, mxUtils.bind(this, function(content)
+			{
+
+			}));
+
+			var mytitle = myShapesModel.parentNode.previousSibling;
+
+			var addMyCells = mxUtils.bind(this, function (cells, bounds, index, evt, mytitle) {
+				cells = graph.cloneCells(mxUtils.sortCells(graph.model.getTopmostCells(cells)));
+
+				// Translates cells to origin
+				for (var i = 0; i < cells.length; i++) {
+					var geo = graph.getCellGeometry(cells[i]);
+
+					if (geo != null) {
+						geo.translate(-bounds.x, -bounds.y);
+					}
+				}
+
+				var table = document.createElement("table");
+				table.style.fontSize = "12px";
+				var tr = document.createElement("tr");
+				var shape_td = document.createElement("td");
+				shape_td.style.width = "40px";
+				shape_td.style.border = "solid 1px #d4d4d4";
+				shape_td.appendChild(this.sidebar.createVertexTemplateFromCells(
+					cells, bounds.width, bounds.height, mytitle || '', true, false, false));
+				var type_td = document.createElement("td");
+				type_td.innerHTML = cells[0].flag;
+				type_td.style.width = "40px";
+				type_td.style.border = "solid 1px #d4d4d4";
+				var id_td = document.createElement("td");
+				id_td.innerHTML = index;
+				id_td.style.width = "40px";
+				id_td.style.border = "solid 1px #d4d4d4";
+				tr.appendChild(shape_td);
+				tr.appendChild(type_td);
+				tr.appendChild(id_td);
+				table.appendChild(tr);
+				myShapesModel.appendChild(table);
+
+
+				//	contentDiv.appendChild(this.sidebar.createVertexTemplateFromCells(
+				//		cells, bounds.width, bounds.height, title || '', true, false, false));
+
+				 var xml = mxUtils.getXml(this.editor.graph.encodeCells(cells));
+				var xotree = new XML.ObjTree();
+				var json = xotree.parseXML(xml);
+				//将json对象转为格式化的字符串
+				var dumper = new JKL.Dumper();
+				jsonText = dumper.dump(json);
+				//对数组进行json序列化，不然无法传递到服务端
+				jsonStr = JSON.stringify(jsonText);
+				console.log(jsonStr);
+				// var entry = {xml: xml, w: bounds.width, h: bounds.height};
+				//
+				// if (title != null) {
+				// 	entry.title = title;
+				// }
+				//
+				// images.push(xml);
+				// console.log(images);
+				// saveLibrary(evt);
+
+				if (dropTarget != null && dropTarget.parentNode != null && images.length > 0) {
+					dropTarget.parentNode.removeChild(dropTarget);
+					dropTarget = null;
+				}
+
+			});
+
+
+			var addMyModel = mxUtils.bind(this, function (evt) {
+				graph.selectVertices();
+				if (!graph.isSelectionEmpty()) {
+					//var cells = graph.getModel().isVertex();
+					var cells = graph.getSelectionCells();
+
+					for(var i = 0; i < cells.length; i++){
+						var mycell = [];
+						mycell[0] = cells[i];
+						var bounds = [];
+						bounds[i] = graph.view.getBounds(mycell);
+						var s = graph.view.scale;
+
+						bounds[i].x /= s;
+						bounds[i].y /= s;
+						bounds[i].width /= s;
+						bounds[i].height /= s;
+
+						bounds[i].x -= graph.view.translate.x;
+						bounds[i].y -= graph.view.translate.y;
+
+
+						addMyCells(mycell, bounds[i],i);
+					}
+				} else if (graph.getRubberband().isActive()) {
+					graph.getRubberband().execute(evt);
+					graph.getRubberband().reset();
+				} else {
+					this.showError(mxResources.get('error'), mxResources.get('nothingIsSelected'), mxResources.get('ok'));
+				}
+				mxEvent.consume(evt);
+			});
+
+			var mybuttons = document.createElement('div');
+			mybuttons.style.right = '0px';
+			mybuttons.style.top = '5px';
+
+			// Workaround for CSS error in IE8 (standards and quirks)
+			if (!mxClient.IS_QUIRKS && document.documentMode != 8)
+			{
+				mybuttons.style.backgroundColor = 'inherit';
+			}
+			var mybtn = document.createElement('img');
+			mybtn.setAttribute('src', Editor.plusImage);
+			mybtn.setAttribute('title', mxResources.get('add'));
+			mybuttons.appendChild(mybtn);
+			mxEvent.addListener(mybtn, 'click', addMyModel);
+			myShapesModel.appendChild(mybuttons);
+
+
+
 			var addCells = mxUtils.bind(this, function(cells, bounds, evt, title)
 			{
 				cells = graph.cloneCells(mxUtils.sortCells(graph.model.getTopmostCells(cells)));
-	
+
 				// Translates cells to origin
 				for (var i = 0; i < cells.length; i++)
 				{
 					var geo = graph.getCellGeometry(cells[i]);
-					
+
 					if (geo != null)
 					{
 						geo.translate(-bounds.x, -bounds.y);
 					}
 				}
-	
+
 				contentDiv.appendChild(this.sidebar.createVertexTemplateFromCells(
 					cells, bounds.width, bounds.height, title || '', true, false, false));
-	
+
 				var xml = this.editor.graph.compress(mxUtils.getXml(this.editor.graph.encodeCells(cells)));
 				var entry = {xml: xml, w: bounds.width, h: bounds.height};
-				
+
 				if (title != null)
 				{
 					entry.title = title;
 				}
-				
+
 				images.push(entry);
 				saveLibrary(evt);
-				
+
 				if (dropTarget != null && dropTarget.parentNode != null && images.length > 0)
 				{
 					dropTarget.parentNode.removeChild(dropTarget);
 					dropTarget = null;
 				}
 			});
-		
+
 			var addSelection = mxUtils.bind(this, function(evt)
 			{
 				if (!graph.isSelectionEmpty())
 				{
 					var cells = graph.getSelectionCells();
 					var bounds = graph.view.getBounds(cells);
-					
+
 					var s = graph.view.scale;
-					
+
 					bounds.x /= s;
 					bounds.y /= s;
 					bounds.width /= s;
 					bounds.height /= s;
-					
+
 					bounds.x -= graph.view.translate.x;
 					bounds.y -= graph.view.translate.y;
-					
+
 					addCells(cells, bounds);
 				}
 				else if (graph.getRubberband().isActive())
@@ -1855,56 +1970,50 @@
 				{
 					this.showError(mxResources.get('error'), mxResources.get('nothingIsSelected'), mxResources.get('ok'));
 				}
-				
+
 				mxEvent.consume(evt);
 			});
-			
+
+
+
+
 			// Defines inactive border state
 			contentDiv.style.border = '3px solid transparent';
-			
+
 			// Adds drop handler from graph
-			mxEvent.addGestureListeners(contentDiv, function(){}, mxUtils.bind(this, function(evt)
-			{
-				if (graph.isMouseDown && graph.panningManager != null && graph.graphHandler.shape != null)
-				{
+			mxEvent.addGestureListeners(contentDiv, function () {
+			}, mxUtils.bind(this, function (evt) {
+				if (graph.isMouseDown && graph.panningManager != null && graph.graphHandler.shape != null) {
 					graph.graphHandler.shape.node.style.visibility = 'hidden';
-					
-					if (dropTarget != null)
-					{
+
+					if (dropTarget != null) {
 						dropTarget.style.border = '3px dotted rgb(254, 137, 12)';
-					}
-					else
-					{
+					} else {
 						contentDiv.style.border = '3px dotted rgb(254, 137, 12)';
 					}
-					
+
 					contentDiv.style.cursor = 'copy';
 					graph.panningManager.stop();
 					graph.autoScroll = false;
-					
-					if (graph.graphHandler.guide != null)
-					{
+
+					if (graph.graphHandler.guide != null) {
 						graph.graphHandler.guide.setVisible(false);
 					}
-					
-					if (graph.graphHandler.hint != null)
-					{
-						graph.graphHandler.hint.style.visibility = 'hidden';	
+
+					if (graph.graphHandler.hint != null) {
+						graph.graphHandler.hint.style.visibility = 'hidden';
 					}
-					
+
 					mxEvent.consume(evt);
 				}
-			}), mxUtils.bind(this, function(evt)
-			{
-				if (graph.isMouseDown && graph.panningManager != null && graph.graphHandler != null)
-				{
+			}), mxUtils.bind(this, function (evt) {
+				if (graph.isMouseDown && graph.panningManager != null && graph.graphHandler != null) {
 					contentDiv.style.border = '3px solid transparent';
-					
-					if (dropTarget != null)
-					{
+
+					if (dropTarget != null) {
 						dropTarget.style.border = '3px dotted lightGray';
 					}
-					
+
 					contentDiv.style.cursor = 'default';
 					this.sidebar.showTooltips = true;
 					graph.panningManager.stop();
@@ -1915,240 +2024,193 @@
 					mxEvent.consume(evt);
 				}
 			}));
-			
+
 			// Handles mouse leaving the library and restoring move
-			mxEvent.addListener(contentDiv, 'mouseleave', mxUtils.bind(this, function(evt)
-			{
-				if (graph.isMouseDown && graph.graphHandler.shape != null)
-				{
+			mxEvent.addListener(contentDiv, 'mouseleave', mxUtils.bind(this, function (evt) {
+				if (graph.isMouseDown && graph.graphHandler.shape != null) {
 					graph.graphHandler.shape.node.style.visibility = 'visible';
 					contentDiv.style.border = '3px solid transparent';
 					contentDiv.style.cursor = '';
 					graph.autoScroll = true;
-					
-					if (graph.graphHandler.guide != null)
-					{
+
+					if (graph.graphHandler.guide != null) {
 						graph.graphHandler.guide.setVisible(true);
 					}
-					
-					if (graph.graphHandler.hint != null)
-					{
-						graph.graphHandler.hint.style.visibility = 'visible';	
+
+					if (graph.graphHandler.hint != null) {
+						graph.graphHandler.hint.style.visibility = 'visible';
 					}
-					
-					if (dropTarget != null)
-					{
+
+					if (dropTarget != null) {
 						dropTarget.style.border = '3px dotted lightGray';
 					}
 				}
 			}));
-			
+
 			// Adds drop handler from filesystem
-			if (Graph.fileSupport)
-			{
-				mxEvent.addListener(contentDiv, 'dragover', mxUtils.bind(this, function(evt)
-				{
-					if (dropTarget != null)
-					{
+			if (Graph.fileSupport) {
+				mxEvent.addListener(contentDiv, 'dragover', mxUtils.bind(this, function (evt) {
+					if (dropTarget != null) {
 						dropTarget.style.border = '3px dotted rgb(254, 137, 12)';
-					}
-					else
-					{
+					} else {
 						contentDiv.style.border = '3px dotted rgb(254, 137, 12)';
 					}
-					
+
 					evt.dataTransfer.dropEffect = 'copy';
 					contentDiv.style.cursor = 'copy';
 					this.sidebar.hideTooltip();
 					evt.stopPropagation();
 					evt.preventDefault();
 				}));
-				
-				mxEvent.addListener(contentDiv, 'drop', mxUtils.bind(this, function(evt)
-				{
+
+				mxEvent.addListener(contentDiv, 'drop', mxUtils.bind(this, function (evt) {
 					contentDiv.style.border = '3px solid transparent';
 					contentDiv.style.cursor = '';
-					
-					if (dropTarget != null)
-					{
+
+					if (dropTarget != null) {
 						dropTarget.style.border = '3px dotted lightGray';
 					}
-					
-				    if (evt.dataTransfer.files.length > 0)
-				    {	
-				    	this.importFiles(evt.dataTransfer.files, 0, 0, this.maxImageSize, mxUtils.bind(this, function(data, mimeType, x, y, w, h, img, doneFn, file)
-				    	{
-							if (data != null && mimeType.substring(0, 6) == 'image/')
-							{
+
+					if (evt.dataTransfer.files.length > 0) {
+						this.importFiles(evt.dataTransfer.files, 0, 0, this.maxImageSize, mxUtils.bind(this, function (data, mimeType, x, y, w, h, img, doneFn, file) {
+							if (data != null && mimeType.substring(0, 6) == 'image/') {
 								var style = 'shape=image;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;image=' +
 									this.convertDataUri(data);
 								var cells = [new mxCell('', new mxGeometry(0, 0, w, h), style)];
 								cells[0].vertex = true;
-	
+
 								addCells(cells, new mxRectangle(0, 0, w, h), evt, (mxEvent.isAltDown(evt)) ? null : img.substring(0, img.lastIndexOf('.')).replace(/_/g, ' '));
 
-								if (dropTarget != null && dropTarget.parentNode != null && images.length > 0)
-								{
+								if (dropTarget != null && dropTarget.parentNode != null && images.length > 0) {
 									dropTarget.parentNode.removeChild(dropTarget);
 									dropTarget = null;
 								}
-							}
-							else
-							{
+							} else {
 								var done = false;
-								
-								var doImport = mxUtils.bind(this, function(theData, theMimeType)
-								{
-									if (theData != null && theMimeType == 'text/xml')
-									{
+
+								var doImport = mxUtils.bind(this, function (theData, theMimeType) {
+									if (theData != null && theMimeType == 'text/xml') {
 										var doc = mxUtils.parseXml(theData);
-										
-										if (doc.documentElement.nodeName == 'mxlibrary')
-										{
-											try
-											{
+
+										if (doc.documentElement.nodeName == 'mxlibrary') {
+											try {
 												var temp = JSON.parse(mxUtils.getTextContent(doc.documentElement));
 												addImages(temp, contentDiv);
 												images = images.concat(temp);
 												saveLibrary(evt);
 												this.spinner.stop();
 												done = true;
-											}
-											catch (e)
-											{
+											} catch (e) {
 												// ignore
 											}
-										}
-										else if (doc.documentElement.nodeName == 'mxfile')
-										{
-											try
-											{
+										} else if (doc.documentElement.nodeName == 'mxfile') {
+											try {
 												var pages = doc.documentElement.getElementsByTagName('diagram');
-												
-												for (var i = 0; i < pages.length; i++)
-												{
+
+												for (var i = 0; i < pages.length; i++) {
 													var temp = mxUtils.getTextContent(pages[i]);
 													var cells = this.stringToCells(this.editor.graph.decompress(temp));
 													var size = this.editor.graph.getBoundingBoxFromGeometry(cells);
 													addCells(cells, new mxRectangle(0, 0, size.width, size.height), evt);
 												}
-												
+
 												done = true;
-											}
-											catch (e)
-											{
-												if (window.console != null)
-												{
+											} catch (e) {
+												if (window.console != null) {
 													console.log('error in drop handler:', e);
 												}
 											}
 										}
 									}
-									
-									if (!done)
-									{
+
+									if (!done) {
 										this.spinner.stop();
 										this.handleError({message: mxResources.get('errorLoadingFile')})
 									}
 
-									if (dropTarget != null && dropTarget.parentNode != null && images.length > 0)
-									{
+									if (dropTarget != null && dropTarget.parentNode != null && images.length > 0) {
 										dropTarget.parentNode.removeChild(dropTarget);
 										dropTarget = null;
 									}
 								});
-								
-								if (!this.isOffline() && new XMLHttpRequest().upload && this.isRemoteFileFormat(data, img) && file != null)
-								{
-									this.parseFile(file, mxUtils.bind(this, function(xhr)
-									{
-										if (xhr.readyState == 4)
-										{
+
+								if (!this.isOffline() && new XMLHttpRequest().upload && this.isRemoteFileFormat(data, img) && file != null) {
+									this.parseFile(file, mxUtils.bind(this, function (xhr) {
+										if (xhr.readyState == 4) {
 											this.spinner.stop();
-											
-											if (xhr.status >= 200 && xhr.status <= 299)
-											{
+
+											if (xhr.status >= 200 && xhr.status <= 299) {
 												doImport(xhr.responseText, 'text/xml');
-											}
-											else
-											{
-												this.handleError({message: mxResources.get((xhr.status == 413) ?
-					            						'drawingTooLarge' : 'invalidOrMissingFile')},
-					            						mxResources.get('errorLoadingFile'));
+											} else {
+												this.handleError({
+														message: mxResources.get((xhr.status == 413) ?
+															'drawingTooLarge' : 'invalidOrMissingFile')
+													},
+													mxResources.get('errorLoadingFile'));
 											}
 										}
 									}));
-								}
-								else
-								{
+								} else {
 									doImport(data, mimeType);
 								}
 							}
-				    	}));
+						}));
 					}
-				    
-				    evt.stopPropagation();
-				    evt.preventDefault();
+
+					evt.stopPropagation();
+					evt.preventDefault();
 				}));
-	
-				mxEvent.addListener(contentDiv, 'dragleave', function(evt)
-				{
-					if (dropTarget != null)
-					{
+
+				mxEvent.addListener(contentDiv, 'dragleave', function (evt) {
+					if (dropTarget != null) {
 						dropTarget.style.border = '3px dotted lightGray';
-					}
-					else
-					{
+					} else {
 						contentDiv.style.border = '3px solid transparent';
 						contentDiv.style.cursor = '';
 					}
-	
+
 					evt.stopPropagation();
 					evt.preventDefault();
 				});
 			}
-	
+
 			btn = btn.cloneNode(false);
 			btn.setAttribute('src', IMAGE_PATH + '/edit.gif');
 			btn.setAttribute('title', mxResources.get('edit'));
 			buttons.insertBefore(btn, buttons.firstChild);
-			
+
 			mxEvent.addListener(btn, 'click', editLibrary);
-			mxEvent.addListener(contentDiv, 'dblclick', function(evt)
-			{
-				if (mxEvent.getSource(evt) == contentDiv)
-				{
+			mxEvent.addListener(contentDiv, 'dblclick', function (evt) {
+				if (mxEvent.getSource(evt) == contentDiv) {
 					editLibrary(evt);
 				}
 			});
-			
+
 			btn = btn.cloneNode(false);
 			btn.setAttribute('src', Editor.plusImage);
 			btn.setAttribute('title', mxResources.get('add'));
 			buttons.insertBefore(btn, buttons.firstChild);
-			
-			if (!this.isOffline() && file.title == '.scratchpad')
-			{
+
+			if (!this.isOffline() && file.title == '.scratchpad') {
 				var link = document.createElement('span');
 				link.setAttribute('title', mxResources.get('help'));
 				link.style.cssText = 'color:gray;text-decoration:none;';
 				link.className = 'geButton';
 				mxUtils.write(link, '?');
-				
-				mxEvent.addGestureListeners(link, mxUtils.bind(this, function(evt)
-				{
+
+				mxEvent.addGestureListeners(link, mxUtils.bind(this, function (evt) {
 					window.open('https://desk.draw.io/support/solutions/articles/16000042367');
 					mxEvent.consume(evt);
 				}));
-				
+
 				buttons.insertBefore(link, buttons.firstChild);
 			}
-			
+
 			var spinBtn = null;
-	
+
 			mxEvent.addListener(btn, 'click', addSelection);
 		}
-		
+
 		title.appendChild(buttons);
 		title.style.paddingRight = (buttons.childNodes.length * btnWidth) + 'px';
 	};

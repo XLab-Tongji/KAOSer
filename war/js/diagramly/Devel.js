@@ -52,6 +52,7 @@ mxscript('js/diagramly/sidebar/Sidebar-OperationModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-RespModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-GoalModel.js');
 mxscript('js/diagramly/sidebar/Sidebar-ResilienceModel.js');
+mxscript('js/diagramly/sidebar/Sidebar-MyModel.js');
 
 mxscript('js/diagramly/util/mxJsCanvas.js');
 mxscript('js/diagramly/util/mxAsyncCanvas.js');
