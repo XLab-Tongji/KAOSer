@@ -22,6 +22,8 @@ mxscript('js/mxgraph/whatType.js');
 mxscript('js/mxgraph/Editor.js');
 mxscript('js/mxgraph/EditorUi.js');
 mxscript('js/myOwnFun/EditStyleOfPDF.js');
+mxscript('js/myOwnFun/getUrlVars.js');
+mxscript('js/myOwnFun/saveAndReadMyShape.js');
 mxscript('js/mxgraph/Sidebar.js');
 mxscript('js/mxgraph/Goaldiv.js');
 mxscript('js/mxgraph/RequirementDiv.js');
