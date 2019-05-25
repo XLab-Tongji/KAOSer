@@ -720,6 +720,7 @@ fromMongo=From Mongo
 localport=http://10.60.38.173:8880/
 urlsave=save
 urlsavemyshape=savemyshape
+urlloadmyshape=loadmyshape
 urltemplate=template/
 urlimportfromMongo=importFromMongo
 urlservletdownload=ServletDownload

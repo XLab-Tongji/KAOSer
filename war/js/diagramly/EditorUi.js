@@ -1801,6 +1801,18 @@
 						geo.translate(-bounds.x, -bounds.y);
 					}
 				}
+				/*
+				var mycell = new mxCell('aaa',new mxGeometry(0,0,120,60),"shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFD966;strokeColor=#916740;fontSize=18");
+				mycell.flag="domain_property"
+				mycell.visible=true;
+				mycell.collapsed=false;
+				mycell.connectable=true;
+				mycell.edge=false;
+				mycell.vertex=true;
+				mycell. ='asd'
+				mycell.domainPropertyRef='sdf'
+				var result = [];
+				result.push(mycell)*/
 				if(SaveMyShape(getUrlVars()["_ijt"],cells,geo)) {
 					var table = document.createElement("table");
 					table.style.fontSize = "12px";
@@ -1889,7 +1901,72 @@
 				mxEvent.consume(evt);
 			});
 			var loadMyModel = mxUtils.bind(this, function (evt) {
-				console.log('loading')
+				var mycells = loadMyCells();
+				for(var i in mycells){
+					var mycell = new mxCell(mycells[i].name,new mxGeometry(0,0,mycells[i].width,mycells[i].height),mycells[i].style);
+					var myattribute = JSON.parse(mycells[i].attribute);
+					var myflag = myattribute.flag;
+					mycell.flag=myflag;
+					mycell.visible=true;
+					mycell.collapsed=false;
+					mycell.connectable=true;
+					mycell.edge=false;
+					mycell.vertex=true;
+					if(myflag=='goal'){
+						mycell.usecaseDiscription=myattribute.usecaseDiscription;
+						mycell.participant=myattribute.participant;
+						mycell.preCondition=myattribute.preCondition;
+					}else if(myflag=='requirement'){
+						mycell.basicEventFlow=myattribute.basicEventFlow;
+						mycell.addtionEventFlow=myattribute.addtionEventFlow;
+						mycell.businessRule=myattribute.businessRule;
+					}else if(myflag=='obstacle'){
+						mycell.gedetail=myattribute.gedetail;
+					}else if(myflag=='domain_property'){
+						mycell.domainPropertyRef=myattribute.domainPropertyRef;
+						mycell.domainPropertyDes=myattribute.domainPropertyDes;
+					}else if(myflag=='hexagon'){
+						mycell.agentType=myattribute.agentType;
+					}else if(myflag=='resource'){
+						mycell.gedetail=myattribute.gedetail;
+					}else if(myflag=='resilience'){
+						mycell.DisruptionTol=myattribute.DisruptionTol;
+						mycell.RecoveryTime=myattribute.RecoveryTime;
+						mycell.QLUnit=myattribute.QLUnit;
+					}else if(myflag=='disruption'){
+						mycell.description=myattribute.description;
+						mycell.DisruptionTol=myattribute.DisruptionTol;
+						mycell.RecoveryTime=myattribute.RecoveryTime;
+						mycell.QualityLoss=myattribute.QualityLoss;
+					}else if(myflag=='performancebenchmark'){
+						mycell.PerformanceValue=myattribute.PerformanceValue;
+						mycell.Unit=myattribute.Unit;
+					}
+					var result = [];
+					result.push(mycell)
+
+					var table = document.createElement("table");
+					table.style.fontSize = "12px";
+					var tr = document.createElement("tr");
+					var shape_td = document.createElement("td");
+					shape_td.style.width = "40px";
+					shape_td.style.border = "solid 1px #d4d4d4";
+					shape_td.appendChild(this.sidebar.createVertexTemplateFromCells(
+						result, mycells[i].width, mycells[i].height,myflag , true, false, false));
+					var type_td = document.createElement("td");
+					type_td.innerHTML = myflag;
+					type_td.style.width = "40px";
+					type_td.style.border = "solid 1px #d4d4d4";
+					var id_td = document.createElement("td");
+					id_td.innerHTML = i;
+					id_td.style.width = "40px";
+					id_td.border = "solid 1px #d4d4d4";
+					tr.appendChild(shape_td);
+					tr.appendChild(type_td);
+					tr.appendChild(id_td);
+					table.appendChild(tr);
+					myShapesModel.appendChild(table);
+				}
 				mxEvent.consume(evt);
 			});
 
@@ -1907,13 +1984,13 @@
 			mybtn.setAttribute('title', mxResources.get('add'));
 			mybuttons.appendChild(mybtn);
 			mxEvent.addListener(mybtn, 'click', addMyModel);
-			/*
+
 			//读取按钮
 			var mybtn1 = document.createElement('img');
 			mybtn1.setAttribute('src', Editor.plusImage);
-			mybtn1.setAttribute('title', mxResources.get('save'));
+			mybtn1.setAttribute('title', mxResources.get('load'));
 			mybuttons.appendChild(mybtn1);
-			mxEvent.addListener(mybtn1, 'click', loadMyModel);*/
+			mxEvent.addListener(mybtn1, 'click', loadMyModel);
 			myShapesModel.appendChild(mybuttons);
 
 

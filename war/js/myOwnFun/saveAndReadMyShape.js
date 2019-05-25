@@ -1,5 +1,24 @@
-function ReadMyShape(myShapesModel) {
-    var table = document.createElement("table");
+function loadMyCells() {
+    var result;
+        $.ajax({
+            type:"GET",
+            url:mxResources.get("localport")+mxResources.get("urlloadmyshape"),
+            data:{
+                id:getUrlVars()["_ijt"],
+            },
+            async: false,
+            success:function (data) {
+                alert("成功");
+                result=data
+
+            },
+            error:function (data) {
+                alert("失败");
+                result=[];
+            }
+        });
+    return result;
+    /*var table = document.createElement("table");
     table.style.fontSize = "12px";
     var tr = document.createElement("tr");
     var shape_td = document.createElement("td");
@@ -20,12 +39,12 @@ function ReadMyShape(myShapesModel) {
     tr.appendChild(id_td);
     table.appendChild(tr);
     myShapesModel.appendChild(table);
-    shape_td.appendChild(this.sidebar.createVertexTemplate('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#0066CC;fontSize=18', 180, 40, '', 'Goal'));
+    shape_td.appendChild(this.sidebar.createVertexTemplate('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#0066CC;fontSize=18', 180, 40, '', 'Goal'));*/
 }
 function SaveMyShape(id,cells,geo) {
     var result;
     for(var i in cells){
-        var ttt =1;
+        var att = getAttribute(cells[i]);
         $.ajax({
             type:"POST",
             url:mxResources.get("localport")+mxResources.get("urlsavemyshape"),
@@ -34,7 +53,8 @@ function SaveMyShape(id,cells,geo) {
                 style:cells[i].style,
                 width:geo.width,
                 height:geo.height,
-                title:cells[i].flag
+                attribute:att,
+                name:cells[i].value
             },
             async: false,
             success:function (data) {
@@ -59,7 +79,53 @@ function SaveMyShape(id,cells,geo) {
     return result;
     //shape_td.appendChild(this.sidebar.createVertexTemplate('shape=goal;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#DAE8FC;strokeColor=#0066CC;fontSize=18', 180, 40, '', 'Goal'));
 }
-var loadMyCells = mxUtils.bind(this, function (cells, bounds, index, evt, mytitle) {
+function getAttribute(cells) {
+    var result={};
+    result.flag=cells.flag;
+    if(cells.flag=='goal'){
+        result.usecaseDiscription=cells.usecaseDiscription;
+        result.participant=cells.participant;
+        result.preCondition=cells.preCondition;
+        result.aftCondition = cells.aftcondition;
+    }
+    else if (cells.flag=='requirement'){
+        result.basicEventFlow=cells.basicEventFlow;
+        result.addtionEventFlow = cells.addtionEventFlow;
+        result.businessRule=cells.businessRule;
+        result.description = cells.description;
+    }
+    else if(cells.flag=='obstacle'){
+        result.gedetail=cells.gedetail;
+    }
+    else if(cells.flag=='domain_property'){
+        result.domainPropertyDes=cells.domainPropertyDes;
+        result.domainPropertyRef=cells.domainPropertyRef;
+    }
+    else if(cells.flag=='hexagon'){
+        result.agentType=cells.agentType;
+    }
+    else if(cells.flag=='resource'){
+        result.gedetail=cells.gedetail;
+    }
+    else if(cells.flag=='testcase'){
+
+    }
+    else if(cells.flag=='resilience'){
+        result.DisruptionTol=cells.DisruptionTol;
+        result.RecoveryTime=cells.RecoveryTime;
+        result.QLUnit=cells.QLUnit;
+    }else if(cells.flag=='disruption'){
+        result.description=cells.description;
+        result.DisruptionTol=cells.DisruptionTol;
+        result.RecoveryTime=cells.RecoveryTime;
+        result.QualityLoss=cells.QualityLoss;
+    }else if(cells.flag=='performancebenchmark'){
+        result.PerformanceValue=cells.PerformanceValue;
+        result.Unit=cells.Unit;
+    }
+    return JSON.stringify(result)
+}
+/*var loadMyCells = mxUtils.bind(this, function (cells, bounds, index, evt, mytitle) {
     cells = graph.cloneCells(mxUtils.sortCells(graph.model.getTopmostCells(cells)));
 
     // Translates cells to origin
@@ -121,4 +187,4 @@ var loadMyCells = mxUtils.bind(this, function (cells, bounds, index, evt, mytitl
         dropTarget = null;
     }
 
-});
+});*/
