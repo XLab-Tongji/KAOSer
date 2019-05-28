@@ -695,9 +695,9 @@
 		if (ignoreSelection && this.fileNode != null && this.currentPage != null)
 		{
 			if(!currentPage)
-				var strModified = EditStyle(mxUtils.getXml(node));
-			else
 				var strModified = mxUtils.getXml(node);
+			else
+				var strModified = EditStyle(mxUtils.getXml(node));
 			var data = this.editor.graph.compress(this.editor.graph.zapGremlins(strModified));
 			mxUtils.setTextContent(this.currentPage.node, data);
 			node = this.fileNode.cloneNode(false);

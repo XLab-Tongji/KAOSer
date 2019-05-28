@@ -21,6 +21,8 @@ function EditStyle(data){
             data = beforeShape + "parallelogram;flipV=1" + data.substring(pos+16);
         else if(shape == "cros")
             data = beforeShape + "cross;size=0;rotation=45" + data.substring(pos+15);
+        else if(shape == "perf")
+            data = beforeShape + "offPageConnector;flipV=1" + data.substring(pos+26);
         pos = data.indexOf("shape",pos+1);
     }
     return data
