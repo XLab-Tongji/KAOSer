@@ -1813,7 +1813,7 @@
 				mycell.domainPropertyRef='sdf'
 				var result = [];
 				result.push(mycell)*/
-				if(SaveMyShape(getUrlVars()["_ijt"],cells,geo)) {
+				if(SaveMyShape(getUrlVars()["id"],cells,geo)) {
 					var table = document.createElement("table");
 					table.style.fontSize = "12px";
 					var tr = document.createElement("tr");
@@ -1827,7 +1827,7 @@
 					type_td.style.width = "40px";
 					type_td.style.border = "solid 1px #d4d4d4";
 					var id_td = document.createElement("td");
-					id_td.innerHTML = index;
+					id_td.innerHTML = cells[0].value;
 					id_td.style.width = "40px";
 					id_td.style.border = "solid 1px #d4d4d4";
 					tr.appendChild(shape_td);
@@ -1901,6 +1901,7 @@
 				mxEvent.consume(evt);
 			});
 			var loadMyModel = mxUtils.bind(this, function (evt) {
+
 				var mycells = loadMyCells();
 				for(var i in mycells){
 					var mycell = new mxCell(mycells[i].name,new mxGeometry(0,0,mycells[i].width,mycells[i].height),mycells[i].style);
@@ -1958,9 +1959,9 @@
 					type_td.style.width = "40px";
 					type_td.style.border = "solid 1px #d4d4d4";
 					var id_td = document.createElement("td");
-					id_td.innerHTML = i;
+					id_td.innerHTML = mycells[i].name;
 					id_td.style.width = "40px";
-					id_td.border = "solid 1px #d4d4d4";
+					id_td.style.border = "solid 1px #d4d4d4";
 					tr.appendChild(shape_td);
 					tr.appendChild(type_td);
 					tr.appendChild(id_td);
@@ -1982,13 +1983,33 @@
 			var mybtn = document.createElement('img');
 			mybtn.setAttribute('src', Editor.plusImage);
 			mybtn.setAttribute('title', mxResources.get('add'));
+			mybtn.onmouseover = function(){
+				mybtn.style.cursor = "pointer";
+				mybtn.style.border = "1px solid #808080";
+			};
+			mybtn.onmouseout = function(){
+				mybtn.style.cursor = "default";
+				mybtn.style.border = "0";
+			};
+			mybtn.style.padding = "5px";
+			mybtn.style.margin = "-1px 1px 0px 0px";
 			mybuttons.appendChild(mybtn);
 			mxEvent.addListener(mybtn, 'click', addMyModel);
 
 			//读取按钮
 			var mybtn1 = document.createElement('img');
-			mybtn1.setAttribute('src', Editor.plusImage);
+			mybtn1.setAttribute('src', IMAGE_PATH + '/Read.png');
 			mybtn1.setAttribute('title', mxResources.get('load'));
+			mybtn1.onmouseover = function(){
+				mybtn1.style.cursor = "pointer";
+				mybtn1.style.border = "1px solid #808080";
+			};
+			mybtn1.onmouseout = function(){
+				mybtn1.style.cursor = "default";
+				mybtn1.style.border = "0";
+			};
+			mybtn1.style.padding = "5px";
+			mybtn.style.margin = "-1px 1px 0px 0px";
 			mybuttons.appendChild(mybtn1);
 			mxEvent.addListener(mybtn1, 'click', loadMyModel);
 			myShapesModel.appendChild(mybuttons);

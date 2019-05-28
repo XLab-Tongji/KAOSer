@@ -213,7 +213,7 @@ function getmyWant(s,id_value,SourceorTarget,flag,information){
 // id_value - > 当前的id
 // SurceorTarget - > 当前作为source或者target（source,target)
 // flag - >目标的形状
-// information - > 信息参数
+// Attribute - > 信息参数
 function getmyWantAttri(s,id_value,SourceorTarget,flag,Attribute){
     getJSONs(s);
     //alert(jsonText);

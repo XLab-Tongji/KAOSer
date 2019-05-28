@@ -4,7 +4,7 @@ function loadMyCells() {
             type:"GET",
             url:mxResources.get("localport")+mxResources.get("urlloadmyshape"),
             data:{
-                id:getUrlVars()["_ijt"],
+                projectName:document.getElementById('title').innerText,
             },
             async: false,
             success:function (data) {
@@ -54,7 +54,8 @@ function SaveMyShape(id,cells,geo) {
                 width:geo.width,
                 height:geo.height,
                 attribute:att,
-                name:cells[i].value
+                name:cells[i].value,
+                projectName:document.getElementById('title').innerText
             },
             async: false,
             success:function (data) {
