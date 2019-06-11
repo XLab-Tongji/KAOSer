@@ -1864,12 +1864,13 @@
 					dropTarget.parentNode.removeChild(dropTarget);
 					dropTarget = null;
 				}
-
+				return cells[0].value;
 			});
 
 
 			var addMyModel = mxUtils.bind(this, function (evt) {
 				graph.selectVertices();
+				var successfullist = '';
 				if (!graph.isSelectionEmpty()) {
 					//var cells = graph.getModel().isVertex();
 					var cells = graph.getSelectionCells();
@@ -1889,9 +1890,13 @@
 						bounds[i].x -= graph.view.translate.x;
 						bounds[i].y -= graph.view.translate.y;
 
-
-						addMyCells(mycell, bounds[i],i);
+						var tempresult = addMyCells(mycell, bounds[i],i);
+						if(tempresult != ''){
+							successfullist = successfullist + tempresult + ',';
+						}
 					}
+					successfullist = successfullist.substring(0,successfullist.length -1);
+					alert("保存成功："+successfullist);
 				} else if (graph.getRubberband().isActive()) {
 					graph.getRubberband().execute(evt);
 					graph.getRubberband().reset();

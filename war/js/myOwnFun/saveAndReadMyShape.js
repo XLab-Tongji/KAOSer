@@ -62,16 +62,13 @@ function SaveMyShape(id,cells,geo) {
 
                 var obj = JSON.parse(data);
                 if(obj.name=="success"){
-                    alert("保存成功");
                     result = true
                 }
                 else{
-                    alert("保存失败，该名称已存在");
                     result = false
                 }
             },
             error:function (data) {
-                alert("失败");
                 result = false;
             }
         });
