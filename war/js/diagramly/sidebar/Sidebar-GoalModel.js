@@ -10,7 +10,6 @@
 			 this.createVertexTemplateEntry('shape=obstacle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=#ffe6cc;strokeColor=#F19C99;fontSize=18', 180, 40, '', 'Obstacle'),
 			 this.createVertexTemplateEntry('shape=domain_property;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#FFD966;strokeColor=#916740;fontSize=18', 120, 60, '', 'Domain Property'),
             this.createVertexTemplateEntry('shape=hexagon;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#fff2cc;strokeColor=#FFD306;fontSize=18', 180, 50, '', 'Agent'),
-            this.createVertexTemplateEntry('shape=resource;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=18', 120, 40, '', 'Asset'),
             this.createVertexTemplateEntry('shape=testcase;whiteSpace=wrap;html=1;top=0;bottom=0;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=18', 120, 60, '', 'Test Case'),
             this.createVertexTemplateEntry('text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;',
                 40, 20, 'Text', 'Text', null, null, 'text textbox textarea label'),
@@ -81,40 +80,40 @@
 
                 return sb.createVertexTemplateFromCells([cell, edge1, edge2,edge3], 180, 100, 'And');
             }),
-            this.addEntry('ObstructLine', function()
-            {
-                var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2');
-                edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
-                edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
-                edge.geometry.relative = true;
-                edge.edge = true;
-
-                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
-                cell.geometry.relative = true;
-                cell.setConnectable(false);
-                cell.vertex = true;
-                cell.geometry.offset = new mxPoint(-9, -9);
-                edge.insert(cell);
-
-                return sb.createEdgeTemplateFromCells([edge], 100, 0, 'Obstruct');
-            }),
-            this.addEntry('resolve', function()
-            {
-                var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#82b366;strokeWidth=2');
-                edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
-                edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
-                edge.geometry.relative = true;
-                edge.edge = true;
-
-                var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=ellipse;html=1;strokeColor=#82b366;fillColor=#ffffff;strokeWidth=2');
-                cell.geometry.relative = true;
-                cell.setConnectable(false);
-                cell.vertex = true;
-                cell.geometry.offset = new mxPoint(-9, -9);
-                edge.insert(cell);
-
-                return sb.createEdgeTemplateFromCells([edge], 100, 0, 'resolve');
-            }),
+            // this.addEntry('ObstructLine', function()
+            // {
+            //     var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#CC0000;strokeWidth=2');
+            //     edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
+            //     edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
+            //     edge.geometry.relative = true;
+            //     edge.edge = true;
+            //
+            //     var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=crossSign;html=1;strokeColor=#CC0000;strokeWidth=2');
+            //     cell.geometry.relative = true;
+            //     cell.setConnectable(false);
+            //     cell.vertex = true;
+            //     cell.geometry.offset = new mxPoint(-9, -9);
+            //     edge.insert(cell);
+            //
+            //     return sb.createEdgeTemplateFromCells([edge], 100, 0, 'Obstruct');
+            // }),
+            // this.addEntry('resolve', function()
+            // {
+            //     var edge = new mxCell('', new mxGeometry(0, 0, 0, 0), 'startArrow=none;endArrow=classic;endFill=1;endSize=10;html=1;strokeColor=#82b366;strokeWidth=2');
+            //     edge.geometry.setTerminalPoint(new mxPoint(0, 0), true);
+            //     edge.geometry.setTerminalPoint(new mxPoint(100, 0), false);
+            //     edge.geometry.relative = true;
+            //     edge.edge = true;
+            //
+            //     var cell = new mxCell('', new mxGeometry(0, 0, 18, 18), 'shape=ellipse;html=1;strokeColor=#82b366;fillColor=#ffffff;strokeWidth=2');
+            //     cell.geometry.relative = true;
+            //     cell.setConnectable(false);
+            //     cell.vertex = true;
+            //     cell.geometry.offset = new mxPoint(-9, -9);
+            //     edge.insert(cell);
+            //
+            //     return sb.createEdgeTemplateFromCells([edge], 100, 0, 'resolve');
+            // }),
 
         ]);
 

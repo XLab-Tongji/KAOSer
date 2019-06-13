@@ -75,9 +75,10 @@ function loadIn(){
 }
 window.onload=loadIn();
 
+Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase','exportTemplate'];
 
-Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase','exportTemplate',what,'importFromDB'];
-
+//Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase',/*'exportTemplate'*/,what/*importFromDB'*/];
+//Menus.prototype.defaultMenuItems = ['file', /*'edit', 'view', 'arrange', 'extras', 'help',*/'saveToDatabase',/*'exportTemplate'*/,what/*importFromDB'*/];
 /**
  * Adds the label menu items to the given menu and parent.
  */
@@ -544,10 +545,11 @@ Menus.prototype.init = function()
 		// }
 
 	})));
-    this.put('importFromDB', new Menu(mxUtils.bind(this, function(menu, parent)
-    {
-        this.addMenuItems(menu, ['fromMongo']);
-    })));
+
+	this.put('importFromDB', new Menu(mxUtils.bind(this, function(menu, parent)
+	{
+		//     this.addMenuItems(menu, ['fromMongo']);
+	})));
 };
 
 /**

@@ -317,7 +317,7 @@ function getmyWantSingle(s,id_value,SourceorTarget,flag,Attribute,order){
     var sourceorTarget = '-'+SourceorTarget;
     var attribute = '-'+Attribute;
     var orderNumber = order;
-
+    var orderTemp = -1;
     var sot ;
     if(sourceorTarget=='-source'){
         sot = '-target';
@@ -351,7 +351,7 @@ function getmyWantSingle(s,id_value,SourceorTarget,flag,Attribute,order){
     }
     else if(sourceorTarget=='-target'){
         for (i = 0; i < jsons.length; i++) {
-            if ((sourceorTarget in jsons[i]) && (jsons[i][sourceorTarget] == id_value) && (!('-flag' in jsons[i]))&&(findSource(jsons,jsons[i]['-source'])==-1)) {
+            if ((sourceorTarget in jsons[i]) &&(jsons[i][sourceorTarget] == id_value) && (!('-flag' in jsons[i]))&&(findSource(jsons,jsons[i]['-source'])==-1)) {
                 bridges.push(jsons[i][sot]);
             }
 
@@ -373,12 +373,24 @@ function getmyWantSingle(s,id_value,SourceorTarget,flag,Attribute,order){
     }
 
 
-    for(i=0;i<jsons.length;i++){
-            if(("-id" in jsons[i])&&(jsons[i]["-id"]==bridges[orderNumber])&&(jsons[i]['-flag']==flag)){
 
-                valueResults.push(jsons[i][attribute]);
+
+    for(i=0;i<jsons.length;i++){
+        for(j=0;j<bridges.length;j++){
+            if(("-id" in jsons[i])&&(jsons[i]["-id"]==bridges[j])&&(jsons[i]['-flag']==flag)){
+                orderTemp++;
+                if(orderTemp == orderNumber){
+                    valueResults.push(jsons[i][attribute]);
+                }
             }
         }
+    }
+
+    // for(i=0;i<jsons.length;i++){
+    //         if(("-id" in jsons[i])&&(jsons[i]["-id"]==bridges[orderNumber])&&(jsons[i]['-flag']==flag)){
+    //             valueResults.push(jsons[i][attribute]);
+    //         }
+    //     }
     results=wirtieResults(uniqueArray(valueResults));
     return results;
 }

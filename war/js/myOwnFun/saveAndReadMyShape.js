@@ -8,7 +8,7 @@ function loadMyCells() {
             },
             async: false,
             success:function (data) {
-                alert("成功");
+               // alert("成功");
                 result=data
 
             },
@@ -122,6 +122,75 @@ function getAttribute(cells) {
         result.Unit=cells.Unit;
     }
     return JSON.stringify(result)
+}
+
+
+
+
+function DeleteMyShape(id,cells) {
+    var result;
+    $.ajax({
+        type:"POST",
+        url:mxResources.get("localport")+mxResources.get("urldeletemyshape"),
+        data:{
+            id:id,
+            style:cells.style,
+            name:cells.value,
+            projectName:document.getElementById('title').innerText
+        },
+        async: false,
+        success:function (data) {
+            var obj = JSON.parse(data);
+            if(obj.name=="success"){
+                alert("删除成功");
+                result = true
+            }
+            else{
+                alert("删除失败，该模型不存在");
+                result = false
+            }
+
+        },
+        error:function (data) {
+            alert("失败");
+            result=false;
+        }
+    });
+    return result;
+}
+
+function DeleteMyLoadShape(id,style,name) {
+    var result;
+    $.ajax({
+        type:"POST",
+        url:mxResources.get("localport")+mxResources.get("urldeletemyshape"),
+        data:{
+            id:id,
+            style:style,
+            name:name,
+            projectName:document.getElementById('title').innerText
+        },
+        async: false,
+        success:function (data) {
+            console.log(style);
+            console.log(name);
+            console.log(id);
+            var obj = JSON.parse(data);
+            if(obj.name=="success"){
+                alert("删除成功");
+                result = true
+            }
+            else{
+                alert("删除失败，该模型不存在");
+                result = false
+            }
+        },
+        error:function (data) {
+            alert("失败");
+            result=false;
+        }
+    });
+    return result;
 }
 /*var loadMyCells = mxUtils.bind(this, function (cells, bounds, index, evt, mytitle) {
     cells = graph.cloneCells(mxUtils.sortCells(graph.model.getTopmostCells(cells)));

@@ -71,6 +71,29 @@ function createResilienceDiv() {
     table.appendChild(tr3);
 
 
+    //Alert Rule
+    var tr10 = document.createElement("tr");
+    var td10_1 = document.createElement("td");
+    td10_1.innerHTML = "Alert Rule";
+    var td10_2 = document.createElement("td");
+    var input10 = document.createElement("input");
+    var input10_type = document.createAttribute("type");
+    input10_type.value = "text";
+    input10.setAttributeNode(input10_type);
+    var input10_name = document.createAttribute("name");
+    input10_name.value = "AlertRule";
+    input10.setAttributeNode(input10_name);
+    var input10_id = document.createAttribute("id");
+    input10_id.value = "AlertRule";
+    input10.setAttributeNode(input10_id);
+    var input10_class = document.createAttribute("class");
+    input10.setAttributeNode(input10_class);
+    td10_2.appendChild(input10);
+    tr10.appendChild(td10_1);
+    tr10.appendChild(td10_2);
+    table.appendChild(tr10);
+
+
     //Disruption Tolerance
     var tr4 = document.createElement("tr");
     var td4_1 = document.createElement("td");

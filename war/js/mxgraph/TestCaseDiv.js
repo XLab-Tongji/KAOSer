@@ -39,28 +39,85 @@ function createTestCaseDiv() {
     var td1_1 = document.createElement("td");
     td1_1.innerHTML = "Action";
     var td1_1_width = document.createAttribute("width");
+    //var td1_1_rowspan = document.createAttribute("rowspan");
     td1_1_width.value = "100px";
+  //  td1_1_rowspan.value = "3";
     td1_1.setAttributeNode(td1_1_width);
-    var td1_2 = document.createElement("td");
+  //  td1_1.setAttributeNode(td1_1_rowspan);
+
+    var tr1_2 = document.createElement("tr");
+    tr1_2.style.backgroundColor = "#FFE6CC";
+    var td1_2_1 = document.createElement("td");
+    td1_2_1.innerHTML = "Disruption Name";
+    var td1_2_1_width = document.createAttribute("width");
+    td1_2_1_width.value = "100px";
+    td1_2_1.setAttributeNode(td1_2_1_width);
+    var td1_2_2 = document.createElement("td");
     var input1 = document.createElement("h4");
     var input1_id = document.createAttribute("id");
-    input1_id.value = "Action";
+    input1_id.value = "testDisname";
     input1.setAttributeNode(input1_id);
-    td1_2.appendChild(input1);
+    td1_2_2.appendChild(input1);
+    tr1_2.appendChild(td1_2_1);
+    tr1_2.appendChild(td1_2_2);
+
+    var tr1_3 = document.createElement("tr");
+    var td1_3_1 = document.createElement("td");
+    td1_3_1.innerHTML = "Target";
+    td1_3_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td1_3_1_width = document.createAttribute("width");
+    td1_3_1_width.value = "100px";
+    td1_3_1.setAttributeNode(td1_3_1_width);
+    var td1_3_2 = document.createElement("td");
+    var input1 = document.createElement("h4");
+    var input1_id = document.createAttribute("id");
+    input1_id.value = "testDistarget";
+    input1.setAttributeNode(input1_id);
+    td1_3_2.appendChild(input1);
+    tr1_3.appendChild(td1_3_1);
+    tr1_3.appendChild(td1_3_2);
+
+
+    var tr1_4 = document.createElement("tr");
+    var td1_4_1 = document.createElement("td");
+    td1_4_1.innerHTML = "Description";
+    td1_4_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td1_4_1_width = document.createAttribute("width");
+    td1_4_1_width.value = "100px";
+    td1_4_1.setAttributeNode(td1_4_1_width);
+    var td1_4_2 = document.createElement("td");
+    var input4 = document.createElement("h4");
+    var input4_id = document.createAttribute("id");
+    input4_id.value = "testDisdescription";
+    input4.setAttributeNode(input4_id);
+    td1_4_2.appendChild(input4);
+    tr1_4.appendChild(td1_4_1);
+    tr1_4.appendChild(td1_4_2);
+
+
+
+    var td1_2 = document.createElement("td");
+    var td1_2attr = document.createAttribute("id");
+    td1_2attr.value = "actiondetail";
+    td1_2.setAttributeNode(td1_2attr);
+    td1_2.appendChild(tr1_2);
+    td1_2.appendChild(tr1_3);
+    td1_2.appendChild(tr1_4);
     tr1.appendChild(td1_1);
     tr1.appendChild(td1_2);
     table.appendChild(tr1);
+
 
     //行 - Checkpoint
     var tr2 = document.createElement("tr");
     var td2_1 = document.createElement("td");
     td2_1.innerHTML = "Checkpoint";
     var td2_1_width = document.createAttribute("width");
-    var td2_1_rowspan = document.createAttribute("rowspan");
+  //  var td2_1_rowspan = document.createAttribute("rowspan");
     td2_1_width.value = "100px";
-    td2_1_rowspan.value = "6";
+   // td2_1_rowspan.value = "7";
     td2_1.setAttributeNode(td2_1_width);
-    td2_1.setAttributeNode(td2_1_rowspan);
+//    td2_1.setAttributeNode(td2_1_rowspan);
 
     var tr2_2 = document.createElement("tr");
     tr2_2.style.backgroundColor = "#DAE8FC";
@@ -93,6 +150,24 @@ function createTestCaseDiv() {
     td2_3_2.appendChild(input3);
     tr2_3.appendChild(td2_3_1);
     tr2_3.appendChild(td2_3_2);
+
+
+    var tr2_8 = document.createElement("tr");
+    var td2_8_1 = document.createElement("td");
+    td2_8_1.innerHTML = "Alert Rule";
+    td2_8_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_8_1_width = document.createAttribute("width");
+    td2_8_1_width.value = "100px";
+    td2_8_1.setAttributeNode(td2_8_1_width);
+    var td2_8_2 = document.createElement("td");
+    var input8 = document.createElement("h4");
+    var input8_id = document.createAttribute("id");
+    input8_id.value = "testGoalalertrule";
+    input8.setAttributeNode(input8_id);
+    td2_8_2.appendChild(input8);
+    tr2_8.appendChild(td2_8_1);
+    tr2_8.appendChild(td2_8_2);
+
 
     var tr2_4 = document.createElement("tr");
     var td2_4_1 = document.createElement("td");
@@ -177,6 +252,7 @@ function createTestCaseDiv() {
     td2_2.setAttributeNode(td2_2attr);
     td2_2.appendChild(tr2_2);
     td2_2.appendChild(tr2_3);
+    td2_2.appendChild(tr2_8);
     td2_2.appendChild(tr2_4);
     td2_2.appendChild(tr2_5);
     td2_2.appendChild(tr2_6);
@@ -191,6 +267,79 @@ function createTestCaseDiv() {
     arrow.appendChild(form);
 
     return arrow;
+}
+
+
+function addDisName(i) {
+    var tr2_2 = document.createElement("tr");
+    tr2_2.style.backgroundColor = "#FFE6CC";
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestDisName"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Disruption Name";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testDisname"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
+
+function addDisTarget(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestDisTarget"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Target";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testDistarget"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
+}
+
+function addDisDescription(i) {
+    var tr2_2 = document.createElement("tr");
+    var tr2_2_id = document.createAttribute("id");
+    var idtemp = "TestDisDescription"+i;
+    tr2_2_id.value = idtemp;
+    tr2_2.setAttributeNode(tr2_2_id);
+    var td2_2_1 = document.createElement("td");
+    td2_2_1.innerHTML = "Description";
+    td2_2_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_2_1_width = document.createAttribute("width");
+    td2_2_1_width.value = "100px";
+    td2_2_1.setAttributeNode(td2_2_1_width);
+    var td2_2_2 = document.createElement("td");
+    var input2 = document.createElement("h4");
+    var input2_id = document.createAttribute("id");
+    var inputtemp = "testDisdescription"+i;
+    input2_id.value = inputtemp;
+    input2.setAttributeNode(input2_id);
+    td2_2_2.appendChild(input2);
+    tr2_2.appendChild(td2_2_1);
+    tr2_2.appendChild(td2_2_2);
+    return tr2_2;
 }
 
 function addGoalName(i) {
@@ -239,6 +388,33 @@ function addGoalTarget(i) {
     tr2_2.appendChild(td2_2_2);
     return tr2_2;
 }
+
+function  addGoalAlertRule(i) {
+    var tr2_8 = document.createElement("tr");
+    var tr2_8_id = document.createAttribute("id");
+    var idtemp = "TestGoalAlertRule"+i;
+    tr2_8_id.value = idtemp;
+    tr2_8.setAttributeNode(tr2_8_id);
+    var td2_8_1 = document.createElement("td");
+    td2_8_1.innerHTML = "Alert Rule";
+    td2_8_1.style.borderBottom ="solid 1px #d4d4d4";
+    var td2_8_1_width = document.createAttribute("width");
+    td2_8_1_width.value = "100px";
+    td2_8_1.setAttributeNode(td2_8_1_width);
+    var td2_8_2 = document.createElement("td");
+    var input8 = document.createElement("h4");
+    var input8_id = document.createAttribute("id");
+    var inputtemp = "testGoalalertrule"+i;
+    input8_id.value = inputtemp;
+    input8.setAttributeNode(input8_id);
+    td2_8_2.appendChild(input8);
+    tr2_8.appendChild(td2_8_1);
+    tr2_8.appendChild(td2_8_2);
+
+    return tr2_8;
+}
+
+
 
 function addGoalDT(i) {
     var tr2_2 = document.createElement("tr");

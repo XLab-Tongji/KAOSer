@@ -1650,7 +1650,7 @@
 		{
 			addImages(images, content);
 	    }));
-
+		contentDiv.style.display = 'none';
 
 		this.repositionLibrary(nextSibling);
 
@@ -1675,7 +1675,7 @@
 	    }
 
 	    title.style.position = 'relative';
-
+		title.style.display = 'none';
 	    var btnWidth = 18;
 		var btn = document.createElement('img');
 		btn.setAttribute('src', Dialog.prototype.closeImage);
@@ -1823,16 +1823,55 @@
 					shape_td.appendChild(this.sidebar.createVertexTemplateFromCells(
 						cells, bounds.width, bounds.height, mytitle || '', true, false, false));
 					var type_td = document.createElement("td");
-					type_td.innerHTML = cells[0].flag;
+					if(cells[0].flag == "resource"){
+						type_td.innerHTML = "asset";
+					}
+					else if(cells[0].flag =="domain_property"){
+						type_td.innerHTML = "domain property";
+					}
+					else if(cells[0].flag =="hexagon"){
+						type_td.innerHTML = "agent";
+					}
+					else if(cells[0].flag =="resilience"){
+						type_td.innerHTML = "resilience goal";
+					}
+					else if(cells[0].flag =="performancebenchmark"){
+						type_td.innerHTML = "performance benchmark";
+					}
+					else if(cells[0].flag =="testcase"){
+						type_td.innerHTML = "test case";
+					}
+					else{
+						type_td.innerHTML = cells[0].flag;
+					}
 					type_td.style.width = "40px";
 					type_td.style.border = "solid 1px #d4d4d4";
 					var id_td = document.createElement("td");
 					id_td.innerHTML = cells[0].value;
 					id_td.style.width = "40px";
 					id_td.style.border = "solid 1px #d4d4d4";
+					var close_td = document.createElement("td");
+					var myclosebtn = document.createElement('img');
+					myclosebtn.setAttribute('src', IMAGE_PATH + '/clear.gif');
+					myclosebtn.onmouseover = function(){
+						myclosebtn.style.cursor = "pointer";
+						myclosebtn.style.border = "1px solid #808080";
+					};
+					myclosebtn.onmouseout = function(){
+						myclosebtn.style.cursor = "default";
+						myclosebtn.style.border = "0";
+					};
+					myclosebtn.addEventListener("click", function () {
+						if(DeleteMyShape(getUrlVars()["id"],cells[0])){
+							table.parentNode.removeChild(table);
+						}
+
+					});
+					close_td.appendChild(myclosebtn);
 					tr.appendChild(shape_td);
 					tr.appendChild(type_td);
 					tr.appendChild(id_td);
+					tr.appendChild(close_td);
 					table.appendChild(tr);
 					myShapesModel.appendChild(table);
 				}
@@ -1905,74 +1944,117 @@
 				}
 				mxEvent.consume(evt);
 			});
+
+			var loadMyModelDetail = mxUtils.bind(this,function (mycells) {
+				var mycell = new mxCell(mycells.name,new mxGeometry(0,0,mycells.width,mycells.height),mycells.style);
+				var myattribute = JSON.parse(mycells.attribute);
+				var myflag = myattribute.flag;
+				mycell.flag=myflag;
+				mycell.visible=true;
+				mycell.collapsed=false;
+				mycell.connectable=true;
+				mycell.edge=false;
+				mycell.vertex=true;
+				if(myflag=='goal'){
+					mycell.usecaseDiscription=myattribute.usecaseDiscription;
+					mycell.participant=myattribute.participant;
+					mycell.preCondition=myattribute.preCondition;
+				}else if(myflag=='requirement'){
+					mycell.basicEventFlow=myattribute.basicEventFlow;
+					mycell.addtionEventFlow=myattribute.addtionEventFlow;
+					mycell.businessRule=myattribute.businessRule;
+				}else if(myflag=='obstacle'){
+					mycell.gedetail=myattribute.gedetail;
+				}else if(myflag=='domain_property'){
+					mycell.domainPropertyRef=myattribute.domainPropertyRef;
+					mycell.domainPropertyDes=myattribute.domainPropertyDes;
+				}else if(myflag=='hexagon'){
+					mycell.agentType=myattribute.agentType;
+				}else if(myflag=='resource'){
+					mycell.gedetail=myattribute.gedetail;
+				}else if(myflag=='resilience'){
+					mycell.DisruptionTol=myattribute.DisruptionTol;
+					mycell.RecoveryTime=myattribute.RecoveryTime;
+					mycell.QLUnit=myattribute.QLUnit;
+				}else if(myflag=='disruption'){
+					mycell.description=myattribute.description;
+					mycell.DisruptionTol=myattribute.DisruptionTol;
+					mycell.RecoveryTime=myattribute.RecoveryTime;
+					mycell.QualityLoss=myattribute.QualityLoss;
+				}else if(myflag=='performancebenchmark'){
+					mycell.PerformanceValue=myattribute.PerformanceValue;
+					mycell.Unit=myattribute.Unit;
+				}
+				var result = [];
+				result.push(mycell);
+
+				var table = document.createElement("table");
+				table.style.fontSize = "12px";
+				var tr = document.createElement("tr");
+				var shape_td = document.createElement("td");
+				shape_td.style.width = "40px";
+				shape_td.style.border = "solid 1px #d4d4d4";
+				shape_td.appendChild(this.sidebar.createVertexTemplateFromCells(
+					result, mycells.width, mycells.height,myflag , true, false, false));
+				var type_td = document.createElement("td");
+				if(myflag == 'resource'){
+					type_td.innerHTML = "asset";
+				}
+				else if(myflag =='domain_property'){
+					type_td.innerHTML = "domain property";
+				}
+				else if(myflag =='hexagon'){
+					type_td.innerHTML = "agent";
+				}
+				else if(myflag =='resilience'){
+					type_td.innerHTML = "resilience goal";
+				}
+				else if(myflag =='performancebenchmark'){
+					type_td.innerHTML = "performance benchmark";
+				}
+				else if(myflag =='testcase'){
+					type_td.innerHTML = "test case";
+				}
+				else{
+					type_td.innerHTML = myflag;
+				}
+				type_td.style.width = "40px";
+				type_td.style.border = "solid 1px #d4d4d4";
+				var id_td = document.createElement("td");
+				id_td.innerHTML = mycells.name;
+				id_td.style.width = "40px";
+				id_td.style.border = "solid 1px #d4d4d4";
+				var close_td = document.createElement("td");
+				var myclosebtn = document.createElement('img');
+				myclosebtn.setAttribute('src', IMAGE_PATH + '/clear.gif');
+				myclosebtn.onmouseover = function(){
+					this.style.cursor = "pointer";
+					this.style.border = "1px solid #808080";
+				};
+				myclosebtn.onmouseout = function(){
+					this.style.cursor = "default";
+					this.style.border = "0";
+				};
+				myclosebtn.addEventListener("click", function () {
+					if(DeleteMyLoadShape(getUrlVars()["id"],mycell.style, mycell.value)){
+						table.parentNode.removeChild(table);
+					}
+				});
+				close_td.appendChild(myclosebtn);
+				tr.appendChild(shape_td);
+				tr.appendChild(type_td);
+				tr.appendChild(id_td);
+				tr.appendChild(close_td);
+				table.appendChild(tr);
+				myShapesModel.appendChild(table);
+			});
+
+
 			var loadMyModel = mxUtils.bind(this, function (evt) {
 
 				var mycells = loadMyCells();
 				for(var i in mycells){
-					var mycell = new mxCell(mycells[i].name,new mxGeometry(0,0,mycells[i].width,mycells[i].height),mycells[i].style);
-					var myattribute = JSON.parse(mycells[i].attribute);
-					var myflag = myattribute.flag;
-					mycell.flag=myflag;
-					mycell.visible=true;
-					mycell.collapsed=false;
-					mycell.connectable=true;
-					mycell.edge=false;
-					mycell.vertex=true;
-					if(myflag=='goal'){
-						mycell.usecaseDiscription=myattribute.usecaseDiscription;
-						mycell.participant=myattribute.participant;
-						mycell.preCondition=myattribute.preCondition;
-					}else if(myflag=='requirement'){
-						mycell.basicEventFlow=myattribute.basicEventFlow;
-						mycell.addtionEventFlow=myattribute.addtionEventFlow;
-						mycell.businessRule=myattribute.businessRule;
-					}else if(myflag=='obstacle'){
-						mycell.gedetail=myattribute.gedetail;
-					}else if(myflag=='domain_property'){
-						mycell.domainPropertyRef=myattribute.domainPropertyRef;
-						mycell.domainPropertyDes=myattribute.domainPropertyDes;
-					}else if(myflag=='hexagon'){
-						mycell.agentType=myattribute.agentType;
-					}else if(myflag=='resource'){
-						mycell.gedetail=myattribute.gedetail;
-					}else if(myflag=='resilience'){
-						mycell.DisruptionTol=myattribute.DisruptionTol;
-						mycell.RecoveryTime=myattribute.RecoveryTime;
-						mycell.QLUnit=myattribute.QLUnit;
-					}else if(myflag=='disruption'){
-						mycell.description=myattribute.description;
-						mycell.DisruptionTol=myattribute.DisruptionTol;
-						mycell.RecoveryTime=myattribute.RecoveryTime;
-						mycell.QualityLoss=myattribute.QualityLoss;
-					}else if(myflag=='performancebenchmark'){
-						mycell.PerformanceValue=myattribute.PerformanceValue;
-						mycell.Unit=myattribute.Unit;
-					}
-					var result = [];
-					result.push(mycell)
-
-					var table = document.createElement("table");
-					table.style.fontSize = "12px";
-					var tr = document.createElement("tr");
-					var shape_td = document.createElement("td");
-					shape_td.style.width = "40px";
-					shape_td.style.border = "solid 1px #d4d4d4";
-					shape_td.appendChild(this.sidebar.createVertexTemplateFromCells(
-						result, mycells[i].width, mycells[i].height,myflag , true, false, false));
-					var type_td = document.createElement("td");
-					type_td.innerHTML = myflag;
-					type_td.style.width = "40px";
-					type_td.style.border = "solid 1px #d4d4d4";
-					var id_td = document.createElement("td");
-					id_td.innerHTML = mycells[i].name;
-					id_td.style.width = "40px";
-					id_td.style.border = "solid 1px #d4d4d4";
-					tr.appendChild(shape_td);
-					tr.appendChild(type_td);
-					tr.appendChild(id_td);
-					table.appendChild(tr);
-					myShapesModel.appendChild(table);
-				}
+					loadMyModelDetail(mycells[i]);				}
 				mxEvent.consume(evt);
 			});
 
@@ -1985,6 +2067,7 @@
 			{
 				mybuttons.style.backgroundColor = 'inherit';
 			}
+			//储存按钮
 			var mybtn = document.createElement('img');
 			mybtn.setAttribute('src', Editor.plusImage);
 			mybtn.setAttribute('title', mxResources.get('add'));

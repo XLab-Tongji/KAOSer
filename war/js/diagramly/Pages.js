@@ -674,7 +674,28 @@ EditorUi.prototype.createPage = function(name)
 	
 	return page;
 };
-
+EditorUi.prototype.loadMyPagingDocument = function(){
+	var result = [];
+	$.ajax({
+		type:"GET",
+		url:mxResources.get("localport")+mxResources.get("urlloadmypagingdocument"),
+		data:{
+			projectName:document.getElementById('title').innerText,
+		},
+		async: false,
+		success:function (data) {
+			alert("成功");
+			result=data.length;
+			console.log(result);
+			console.log(data);
+		},
+		error:function (data) {
+			alert("失败");
+			result=[];
+		}
+	});
+	return result;
+}
 /**
  * Returns true if the given string contains an mxfile.
  */
@@ -1070,7 +1091,7 @@ EditorUi.prototype.createPageMenuTab = function()
 	tab.setAttribute('title', mxResources.get('pages'));
 	tab.style.position = 'absolute';
 	tab.style.left = '1px';
-	tab.style.visibility = 'hidden';
+	//tab.style.visibility = 'hidden';
 
 	mxEvent.addListener(tab, 'click', mxUtils.bind(this, function(evt)
 	{
@@ -1161,12 +1182,43 @@ EditorUi.prototype.createPageInsertTab = function()
 {
 	var tab = this.createControlTab(4, '<div class="geSprite geSprite-plus" style="display:inline-block;width:21px;height:21px;"></div>');
 	tab.setAttribute('title', mxResources.get('insertPage'));
-	tab.style.visibility = 'hidden';
+	//tab.style.visibility = 'hidden';
 	var graph = this.editor.graph;
 
 	mxEvent.addListener(tab, 'click', mxUtils.bind(this, function(evt)
 	{
-		this.insertPage();
+		var pageNumber = this.loadMyPagingDocument();
+		console.log(pageNumber);
+		// var pageNumber = 1;
+		// $.ajax({
+		// 	type:"GET",
+		// 	url:mxResources.get("localport")+mxResources.get("urlloadmypagingdocument"),
+		// 	data:{
+		// 		projectName:document.getElementById('title').innerText,
+		// 	},
+		// 	async: true,
+		// 	success:function (data) {
+		// 		alert("成功");
+		// 		pageNumber=data.length;
+		// 		console.log(data);
+		// 		console.log(pageNumber);
+		// 		if(pageNumber > 1){
+		// 			for(var i = pageNumber; i >1; i--){
+		// 				tab.insertPage();
+		// 			}
+		// 		}
+		//
+		// 	},
+		// 	error:function (data) {
+		// 		alert("失败");
+		// 		result=[];
+		// 	}
+		// });
+		if(pageNumber > 1){
+			for(var i = pageNumber; i >1; i--){
+				this.insertPage();
+			}
+		}
 		mxEvent.consume(evt);
 	}));
 
@@ -1184,7 +1236,7 @@ EditorUi.prototype.createTabForPage = function(page, tabWidth, hoverEnabled)
 	mxUtils.write(tab, name);
 	tab.style.maxWidth = tabWidth + 'px';
 	tab.style.width = tabWidth + 'px';
-	tab.style.visibility = 'hidden';
+//	tab.style.visibility = 'hidden';
 	this.addTabListeners(page, tab);
 
 	if (tabWidth > 42)

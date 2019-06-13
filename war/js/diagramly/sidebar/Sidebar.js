@@ -626,10 +626,10 @@
 
 
 		this.addGoalModelPalette();
+		this.addResilienceModelPalette();
         this.addRespModelPalette();
         this.addObjectModelPalette();
         this.addOperationModelPalette();
-        this.addResilienceModelPalette();
 	};
 
 	/**

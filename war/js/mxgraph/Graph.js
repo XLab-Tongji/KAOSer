@@ -3092,7 +3092,7 @@ HoverIcons.prototype.reset = function(clearTimeout)
 /**
  *
  */
-var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0,flagPerformance=0,checkNum=1;
+var flagGoal=0,flagResilience=0,flagDisruption=0,flagRequirement=0,flagOthers=0,flagResource=0,flagAgent=0,flagDomainProperty=0,flagTestCase=0,flagText=0,flagPerformance=0,checkNum=1,checkNum2=1;
 HoverIcons.prototype.repaint = function()
 {
 	this.bbox = null;
@@ -3576,6 +3576,7 @@ HoverIcons.prototype.repaint = function()
 					if (mresiliencediv.style.visibility == 'visible') {
 						that.TargetRes=getmyWant(gm,that.id,'source','resource','TargetRes');
 						that.BenchmarkedBy=getmyWant(gm,that.id, 'target','performancebenchmark','BenchmarkedBy');
+						that.AlertRule = document.getElementById("AlertRule").value;
 						that.DisruptionTol=document.getElementById("DisruptionTol").value;
 						that.DTUnit = getmyWantAttri(gm,that.id, 'target','performancebenchmark','Unit');
 						that.RecoveryTime=document.getElementById("RecoveryTime").value;
@@ -3613,6 +3614,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("resiId").value='';
 						document.getElementById("TargetRes").innerHTML='';
 						document.getElementById("BenchmarkedBy").innerHTML='';
+						document.getElementById("AlertRule").value = '';
 						document.getElementById("DisruptionTol").value='';
 						document.getElementById("RecoveryTime").value='';
 						document.getElementById("QualityLoss").value='';
@@ -3628,6 +3630,7 @@ HoverIcons.prototype.repaint = function()
 						document.getElementById("resiId").innerHTML=that.value;
 						document.getElementById("TargetRes").innerHTML=getmyWant(gm,that.id,'source','resource','TargetRes');
 						document.getElementById("BenchmarkedBy").innerHTML=getmyWant(gm,that.id, 'target','performancebenchmark','BenchmarkedBy');
+						document.getElementById("AlertRule").value = that.AlertRule;
 						document.getElementById("DisruptionTol").value=that.DisruptionTol;
 						document.getElementById("DTUnit").innerHTML = getmyWantAttri(gm,that.id, 'target','performancebenchmark', 'Unit');
 						document.getElementById("RecoveryTime").value=that.RecoveryTime;
@@ -3753,11 +3756,14 @@ HoverIcons.prototype.repaint = function()
 				else if(curr.style['shape'] == 'testcase') {
 					if (mtestcasediv.style.visibility == 'visible') {
 						that.resiNum = getmyWantNum(gm,that.id,'target','resilience');
+						that.disrNum = getmyWantNum(gm,that.id,'target','disruption');
 						var diff = that.resiNum - checkNum;
+						var diff2 = that.disrNum - checkNum2;
 						if(diff > 0){
 							for(var i = that.resiNum-1; i >= that.resiNum-diff; i--){
 								document.getElementById("checkpointdetail").appendChild(addGoalName(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalTarget(i));
+								document.getElementById("checkpointdetail").appendChild(addGoalAlertRule(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalDT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalRT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalQL(i));
@@ -3765,8 +3771,6 @@ HoverIcons.prototype.repaint = function()
 								checkNum++;
 							}
 						}
-
-
 						else if(that.resiNum > 0){
 							for(var i = checkNum -1; i >=that.resiNum; i--){
 								var idnumber = that.i * (-1);
@@ -3777,6 +3781,11 @@ HoverIcons.prototype.repaint = function()
 								var testGoalTargettemp = "TestGoalTarget"+idnumber;
 								var testGoalTarget = testGoalTargettemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalTarget));
+
+								var testGoalAlertRuletemp = "TestGoalAlertRule"+idnumber;
+								var testGoalAlertRule = testGoalAlertRuletemp;
+								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalAlertRule));
+
 								var testGoalDTtemp = "TestGoalDT"+idnumber;
 								var testGoalDT = testGoalDTtemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDT));
@@ -3792,36 +3801,43 @@ HoverIcons.prototype.repaint = function()
 								checkNum--;
 							}
 
-
-							// while(that.i < 0){
-							// 	var idnumber = that.i * (-1);
-							// 	// var idnumber = 1;
-							// 	var testGoalNametemp = "TestGoalName"+idnumber;
-							// 	var testGoalName = testGoalNametemp;
-							// 	document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalName));
-							// 	var testGoalDesctemp = "TestGoalDesc"+idnumber;
-							// 	var testGoalDesc = testGoalDesctemp;
-							// 	document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDesc));
-							// 	var testGoalDTtemp = "TestGoalDT"+idnumber;
-							// 	var testGoalDT = testGoalDTtemp;
-							// 	document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDT));
-							// 	var testGoalRTtemp = "TestGoalRT"+idnumber;
-							// 	var testGoalRT = testGoalRTtemp;
-							// 	document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalRT));
-							// 	var testGoalQLtemp = "TestGoalQL"+idnumber;
-							// 	var testGoalQL = testGoalQLtemp;
-							// 	document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalQL));
-							// 	var testGoalBenchtemp = "TestGoalBench"+idnumber;
-							// 	var testGoalBench = testGoalBenchtemp;
-							// 	document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalBench));
-							// 	that.i++;
-							// 	checkNum--;
-							// }
 						}
 
-						that.Action=getmyWantAttri(gm,that.id,'target','disruption','description');
+						if(diff2 > 0){
+							for(var i = that.disrNum-1;i >= that.disrNum-diff2; i--) {
+								document.getElementById("actiondetail").appendChild(addDisName(i));
+								document.getElementById("actiondetail").appendChild(addDisTarget(i));
+								document.getElementById("actiondetail").appendChild(addDisDescription(i));
+								checkNum2++;
+							}
+						}
+						else if(that.disrNum > 0){
+							for(var i = checkNum2 - 1; i >=that.disrNum; i--){
+								var idnumber = that.i * (-1);
+								// var idnumber = 1;
+								var testDisNametemp = "TestDisName"+idnumber;
+								var testDisName = testDisNametemp;
+								document.getElementById("actiondetail").removeChild(document.getElementById(testDisName));
+								var testDisTargettemp = "TestDisTarget"+idnumber;
+								var testDisTarget = testDisTargettemp;
+								document.getElementById("actiondetail").removeChild(document.getElementById(testDisTarget));
+								var testDisDescriptiontemp = "TestDisDescription"+idnumber;
+								var testDisDescription = testDisDescriptiontemp;
+								document.getElementById("actiondetail").removeChild(document.getElementById(testDisDescription));
+								checkNum2--;
+							}
+						}
+
+
+
+
+						//that.Action=getmyWantAttri(gm,that.id,'target','disruption','description');
+						that.testDisname=getmyWant(gm,that.id,'target','disruption','testDisname');
+						that.testDistarget=getmyWantAttri(gm,that.id,'target','disruption','TargetResDis');
+						that.testDisdescription=getmyWantAttri(gm,that.id,'target','disruption','description');
 						that.testGoalname=getmyWant(gm,that.id,'target','resilience','testGoalname');
 						that.testTarget = getmyWantAttri(gm,that.id,'target','resilience','TargetRes');
+						that.testAlertRule = getmyWantAttri(gm,that.id,'target','resilience', 'AlertRule');
 						that.testDT = getmyWantAttri(gm,that.id,'target','resilience','DisruptionTol');
 						that.testDTUnit = getmyWantAttri(gm,that.id,'target','resilience','DTUnit');
 						that.testRT = getmyWantAttri(gm,that.id,'target','resilience','RecoveryTime');
@@ -3832,9 +3848,13 @@ HoverIcons.prototype.repaint = function()
 						mtestcasediv.style.visibility = 'hidden';
 
 						document.getElementById("testCaseId").value = '';
-						document.getElementById("Action").innerHTML = '';
+						//document.getElementById("Action").innerHTML = '';
+						document.getElementById("testDisname").innerHTML = '';
+						document.getElementById("testDistarget").innerHTML = '';
+						document.getElementById("testDisdescription").innerHTML = '';
 						document.getElementById("testGoalname").innerHTML = '';
 						document.getElementById("testGoaltarget").innerHTML = '';
+						document.getElementById("testGoalalertrule").innerHTML = '';
 						document.getElementById("testDT").innerHTML = '';
 						document.getElementById("testDTUnit").innerHTML = '';
 						document.getElementById("testRT").innerHTML = '';
@@ -3851,6 +3871,11 @@ HoverIcons.prototype.repaint = function()
 								var testTargettemp = "testGoaltarget"+curren;
 								var testTarget = testTargettemp;
 								document.getElementById(testTarget).innerHTML = '';
+
+								var testalertruletemp = "testGoalalertrule"+curren;
+								var testalertrule = testalertruletemp;
+								document.getElementById(testalertrule).innerHTML = '';
+
 								var testdttemp = "testGoalDT" + curren;
 								var testdt = testdttemp;
 								document.getElementById(testdt).innerHTML ='';
@@ -3873,26 +3898,35 @@ HoverIcons.prototype.repaint = function()
 								var testbenchtemp = "testGoalBench" + curren;
 								var testbench = testbenchtemp;
 								document.getElementById(testbench).innerHTML ='';
-
-
 							}
 						}
-						// if(that.resiNum > 1){
-						// 	for(var curren = 1; curren <= that.resiNum; curren++){
-						// 		var testGoalDesctemp = "testGoaldesc"+curren;
-						// 		var testGoalDesc = testGoalDesctemp;
-						// 		document.getElementById(testGoalDesc).innerHTML = '';
-						// 	}
-						// }
+						if(that.disrNum > 1){
+							for(var current = 1; current < that.disrNum; current++){
+								var curren = current;
+								var testNametemp = "testDisname" + curren;
+								var testName = testNametemp;
+								document.getElementById(testName).innerHTML = '';
+								var testTargettemp = "testDistarget"+curren;
+								var testTarget = testTargettemp;
+								document.getElementById(testTarget).innerHTML = '';
+								var testDescriptiontemp = "testDisdescription"+curren;
+								var testDescription = testDescriptiontemp;
+								document.getElementById(testDescription).innerHTML = '';
+							}
+						}
 
 					}
 					else {
+						flagTestCase = 1;
 						that.resiNum = getmyWantNum(gm,that.id,'target','resilience');
+						that.disrNum = getmyWantNum(gm,that.id,'target','disruption');
 						var diff = that.resiNum - checkNum;
+						var diff2 = that.disrNum - checkNum2;
 						if(diff > 0){
 							for(var i = that.resiNum-1; i >= that.resiNum-diff; i--){
 								document.getElementById("checkpointdetail").appendChild(addGoalName(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalTarget(i));
+								document.getElementById("checkpointdetail").appendChild(addGoalAlertRule(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalDT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalRT(i));
 								document.getElementById("checkpointdetail").appendChild(addGoalQL(i));
@@ -3910,6 +3944,11 @@ HoverIcons.prototype.repaint = function()
 								var testGoalTargettemp = "TestGoalTarget" + idnumber;
 								var testGoalTarget = testGoalTargettemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalTarget));
+
+								var testGoalAlertRuletemp = "TestGoalAlertRule" + idnumber;
+								var testGoalAlertRule = testGoalAlertRuletemp;
+								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalAlertRule));
+
 								var testGoalDTtemp = "TestGoalDT" + idnumber;
 								var testGoalDT = testGoalDTtemp;
 								document.getElementById("checkpointdetail").removeChild(document.getElementById(testGoalDT));
@@ -3926,12 +3965,42 @@ HoverIcons.prototype.repaint = function()
 							}
 						}
 
-						flagTestCase = 1;
+						if(diff2 > 0){
+							for(var i = that.disrNum-1;i >= that.disrNum-diff2; i--) {
+								document.getElementById("actiondetail").appendChild(addDisName(i));
+								document.getElementById("actiondetail").appendChild(addDisTarget(i));
+								document.getElementById("actiondetail").appendChild(addDisDescription(i));
+								checkNum2++;
+							}
+						}
+						else if(that.disrNum > 0){
+							for(var i = checkNum2 - 1; i >=that.disrNum; i--){
+								var idnumber = i;
+								var testDisNametemp = "TestDisName"+idnumber;
+								var testDisName = testDisNametemp;
+								document.getElementById("actiondetail").removeChild(document.getElementById(testDisName));
+								var testDisTargettemp = "TestDisTarget"+idnumber;
+								var testDisTarget = testDisTargettemp;
+								document.getElementById("actiondetail").removeChild(document.getElementById(testDisTarget));
+								var testDisDescriptiontemp = "TestDisDescription"+idnumber;
+								var testDisDescription = testDisDescriptiontemp;
+								document.getElementById("actiondetail").removeChild(document.getElementById(testDisDescription));
+								checkNum2--;
+							}
+						}
+
 						var first = 0;
 						document.getElementById("testCaseId").innerHTML = that.value;
-						document.getElementById("Action").innerHTML = getmyWantAttri(gm,that.id,'target','disruption','description');
+						//document.getElementById("Action").innerHTML = getmyWantAttri(gm,that.id,'target','disruption','description');
+						document.getElementById("testDisname").innerHTML = getmyWantSingle(gm,that.id,'target','disruption','value', first);
+						console.log(document.getElementById("testDisname").innerHTML);
+						document.getElementById("testDistarget").innerHTML =  getmyWantSingle(gm,that.id,'target','disruption','TargetResDis', first);
+						console.log(document.getElementById("testDistarget").innerHTML);
+						document.getElementById("testDisdescription").innerHTML =  getmyWantSingle(gm,that.id,'target','disruption','description', first);
+						console.log(document.getElementById("testDisdescription").innerHTML);
 						document.getElementById("testGoalname").innerHTML =  getmyWantSingle(gm,that.id,'target','resilience','value', first);
 						document.getElementById("testGoaltarget").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','TargetRes', first);
+						document.getElementById("testGoalalertrule").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','AlertRule', first);
 						document.getElementById("testDT").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DisruptionTol', first);
 						document.getElementById("testDTUnit").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DTUnit', first);
 						document.getElementById("testRT").innerHTML = getmyWantSingle(gm,that.id,'target','resilience','RecoveryTime', first);
@@ -3947,6 +4016,11 @@ HoverIcons.prototype.repaint = function()
 								var testTargettemp = "testGoaltarget"+curren;
 								var testTarget = testTargettemp;
 								document.getElementById(testTarget).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','TargetRes', curren);
+
+								var testalertruletemp = "testGoalalertrule" + curren;
+								var testalertrule = testalertruletemp;
+								document.getElementById(testalertrule).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','AlertRule', curren);
+
 								var testdttemp = "testGoalDT" + curren;
 								var testdt = testdttemp;
 								document.getElementById(testdt).innerHTML = getmyWantSingle(gm,that.id,'target','resilience','DisruptionTol', curren);
@@ -3975,6 +4049,22 @@ HoverIcons.prototype.repaint = function()
 							}
 						}
 
+						if(that.disrNum > 1){
+							for(var current = 1; current < that.disrNum; current++){
+								var curren = current;
+								var testNametemp = "testDisname" + curren;
+								var testName = testNametemp;
+								document.getElementById(testName).innerHTML = getmyWantSingle(gm,that.id,'target','disruption','value', curren);
+								var testTargettemp = "testDistarget"+curren;
+								var testTarget = testTargettemp;
+								document.getElementById(testTarget).innerHTML = getmyWantSingle(gm,that.id,'target','disruption','TargetResDis', curren);
+
+								var testalertruletemp = "testDisdescription" + curren;
+								var testalertrule = testalertruletemp;
+								document.getElementById(testalertrule).innerHTML = getmyWantSingle(gm,that.id,'target','disruption','description', curren);
+
+							}
+						}
 
 
 						mtestcasediv.style.visibility = 'visible';
