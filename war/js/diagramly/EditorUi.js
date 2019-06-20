@@ -1813,6 +1813,7 @@
 				mycell.domainPropertyRef='sdf'
 				var result = [];
 				result.push(mycell)*/
+				var oneresults = [];
 				if(SaveMyShape(getUrlVars()["id"],cells,geo)) {
 					var table = document.createElement("table");
 					table.style.fontSize = "12px";
@@ -1874,6 +1875,9 @@
 					tr.appendChild(close_td);
 					table.appendChild(tr);
 					myShapesModel.appendChild(table);
+					oneresults.push(true);
+				}else{
+					oneresults.push(false);
 				}
 
 
@@ -1889,27 +1893,21 @@
 				//对数组进行json序列化，不然无法传递到服务端
 				jsonStr = JSON.stringify(jsonText);
 				console.log(jsonStr);
-				// var entry = {xml: xml, w: bounds.width, h: bounds.height};
-				//
-				// if (title != null) {
-				// 	entry.title = title;
-				// }
-				//
-				// images.push(xml);
-				// console.log(images);
-				// saveLibrary(evt);
+
 
 				if (dropTarget != null && dropTarget.parentNode != null && images.length > 0) {
 					dropTarget.parentNode.removeChild(dropTarget);
 					dropTarget = null;
 				}
-				return cells[0].value;
+				oneresults.push(cells[0].value)
+				return oneresults;
 			});
 
 
 			var addMyModel = mxUtils.bind(this, function (evt) {
 				graph.selectVertices();
 				var successfullist = '';
+				var failedlist = '';
 				if (!graph.isSelectionEmpty()) {
 					//var cells = graph.getModel().isVertex();
 					var cells = graph.getSelectionCells();
@@ -1930,12 +1928,15 @@
 						bounds[i].y -= graph.view.translate.y;
 
 						var tempresult = addMyCells(mycell, bounds[i],i);
-						if(tempresult != ''){
-							successfullist = successfullist + tempresult + ',';
+						if(tempresult[0]){
+							successfullist = successfullist + tempresult[1] + ',';
+						}else{
+							failedlist = failedlist + tempresult[1] + ',';
 						}
 					}
 					successfullist = successfullist.substring(0,successfullist.length -1);
-					alert("保存成功："+successfullist);
+					failedlist = failedlist.substring(0,failedlist.length -1);
+					alert("保存失败："+failedlist+'\n'+"保存成功："+successfullist);
 				} else if (graph.getRubberband().isActive()) {
 					graph.getRubberband().execute(evt);
 					graph.getRubberband().reset();
