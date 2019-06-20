@@ -87,6 +87,7 @@ function createResilienceDiv() {
     input10_id.value = "AlertRule";
     input10.setAttributeNode(input10_id);
     var input10_class = document.createAttribute("class");
+    input10_class.value = "detailform-single-text";
     input10.setAttributeNode(input10_class);
     td10_2.appendChild(input10);
     tr10.appendChild(td10_1);
