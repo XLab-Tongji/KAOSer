@@ -612,7 +612,7 @@ EditorUi.prototype.selectPage = function(page, quiet)
 
 	// Special flag to bypass autosave for this edit
 	edit.ignoreEdit = true;
-
+	window.location.href=page.baseURI
 	var change = new SelectPage(this, page);
 	change.execute();
 	edit.add(change);
@@ -654,7 +654,7 @@ EditorUi.prototype.insertPage = function(page, index)
 	if (this.editor.graph.isEnabled())
 	{
 		page = (page != null) ? page : this.createPage();
-		page.baseURI = "http://10.60.38.173:8445/?id="+allPages[index]
+		page.baseURI = "http://10.60.38.173:8445?id="+allPages[index-1]
 		index = (index != null) ? index : this.pages.length;
 
 		// Uses model to fire event and trigger autosave
