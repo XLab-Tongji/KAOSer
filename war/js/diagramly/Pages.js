@@ -653,8 +653,8 @@ EditorUi.prototype.insertPage = function(page, index)
 {
 	if (this.editor.graph.isEnabled())
 	{
-		page = (page != null) ? page : this.createPage();
-		page.baseURI = "http://10.60.38.173:8445?id="+allPages[index-1]
+		page = (page != null) ? page : this.createPage(PageName[index-1]);
+		page.node.baseURI = "http://10.60.38.173:8445?id="+allPages[index-1]
 		index = (index != null) ? index : this.pages.length;
 
 		// Uses model to fire event and trigger autosave
@@ -675,7 +675,8 @@ EditorUi.prototype.createPage = function(name)
 
 	return page;
 };
-var allPages=[]
+var allPages=[];
+var PageName= []
 EditorUi.prototype.loadMyPagingDocument = function(){
 	var result = [];
 	$.ajax({
@@ -688,6 +689,7 @@ EditorUi.prototype.loadMyPagingDocument = function(){
 		success:function (data) {
 			for(var i in data){
 				allPages.push(data[i].id)
+				PageName.push(data[i].name)
 			}
 			alert("成功");
 			result=data.length;
@@ -1221,7 +1223,7 @@ EditorUi.prototype.createPageInsertTab = function()
 		// });
 		if(pageNumber > 1){
 			for(var i = 1; i <pageNumber; i++){
-				this.insertPage(null,pageNumber);
+				this.insertPage(null,i);
 			}
 		}
 		mxEvent.consume(evt);
