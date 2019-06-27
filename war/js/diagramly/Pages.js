@@ -661,7 +661,6 @@ EditorUi.prototype.insertPage = function(page, index)
 		var change = new ChangePage(this, page, page, index);
 		this.editor.graph.model.execute(change);
 	}
-
 	return page;
 };
 
@@ -1222,7 +1221,7 @@ EditorUi.prototype.createPageInsertTab = function()
 		// 	}
 		// });
 		if(pageNumber > 1){
-			for(var i = 1; i <pageNumber; i++){
+			for(var i = 1; i <pageNumber+1; i++){
 				this.insertPage(null,i);
 			}
 		}
