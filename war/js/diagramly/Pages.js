@@ -612,7 +612,7 @@ EditorUi.prototype.selectPage = function(page, quiet)
 
 	// Special flag to bypass autosave for this edit
 	edit.ignoreEdit = true;
-	window.location.href=page.baseURI
+	window.location.href=page.node.baseURI
 	var change = new SelectPage(this, page);
 	change.execute();
 	edit.add(change);
